@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Japan Unified Communication Support Blog</title>
+  
+  <subtitle>日本マイクロソフトの Teams と Skype for Business に関するサポート情報のブログです。</subtitle>
+  <link href="/blog/atom.xml" rel="self"/>
+  
+  <link href="https://jpucsupport.github.io/blog/"/>
+  <updated>2021-03-24T06:30:58.611Z</updated>
+  <id>https://jpucsupport.github.io/blog/</id>
+  
+  <author>
+    <name>CSS Japan</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="https://jpucsupport.github.io/blog/information/test/"/>
+    <id>https://jpucsupport.github.io/blog/information/test/</id>
+    <published>2021-03-24T06:00:00.000Z</published>
+    <updated>2021-03-24T06:30:58.611Z</updated>
+    
+    <content type="html"><![CDATA[<p>テスト記事です。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;テスト記事です。&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Information" scheme="https://jpucsupport.github.io/blog/tags/Information/"/>
+    
+  </entry>
+  
+</feed>
