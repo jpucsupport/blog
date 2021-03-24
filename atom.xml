@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://jpucsupport.github.io/blog/"/>
-  <updated>2021-03-24T06:30:58.611Z</updated>
+  <updated>2021-03-24T12:21:06.784Z</updated>
   <id>https://jpucsupport.github.io/blog/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>タイトル</title>
+    <link href="https://jpucsupport.github.io/blog/chat/template/"/>
+    <id>https://jpucsupport.github.io/blog/chat/template/</id>
+    <published>2021-03-24T06:00:00.000Z</published>
+    <updated>2021-03-24T12:21:06.784Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは。 Unified Communication サポートのXXです。  </p><p>画像を入れたいときは以下。<br><img src="./path/filename.jpg" alt=""></p><h2 id="サブタイトル-①"><a href="#サブタイトル-①" class="headerlink" title="サブタイトル ①"></a>サブタイトル ①</h2><p>本文 ①</p><h2 id="サブタイトル-②"><a href="#サブタイトル-②" class="headerlink" title="サブタイトル ②"></a>サブタイトル ②</h2><p>本文 ②</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;こんにちは。 Unified Communication サポートのXXです。  &lt;/p&gt;
+&lt;p&gt;画像を入れたいときは以下。&lt;br&gt;&lt;img src=&quot;./path/filename.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;サブタイトル-①&quot;&gt;&lt;a href=&quot;#
+      
+    
+    </summary>
+    
+    
+    
+      <category term="chat" scheme="https://jpucsupport.github.io/blog/tags/chat/"/>
+    
+  </entry>
+  
+  <entry>
     <title>test</title>
     <link href="https://jpucsupport.github.io/blog/information/test/"/>
     <id>https://jpucsupport.github.io/blog/information/test/</id>
     <published>2021-03-24T06:00:00.000Z</published>
-    <updated>2021-03-24T06:30:58.611Z</updated>
+    <updated>2021-03-24T12:21:06.784Z</updated>
     
     <content type="html"><![CDATA[<p>テスト記事です。</p>]]></content>
     
