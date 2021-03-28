@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://jpucsupport.github.io/blog/"/>
-  <updated>2021-03-25T04:12:13.783Z</updated>
+  <updated>2021-03-28T22:58:06.361Z</updated>
   <id>https://jpucsupport.github.io/blog/</id>
   
   <author>
@@ -18,52 +18,36 @@
   
   <entry>
     <title>タイトル</title>
-    <link href="https://jpucsupport.github.io/blog/chat/template/"/>
-    <id>https://jpucsupport.github.io/blog/chat/template/</id>
+    <link href="https://jpucsupport.github.io/blog/chat/templete/"/>
+    <id>https://jpucsupport.github.io/blog/chat/templete/</id>
     <published>2021-03-24T06:00:00.000Z</published>
-    <updated>2021-03-25T04:12:13.783Z</updated>
+    <updated>2021-03-28T22:58:06.361Z</updated>
     
-    <content type="html"><![CDATA[<p>こんにちは。 Unified Communication サポートのXXです。  </p><p>画像を入れたいときは以下。<br><img src="./path/filename.jpg" alt=""></p><h2 id="サブタイトル-①"><a href="#サブタイトル-①" class="headerlink" title="サブタイトル ①"></a>サブタイトル ①</h2><p>本文 ①</p><h2 id="サブタイトル-②"><a href="#サブタイトル-②" class="headerlink" title="サブタイトル ②"></a>サブタイトル ②</h2><p>本文 ②</p>]]></content>
+    <content type="html"><![CDATA[<p>tags は追加することも可能ですが、今のところ、上記のうちどれかを記載してください。複数選択も可能です。</p><p>ここには書き出しを書きます。<br>こんにちは。 Unified Communication サポートのXXです。<br>今回は、XXについてご案内します。  </p><h2 id="中項目です"><a href="#中項目です" class="headerlink" title="中項目です"></a>中項目です</h2><p>ここには中項目について書きます。</p><h3 id="小項目です"><a href="#小項目です" class="headerlink" title="小項目です"></a>小項目です</h3><p>ここには小項目について書きます。</p><p>上記内容が皆様の参考となりますと幸いです。どちら様も素敵な Teams ライフをお過ごしください。</p><p>ご不明な点等がありましたら、ぜひ弊社サポート サービスをご利用ください。</p><h1 id="本文の内容の-Tips"><a href="#本文の内容の-Tips" class="headerlink" title="本文の内容の Tips"></a>本文の内容の Tips</h1><h2 id="改行する"><a href="#改行する" class="headerlink" title="改行する"></a>改行する</h2><p>スペースを 2 つ以上記述    </p><h2 id="番号付きリスト"><a href="#番号付きリスト" class="headerlink" title="番号付きリスト"></a>番号付きリスト</h2><ol><li>何か文章を書く</li><li>連続した番号が続く場でも、先頭は「1.」をいれて連続すると、連番に変換してくれる</li><li>カウントアップしても問題ないが、順序の入れ替えが発生した場合に書き換える手間があり面倒</li></ol><h2 id="番号なしリスト"><a href="#番号なしリスト" class="headerlink" title="番号なしリスト"></a>番号なしリスト</h2><ul><li>1 番目のリスト (黒丸)</li><li>2 番目のリスト<ul><li>2 番目-1 (白丸)</li><li>2 番目-2</li></ul></li></ul><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote><p>これは引用です<br>これは引用です、引用です</p></blockquote><h2 id="リンクを定義したい"><a href="#リンクを定義したい" class="headerlink" title="リンクを定義したい"></a>リンクを定義したい</h2><p><a href="https://XXXX.com" target="_blank" rel="noopener">サイトの題名など、リンクしたい文字列を入力</a></p><h2 id="区切り線"><a href="#区切り線" class="headerlink" title="区切り線"></a>区切り線</h2><p>3 つ以上のハイフンやアスタリスクで構成されている行は罫線になる</p><hr><hr><h2 id="ソースコードを書きたい"><a href="#ソースコードを書きたい" class="headerlink" title="ソースコードを書きたい"></a>ソースコードを書きたい</h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Install-Module</span> <span class="literal">-Name</span> MicrosoftTeams</span><br></pre></td></tr></table></figure><h2 id="強調したい"><a href="#強調したい" class="headerlink" title="強調したい"></a>強調したい</h2><p><em>ここが em タグで斜体になります</em><br><em>ここが em タグで斜体になります</em><br><strong>ここが strong タグで強調されます</strong><br><strong>ここが strong タグで強調されます</strong></p><h2 id="打消し線を入れたい"><a href="#打消し線を入れたい" class="headerlink" title="打消し線を入れたい"></a>打消し線を入れたい</h2><p><del>で囲むと打ち消される</del></p><h2 id="折りたたみ"><a href="#折りたたみ" class="headerlink" title="折りたたみ"></a>折りたたみ</h2><details><summary>要約として表示したい文章を記載します</summary>ここに記載された内容は、要約の下に折りたたまれます</details><h2 id="テーブルを入れたい"><a href="#テーブルを入れたい" class="headerlink" title="テーブルを入れたい"></a>テーブルを入れたい</h2><table><thead><tr><th>ユーザーは次のことを実行できます</th><th>外部アクセス ユーザー</th><th>ゲスト</th></tr></thead><tbody><tr><td>別の組織のユーザーとチャットする</td><td>はい</td><td>はい</td></tr><tr><td>別の組織のユーザーに電話をかける</td><td>はい</td><td>はい</td></tr></tbody></table><h2 id="画像を入れたい"><a href="#画像を入れたい" class="headerlink" title="画像を入れたい"></a>画像を入れたい</h2><p><img src="" alt=""><br>() の中には、画像のパスを入れる。ex. 「./articles/chat/filename.jpg」<br>なお、画像については、原則記事作成時に、ローカルへダウンロードし、管理者への提出時に一緒にわたしてください。</p><h2 id="そのほかにもいろいろと文法があるので、ぜひ試してみてください！"><a href="#そのほかにもいろいろと文法があるので、ぜひ試してみてください！" class="headerlink" title="そのほかにもいろいろと文法があるので、ぜひ試してみてください！"></a>そのほかにもいろいろと文法があるので、ぜひ試してみてください！</h2>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;こんにちは。 Unified Communication サポートのXXです。  &lt;/p&gt;
-&lt;p&gt;画像を入れたいときは以下。&lt;br&gt;&lt;img src=&quot;./path/filename.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;サブタイトル-①&quot;&gt;&lt;a href=&quot;#
+        &lt;p&gt;tags は追加することも可能ですが、今のところ、上記のうちどれかを記載してください。複数選択も可能です。&lt;/p&gt;
+&lt;p&gt;ここには書き出しを書きます。&lt;br&gt;こんにちは。 Unified Communication サポートのXXです。&lt;br&gt;今回は、XXについてご案内しま
       
     
     </summary>
     
     
     
-      <category term="chat" scheme="https://jpucsupport.github.io/blog/tags/chat/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="https://jpucsupport.github.io/blog/information/test/"/>
-    <id>https://jpucsupport.github.io/blog/information/test/</id>
-    <published>2021-03-24T06:00:00.000Z</published>
-    <updated>2021-03-25T04:12:13.783Z</updated>
-    
-    <content type="html"><![CDATA[<p>テスト記事です。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;テスト記事です。&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
+      <category term="Chat" scheme="https://jpucsupport.github.io/blog/tags/Chat/"/>
     
       <category term="Information" scheme="https://jpucsupport.github.io/blog/tags/Information/"/>
+    
+      <category term="Settings" scheme="https://jpucsupport.github.io/blog/tags/Settings/"/>
+    
+      <category term="Skype for Business" scheme="https://jpucsupport.github.io/blog/tags/Skype-for-Business/"/>
+    
+      <category term="Teams Live Event" scheme="https://jpucsupport.github.io/blog/tags/Teams-Live-Event/"/>
+    
+      <category term="Teams meeting" scheme="https://jpucsupport.github.io/blog/tags/Teams-meeting/"/>
     
   </entry>
   
@@ -72,7 +56,7 @@
     <link href="https://jpucsupport.github.io/blog/information/Welcome/"/>
     <id>https://jpucsupport.github.io/blog/information/Welcome/</id>
     <published>2020-03-24T15:00:00.000Z</published>
-    <updated>2021-03-25T04:12:13.783Z</updated>
+    <updated>2021-03-28T22:58:06.361Z</updated>
     
     <content type="html"><![CDATA[<p>Unified Communications Support チームのブログです。</p><p>わたしたちのチームでは、以下の製品およびサービスのサポートを提供しております。<br>本ブログでは、これらの製品に関連する情報を発信していく予定です。</p><ul><li>Teams</li><li>Skype for Business</li><li>Skype for Business Online </li><li>Live Event / Live Event Assitance Program</li></ul><p>なお、本ブログは弊社の公式見解ではなく、予告なく変更される場合があります。</p>]]></content>
     
