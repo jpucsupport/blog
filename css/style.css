@@ -618,10 +618,10 @@ width: 100% {
   text-decoration: none;
 }
 .article-readmore a:hover {
-  background: #f6f6f6;
-  color: #fff !important;
+  background: rgba(10,7,74,0.71);
+  color: #e6e6e6 !important;
   text-decoration: none !important;
-  text-shadow: 0 1px #c5c5c5;
+  text-shadow: 0 1px #eaeaea;
 }
 .article-entry {
   color: #505050;
@@ -1143,7 +1143,7 @@ width: 100% {
   line-height: 1.6em;
 }
 .archive-article-title:hover {
-  color: #f6f6f6;
+  color: #3f51b5;
 }
 .archive-article-footer {
   margin-top: 1em;
