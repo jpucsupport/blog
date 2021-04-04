@@ -38,12 +38,12 @@ fb_app_id:
 
 root_tag_option:
   root_tag_names:
-    - Azure AD
-    - AAD Connect
-    - AD FS
-    - 情報採取
+    - Information
+    - Teams
+    - Live Event / Live Event Assitance Program
+    - Skype for Business Online
+    - SKype for Business 
   sub_tag_limit: 20
-  sub_tag_sort: 'name' # 未実装
 
 # show disclaimer in all article by default. disableDisclaimer of article's option set true hide.
 # ex) 
