@@ -363,7 +363,7 @@ body {
   height: 60%;
 /* background: url(banner-url) center #000 */
 /* background-size: cover */
-  background-color: #333;
+  background-color: rgba(10,7,74,0.71);
   z-index: -1;
 }
 #header-title {
@@ -420,7 +420,7 @@ body {
 .nav-icon:hover,
 .main-nav-link:hover {
   opacity: 1;
-  color: #0065b3;
+  color: #f6f6f6;
 }
 #ms-logo {
   width: 124px;
@@ -618,10 +618,10 @@ width: 100% {
   text-decoration: none;
 }
 .article-readmore a:hover {
-  background: #0065b3;
+  background: #f6f6f6;
   color: #fff !important;
   text-decoration: none !important;
-  text-shadow: 0 1px #00518f;
+  text-shadow: 0 1px #c5c5c5;
 }
 .article-entry {
   color: #505050;
@@ -659,7 +659,7 @@ width: 100% {
 /* color: #f60 */
 }
 .article-entry a {
-  color: #0065b3;
+  color: #f6f6f6;
   text-decoration: none;
 }
 .article-entry a:hover {
@@ -795,10 +795,10 @@ width: 100% {
   text-decoration: none;
 }
 .article-more-link a:hover {
-  background: #0065b3;
+  background: #f6f6f6;
   color: #fff;
   text-decoration: none;
-  text-shadow: 0 1px #00518f;
+  text-shadow: 0 1px #c5c5c5;
 }
 .article-footer {
   font-size: 0.85em;
@@ -1101,7 +1101,7 @@ width: 100% {
   margin: 50px 0;
 }
 #comments a {
-  color: #0065b3;
+  color: #f6f6f6;
 }
 .archives-wrap {
   margin: 50px 0;
@@ -1143,7 +1143,7 @@ width: 100% {
   line-height: 1.6em;
 }
 .archive-article-title:hover {
-  color: #0065b3;
+  color: #f6f6f6;
 }
 .archive-article-footer {
   margin-top: 1em;
@@ -1211,13 +1211,13 @@ width: 100% {
   color: #d2d2d2;
 }
 #footer {
-  background: #2f2f2f;
+  background: rgba(10,7,74,0.71);
   padding: 50px 0;
   border-top: 1px solid #d2d2d2;
-  color: #737373;
+  color: #f6f6f6;
 }
 #footer a {
-  color: #0065b3;
+  color: #f6f6f6;
   text-decoration: none;
 }
 #footer a:hover {
@@ -1338,7 +1338,7 @@ width: 100% {
   margin-left: 20px;
 }
 .article-entry .gist .gist-file .gist-meta a {
-  color: #0065b3;
+  color: #f6f6f6;
   font-weight: normal;
 }
 .article-entry .gist .gist-file .gist-meta a:hover {
@@ -1437,7 +1437,7 @@ pre .javascript .function {
   margin-top: 10px;
 }
 a#issue-header:hover {
-  color: #0065b3;
+  color: #f6f6f6;
 }
 .issue-header {
   width: 100vw;
@@ -1460,16 +1460,16 @@ a#issue-header:hover {
   margin: 50px 0;
 }
 .widget {
-  color: #737373;
-  background: #d2d2d2;
-  -webkit-box-shadow: 0 -1px 4px #d2d2d2 inset;
-  box-shadow: 0 -1px 4px #d2d2d2 inset;
-  border: 1px solid #d2d2d2;
+  color: #f6f6f6;
+  background: rgba(10,7,74,0.71);
+  -webkit-box-shadow: 0 -1px 4px rgba(10,7,74,0.71) inset;
+  box-shadow: 0 -1px 4px rgba(10,7,74,0.71) inset;
+  border: 1px solid rgba(10,7,74,0.71);
   padding: 15px;
   border-radius: 3px;
 }
 .widget a {
-  color: #0065b3;
+  color: #f6f6f6;
   text-decoration: none;
 }
 .widget a:hover {
@@ -1515,7 +1515,7 @@ a#issue-header:hover {
 .tag-list-count,
 .archive-list-count {
   padding-left: 5px;
-  color: #737373;
+  color: #f6f6f6;
   font-size: 0.85em;
 }
 .category-list-count:before,
