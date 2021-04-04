@@ -1,0 +1,22 @@
+<section class="archives-wrap">
+    <h2 class='widget-title'>全記事一覧</h2>
+  
+    <div class="archives">
+      <% if (pagination == 2){ %>
+        <% page.posts.each(function(post){ %>
+          <%- partial('all-articles-post', {post: post}) %>
+        <% }) %>
+      <% }%>
+    </div>
+  </section>
+
+  <% if (page.total > 1){ %>
+    <nav id="page-nav">
+      <% var prev_text = "&laquo; " + __('prev');var next_text = __('next') + " &raquo;"%>
+      <%- paginator({
+        prev_text: prev_text,
+        next_text: next_text,
+        escape: false
+      }) %>
+    </nav>
+  <% } %>

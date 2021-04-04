@@ -1,0 +1,55 @@
+# Header
+menu:
+  Home: /
+  Archives: archives
+rss: atom.xml
+
+# Content
+excerpt_link: Read More
+
+# Sidebar
+sidebar: right
+widgets:
+# - category
+- recent_posts
+- tag
+- archive
+- tagcloud
+
+# display widgets at the bottom of index pages (pagination == 2)
+index_widgets:
+# - category
+# - tagcloud
+# - archive
+
+# widget behavior
+archive_type: 'monthly'
+show_count: false
+
+# Miscellaneous
+google_analytics:
+gauges_analytics:
+# favicon links are in header.ejs
+# favicon: /favicon.png
+twitter:
+google_plus:
+fb_admins:
+fb_app_id:
+
+root_tag_option:
+  root_tag_names:
+    - Azure AD
+    - AAD Connect
+    - AD FS
+    - 情報採取
+  sub_tag_limit: 20
+  sub_tag_sort: 'name' # 未実装
+
+# show disclaimer in all article by default. disableDisclaimer of article's option set true hide.
+# ex) 
+# ---
+# title: Article Title
+# date: 2020-04-30 10:00
+# disableDisclaimer: true
+# ---
+disclaimer: ※本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。

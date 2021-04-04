@@ -15,11 +15,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          submodules: false
+          submodules: true
 
       - name: Initialize
         run: |
           cp -r /blog/* .
+          git submodule update -i
 
       - name: Build
         run: npm run build
