@@ -2,8 +2,8 @@
 title:  Live Events Assistance Program (LEAP) のご紹介
 date: 2021-4-5 12:00:00
 tags:
-  - Information
   - Live Event / Live Event Assitance Program
+  - Introduction
 ---
 
 

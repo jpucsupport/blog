@@ -26,7 +26,7 @@ root_tag_generator:
     - Teams
     - Live Event / Live Event Assitance Program
     - Skype for Business Online
-    - SKype for Business 
+    - Skype for Business 
   sub_tag_limit: 20
 
 # URL
