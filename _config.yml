@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Title (display)
-title: Japan Unified Communication Support Blog
+title: Japan Unified Communications Support Blog
 # Sub Title (display)
 subtitle: 日本マイクロソフトの Teams と Skype for Business に関するサポート情報のブログです。
 # Description
@@ -11,10 +11,11 @@ description: 日本マイクロソフトの Teams と Skype for Business に関�
 
 # Keywords
 keywords:
-  - Information
   - Teams
   - Teams Live Event
   - Skype for Business
+  - Skype for Business Online
+  - SfB
 
 author: CSS Japan
 
@@ -22,11 +23,10 @@ author: CSS Japan
 root_tag_generator:
   root_tag_names:
     - Information
-    - Settings
-    - Teams meeting
-    - Chat
-    - Teams Live event
-    - Skype for Business
+    - Teams
+    - Live Event / Live Event Assitance Program
+    - Skype for Business Online
+    - SKype for Business 
   sub_tag_limit: 20
 
 # URL
