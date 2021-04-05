@@ -405,7 +405,7 @@ body {
 .nav-icon,
 .main-nav-link {
   float: left;
-  color: #000;
+  color: #505050;
   opacity: 0.6;
   text-decoration: none;
 /* text-shadow: 0 1px rgba(0, 0, 0, 0.2) */
@@ -420,7 +420,7 @@ body {
 .nav-icon:hover,
 .main-nav-link:hover {
   opacity: 1;
-  color: #f6f6f6;
+  color: rgba(10,7,74,0.71);
 }
 #ms-logo {
   width: 124px;
@@ -659,11 +659,21 @@ width: 100% {
 /* color: #f60 */
 }
 .article-entry a {
-  color: #f6f6f6;
+  color: #3f51b5;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 1em;
+  padding: 6px 15px;
+  border-radius: 15px;
+  background: #e6e6e6;
+  text-shadow: 0 1px #fff;
   text-decoration: none;
 }
 .article-entry a:hover {
-  text-decoration: underline;
+  text-decoration: none !important;
+  text-shadow: 0 1px #eaeaea;
+  background: rgba(10,7,74,0.71);
+  color: #f6f6f6;
 }
 .article-entry h1,
 .article-entry h2,
@@ -1214,7 +1224,7 @@ width: 100% {
   background: rgba(10,7,74,0.71);
   padding: 50px 0;
   border-top: 1px solid #d2d2d2;
-  color: #f6f6f6;
+  color: #737373;
 }
 #footer a {
   color: #f6f6f6;
