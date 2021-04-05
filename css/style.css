@@ -621,7 +621,7 @@ width: 100% {
   background: rgba(10,7,74,0.71);
   color: #e6e6e6 !important;
   text-decoration: none !important;
-  text-shadow: 0 1px #eaeaea;
+  text-shadow: 0 1px rgba(9,7,70,0.71);
 }
 .article-entry {
   color: #505050;
@@ -671,9 +671,9 @@ width: 100% {
 }
 .article-entry a:hover {
   text-decoration: none !important;
-  text-shadow: 0 1px #eaeaea;
+  text-shadow: 0 1px rgba(9,7,70,0.71);
   background: rgba(10,7,74,0.71);
-  color: #f6f6f6;
+  color: rgba(10,7,74,0.71);
 }
 .article-entry h1,
 .article-entry h2,
@@ -805,10 +805,10 @@ width: 100% {
   text-decoration: none;
 }
 .article-more-link a:hover {
-  background: #f6f6f6;
+  background: rgba(10,7,74,0.71);
   color: #fff;
   text-decoration: none;
-  text-shadow: 0 1px #c5c5c5;
+  text-shadow: 0 1px rgba(8,6,59,0.71);
 }
 .article-footer {
   font-size: 0.85em;
@@ -1111,7 +1111,7 @@ width: 100% {
   margin: 50px 0;
 }
 #comments a {
-  color: #f6f6f6;
+  color: rgba(10,7,74,0.71);
 }
 .archives-wrap {
   margin: 50px 0;
@@ -1227,7 +1227,7 @@ width: 100% {
   color: #737373;
 }
 #footer a {
-  color: #f6f6f6;
+  color: rgba(10,7,74,0.71);
   text-decoration: none;
 }
 #footer a:hover {
@@ -1348,7 +1348,7 @@ width: 100% {
   margin-left: 20px;
 }
 .article-entry .gist .gist-file .gist-meta a {
-  color: #f6f6f6;
+  color: rgba(10,7,74,0.71);
   font-weight: normal;
 }
 .article-entry .gist .gist-file .gist-meta a:hover {
@@ -1447,7 +1447,7 @@ pre .javascript .function {
   margin-top: 10px;
 }
 a#issue-header:hover {
-  color: #f6f6f6;
+  color: rgba(10,7,74,0.71);
 }
 .issue-header {
   width: 100vw;
