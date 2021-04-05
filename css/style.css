@@ -619,7 +619,7 @@ width: 100% {
 }
 .article-readmore a:hover {
   background: rgba(10,7,74,0.71);
-  color: #e6e6e6 !important;
+  color: #f6f6f6 !important;
   text-decoration: none !important;
   text-shadow: 0 1px rgba(9,7,70,0.71);
 }
