@@ -1224,14 +1224,15 @@ width: 100% {
   background: rgba(10,7,74,0.71);
   padding: 50px 0;
   border-top: 1px solid #d2d2d2;
-  color: #737373;
+  color: #f6f6f6;
 }
 #footer a {
-  color: rgba(10,7,74,0.71);
+  color: #f6f6f6;
   text-decoration: none;
 }
 #footer a:hover {
   text-decoration: underline;
+  color: #2196f3;
 }
 #footer-info {
   line-height: 1.6em;
