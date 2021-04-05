@@ -1,17 +1,18 @@
 ---
 title:  Live Events Assistance Program (LEAP) のご紹介
-date: 2021-4-5 12:00:00
+date: 2021-3-24 15:00:00
 tags:
-  - Live Event / Live Event Assitance Program
+  - Live Events / Live Events Assitance Program
   - Introduction
 ---
 
 
-# Live Events Assistance Program (LEAP) のご紹介
+#  Live Events Assistance Program (LEAP) のご紹介
 
 こんにちは。
 <br>いつも Microsoft Teams をご利用いただきありがとうございます。
 <br>今回は、Live Events Assistance Program (LEAP) について、ご紹介いたします。
+<br>
 
 ## Live Events Assistance Program (LEAP) とは
 Microsoft 製品を用いたライブイベントの開催全般をサポートするプログラムです。
@@ -21,10 +22,11 @@ Microsoft 製品を用いたライブイベントの開催全般をサポート�
 - Yammer
 
 主に、以下のご支援を行っております。
+<br>※ エンコーダーなど、Microsoft 製品以外の部分については、サポート対象外となります。
+
  - イベント前の操作方法のレクチャー、Q&A 対応
  - イベント中の急なご質問への対応、モニタリング、トラブルシューティングの支援、などなど
- <br>※ エンコーダーなど、Microsoft 製品以外の部分については、サポート対象外となります。
-
+ 
 ## 実際のプログラムの流れ
 本プログラムにお申込みいただいたあとは、以下のような流れでライブイベント本番までご支援いたします。
 
@@ -34,24 +36,22 @@ Microsoft 製品を用いたライブイベントの開催全般をサポート�
 4. リハーサルのモニタリング
 5. 本番ライブイベントのモニタリング、本番中の問合せ、トラブルシューティング支援
 
+上記以外の内容についても、ご要望に応じて対応いたしますので、一度 LEAP にご登録いただきご相談ください。
 <br>
-上記以外の内容についても、ご要望に応じて対応いたしますので、一度 LEAP にご登録いただき、ご相談ください。
 
-### よくご相談いただく内容
+### よくあるご相談内容
  - ライブイベントの配信画面の操作の仕方が分からない
  - 社内向けのイベントを計画しており、参加者募集から事後フォローまでの流れを検討しているが、目的に沿った内容となっているか不安
  - ○○を実現したいが、実現方法が分からないので、相談に乗ってほしい
  - 初めての大規模イベント開催で不安なので、当日のライブイベントをモニタリングしてほしい
- 
 <br>
 
 ## よくあるご質問
-*Q. 費用はかかるでしょうか？*
+Q. 費用はかかるでしょうか？
 <br>A. 現在プレビュー中のプログラムとなりますので、無償でご利用可能です。プレビュー期間については、お申し込みの際にご確認ください。
-
-*Q. 通常の Microsoft のサポートへの問い合わせとは違うのでしょうか？*
+<br>
+Q. 通常の Microsoft のサポートへの問い合わせとは違うのでしょうか？
 <br>A. 本プログラムは、1 イベントにつき 1 つのお問い合わせとなります。一問一答形式の通常のお問い合わせと比べて、よりライブイベント開催に向けた包括的なサポートをご提供しております。
-
 <br>
 
 ## お申込み方法
@@ -59,9 +59,8 @@ Microsoft 製品を用いたライブイベントの開催全般をサポート�
 
 [Live Events Assistance Program お申込みフォーム](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRyDjDy_PXI5OtUv8Q_mW3a5UOUZYOTg2TjZMQzRSWTFUVFU4S0YyT1dORiQlQCN0PWcu)
 
-<br>
 申し込み期限はございませんが、本番 2 週間前までのお申し込みであれば、レクチャーやリハーサルに十分な時間を確保することが可能ですので、できるだけ早いタイミングでお申込みいただくことをおすすめしております。
-<br><br>
+<br>
 プログラムの詳細は以下のページになります。
 
 [Microsoft 365 Live Events Assistance](https://docs.microsoft.com/ja-jp/stream/live-events-assistance)

@@ -12,7 +12,7 @@ description: 日本マイクロソフトの Teams と Skype for Business に関�
 # Keywords
 keywords:
   - Teams
-  - Teams Live Event
+  - Teams Live Events
   - Skype for Business
   - Skype for Business Online
   - SfB
@@ -24,7 +24,7 @@ root_tag_generator:
   root_tag_names:
     - Information
     - Teams
-    - Live Event / Live Event Assitance Program
+    - Live Events / Live Events Assitance Program
     - Skype for Business Online
     - Skype for Business 
   sub_tag_limit: 20
