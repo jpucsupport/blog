@@ -673,7 +673,7 @@ width: 100% {
   text-decoration: none !important;
   text-shadow: 0 1px rgba(9,7,70,0.71);
   background: rgba(10,7,74,0.71);
-  color: rgba(10,7,74,0.71);
+  color: #f6f6f6;
 }
 .article-entry h1,
 .article-entry h2,
