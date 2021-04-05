@@ -9,7 +9,7 @@ tags:
 
 #  Live Events Assistance Program (LEAP) のご紹介
 
-こんにちは。   いつも Microsoft Teams をご利用いただきありがとうございます。   
+こんにちは。いつも Microsoft Teams をご利用いただきありがとうございます。   
 今回は、Live Events Assistance Program (LEAP) について、ご紹介いたします。   
 
 ## Live Events Assistance Program (LEAP) とは

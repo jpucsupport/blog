@@ -40,7 +40,7 @@ root_tag_option:
   root_tag_names:
     - Information
     - Teams
-    - Live Event / Live Event Assitance Program
+    - Live Events / Live Events Assitance Program
     - Skype for Business Online
     - SKype for Business 
   sub_tag_limit: 20
