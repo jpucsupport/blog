@@ -661,19 +661,9 @@ width: 100% {
 .article-entry a {
   color: #3f51b5;
   text-decoration: none;
-  display: inline-block;
-  line-height: 1em;
-  padding: 6px 15px;
-  border-radius: 15px;
-  background: #e6e6e6;
-  text-shadow: 0 1px #fff;
-  text-decoration: none;
 }
 .article-entry a:hover {
-  text-decoration: none !important;
-  text-shadow: 0 1px rgba(9,7,70,0.71);
-  background: rgba(10,7,74,0.71);
-  color: #f6f6f6;
+  text-decoration: underline;
 }
 .article-entry h1,
 .article-entry h2,
