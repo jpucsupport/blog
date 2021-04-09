@@ -14,7 +14,7 @@
 <meta property="og:description" content="こんにちは、Unified Communications サポート チームの須鎗です。いつも Microsoft Teams をご利用いただきありがとうございます。 今回は、Teams デスクトップ クライアントで何か問題が起きた際に、まず実施いただきたい一般的な切り分けの項目と手順をお伝えいたします。ユーザーの皆様が問題に直面した際や、管理者の皆様がお問い合わせを起票いただく際に、お役立ていただ">
 <meta property="og:locale" content="ja_JP">
 <meta property="article:published_time" content="2021-04-08T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-04-09T09:05:03.466Z">
+<meta property="article:modified_time" content="2021-04-09T09:18:57.713Z">
 <meta property="article:author" content="CSS Japan">
 <meta property="article:tag" content="Teams">
 <meta property="article:tag" content="Troubleshooting">
@@ -103,7 +103,7 @@
         
         <a href="https://github.com/jpucsupport/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+7cca6e58-db87-5a82-8642-0cd7b4710f03%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BTeams+%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97+%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%81%AE%E4%B8%80%E8%88%AC%E7%9A%84%E3%81%AA%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%5D%28https%3A%2F%2Fjpucsupport.github.io%2Fblog%2Fteams%2FTeams%2520%E3%81%AE%E4%B8%80%E8%88%AC%E7%9A%84%E3%81%AA%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%2F%29%0A*+Content+Source%3A+%5Barticles%2Fteams%2FTeams+%E3%81%AE%E4%B8%80%E8%88%AC%E7%9A%84%E3%81%AA%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0.md%5D%28https%3A%2F%2Fgithub.com%2Fjpucsupport%2Fblog%2Fblob%2Fmaster%2Farticles%2Fteams%2FTeams%2520%E3%81%AE%E4%B8%80%E8%88%AC%E7%9A%84%E3%81%AA%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpucsupport.github.io/blog/teams/Teams%20%E3%81%AE%E4%B8%80%E8%88%AC%E7%9A%84%E3%81%AA%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0/" data-id="ckna32s7u00048rrz0amebz0m" class="article-share-link">共有</a>
+        <a data-url="https://jpucsupport.github.io/blog/teams/Teams%20%E3%81%AE%E4%B8%80%E8%88%AC%E7%9A%84%E3%81%AA%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0/" data-id="ckna3knxa00048qpjapvrb1v5" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
@@ -113,9 +113,9 @@
 <p>「Teams デスクトップ クライアントにサインインができない」「Teams 会議に参加したら、画面共有ができなかった」等々、日々 Teams デスクトップ クライアントに関するたくさんのお問い合わせをいただきます。<br>一見同じような問題に見えても、その状況や原因については様々です。そのため、わたしたちサポートチームが迅速に調査を進めるためにも、まず問題の切り分けを行い、事象を正確に把握することが重要です。<br>ここでは、問題が発生した際に確認していただきたい事項と手順について、順番にご説明していきます！<br></p>
 <h2 id="キャッシュの削除について"><a href="#キャッシュの削除について" class="headerlink" title="キャッシュの削除について"></a>キャッシュの削除について</h2><p>Teams デスクトップ クライアントは、ネットワーク トラフィックの負荷軽減やパフォーマンス向上の観点から、一部の設定情報やデータをキャッシュ ファイルとして保持しています (よく使うデータ等をクラウドにおいておかず、端末に持っておくようなイメージです)。<br>何らかの要因でこのキャッシュ ファイルが適切に破棄/更新されなかった場合や、ファイルが破損している場合などに、Teams デスクトップ クライアントで予期しない問題が発生する場合があります。<br>そのため、Teams デスクトップ クライアントのキャッシュが影響して、問題が起きているかの切り分けのために、次の手順に従って、キャッシュを削除し、問題が改善されるかご確認ください。   </p>
 <ol>
-<li>Teams デスクトップ クライアントを完全に終了します。<br>　このとき、タスクバー上の [隠れているインジゲーターを表示します] をクリックして Teams アイコンが表示される場合には、Teams は終了していません。<br>　右クリックでメニューが表示されたら、 [終了] をクリックして、完全に終了させます。</li>
+<li>Teams デスクトップ クライアントを完全に終了します。<br>このとき、タスクバー上の [隠れているインジゲーターを表示します] をクリックして Teams アイコンが表示される場合には、Teams は終了していません。<br>右クリックでメニューが表示されたら、 [終了] をクリックして、完全に終了させます。</li>
 <li>Outlook を利用している場合には、Teams と同様に Outlook も終了しておきます。</li>
-<li>Windows ＋ R キーで [ファイル名を指定して実行] を起動し、次のパスを入力して Microsoft フォルダーを開きます。<br>　“%AppData%\Microsoft”</li>
+<li>Windows ＋ R キーで [ファイル名を指定して実行] を起動し、次のパスを入力して Microsoft フォルダーを開きます。<br>“%AppData%\Microsoft”</li>
 <li>Teams フォルダーをみつけたら、削除します。</li>
 <li>再度 Teams デスクトップ クライアントを起動して問題が再び起きるか確認します。<br></li>
 </ol>
