@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Teams デスクトップ クライアントの一般的なトラブルシューティング | Japan Unified Communications Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="こんにちは、Unified Communications サポート チームの須鎗です。いつも Microsoft Teams をご利用いただきありがとうございます。 今回は、Teams デスクトップ クライアントで何か問題が起きた際に、まず実施いただきたい一般的な切り分けの項目と手順をお伝えいたします。ユーザーの皆様が問題に直面した際や、管理者の皆様がお問い合わせを起票いただく際に、お役立ていただ">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Teams デスクトップ クライアントの一般的なトラブルシューティング">
+<meta property="og:url" content="https://jpucsupport.github.io/blog/teams/Teams%20%E3%81%AE%E4%B8%80%E8%88%AC%E7%9A%84%E3%81%AA%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0/index.html">
+<meta property="og:site_name" content="Japan Unified Communications Support Blog">
+<meta property="og:description" content="こんにちは、Unified Communications サポート チームの須鎗です。いつも Microsoft Teams をご利用いただきありがとうございます。 今回は、Teams デスクトップ クライアントで何か問題が起きた際に、まず実施いただきたい一般的な切り分けの項目と手順をお伝えいたします。ユーザーの皆様が問題に直面した際や、管理者の皆様がお問い合わせを起票いただく際に、お役立ていただ">
+<meta property="og:locale" content="ja_JP">
+<meta property="article:published_time" content="2021-04-08T15:00:00.000Z">
+<meta property="article:modified_time" content="2021-04-09T09:02:27.764Z">
+<meta property="article:author" content="CSS Japan">
+<meta property="article:tag" content="Teams">
+<meta property="article:tag" content="Troubleshooting">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="../../atom.xml" title="Japan Unified Communications Support Blog" type="application/atom+xml">
+  
+
+  <link rel="icon" href="../../favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="../../css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        <div id="ms-logo"></div>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+        <a class="main-nav-link" href="https://cssjpn.github.io/" target="_blank" rel="noopener">サポート情報</a>
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="../../atom.xml" title="RSSフィード"></a>
+        
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//www.bing.com/search" method="get" accept-charset="UTF-8" name="bing-search" onsubmit="var f=this;if(f['q'].value){var searchUrl =  'https://www.bing.com/search?q=' +  encodeURIComponent(f['q'].value + ' site:' + f['sitesearch'].value) ;window.open(searchUrl, 'blank') };return false;" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="検索"><button type="submit" id="nav-search-btn" class="search-form-submit"></button><input type="hidden" name="sitesearch" value="https://jpucsupport.github.io/blog"></form>
+      </div>
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="../../index.html" id="logo">Japan Unified Communications Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="../../index.html" id="subtitle">日本マイクロソフトの Teams と Skype for Business に関するサポート情報のブログです。</a>
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-teams/Teams の一般的なトラブルシューティング" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Teams デスクトップ クライアントの一般的なトラブルシューティング
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="" class="article-date-single">
+  <time datetime="2021-04-08T15:00:00.000Z" itemprop="datePublished">2021-04-09</time>
+</a>
+        
+        
+        <a href="https://github.com/jpucsupport/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+7cca6e58-db87-5a82-8642-0cd7b4710f03%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BTeams+%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97+%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%81%AE%E4%B8%80%E8%88%AC%E7%9A%84%E3%81%AA%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%5D%28https%3A%2F%2Fjpucsupport.github.io%2Fblog%2Fteams%2FTeams%2520%E3%81%AE%E4%B8%80%E8%88%AC%E7%9A%84%E3%81%AA%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%2F%29%0A*+Content+Source%3A+%5Barticles%2Fteams%2FTeams+%E3%81%AE%E4%B8%80%E8%88%AC%E7%9A%84%E3%81%AA%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0.md%5D%28https%3A%2F%2Fgithub.com%2Fjpucsupport%2Fblog%2Fblob%2Fmaster%2Farticles%2Fteams%2FTeams%2520%E3%81%AE%E4%B8%80%E8%88%AC%E7%9A%84%E3%81%AA%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        
+        <a data-url="https://jpucsupport.github.io/blog/teams/Teams%20%E3%81%AE%E4%B8%80%E8%88%AC%E7%9A%84%E3%81%AA%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0/" data-id="ckna2zfvo00048wpfav9lfejd" class="article-share-link">共有</a>
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>こんにちは、Unified Communications サポート チームの須鎗です。<br>いつも Microsoft Teams をご利用いただきありがとうございます。<br></p>
+<p>今回は、Teams デスクトップ クライアントで何か問題が起きた際に、まず実施いただきたい一般的な切り分けの項目と手順をお伝えいたします。<br>ユーザーの皆様が問題に直面した際や、管理者の皆様がお問い合わせを起票いただく際に、お役立ていただけますと幸いです。<br>※ なお、ご案内する切り分けについては、すべての問題・事象にあてはまるものではないこと、予めご了承ください。</p>
+<p>「Teams デスクトップ クライアントにサインインができない」「Teams 会議に参加したら、画面共有ができなかった」等々、日々 Teams デスクトップ クライアントに関するたくさんのお問い合わせをいただきます。<br>一見同じような問題に見えても、その状況や原因については様々です。そのため、わたしたちサポートチームが迅速に調査を進めるためにも、まず問題の切り分けを行い、事象を正確に把握することが重要です。<br>ここでは、問題が発生した際に確認していただきたい事項と手順について、順番にご説明していきます！<br></p>
+<h2 id="キャッシュの削除について"><a href="#キャッシュの削除について" class="headerlink" title="キャッシュの削除について"></a>キャッシュの削除について</h2><p>Teams デスクトップ クライアントは、ネットワーク トラフィックの負荷軽減やパフォーマンス向上の観点から、一部の設定情報やデータをキャッシュ ファイルとして保持しています (よく使うデータ等をクラウドにおいておかず、端末に持っておくようなイメージです)。<br>何らかの要因でこのキャッシュ ファイルが適切に破棄/更新されなかった場合や、ファイルが破損している場合などに、Teams デスクトップ クライアントで予期しない問題が発生する場合があります。<br>そのため、Teams デスクトップ クライアントのキャッシュが影響して、問題が起きているかの切り分けのために、次の手順に従って、キャッシュを削除し、問題が改善されるかご確認ください。   </p>
+<ol>
+<li>Teams デスクトップ クライアントを完全に終了します。<br>　このとき、タスクバー上の [隠れているインジゲーターを表示します] をクリックして Teams アイコンが表示される場合には、Teams は終了していません。<br>　右クリックでメニューが表示されたら、 [終了] をクリックして、完全に終了させます。</li>
+<li>Outlook を利用している場合には、Teams と同様に Outlook も終了しておきます。</li>
+<li>Windows ＋ R キーで [ファイル名を指定して実行] を起動し、次のパスを入力して Microsoft フォルダーを開きます。<br>　“%AppData%\Microsoft”</li>
+<li>Teams フォルダーをみつけたら、削除します。</li>
+<li>再度 Teams デスクトップ クライアントを起動して問題が再び起きるか確認します。<br></li>
+</ol>
+<h2 id="問題が何度も発生するかについて"><a href="#問題が何度も発生するかについて" class="headerlink" title="問題が何度も発生するかについて"></a>問題が何度も発生するかについて</h2><p>問題が一時的なものなのか、それとも複数回あるいは毎回発生するのかについてもご確認ください。一時的な問題であった場合には、要因の特定は難しい場合があります。<br></p>
+<h2 id="問題が発生するユーザーについて"><a href="#問題が発生するユーザーについて" class="headerlink" title="問題が発生するユーザーについて"></a>問題が発生するユーザーについて</h2><p>特定のユーザーのみに発生している問題なのかを切り分けるために、現在組織でサービスをご利用しているユーザー数と、そのうち今回問題が発生しているユーザー数についてご確認ください。<br>もちろん、全ユーザーの発生状況を確認することは難しいかと思いますので、可能な範囲で具体的な状況をお知らせください。<br>例: 特定のユーザーでのみ発生している、全員ではないが複数のユーザー (X 名) で発生していることを確認している、確認した X 名のユーザーでは全員で発生していた   等<br>また、複数のユーザーで発生している場合には問題が発生しているユーザーに共通する事項等 (同じ社内ネットワークを利用している、最近 XX の設定を変えた、等々) があるかどうかもお伝えいただけますと、切り分けの参考になります。 <br></p>
+<h2 id="問題が発生する端末について"><a href="#問題が発生する端末について" class="headerlink" title="問題が発生する端末について"></a>問題が発生する端末について</h2><p>PC 端末に依存した問題かどうかを切り分けるために、問題が発生しない、正常な端末が存在するかご確認ください。<br>また、問題を確認しているユーザーが正常環境でサインインした場合に問題が発生するかどうかについても、あわせてご確認いただきますと、より詳細に切り分けを行うことが可能です。<br></p>
+<h2 id="ネットワーク環境について"><a href="#ネットワーク環境について" class="headerlink" title="ネットワーク環境について"></a>ネットワーク環境について</h2><p>ネットワーク環境に依存した問題かどうかを切り分けるために、問題を確認しているネット―ワークと異なるネットワーク (社外ネットワークや Wi-Fi 等) に接続し、アクセスした場合にも問題が改善しないかご確認ください。<br></p>
+<h2 id="ブラウザ版-Microsoft-Teams-での再現性"><a href="#ブラウザ版-Microsoft-Teams-での再現性" class="headerlink" title="ブラウザ版 Microsoft Teams での再現性"></a>ブラウザ版 Microsoft Teams での再現性</h2><p>Teams デスクトップ クライアントに依存した問題かどうかを切り分けるために、ブラウザ版の Teams を利用した場合にも問題が発生するかご確認ください。このとき、サポートされる任意のブラウザで <a href="https://teams.microsoft.com" target="_blank" rel="noopener">https://teams.microsoft.com</a> にアクセスし、問題が発生するかどうかの確認の結果と、確認に使用したブラウザの種類 (Edge, Chrome など) をお知らせください。<br>なお、ブラウザ版 Teams においては、会議等の機能がサポートされないブラウザもございますので、利用するブラウザで問題の発生している機能がサポートされているかについては、以下の公開情報をご確認ください。<br><a href="https://docs.microsoft.com/ja-jp/microsoftteams/limits-specifications-teams#browsers" target="_blank" rel="noopener">Microsoft Teams の制限事項と仕様 : ブラウザー</a> <br></p>
+<h2 id="他サービスとの連携部分について"><a href="#他サービスとの連携部分について" class="headerlink" title="他サービスとの連携部分について"></a>他サービスとの連携部分について</h2><p>Teams では他のサービスと連携して動作する機能が多数提供されています。そのため、連携先のサービスの問題か、Teams 自体の問題かを切り分ける必要がございます。<br>例えば、Teams では会話の中やファイル タブで共有されたファイルを閲覧できますが、ファイルは SharePoint Online や OneDrive for Business 上に保存されています。そのため、ファイルが閲覧できない、ファイルの状態がおかしい、といった場合には、SharePoint Online や OneDrive for Business の問題か、Teams 上でのみ発生する問題かを切り分ける必要がございます。<br>Teams 上でファイルが閲覧できない場合には、閲覧できないファイルを SharePoint Online や OneDrive for Business からも開くことができないのか、Teams 上からのみ開くことができないのか、によって調査の観点・方法が異なるため、ご確認ください。 <br></p>
+<p>今回は、一般的な問題の切り分けと確認手順についてお伝えしました。<br>わたしたちサポート チームがお問い合わせをいただいた際にも、まずは切り分けや具体的な症状・影響範囲の確認を行い、その結果に応じて、過去事例や技術情報、ログ等を用いた詳細調査を行います。<br>結果的に、早く問題を解決するためにとても重要なステップとなりますので、ぜひ本記事をご熟読いただけますと幸いです！</p>
+
+      
+      
+        <div class="article-disclaimer">
+        
+          <p>※本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。</p>
+        
+        </div>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Troubleshooting/" rel="tag">Troubleshooting</a></li></ul>
+
+        
+        <a href="https://github.com/jpucsupport/blog/edit/master/articles/teams/Teams%20の一般的なトラブルシューティング.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="../../live%20event/Teams%20Live%20%20Events%20%E5%8F%82%E8%80%83%E6%83%85%E5%A0%B1%E9%9B%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前の記事</strong>
+      <div class="article-nav-title">Live Events - Teams Live Events 参考情報集</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近の投稿</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="">Teams デスクトップ クライアントの一般的なトラブルシューティング</a>
+          </li>
+        
+          <li>
+            <a href="../../live%20event/Teams%20Live%20%20Events%20%E5%8F%82%E8%80%83%E6%83%85%E5%A0%B1%E9%9B%86/">Live Events - Teams Live Events 参考情報集</a>
+          </li>
+        
+          <li>
+            <a href="../../live%20event/Live%20Events%20Assistance%20Program%20(LEAP)%20%E3%81%AE%E3%81%94%E7%B4%B9%E4%BB%8B_0405/">Live Events Assistance Program (LEAP) のご紹介</a>
+          </li>
+        
+          <li>
+            <a href="../../information/Welcome/">Unified Communications Support チームブログへようこそ</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグ</h3>
+    <div class="widget">
+      <!-- <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Information/" rel="tag">Information</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Introduction/" rel="tag">Introduction</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Live-Events-Live-Events-Assitance-Program/" rel="tag">Live Events / Live Events Assitance Program</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Troubleshooting/" rel="tag">Troubleshooting</a></li></ul>  -->
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Information/">Information</a><span class="tag-list-count">1</span><ul></ul></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Live-Events-Live-Events-Assitance-Program/">Live Events / Live Events Assitance Program</a><span class="tag-list-count">2</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Live-Events-Live-Events-Assitance-Program/Introduction">Introduction</a><span class="tag-list-count">1</span></li></ul></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Teams/">Teams</a><span class="tag-list-count">1</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Troubleshooting">Troubleshooting</a><span class="tag-list-count">1</span></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">アーカイブ</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/04/">2021 / 04</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグクラウド</h3>
+    <div class="widget tagcloud">
+      <a href="../../tags/Information/" style="font-size: 10px;">Information</a> <a href="../../tags/Introduction/" style="font-size: 10px;">Introduction</a> <a href="../../tags/Live-Events-Live-Events-Assitance-Program/" style="font-size: 20px;">Live Events / Live Events Assitance Program</a> <a href="../../tags/Teams/" style="font-size: 10px;">Teams</a> <a href="../../tags/Troubleshooting/" style="font-size: 10px;">Troubleshooting</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 CSS Japan<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="../../index.html" class="mobile-nav-link">Home</a>
+  
+    <a href="../../archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="../../js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
