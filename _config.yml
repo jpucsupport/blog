@@ -16,6 +16,7 @@ keywords:
   - Skype for Business
   - Skype for Business Online
   - SfB
+  - Lync Server
 
 author: CSS Japan
 
@@ -26,7 +27,7 @@ root_tag_generator:
     - Teams
     - Live Events / Live Events Assitance Program
     - Skype for Business Online
-    - Skype for Business 
+    - Lync Server / Skype for Business Server 
   sub_tag_limit: 20
 
 # URL
