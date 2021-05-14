@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Teams - ユーザーの UPN を変更した場合の影響 | Japan Unified Communications Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="#　Teams - ユーザーの UPN を変更した場合の影響 こんにちは。Unified Communications サポート チームの吉井です。いつも Microsoft Teams をご利用いただきありがとうございます。今回は、よくお問合せのある、ユーザーの UPN を変更した場合の Microsoft Teams への影響についてご紹介します。 ユーザー管理において、様々なご事情でユーザー">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Teams - ユーザーの UPN を変更した場合の影響">
+<meta property="og:url" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%20UPN%20%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE%E5%BD%B1%E9%9F%BF/index.html">
+<meta property="og:site_name" content="Japan Unified Communications Support Blog">
+<meta property="og:description" content="#　Teams - ユーザーの UPN を変更した場合の影響 こんにちは。Unified Communications サポート チームの吉井です。いつも Microsoft Teams をご利用いただきありがとうございます。今回は、よくお問合せのある、ユーザーの UPN を変更した場合の Microsoft Teams への影響についてご紹介します。 ユーザー管理において、様々なご事情でユーザー">
+<meta property="og:locale" content="ja_JP">
+<meta property="article:published_time" content="2021-05-14T06:00:00.000Z">
+<meta property="article:modified_time" content="2021-05-14T08:54:25.014Z">
+<meta property="article:author" content="CSS Japan">
+<meta property="article:tag" content="Microsoft Teams">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="../../atom.xml" title="Japan Unified Communications Support Blog" type="application/atom+xml">
+  
+
+  <link rel="icon" href="../../favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="../../css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        <div id="ms-logo"></div>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+        <a class="main-nav-link" href="https://cssjpn.github.io/" target="_blank" rel="noopener">サポート情報</a>
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="../../atom.xml" title="RSSフィード"></a>
+        
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//www.bing.com/search" method="get" accept-charset="UTF-8" name="bing-search" onsubmit="var f=this;if(f['q'].value){var searchUrl =  'https://www.bing.com/search?q=' +  encodeURIComponent(f['q'].value + ' site:' + f['sitesearch'].value) ;window.open(searchUrl, 'blank') };return false;" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="検索"><button type="submit" id="nav-search-btn" class="search-form-submit"></button><input type="hidden" name="sitesearch" value="https://jpucsupport.github.io/blog"></form>
+      </div>
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="../../index.html" id="logo">Japan Unified Communications Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="../../index.html" id="subtitle">日本マイクロソフトの Teams と Skype for Business に関するサポート情報のブログです。</a>
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-teams/Teams - ユーザーの UPN を変更した場合の影響" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Teams - ユーザーの UPN を変更した場合の影響
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="" class="article-date-single">
+  <time datetime="2021-05-14T06:00:00.000Z" itemprop="datePublished">2021-05-14</time>
+</a>
+        
+        
+        <a href="https://github.com/jpucsupport/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+a8a96de3-04d9-589d-8a36-b16a3dd89e47%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BTeams+-+%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE+UPN+%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE%E5%BD%B1%E9%9F%BF%5D%28https%3A%2F%2Fjpucsupport.github.io%2Fblog%2Fteams%2FTeams%2520-%2520%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%2520UPN%2520%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE%E5%BD%B1%E9%9F%BF%2F%29%0A*+Content+Source%3A+%5Barticles%2Fteams%2FTeams+-+%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE+UPN+%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE%E5%BD%B1%E9%9F%BF.md%5D%28https%3A%2F%2Fgithub.com%2Fjpucsupport%2Fblog%2Fblob%2Fmaster%2Farticles%2Fteams%2FTeams%2520-%2520%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%2520UPN%2520%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE%E5%BD%B1%E9%9F%BF.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        
+        <a data-url="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%20UPN%20%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE%E5%BD%B1%E9%9F%BF/" data-id="ckoo33wip000b8sk45tbmadyi" class="article-share-link">共有</a>
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#　Teams - ユーザーの UPN を変更した場合の影響</p>
+<p>こんにちは。Unified Communications サポート チームの吉井です。いつも Microsoft Teams をご利用いただきありがとうございます。<br>今回は、よくお問合せのある、ユーザーの UPN を変更した場合の Microsoft Teams への影響についてご紹介します。</p>
+<p>ユーザー管理において、様々なご事情でユーザーの UPN を変更する必要があるかと存じますが、UPN は多くのサービスで利用されているため、それぞれのサービスでの影響をきちんと把握しておくことが重要になります。<br>今回は、Microsoft Teams サービスに限定して、ユーザーの UPN の変更の影響をご案内いたします。<br>ぜひユーザー管理の参考にしていただければ幸いです。<br>※ オンプレミス環境とのフェデレーションを組んでいる場合や、ゲストユーザーとして他テナントに招待されている場合などには影響範囲が異なりますことをご留意ください。<br></p>
+<p>ユーザーの UPN を変更した場合、永続的な影響と一時的な影響の 2 つがあり、それぞれ対応が必要となります。</p>
+<h3 id="永続的な影響"><a href="#永続的な影響" class="headerlink" title="永続的な影響"></a>永続的な影響</h3><h4 id="共有ファイルのリンク"><a href="#共有ファイルのリンク" class="headerlink" title="共有ファイルのリンク"></a>共有ファイルのリンク</h4><p>UPN 変更前の 1 対 1 のプライベート チャット、グループ チャットで共有したファイル (ハイパーリンク) へのアクセスが出来なくなります。</p>
+<p>Teams のチャットで共有したファイルは、共有したユーザーの OneDrive for Business の領域に保存され、共有した相手には当該ファイルへのファイルパスとアクセス権が付与される動作となります。<br>ユーザーの UPN は該当ユーザーの OneDrive for Business サイトの URL に使用されており、UPN が変更される事により、この OneDrive for Business の URL も変更されます。<br>しかしながら、既にチャット内で共有されているリンクについては、自動的に新しい URL に更新されません。<br>そのため、UPN 変更前に共有したファイルに関しては、再度共有しなおす必要があります。  </p>
+<p>＜参考情報＞<br>Title : UPN の変更が OneDrive の URL と OneDrive の機能に与える影響<br>URL : <a href="https://docs.microsoft.com/ja-jp/onedrive/upn-changes" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/onedrive/upn-changes</a>　  </p>
+<p>Title : Microsoft Teams との SharePoint Online と OneDrive for Business の連携<br>URL : <a href="https://docs.microsoft.com/ja-jp/microsoftteams/sharepoint-onedrive-interact" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/microsoftteams/sharepoint-onedrive-interact</a>　<br><br></p>
+<h3 id="一時的な影響"><a href="#一時的な影響" class="headerlink" title="一時的な影響"></a>一時的な影響</h3><p>ユーザーの UPN 変更後に、旧 UPN でサインインしていたサービスから警告が表示されることがあります。<br>その場合には、一度サインアウトし、サインインし直して警告が表示されなくなることを確認してください。<br>※ 旧 UPN で割り当て済みのライセンスの再認証は不要です。</p>
+<p>また、UPN の変更はテナントへの変更となるため、システム的な変更の反映に時間がかかる場合があります。<br>システム側での変更の反映中に、各種サービスに一時的にログインができなくなることもありますが、その場合にはしばらくお待ちいただいてから再度新 UPN でのアクセスをお試しください。<br>※ 変更の反映までに通常 24 ～ 48 時間程となりますが、サーバーの負荷状況により前後する可能性があります。</p>
+<p>UPN の変更に当たっては、各種サインイン情報のキャッシュの影響で問題が起こることもございます。<br>そのため、UPN 変更後に当該ユーザーの端末にて、キャッシュ削除および認証情報の削除を実施することをおすすめしております。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">★ キャッシュ削除および認証情報の削除方法</span><br><span class="line">1. 以下のフォルダを削除します。</span><br><span class="line">%USERPROFILE%\AppData\Roaming\Microsoft\Teams</span><br><span class="line">%LocalAppData%\Microsoft\IdentityCache </span><br><span class="line"> </span><br><span class="line">2. 資格情報マネージャーを起動します。</span><br><span class="line">3. [Windows 資格情報] 欄から、“msteams” で始まるものを削除します。</span><br><span class="line"></span><br><span class="line">4. 以下のフォルダおよびファイルを削除します。</span><br><span class="line">%LocalAppData%\Google\Chrome\User Data\Default\Cache</span><br><span class="line">%LocalAppData%\Google\Chrome\User Data\Default\Cookies</span><br><span class="line">%LocalAppData%\Google\Chrome\User Data\Default\Web Data</span><br><span class="line"></span><br><span class="line">5. PowerShell を起動して下記 2コマンドを実行します。(IE&#x2F;Edge のクッキーとインターネット一時ファイルを削除します)</span><br><span class="line">RunDll32.exe InetCpl.cpl, ClearMyTracksByProcess 8</span><br><span class="line">RunDll32.exe InetCpl.cpl, ClearMyTracksByProcess 2</span><br></pre></td></tr></table></figure>
+
+      
+      
+        <div class="article-disclaimer">
+        
+          <p>※本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。</p>
+        
+        </div>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Microsoft-Teams/" rel="tag">Microsoft Teams</a></li></ul>
+
+        
+        <a href="https://github.com/jpucsupport/blog/edit/master/articles/teams/Teams%20-%20ユーザーの%20UPN%20を変更した場合の影響.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="../Teams-Proxy/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前の記事</strong>
+      <div class="article-nav-title">Teams - メディア通信を Proxy Server 経由で接続する際の注意事項</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近の投稿</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="">Teams - ユーザーの UPN を変更した場合の影響</a>
+          </li>
+        
+          <li>
+            <a href="../Teams-Proxy/">Teams - メディア通信を Proxy Server 経由で接続する際の注意事項</a>
+          </li>
+        
+          <li>
+            <a href="../../live%20event/%E3%83%90%E3%83%83%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%20%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%20URL%20%E3%81%AE%E5%B7%AE%E3%81%97%E6%9B%BF%E3%81%88%E6%96%B9%E6%B3%95/">Live Events - バックアップ イベント URL の差し替え方法</a>
+          </li>
+        
+          <li>
+            <a href="../../live%20event/%E6%9C%AC%E7%95%AA%E3%81%A7%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%97%E3%81%9F%E6%99%82%E3%81%AE%E5%AF%BE%E5%87%A6/">Live Events - 本番でトラブルが起きたときの対処</a>
+          </li>
+        
+          <li>
+            <a href="../../live%20event/%E6%9C%AC%E7%95%AA%E3%81%BE%E3%81%A7%E3%81%AE%E6%BA%96%E5%82%99/">Live Events – 本番までの準備</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグ</h3>
+    <div class="widget">
+      <!-- <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Edge/" rel="tag">Edge</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Information/" rel="tag">Information</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Introduction/" rel="tag">Introduction</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Live-Events-Live-Events-Assitance-Program/" rel="tag">Live Events / Live Events Assitance Program</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Lync-Server-Skype-for-Business-Server/" rel="tag">Lync Server / Skype for Business Server</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Media/" rel="tag">Media</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Microsoft-Teams/" rel="tag">Microsoft Teams</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Proxy/" rel="tag">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Troubleshooting/" rel="tag">Troubleshooting</a></li></ul>  -->
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Information/">Information</a><span class="tag-list-count">1</span><ul></ul></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Lync-Server-Skype-for-Business-Server/">Lync Server / Skype for Business Server</a><span class="tag-list-count">1</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Lync-Server-Skype-for-Business-Server/Edge">Edge</a><span class="tag-list-count">1</span></li></ul></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Live-Events-Live-Events-Assitance-Program/">Live Events / Live Events Assitance Program</a><span class="tag-list-count">5</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Live-Events-Live-Events-Assitance-Program/Introduction">Introduction</a><span class="tag-list-count">1</span></li></ul></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Teams/">Teams</a><span class="tag-list-count">2</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Media">Media</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Proxy">Proxy</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Troubleshooting">Troubleshooting</a><span class="tag-list-count">1</span></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">アーカイブ</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/05/">2021 / 05</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/04/">2021 / 04</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグクラウド</h3>
+    <div class="widget tagcloud">
+      <a href="../../tags/Edge/" style="font-size: 10px;">Edge</a> <a href="../../tags/Information/" style="font-size: 10px;">Information</a> <a href="../../tags/Introduction/" style="font-size: 10px;">Introduction</a> <a href="../../tags/Live-Events-Live-Events-Assitance-Program/" style="font-size: 20px;">Live Events / Live Events Assitance Program</a> <a href="../../tags/Lync-Server-Skype-for-Business-Server/" style="font-size: 10px;">Lync Server / Skype for Business Server</a> <a href="../../tags/Media/" style="font-size: 10px;">Media</a> <a href="../../tags/Microsoft-Teams/" style="font-size: 10px;">Microsoft Teams</a> <a href="../../tags/Proxy/" style="font-size: 10px;">Proxy</a> <a href="../../tags/Teams/" style="font-size: 15px;">Teams</a> <a href="../../tags/Troubleshooting/" style="font-size: 10px;">Troubleshooting</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 CSS Japan<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="../../index.html" class="mobile-nav-link">Home</a>
+  
+    <a href="../../archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="../../js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
