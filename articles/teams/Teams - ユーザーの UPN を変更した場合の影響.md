@@ -4,7 +4,7 @@ date: 2021-5-14 15:00:00
 tags:
   - Microsoft Teams 
 ---
-#　Teams - ユーザーの UPN を変更した場合の影響
+# Teams - ユーザーの UPN を変更した場合の影響
 
 こんにちは。Unified Communications サポート チームの吉井です。いつも Microsoft Teams をご利用いただきありがとうございます。 
 今回は、よくお問合せのある、ユーザーの UPN を変更した場合の Microsoft Teams への影響についてご紹介します。
