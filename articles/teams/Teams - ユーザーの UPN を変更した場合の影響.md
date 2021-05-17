@@ -63,3 +63,6 @@ UPN の変更に当たっては、各種サインイン情報のキャッシュ�
 RunDll32.exe InetCpl.cpl, ClearMyTracksByProcess 8
 RunDll32.exe InetCpl.cpl, ClearMyTracksByProcess 2
 ```
+
+今回ご案内した内容は、一般的な構成をもとにしたものとなっており、オンプレミス環境とのフェデレーションを組んでいる場合には、影響範囲が異なります。
+また、UPN の変更はユーザー情報全体に影響があるため、Azure AD 観点での確認も必要となります。十分に影響範囲を検討のうえ、UPN の変更を実施いただきますようお願いいたします。
