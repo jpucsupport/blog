@@ -1,6 +1,6 @@
 ---
 title: Microsoft Teams クライアントの種類
-date: 2021-07-07 17:30:00
+date: 2021-07-20 17:00:00
 tags:
  - Teams
  - Windows
@@ -44,17 +44,17 @@ Windows 環境で Teams アプリケーションをインストールする手�
 - <a name="EXE">**EXE 版**</a>  
   - **概要**  
     管理者権限が不要なため、ユーザー自身で容易にインストールが可能です。インストール完了とともに Teams が起動し、既定で自動起動が有効化されます。  
-  
+
   - **インストール先**  
     ユーザープロファイル配下の以下フォルダに展開されます。  
-    ```%LocalAppData%\Microsoft\Teams```  
+    > %LocalAppData%\Microsoft\Teams  
   
   - **アンインストール**  
     コントロールパネルのプログラムと機能では、以下の名前で登録されてアンインストールが可能です。アンインストールについてもユーザーごとに実施する必要があります。  
-    ```Microsoft Teams```  
+    > Microsoft Teams  
 
     コマンドで削除する場合は以下となります。  
-    ```%LocalAppData%\Microsoft\Teams\Update.exe --uninstall -s```  
+    > %LocalAppData%\Microsoft\Teams\Update.exe --uninstall -s  
   
   - **アップデート**  
     Windows Update を利用しておらず、Teams の実装によりアップデートが自動的に実施されます。現時点では管理者によるバージョン管理機能は提供されていません。  
@@ -66,29 +66,22 @@ Windows 環境で Teams アプリケーションをインストールする手�
   
   - **インストール先**  
     ユーザープロファイル配下の以下フォルダに展開されます。  
-    ```
-    [32bit OS]
-    %ProgramFiles%\Teams Installer
-
-    [64bit OS]
-    %ProgramFiles(x86)%\Teams Installer
-    ```
+    - [32bit OS]  
+      > %ProgramFiles%\Teams Installer  
+    - [64bit OS]  
+      > %ProgramFiles(x86)%\Teams Installer  
 
   - **アンインストール**  
     コントロールパネルのプログラムと機能では、以下の名前で登録されてアンインストールが可能です。既定では、アンインストールは MSI のインストールを実施したユーザーのみが実施できます。全ユーザーに Teams Machine-Wide Installer が表示され、アンインストールを可能にするためにはインストール時にオプションを指定する必要があります。  
-    ```Teams Machine-Wide Installer```  
+    > Teams Machine-Wide Installer  
 
     コマンドで削除する場合は以下となり、管理者権限で実行する必要があります。今後のバージョンアップによって ID が変わる可能性もあるため、あらかじめ PowerShell のコマンドで ID を確認してください。  
-    ```
-    [ID 確認用 PowerShell コマンド]
-    Get-WmiObject Win32_Product | where {$_.name -like "*Teams*"} | Format-List
-
-    [32bit 版]
-    msiexec /X"{39AF0813-FA7B-4860-ADBE-93B9B214B914}" /qn
-
-    [64bit 版]
-    msiexec /X"{731F6BAA-A986-45A4-8936-7C3AAAAA760B}" /qn
-    ```
+    - [ID 確認用 PowerShell コマンド]  
+      > Get-WmiObject Win32_Product | where {$_.name -like "*Teams*"} | Format-List  
+    - [32bit 版]  
+      > msiexec /X"{39AF0813-FA7B-4860-ADBE-93B9B214B914}" /qn  
+    - [64bit 版]  
+      > msiexec /X"{731F6BAA-A986-45A4-8936-7C3AAAAA760B}" /qn  
 
     MSI 版をアンインストールすると、各ユーザーに展開されている Teams のアンインストールも実施されます。MSI のアンインストールを実行したユーザー以外は、ユーザーが次回サインインしたタイミングでアンインストールが実施されます。  
 
@@ -98,41 +91,33 @@ Windows 環境で Teams アプリケーションをインストールする手�
   - **インストールオプション**  
     MSI 版はインストール時に次のオプションを指定することが可能です。  
 
-    >```OPTIONS="noAutoStart=true"```  
-    > ユーザーがサインインした際に Teams の展開は実施しますが、展開後の自動起動を無効化します。ユーザーはデスクトップ上に作成される Teams アイコンから起動する必要があり、一度起動すると以降は自動起動が有効化されます。このオプションを利用するためには、MSI 版のインストーラーを管理者として実行する必要があります。  
-
-    >```ALLUSERS=1```  
-    > 既定ではプログラムと機能に Teams Machine-Wide Installer が表示され、アンインストールを実施できるユーザーはインストールしたユーザーのみとなります。このオプションを指定することで、管理者権限を持つ全てのユーザーで Teams Machine-Wide Installer が表示されてアンインストールが可能となります。  
-
-    >```ALLUSER=1```  
-    > Azure Virtual Desktopや、Citrix 社、VMWare 社から提供される VDI 環境にインストールする際に利用できるオプションです。VDI 環境以外で指定するとインストールが失敗します。（VDI に関しては別途記載）  
+    - OPTIONS="noAutoStart=true"  
+      > ユーザーがサインインした際に Teams の展開は実施しますが、展開後の自動起動を無効化します。ユーザーはデスクトップ上に作成される Teams アイコンから起動する必要があり、一度起動すると以降は自動起動が有効化されます。このオプションを利用するためには、MSI 版のインストーラーを管理者として実行する必要があります。  
+    - ALLUSERS=1  
+      > 既定ではプログラムと機能に Teams Machine-Wide Installer が表示され、アンインストールを実施できるユーザーはインストールしたユーザーのみとなります。このオプションを指定することで、管理者権限を持つ全てのユーザーで Teams Machine-Wide Installer が表示されてアンインストールが可能となります。  
+    - ALLUSER=1  
+      > Azure Virtual Desktopや、Citrix 社、VMWare 社から提供される VDI 環境にインストールする際に利用できるオプションです。VDI 環境以外で指定するとインストールが失敗します。（VDI に関しては別途記載）  
 
     オプションを指定してインストールする際の実行例を以下に示します。
-    ```
-    [32bit 版]
-    msiexec /i Teams_windows.msi OPTIONS="noAutoStart=true" ALLUSERS=1
-
-    [64bit 版]
-    msiexec /i Teams_windows_x64.msi OPTIONS="noAutoStart=true" ALLUSERS=1
-    ```
+    - [32bit 版]  
+      > msiexec /i Teams_windows.msi OPTIONS="noAutoStart=true" ALLUSERS=1  
+    - [64bit 版]  
+      > msiexec /i Teams_windows_x64.msi OPTIONS="noAutoStart=true" ALLUSERS=1  
 
   - **展開後の自動起動の無効化**  
     OPTIONS="noAutoStart=true" オプションと同様に、GPO でポリシーを配布することで自動起動を無効化することができます。以下よりテンプレートを取得して、Teams のポリシーを配布します。  
     [https://www.microsoft.com/en-us/download/details.aspx?id=49030](https://www.microsoft.com/en-us/download/details.aspx?id=49030)  
-    ```
-    [ユーザーの構成]
-      + [ポリシー]
-          + [管理用テンプレート]
-              + [Microsoft Teams]
-                  + [インストール後に Microsoft Teams が自動的に起動しないようにする] => 有効
-    ```  
+    - [ユーザーの構成]  
+      - [ポリシー]  
+        - [管理用テンプレート]  
+          - [Microsoft Teams]  
+            - [インストール後に Microsoft Teams が自動的に起動しないようにする] => 有効  
+
     レジストリの追加で対応することも可能ですが、ユーザーごとに設定する必要がある点にご注意ください。（HKLM 配下のレジストリは用意されていません。）
-    ```
-    レジストリ：HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Office\16.0\Teams
-    値の名前　：PreventFirstLaunchAfterInstall
-    値の種類　：REG_DWORD
-    値　　　　：1
-    ```
+    - レジストリ：HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Office\16.0\Teams  
+    - 値の名前　：PreventFirstLaunchAfterInstall  
+    - 値の種類　：REG_DWORD  
+    - 値　　　　：1  
 
   - **sysprep 実施時の注意事項**  
     展開用のマスターイメージを作成するなどで sysprep による一般化を実施する場合、MSI 版のインストール後に OS のサインアウト/サインインを実施せずに sysprep を実行してください。インストール時のアカウントなどに Teams 本体が展開された状態で sysprep を実行すると、Outlook との連携などで問題が発生する可能性があります。  
@@ -143,18 +128,15 @@ Windows 環境で Teams アプリケーションをインストールする手�
 
   - **インストール**  
     インストールされる Teams は、MSI 版と同じものとなります。ただし、単体の MSI 版インストーラーの様にインストール時にオプションを指定することができません。sysyprep などの関係で MSI 版 Teams を個別にインストールしたい場合、以下サンプルの xml ファイルを用いて、Office 展開ツールによりインストールすることで Teams を除外することができます。  
-
-    ```xml
-    <Configuration>
-       <Add Version="MatchInstalled">
-          <Product ID="O365ProPlusRetail">
-           <Language ID="MatchInstalled" TargetProduct="All" />
-           <ExcludeApp ID="Teams" />
-          </Product>
-       </Add>
-       <Display Level="None" />
-    </Configuration>
-    ```  
+    > \<Configuration>  
+    > \<Add Version="MatchInstalled">  
+    > \<Product ID="O365ProPlusRetail">  
+    > \<Language ID="MatchInstalled" TargetProduct="All" />  
+    > \<ExcludeApp ID="Teams" />  
+    > \</Product>  
+    > \</Add>  
+    > \<Display Level="None" />  
+    > \</Configuration>  
 
   - **アンインストール**  
     Microsoft 365 Apps をアンインストールすると、Teams Machine-Wide Installer も同時にアンインストールされます。ユーザーごとに展開されている Teams 本体に関しては、Microsoft 365 Apps アンインストール後に初めてサインインしたタイミングで削除されます。
@@ -185,31 +167,25 @@ Windows 環境で Teams アプリケーションをインストールする手�
 
   - **ユーザーごとのインストール(永続環境のみ)**  
     通常どおりのインストールとなり、ユーザーごとに Teams 本体が展開されます。  
-    ```
-    msiexec /i <path_to_msi> /l*v <install_logfile_name> ALLUSERS=1
-    ```
+    > msiexec /i <path_to_msi> /l*v <install_logfile_name> ALLUSERS=1  
 
   - **マシンごとのインストール(永続環境/非永続環境)**  
     マシンごとのインストールは VDI 環境でのみサポートされており、AVD の場合は以下コマンドによりレジストリを追加しておく必要があります。Citrix 社と VMWare 社の VDI については両者から提示されているドキュメントに従ってください。
-    ```
-    reg add "HKLM\SOFTWARE\Microsoft\Teams" /v IsWVDEnvironment /t REG_DWORD /d 1 /f
-    ```
-    ALLUSER=1 オプションを指定することによりマシンごとのインストールとなります。上記レジストリが登録されていないなど、VDI 環境であることを検出できない場合はエラーメッセージが表示されてインストールは失敗します。
-    ```
-    msiexec /i <path_to_msi> /l*v <install_logfile_name> ALLUSER=1 ALLUSERS=1
-    ```
-    マシンごとのインストールを実施した場合、Teams 本体はユーザープロファイルではなく以下のフォルダに展開されます。
-    ```
-    [32bit OS]
-    %ProgramFiles%\Microsoft\Teams
-    %ProgramFiles%\Microsoft\TeamsMeetingAddin
-    %ProgramFiles%\Microsoft\TeamsPresenceAddin
+    > reg add "HKLM\SOFTWARE\Microsoft\Teams" /v IsWVDEnvironment /t REG_DWORD /d 1 /f  
 
-    [64bit OS]
-    %ProgramFiles(x86)%\Microsoft\Teams
-    %ProgramFiles(x86)%\Microsoft\TeamsMeetingAddin
-    %ProgramFiles(x86)%\Microsoft\TeamsPresenceAddin
-    ```
+    ALLUSER=1 オプションを指定することによりマシンごとのインストールとなります。上記レジストリが登録されていないなど、VDI 環境であることを検出できない場合はエラーメッセージが表示されてインストールは失敗します。
+    > msiexec /i <path_to_msi> /l*v <install_logfile_name> ALLUSER=1 ALLUSERS=1  
+
+    マシンごとのインストールを実施した場合、Teams 本体はユーザープロファイルではなく以下のフォルダに展開されます。  
+    - [32bit OS]  
+      > %ProgramFiles%\Microsoft\Teams  
+      > %ProgramFiles%\Microsoft\TeamsMeetingAddin  
+      > %ProgramFiles%\Microsoft\TeamsPresenceAddin  
+
+    - [64bit OS]  
+      > %ProgramFiles(x86)%\Microsoft\Teams  
+      > %ProgramFiles(x86)%\Microsoft\TeamsMeetingAddin  
+      > %ProgramFiles(x86)%\Microsoft\TeamsPresenceAddin  
 
 - **マシンごとのインストールに関する注意事項**  
 
@@ -224,14 +200,12 @@ Windows 環境で Teams アプリケーションをインストールする手�
 
   - **キャッシュフォルダの同期について**  
     非永続環境において Teams を適切に動作させるためには、プロファイルキャッシュマネージャーにより以下のフォルダを同期する必要があります。  
-    ```
-    C:\Users\username\AppData\Local\Microsoft\IdentityCache (%localAppdata%\Microsoft\IdentityCache)
-    C:\Users\username\AppData\Roaming\Microsoft\Teams (%appdata%\Microsoft\Teams)
-    ```
+    - C:\Users\username\AppData\Local\Microsoft\IdentityCache (%localAppdata%\Microsoft\IdentityCache)  
+    - C:\Users\username\AppData\Roaming\Microsoft\Teams (%appdata%\Microsoft\Teams)  
+
     ただし、%appdata%/Microsoft/Teams フォルダに含まれる以下のファイル、フォルダについては同期対象から除外して最適化することが可能です。  
-    ```
-    - 拡張子が ".txt" のファイル
-    - media-stack (%appdata%\Microsoft\Teams\media-stack) フォルダ
-    - meeting-addin\Cache (%appdata%\Microsoft\Teams\meeting-addin\Cache）フォルダ
-    ```
+    - 拡張子が ".txt" のファイル  
+    - media-stack (%appdata%\Microsoft\Teams\media-stack) フォルダ  
+    - meeting-addin\Cache (%appdata%\Microsoft\Teams\meeting-addin\Cache）フォルダ  
+
     キャッシュファイルはトラブルシュート等の目的において削除いただくことは問題ありませんが、常に削除されると再作成によるディスクやネットワークの I/O 増加が懸念されます。その結果、Teams のパフォーマンス低下や予期しない問題の発生につながる可能性もございます。また、ネットワーク上の共有フォルダへのフォルダリダイレクトについても、キャッシュファイルへのアクセス遅延の要因となり問題が発生しますので、現時点ではサポート外となりますのでご注意ください。  
