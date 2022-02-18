@@ -47,7 +47,3 @@ Windows Server 2012 において、Winhttp を使用する通信を TLS 1.2 に�
 この問題は、以下の OS では発生しません。既定で Winhttp が TLS 1.2 に対応しています。
 - Windows 8.1 以降
 - Windows Server 2012 R2 以降
-
-
-### 関連情報
-[Proxy 環境で、Teams の Powershell 2.0.0 以降の Teams Powershell で Get-csOnlineUser などの YYY-csXXX のコマンドを実行する場合、Winhttp 側への Proxy 設定が必要](URL)
