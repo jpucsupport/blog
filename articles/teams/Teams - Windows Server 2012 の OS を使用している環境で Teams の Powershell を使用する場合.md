@@ -1,12 +1,12 @@
 ---------------------------
-title: Windows Server 2012 の OS を使用している環境で、Teams の Powershell を使用する場合には、Winhttp の TLS1.2 対応の修正プログラムが必要
-date: 2021-02-03 00:00:00
+title: Teams - Windows Server 2012 の OS を使用している環境で Teams の Powershell を使用する場合
+date: 2021-03-15 00:00:00
 tags:
   - Teams
   - PowerShell
 ---------------------------
 
-# Windows Server 2012 の OS を使用している環境で、Teams の Powershell を使用する場合には、Winhttp の TLS1.2 対応の修正プログラムが必要
+# Teams - Windows Server 2012 の OS を使用している環境で Teams の Powershell を使用する場合
 
 こんにちは。Unified Communications サポート チームです。
 いつも Microsoft Teams をご利用いただきありがとうございます。

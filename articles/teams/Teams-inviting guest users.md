@@ -2,7 +2,7 @@
 title: Teams - ゲスト ユーザーを招待した際の動作
 date: 2021-7-5 15:00:00
 tags:
-  - Microsoft Teams 
+  - Teams 
   - Guest User 
 ---
 
