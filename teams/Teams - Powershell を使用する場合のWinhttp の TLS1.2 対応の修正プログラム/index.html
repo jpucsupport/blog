@@ -4,19 +4,20 @@
   <meta charset="utf-8">
   
   
-  <title>Live Events - Teams Live Events 参考情報集 | Japan Unified Communications Support Blog</title>
+  <title>Windows Server 2012 の OS を使用している環境で、Teams の Powershell を使用する場合には、Winhttp の TLS1.2 対応の修正プログラムが必要 | Japan Unified Communications Support Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="こんにちは。いつも Microsoft Teams をご利用いただきありがとうございます。Live Events Assistance Program (LEAP) 担当です。今回は、ライブイベントを実施する際に、参考となる資料をご案内いたします。ご利用シーン別のマニュアルもご用意しておりますので、ぜひ参考にしてください。 動画ライブイベントの作成からイベント終了後のフォローまでを動画でまとめた資">
+  <meta name="description" content="こんにちは。Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。 Windows Server 2012 の OS を使用している環境に、Teams の Powershell を使用し、サインイン後に、Get-Team などは正常に実行できますが、Get-CsOnlineUser などの YY-CsXXX">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Live Events - Teams Live Events 参考情報集">
-<meta property="og:url" content="https://jpucsupport.github.io/blog/live%20event/Teams%20Live%20%20Events%20%E5%8F%82%E8%80%83%E6%83%85%E5%A0%B1%E9%9B%86/index.html">
+<meta property="og:title" content="Windows Server 2012 の OS を使用している環境で、Teams の Powershell を使用する場合には、Winhttp の TLS1.2 対応の修正プログラムが必要">
+<meta property="og:url" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Powershell%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AEWinhttp%20%E3%81%AE%20TLS1.2%20%E5%AF%BE%E5%BF%9C%E3%81%AE%E4%BF%AE%E6%AD%A3%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0/index.html">
 <meta property="og:site_name" content="Japan Unified Communications Support Blog">
-<meta property="og:description" content="こんにちは。いつも Microsoft Teams をご利用いただきありがとうございます。Live Events Assistance Program (LEAP) 担当です。今回は、ライブイベントを実施する際に、参考となる資料をご案内いたします。ご利用シーン別のマニュアルもご用意しておりますので、ぜひ参考にしてください。 動画ライブイベントの作成からイベント終了後のフォローまでを動画でまとめた資">
+<meta property="og:description" content="こんにちは。Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。 Windows Server 2012 の OS を使用している環境に、Teams の Powershell を使用し、サインイン後に、Get-Team などは正常に実行できますが、Get-CsOnlineUser などの YY-CsXXX">
 <meta property="og:locale" content="ja_JP">
-<meta property="article:published_time" content="2021-04-06T06:00:00.000Z">
+<meta property="article:published_time" content="2021-02-02T15:00:00.000Z">
 <meta property="article:modified_time" content="2022-03-15T03:01:29.509Z">
 <meta property="article:author" content="CSS Japan">
-<meta property="article:tag" content="Live Events &#x2F; Live Events Assitance Program">
+<meta property="article:tag" content="Teams">
+<meta property="article:tag" content="PowerShell">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="../../atom.xml" title="Japan Unified Communications Support Blog" type="application/atom+xml">
@@ -79,7 +80,7 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-live event/Teams Live  Events 参考情報集" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-teams/Teams - Powershell を使用する場合のWinhttp の TLS1.2 対応の修正プログラム" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     
@@ -88,7 +89,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Live Events - Teams Live Events 参考情報集
+      Windows Server 2012 の OS を使用している環境で、Teams の Powershell を使用する場合には、Winhttp の TLS1.2 対応の修正プログラムが必要
     </h1>
   
 
@@ -96,46 +97,37 @@
       <div class="article-share">
         Last Update: 
         <a href="" class="article-date-single">
-  <time datetime="2021-04-06T06:00:00.000Z" itemprop="datePublished">2021-04-06</time>
+  <time datetime="2021-02-02T15:00:00.000Z" itemprop="datePublished">2021-02-03</time>
 </a>
         
         
-        <a href="https://github.com/jpucsupport/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+bd769d47-2b55-540d-b99c-0276ffcbd179%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BLive+Events+-+Teams+Live+Events+%E5%8F%82%E8%80%83%E6%83%85%E5%A0%B1%E9%9B%86%5D%28https%3A%2F%2Fjpucsupport.github.io%2Fblog%2Flive%2520event%2FTeams%2520Live%2520%2520Events%2520%E5%8F%82%E8%80%83%E6%83%85%E5%A0%B1%E9%9B%86%2F%29%0A*+Content+Source%3A+%5Barticles%2Flive+event%2FTeams+Live++Events+%E5%8F%82%E8%80%83%E6%83%85%E5%A0%B1%E9%9B%86.md%5D%28https%3A%2F%2Fgithub.com%2Fjpucsupport%2Fblog%2Fblob%2Fmaster%2Farticles%2Flive%2520event%2FTeams%2520Live%2520%2520Events%2520%E5%8F%82%E8%80%83%E6%83%85%E5%A0%B1%E9%9B%86.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        <a href="https://github.com/jpucsupport/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+58dd910f-2cf0-5e8c-9c15-ab3073acca2b%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BWindows+Server+2012+%E3%81%AE+OS+%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E7%92%B0%E5%A2%83%E3%81%A7%E3%80%81Teams+%E3%81%AE+Powershell+%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AB%E3%81%AF%E3%80%81Winhttp+%E3%81%AE+TLS1.2+%E5%AF%BE%E5%BF%9C%E3%81%AE%E4%BF%AE%E6%AD%A3%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%8C%E5%BF%85%E8%A6%81%5D%28https%3A%2F%2Fjpucsupport.github.io%2Fblog%2Fteams%2FTeams%2520-%2520Powershell%2520%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AEWinhttp%2520%E3%81%AE%2520TLS1.2%2520%E5%AF%BE%E5%BF%9C%E3%81%AE%E4%BF%AE%E6%AD%A3%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%2F%29%0A*+Content+Source%3A+%5Barticles%2Fteams%2FTeams+-+Powershell+%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AEWinhttp+%E3%81%AE+TLS1.2+%E5%AF%BE%E5%BF%9C%E3%81%AE%E4%BF%AE%E6%AD%A3%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0.md%5D%28https%3A%2F%2Fgithub.com%2Fjpucsupport%2Fblog%2Fblob%2Fmaster%2Farticles%2Fteams%2FTeams%2520-%2520Powershell%2520%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AEWinhttp%2520%E3%81%AE%2520TLS1.2%2520%E5%AF%BE%E5%BF%9C%E3%81%AE%E4%BF%AE%E6%AD%A3%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpucsupport.github.io/blog/live%20event/Teams%20Live%20%20Events%20%E5%8F%82%E8%80%83%E6%83%85%E5%A0%B1%E9%9B%86/" data-id="cl0rjsvhk00059kqg1lmydeog" class="article-share-link">共有</a>
+        <a data-url="https://jpucsupport.github.io/blog/teams/Teams%20-%20Powershell%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AEWinhttp%20%E3%81%AE%20TLS1.2%20%E5%AF%BE%E5%BF%9C%E3%81%AE%E4%BF%AE%E6%AD%A3%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0/" data-id="cl0rjsvhr000c9kqgh19pbv6j" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>こんにちは。<br>いつも Microsoft Teams をご利用いただきありがとうございます。<br>Live Events Assistance Program (LEAP) 担当です。<br><br>今回は、ライブイベントを実施する際に、参考となる資料をご案内いたします。<br>ご利用シーン別のマニュアルもご用意しておりますので、ぜひ参考にしてください。</p>
-<h2 id="動画"><a href="#動画" class="headerlink" title="動画"></a>動画</h2><p>ライブイベントの作成からイベント終了後のフォローまでを動画でまとめた資料となります。<br>1 本 2 分程度の動画となっておりますので、クイックに確認いただけます。</p>
+        <p>こんにちは。Unified Communications サポート チームです。<br>いつも Microsoft Teams をご利用いただきありがとうございます。</p>
+<p>Windows Server 2012 の OS を使用している環境に、Teams の Powershell を使用し、サインイン後に、Get-Team などは正常に実行できますが、Get-CsOnlineUser などの YY-CsXXXXXX のコマンドを実行すると、以下のようなエラーが発生する場合がございます。</p>
+<p>■ エラーメッセージ例 （以下は 2.3.1 の Teams Powershell での実行した場合のエラー）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Get-CsOnlineSession : リモート サーバー api.interfaces.records.teams.microsoft.com への接続に失敗し、次のエラー メッセージが返されました: WinRM クライアントは、サーバー名を解決できないため、要求を処理できません。詳細については、about_Remote_Troubleshooting のヘルプ トピックを参照してください。</span><br><span class="line">発生場所 C:\Program Files\WindowsPowerShell\Modules\MicrosoftTeams\2.3.1\net472\SfBORemotePowershellModule.psm1:63 文字:22</span><br><span class="line">+     $remoteSession &#x3D; &amp; (Get-CsOnlineSessionCommand)</span><br><span class="line">+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span><br><span class="line">    + CategoryInfo          : NotSpecified: (:) [Get-CsOnlineSession],PSRemotingTransportException</span><br><span class="line">    + FullyQualifiedErrorId : PSRemotingTransportException,Microsoft.Teams.ConfigApi.Cmdlets.GetCsOnlineSession</span><br><span class="line"></span><br><span class="line">Invoke-Command : パラメーター &#39;Session の引数を確認できません。引数が null または空です。null または空でない引数を指定して、コマンドを再度実行してください。</span><br><span class="line">発生場所 C:\Program Files\WindowsPowerShell\Modules\MicrosoftTeams\2.3.1\net472\SfBORemotePowershellModule.psm1:9490 文字:38</span><br><span class="line">+ ...    -Session (Get-PSImplicitRemotingSession -CommandName &#39;Get-CsOnline ...</span><br><span class="line">+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span><br><span class="line">    + CategoryInfo          : InvalidData: (:) [Invoke-Command]、ParentContainsErrorRecordException</span><br></pre></td></tr></table></figure>
+
+<h3 id="原因について"><a href="#原因について" class="headerlink" title="原因について"></a>原因について</h3><p>本事象ですが、以下の要因で発生します。</p>
 <ul>
-<li><p><a href="https://www.youtube.com/watch?v=ohluztrdCrQ" target="_blank" rel="noopener">Microsoft Teams ライブイベントの使い方 Part 1（事前設定編）</a></p>
-</li>
-<li><p><a href="https://www.youtube.com/watch?v=y3o-SUuwO-k" target="_blank" rel="noopener">Microsoft Teams ライブイベントの使い方 Part 2（本番当日準備編）</a></p>
-</li>
-<li><p><a href="https://www.youtube.com/watch?v=06O26UsA7dY" target="_blank" rel="noopener">Microsoft Teams ライブイベントの使い方 Part 3（本番実施編）</a></p>
-</li>
-<li><p><a href="https://www.youtube.com/watch?v=i6ljXgH6uXk" target="_blank" rel="noopener">Microsoft Teams ライブイベントの使い方 Part 4（事後編）</a></p>
-</li>
+<li>Teams の Powershell のバージョンが 2.0.0 以降では、Teams 系のコマンドと Skype for Business 系のコマンドの 2 種類が含まれております。Teams 系のコマンドは通常のプロキシ設定を使用いたしますが、Skype for Business 系のコマンドは、Winhttp を使用するようになっております。</li>
+<li>Windows Server 2012 の場合、既定では Winhttp は TLS 1.2 に対応しておりません。</li>
+<li>現在 Microsoft 365 サービスへの接続には、TLS 1.2 で接続できる必要があります。</li>
 </ul>
-<h2 id="資料"><a href="#資料" class="headerlink" title="資料"></a>資料</h2><ul>
-<li><p><a href="https://aka.ms/TeamsOnlineEvent_Japanese3" target="_blank" rel="noopener">Teams でオンラインイベントを開催しよう (PDF 5.07 MB)</a> ※ URL にアクセスすると PDF のダウンロードが始まります。<br>実際の Teams 上の画面をもとに、各機能の説明や設定の比較をした資料になります。</p>
-</li>
-<li><p><a href="https://www.microsoft.com/ja-jp/biz/education/gigaschool-make-good-use.aspx" target="_blank" rel="noopener">ライブイベントのシーン別配信方法</a><br>学校での利用シーン別の配信方法をまとめたものですが、実際の機材・設定例の記載がございます。会場で開催しているイベントをカメラ機材で配信するなど、類似のシチュエーションでの配信をご希望の方はぜひご活用ください。</p>
-</li>
-</ul>
-<h2 id="公開情報"><a href="#公開情報" class="headerlink" title="公開情報"></a>公開情報</h2><p>ライブイベントを開催する際に参考となる公開情報となります。ライブイベントの詳細な設定の内容や比較などを盛り込んだ、比較的細かい内容となっております。</p>
+<p>上述のため、Windows Server 2012 上で Teams の Powershell 2.0.0 以降を使用した場合に、Skype for Business 系のコマンドだけが TLS 1.2 の通信ができないため、コマンドの実行が失敗します。</p>
+<h3 id="対処策について"><a href="#対処策について" class="headerlink" title="対処策について"></a>対処策について</h3><p>Windows Server 2012 において、Winhttp を使用する通信を TLS 1.2 に対応できるように更新していただくことで対処可能です。以下にアクセスしていただき、更新プログラムを適用してください。</p>
+<p><a href="https://support.microsoft.com/ja-jp/topic/windows-%E3%81%AE-winhttp-%E3%81%A7-tls-1-1-%E3%81%8A%E3%82%88%E3%81%B3-tls-1-2-%E3%82%92%E6%97%A2%E5%AE%9A%E3%81%AE%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3-%E3%81%A7%E4%BF%9D%E8%AD%B7%E3%81%95%E3%82%8C%E3%81%9F%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%81%97%E3%81%A6%E6%9C%89%E5%8A%B9%E3%81%AB%E3%81%99%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E6%9B%B4%E6%96%B0%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0-c4bd73d2-31d7-761e-0178-11268bb10392" target="_blank" rel="noopener">Windows の WinHTTP で TLS 1.1 および TLS 1.2 を既定のセキュリティ で保護されたプロトコルとして有効にするための更新プログラム</a></p>
+<h3 id="補足"><a href="#補足" class="headerlink" title="補足"></a>補足</h3><p>この問題は、以下の OS では発生しません。既定で Winhttp が TLS 1.2 に対応しています。</p>
 <ul>
-<li><p><a href="https://support.microsoft.com/ja-jp/office/e500370e-4dd1-4187-8b48-af10ef02cf42?ui=ja-jp&rs=ja-jp&ad=jp" target="_blank" rel="noopener">Teams live イベントを生成するためのベストプラクティス</a></p>
-</li>
-<li><p><a href="https://support.microsoft.com/ja-jp/office/d077fec2-a058-483e-9ab5-1494afda578a?ui=ja-jp&rs=ja-jp&ad=jp" target="_blank" rel="noopener">Microsoft Teams ライブ イベントの使用を開始する</a></p>
-</li>
-<li><p><a href="https://docs.microsoft.com/ja-jp/microsoftteams/teams-live-events/plan-for-teams-live-events" target="_blank" rel="noopener">Microsoft Teams でのライブ イベントの計画</a></p>
-</li>
+<li>Windows 8.1 以降</li>
+<li>Windows Server 2012 R2 以降</li>
 </ul>
-<p>これらの資料は一般的なライブイベントを開催する前に知っておいた方がよい内容となります。実際のライブイベントでは、より多彩なご要望があるかと存じます。お客様固有のご要望に対しては、Live Events Assistance Program にてご支援しております。</p>
-<h3 id="お気軽に-Live-Events-Assistance-Program-までご連絡ください。"><a href="#お気軽に-Live-Events-Assistance-Program-までご連絡ください。" class="headerlink" title="お気軽に Live Events Assistance Program までご連絡ください。"></a>お気軽に <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRyDjDy_PXI5OtUv8Q_mW3a5UOUZYOTg2TjZMQzRSWTFUVFU4S0YyT1dORiQlQCN0PWcu" target="_blank" rel="noopener">Live Events Assistance Program</a> までご連絡ください。</h3>
+
       
       
         <div class="article-disclaimer">
@@ -148,10 +140,10 @@
     <footer class="article-footer">
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Live-Events-Live-Events-Assitance-Program/" rel="tag">Live Events / Live Events Assitance Program</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/PowerShell/" rel="tag">PowerShell</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li></ul>
 
         
-        <a href="https://github.com/jpucsupport/blog/edit/master/articles/live%20event/Teams%20Live%20%20Events%20参考情報集.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        <a href="https://github.com/jpucsupport/blog/edit/master/articles/teams/Teams%20-%20Powershell%20を使用する場合のWinhttp%20の%20TLS1.2%20対応の修正プログラム.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
         
     </footer>
   </div>
@@ -159,20 +151,15 @@
     
 <nav id="article-nav">
   
-    <a href="../../teams/Teams%20%E3%81%AE%E4%B8%80%E8%88%AC%E7%9A%84%E3%81%AA%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="../../information/Welcome/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">次の記事</strong>
       <div class="article-nav-title">
         
-          Teams デスクトップ クライアントの一般的なトラブルシューティング
+          Unified Communications Support チームブログへようこそ
         
       </div>
     </a>
   
-  
-    <a href="../Live%20Events%20Assistance%20Program%20(LEAP)%20%E3%81%AE%E3%81%94%E7%B4%B9%E4%BB%8B_0405/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">前の記事</strong>
-      <div class="article-nav-title">Live Events Assistance Program (LEAP) のご紹介</div>
-    </a>
   
 </nav>
 
@@ -190,23 +177,23 @@
       <ul>
         
           <li>
-            <a href="../../teams/Teams%20%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%81%A7%E3%81%AE%E3%83%A9%E3%82%A4%E3%83%96%E3%82%AD%E3%83%A3%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E8%A8%80%E8%AA%9E%E9%81%B8%E6%8A%9E%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Teams モバイルクライアントでのライブキャプションの言語選択について</a>
+            <a href="../Teams%20%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%81%A7%E3%81%AE%E3%83%A9%E3%82%A4%E3%83%96%E3%82%AD%E3%83%A3%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E8%A8%80%E8%AA%9E%E9%81%B8%E6%8A%9E%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Teams モバイルクライアントでのライブキャプションの言語選択について</a>
           </li>
         
           <li>
-            <a href="../../teams/Teams%20-%20%E4%BC%9A%E8%AD%B0%E3%81%AE%E6%99%82%E9%96%93%E5%88%B6%E9%99%90%E3%81%AE%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Teams - 会議の時間制限の動作について</a>
+            <a href="../Teams%20-%20%E4%BC%9A%E8%AD%B0%E3%81%AE%E6%99%82%E9%96%93%E5%88%B6%E9%99%90%E3%81%AE%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Teams - 会議の時間制限の動作について</a>
           </li>
         
           <li>
-            <a href="../../teams/Teams%20-%20%E3%82%B2%E3%82%B9%E3%83%88%20%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%E6%8B%9B%E5%BE%85%E3%81%8C%E6%AD%A3%E3%81%97%E3%81%8F%E5%8B%95%E4%BD%9C%E3%81%97%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Teams - ゲスト ユーザーの招待が正しく動作しない問題について</a>
+            <a href="../Teams%20-%20%E3%82%B2%E3%82%B9%E3%83%88%20%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%E6%8B%9B%E5%BE%85%E3%81%8C%E6%AD%A3%E3%81%97%E3%81%8F%E5%8B%95%E4%BD%9C%E3%81%97%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Teams - ゲスト ユーザーの招待が正しく動作しない問題について</a>
           </li>
         
           <li>
-            <a href="../../teams/Teams-VDIperticipatelist/">VDI 環境おいて、テナント切り替えを行った直後に参加した会議にて、参加者一覧が更新されない問題について</a>
+            <a href="../Teams-VDIperticipatelist/">VDI 環境おいて、テナント切り替えを行った直後に参加した会議にて、参加者一覧が更新されない問題について</a>
           </li>
         
           <li>
-            <a href="../../teams/Teams-Client/">Microsoft Teams クライアントの種類</a>
+            <a href="../Teams-Client/">Microsoft Teams クライアントの種類</a>
           </li>
         
       </ul>
