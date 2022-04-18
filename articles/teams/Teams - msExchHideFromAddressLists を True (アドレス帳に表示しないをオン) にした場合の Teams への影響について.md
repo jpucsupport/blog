@@ -17,9 +17,9 @@ Exchange Server/Online 側にて msExchHideFromAddressLists を True (アドレ�
 ### 1. 検索箇所について
 Teams でのユーザー検索は、大きく以下の 2 つがあります。
 1. [チャット] ＞ [新しいチャット] を選択し、ユーザー検索をする場合  
-![チャット](./Teams - msExchHideFromAddressLists/chat.png) 
+![チャット](./chat.png) 
 1. Teams 上部にある PowerBar でユーザーを検索する場合  
-![チャット](./Teams - msExchHideFromAddressLists/PowerBar.png) 
+![チャット](./PowerBar.png) 
 
 
 ### 2. それぞれの影響について
