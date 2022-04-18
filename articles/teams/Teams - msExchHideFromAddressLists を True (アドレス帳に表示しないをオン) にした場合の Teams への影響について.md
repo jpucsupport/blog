@@ -17,9 +17,9 @@ Exchange Server/Online 側にて msExchHideFromAddressLists を True (アドレ�
 ### 1. 検索箇所について
 Teams でのユーザー検索は、大きく以下の 2 つがあります。
 1. [チャット] ＞ [新しいチャット] を選択し、ユーザー検索をする場合  
-![チャット](./chat.png) 
+![チャット](./Teams - msExchHideFromAddressLists/chat.png) 
 1. Teams 上部にある PowerBar でユーザーを検索する場合  
-![チャット](./PowerBar.png) 
+![チャット](./Teams - msExchHideFromAddressLists/PowerBar.png) 
 
 
 ### 2. それぞれの影響について
@@ -35,7 +35,3 @@ msExchHideFromAddressLists を True (アドレス帳に表示しないをオン)
 
 今回は、msExchHideFromAddressLists を True (アドレス帳に表示しないをオン) にした場合の Teams への影響についてご案内いたしました。  
 設定による動作の違いに注意いただき、Teams ライフをお楽しみください。
-
-  ```
-  ※本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。
-  ```
