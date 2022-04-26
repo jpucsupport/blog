@@ -10,9 +10,8 @@ tags:
 
 こんにちは。Unified Communications サポート チームです。  
 いつも Microsoft Teams をご利用いただきありがとうございます。  
-<br />
-次の記事でもご案内したとおり、EXE 版の Teams インストーラーが新しい実装に変更されました。  
 
+次の記事でもご案内したとおり、EXE 版の Teams インストーラーが新しい実装に変更されました。  
 [EXE 版の Teams のインストーラーの変更によるインストールへの影響について](https://jpucsupport.github.io/blog/teams/Teams%20-%20EXE%20%E7%89%88%E3%81%AE%20Teams%20%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A9%E3%83%BC%E3%81%AE%E5%A4%89%E6%9B%B4%E3%81%AB%E3%82%88%E3%82%8B%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%B8%E3%81%AE%E5%BD%B1%E9%9F%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/)  
 
 新しいインストーラーは最新バージョンの Teams がインストールされるよう、最新のモジュールをダウンロードする仕組みとなりました。
@@ -42,4 +41,4 @@ URL: https://docs.microsoft.com/ja-jp/MicrosoftTeams/msi-deployment#msi-files
 <br />
 
 NOTE:  
-- 2022 年 4 月 XX 日に、初版を公開しました。  
+- 2022 年 4 月 26 日に、初版を公開しました。  
