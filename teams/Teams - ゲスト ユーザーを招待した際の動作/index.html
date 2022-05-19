@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Teams - ゲスト ユーザーを招待した際の動作 | Japan Unified Communications Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="こんにちは。Unified Communications サポート チームの吉井です。いつも Microsoft Teams をご利用いただきありがとうございます。  今回は、Teams で自社テナントにゲスト ユーザーを招待したときの一般的な流れについてご紹介します。ゲスト ユーザーとなると、自テナントのみでの検証が難しく、実際にお客様をゲスト ユーザーとして招待したけど、どういった案内がゲスト">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Teams - ゲスト ユーザーを招待した際の動作">
+<meta property="og:url" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%82%B2%E3%82%B9%E3%83%88%20%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%92%E6%8B%9B%E5%BE%85%E3%81%97%E3%81%9F%E9%9A%9B%E3%81%AE%E5%8B%95%E4%BD%9C/index.html">
+<meta property="og:site_name" content="Japan Unified Communications Support Blog">
+<meta property="og:description" content="こんにちは。Unified Communications サポート チームの吉井です。いつも Microsoft Teams をご利用いただきありがとうございます。  今回は、Teams で自社テナントにゲスト ユーザーを招待したときの一般的な流れについてご紹介します。ゲスト ユーザーとなると、自テナントのみでの検証が難しく、実際にお客様をゲスト ユーザーとして招待したけど、どういった案内がゲスト">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%82%B2%E3%82%B9%E3%83%88%20%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%92%E6%8B%9B%E5%BE%85%E3%81%97%E3%81%9F%E9%9A%9B%E3%81%AE%E5%8B%95%E4%BD%9C/A2%E9%80%9A%E7%9F%A5%E3%83%A1%E3%83%BC%E3%83%AB.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%82%B2%E3%82%B9%E3%83%88%20%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%92%E6%8B%9B%E5%BE%85%E3%81%97%E3%81%9F%E9%9A%9B%E3%81%AE%E5%8B%95%E4%BD%9C/A2%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E8%A8%B1%E5%8F%AF.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%82%B2%E3%82%B9%E3%83%88%20%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%92%E6%8B%9B%E5%BE%85%E3%81%97%E3%81%9F%E9%9A%9B%E3%81%AE%E5%8B%95%E4%BD%9C/B2%E9%80%9A%E7%9F%A5%E3%83%A1%E3%83%BC%E3%83%AB.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%82%B2%E3%82%B9%E3%83%88%20%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%92%E6%8B%9B%E5%BE%85%E3%81%97%E3%81%9F%E9%9A%9B%E3%81%AE%E5%8B%95%E4%BD%9C/B2%E3%83%9E%E3%82%A4%E3%82%A2%E3%83%97%E3%83%AA.png">
+<meta property="article:published_time" content="2021-07-05T06:00:00.000Z">
+<meta property="article:modified_time" content="2022-05-19T08:46:39.907Z">
+<meta property="article:author" content="CSS Japan">
+<meta property="article:tag" content="Teams">
+<meta property="article:tag" content="Guest User">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%82%B2%E3%82%B9%E3%83%88%20%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%92%E6%8B%9B%E5%BE%85%E3%81%97%E3%81%9F%E9%9A%9B%E3%81%AE%E5%8B%95%E4%BD%9C/A2%E9%80%9A%E7%9F%A5%E3%83%A1%E3%83%BC%E3%83%AB.png">
+  
+    <link rel="alternate" href="../../atom.xml" title="Japan Unified Communications Support Blog" type="application/atom+xml">
+  
+
+  <link rel="icon" href="../../favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="../../css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        <div id="ms-logo"></div>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+        <a class="main-nav-link" href="https://cssjpn.github.io/" target="_blank" rel="noopener">サポート情報</a>
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="../../atom.xml" title="RSSフィード"></a>
+        
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//www.bing.com/search" method="get" accept-charset="UTF-8" name="bing-search" onsubmit="var f=this;if(f['q'].value){var searchUrl =  'https://www.bing.com/search?q=' +  encodeURIComponent(f['q'].value + ' site:' + f['sitesearch'].value) ;window.open(searchUrl, 'blank') };return false;" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="検索"><button type="submit" id="nav-search-btn" class="search-form-submit"></button><input type="hidden" name="sitesearch" value="https://jpucsupport.github.io/blog"></form>
+      </div>
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="../../index.html" id="logo">Japan Unified Communications Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="../../index.html" id="subtitle">日本マイクロソフトの Teams と Skype for Business に関するサポート情報のブログです。</a>
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-teams/Teams - ゲスト ユーザーを招待した際の動作" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Teams - ゲスト ユーザーを招待した際の動作
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="" class="article-date-single">
+  <time datetime="2021-07-05T06:00:00.000Z" itemprop="datePublished">2021-07-05</time>
+</a>
+        
+        
+        <a href="https://github.com/jpucsupport/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+2fe7cbc9-1f2a-5a10-82e8-e454208cbfa6%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BTeams+-+%E3%82%B2%E3%82%B9%E3%83%88+%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%92%E6%8B%9B%E5%BE%85%E3%81%97%E3%81%9F%E9%9A%9B%E3%81%AE%E5%8B%95%E4%BD%9C%5D%28https%3A%2F%2Fjpucsupport.github.io%2Fblog%2Fteams%2FTeams%2520-%2520%E3%82%B2%E3%82%B9%E3%83%88%2520%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%92%E6%8B%9B%E5%BE%85%E3%81%97%E3%81%9F%E9%9A%9B%E3%81%AE%E5%8B%95%E4%BD%9C%2F%29%0A*+Content+Source%3A+%5Barticles%2Fteams%2FTeams+-+%E3%82%B2%E3%82%B9%E3%83%88+%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%92%E6%8B%9B%E5%BE%85%E3%81%97%E3%81%9F%E9%9A%9B%E3%81%AE%E5%8B%95%E4%BD%9C.md%5D%28https%3A%2F%2Fgithub.com%2Fjpucsupport%2Fblog%2Fblob%2Fmaster%2Farticles%2Fteams%2FTeams%2520-%2520%E3%82%B2%E3%82%B9%E3%83%88%2520%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%92%E6%8B%9B%E5%BE%85%E3%81%97%E3%81%9F%E9%9A%9B%E3%81%AE%E5%8B%95%E4%BD%9C.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        
+        <a data-url="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%82%B2%E3%82%B9%E3%83%88%20%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%92%E6%8B%9B%E5%BE%85%E3%81%97%E3%81%9F%E9%9A%9B%E3%81%AE%E5%8B%95%E4%BD%9C/" data-id="cl3crr59h000s9io611mf9an6" class="article-share-link">共有</a>
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>こんにちは。Unified Communications サポート チームの吉井です。いつも Microsoft Teams をご利用いただきありがとうございます。 </p>
+<p>今回は、Teams で自社テナントにゲスト ユーザーを招待したときの一般的な流れについてご紹介します。<br>ゲスト ユーザーとなると、自テナントのみでの検証が難しく、実際にお客様をゲスト ユーザーとして招待したけど、どういった案内がゲスト ユーザーに送付されているのか、どういった流れでゲスト ユーザーとしてテナントに参加するのか、などイメージがつきにくい部分も多く、お問い合わせが多い内容となっております。<br>また、お客様の運用によってゲスト ユーザーの招待の運用方法が異なりますので、招待方法別にそれぞれ詳細をご案内いたします。</p>
+<blockquote>
+<p>凡例 :<br>テナント A : 招待元テナント（自社テナント）<br>テナント B : ゲスト ユーザーが所属するテナント</p>
+</blockquote>
+<h3 id="A-1-ゲスト-ユーザーを-Teams-クライアントや-Web-から招待した際の流れ-招待側-テナント-A"><a href="#A-1-ゲスト-ユーザーを-Teams-クライアントや-Web-から招待した際の流れ-招待側-テナント-A" class="headerlink" title="A-1. ゲスト ユーザーを Teams (クライアントや Web) から招待した際の流れ (招待側 : テナント A)"></a>A-1. ゲスト ユーザーを Teams (クライアントや Web) から招待した際の流れ (招待側 : テナント A)</h3><p>Teams (クライアントや Web) 経由でゲスト ユーザーを招待する場合には、以下の手順で招待することが可能です。<br>※ 手順は一例となります。以下の手順以外でもメンバーの追加は可能ですので、あくまでも Teams クライアントや Web からの追加を行った場合の流れとなります。</p>
+<p>テナント A での招待の手順が完了すると、テナント B のゲスト ユーザーに招待通知メールが送付されるので、ゲスト ユーザー側での操作が完了するのをお待ちください。</p>
+<blockquote>
+<ol>
+<li>テナント A 内のゲスト ユーザーを招待したいチーム名の右にある […] を選択し、[メンバーを追加] をクリックします。</li>
+<li>招待したいユーザーのメールアドレスを入力します。</li>
+<li>[(入力したメールアドレス）をゲストとして追加] を選択し、[追加] ボタンをクリックします。</li>
+</ol>
+</blockquote>
+<h3 id="A-2-テナント-A-からゲスト-ユーザーとして招待された際の流れ-ゲストユーザー側-テナント-B"><a href="#A-2-テナント-A-からゲスト-ユーザーとして招待された際の流れ-ゲストユーザー側-テナント-B" class="headerlink" title="A-2. テナント A からゲスト ユーザーとして招待された際の流れ (ゲストユーザー側 : テナント B)"></a>A-2. テナント A からゲスト ユーザーとして招待された際の流れ (ゲストユーザー側 : テナント B)</h3><p>テナント A でゲスト ユーザーの招待の手順が完了すると、招待されたユーザーに対して、以下のような通知メールが送付されます。<br><img src="./A2%E9%80%9A%E7%9F%A5%E3%83%A1%E3%83%BC%E3%83%AB.png" alt=""></p>
+<p>通知メール内の [Open Microsoft Teams] をクリックすると、ゲスト ユーザーとしてテナント A に参加する処理が進みます。</p>
+<p>テナント B が組織テナントの場合には、テナント B に登録しているユーザー名とパスワードでサインインすると、アクセス許可を求める画面が表示されます。<br>こちらは、テナント A がテナント B からゲスト ユーザーの基本情報を取得するための許可になります。<br>内容を確認のうえ、[承諾] をクリックすると、テナント A にゲスト ユーザーとして参加が可能になります。<br><img src="./A2%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E8%A8%B1%E5%8F%AF.png" alt=""></p>
+<p>また、ゲスト ユーザーが組織テナントに所属していない場合（例 : Gmail を利用しているユーザーなど）には、任意のパスワードを入力してサインインを進めてください。<br>※ 今後のサインイン時に必要なパスワードとなります。</p>
+<p>アクセス許可を求める画面からのフローは組織テナントに所属しているユーザーと同様です。</p>
+<h3 id="B-1-Azure-AD-からゲスト-ユーザーを招待した際の流れ-招待側-テナント-A"><a href="#B-1-Azure-AD-からゲスト-ユーザーを招待した際の流れ-招待側-テナント-A" class="headerlink" title="B-1. Azure AD からゲスト ユーザーを招待した際の流れ (招待側 : テナント A)"></a>B-1. Azure AD からゲスト ユーザーを招待した際の流れ (招待側 : テナント A)</h3><p>Azure AD 管理ポータルからゲスト ユーザーを招待する場合には、、以下の手順で招待することが可能です。<br>Azure AD 管理ポータル側での招待の手順が完了すると、テナント B のゲスト ユーザーに招待通知メールが送付されるので、ゲスト ユーザーでの操作が完了するのをお待ちください。</p>
+<blockquote>
+<ol>
+<li>テナント A の Azure AD 管理ポータルにアクセスします。</li>
+<li>[ユーザー] 一覧ページから、[+ 新しいゲスト ユーザー] をクリックします。</li>
+<li>必要情報を入力し、[招待] をクリックします。</li>
+</ol>
+</blockquote>
+<h3 id="B-2-Azure-AD-からゲストユーザーを招待した際の流れ-ゲスト-ユーザー側-テナント-B"><a href="#B-2-Azure-AD-からゲストユーザーを招待した際の流れ-ゲスト-ユーザー側-テナント-B" class="headerlink" title="B-2. Azure AD からゲストユーザーを招待した際の流れ (ゲスト ユーザー側 : テナント B)"></a>B-2. Azure AD からゲストユーザーを招待した際の流れ (ゲスト ユーザー側 : テナント B)</h3><p>テナント A でゲスト ユーザーの招待の手順が完了すると、招待されたユーザーに対して、以下のような通知メールが送付されます<br><img src="./B2%E9%80%9A%E7%9F%A5%E3%83%A1%E3%83%BC%E3%83%AB.png" alt=""></p>
+<p>通知メール内の [Accept invitation] をクリックすると、ゲスト ユーザーとしてテナント A に参加する処理が進みます。<br>サインイン/認証のフローは、A-2 で記載した内容と同様です。<br>ゲスト ユーザーとしてテナント A への参加が完了すると、以下のページが表示されます。<br><img src="./B2%E3%83%9E%E3%82%A4%E3%82%A2%E3%83%97%E3%83%AA.png" alt=""></p>
+<p>Teams のチームにゲスト ユーザーを追加する場合には、既にテナント A の Azure AD にゲスト ユーザーとして登録されている状況なので、通常の Teams のチームへのユーザーの追加と同様の手順でチームに追加してください。</p>
+<p>また、Azure AD からゲスト ユーザーを追加する場合、招待するグループを指定することができます。<br>その場合には、[グループとロール] 項目で追加するグループを指定してください。<br>ゲスト ユーザー側での参加のフローは変わりませんが、Teams のチームに追加された場合に送付される通知メールが送付されないので、ゲスト ユーザー自身で Microsoft Teams にアクセスして、参加チームを確認する必要があります。</p>
+<h3 id="C-システム上の流れ"><a href="#C-システム上の流れ" class="headerlink" title="C. システム上の流れ"></a>C. システム上の流れ</h3><p>テナント A, B のアカウントはそれぞれ別のアカウントであり、ゲスト ユーザーが A-2, B-2 の手順において、ユーザー情報の読み取りを承諾したタイミング以外では、テナント A / B 間の情報の連携は行われません。<br>具体的な流れは以下になります。</p>
+<hr>
+<p>例:<br>テナント B (@fabrikam.com) に所属するユーザー “MS太郎” (UPN: <a href="mailto:userX@fabrikam.com">userX@fabrikam.com</a>) が、テナント A (@contoso.com) にゲスト参加する場合の流れについて</p>
+<ol>
+<li><p>テナント A にて、テナント B に所属するユーザーである “MS太郎” をゲスト ユーザーとして招待します。(A-1, B-1)<br>このタイミングでテナント A 側の Azure AD 上に、ユーザー X 用のゲスト アカウントが新規にて作成されます。<br> // テナント B 上</p>
+<ul>
+<li><p>表示名: MS太郎</p>
+</li>
+<li><p>UPN: <a href="mailto:userX@fabrikam.com">userX@fabrikam.com</a> (一般アカウント)</p>
+<p>// テナント A 上</p>
+</li>
+<li><p>表示名: userX ※既定ではメールアドレスの先頭部分がユーザー名となります</p>
+</li>
+<li><p>UPN: userX_fabrikam.com#EXT#@contoso.com (ゲスト アカウント)</p>
+</li>
+</ul>
+</li>
+<li><p>“MS太郎” が、テナント A へゲスト参加する際、ユーザー情報の読み取りを承諾します。(A-2,B-2)<br>このタイミングでテナント B の Azure AD 上に登録されている表示名が、テナント A 上のゲスト アカウントの表示名に反映されます。<br>※ 当該タイミング以外での情報の連携は行われません</p>
+<p> // テナント B 上</p>
+<ul>
+<li><p>表示名: MS太郎</p>
+</li>
+<li><p>UPN: <a href="mailto:userX@fabrikam.com">userX@fabrikam.com</a> (一般アカウント)</p>
+<p>// テナント A 上</p>
+</li>
+<li><p>表示名: MS太郎</p>
+</li>
+<li><p>UPN: userX_fabrikam.com#EXT#@contoso.com (ゲスト アカウント)</p>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="D-ゲスト-ユーザー側でテナントの切り替えができない場合の一般的な対処方法"><a href="#D-ゲスト-ユーザー側でテナントの切り替えができない場合の一般的な対処方法" class="headerlink" title="D. ゲスト ユーザー側でテナントの切り替えができない場合の一般的な対処方法"></a>D. ゲスト ユーザー側でテナントの切り替えができない場合の一般的な対処方法</h3><p>正常にゲスト ユーザーの招待が完了しているにもかかわらず、ゲスト ユーザー側でテナントの切り替えができない問題が起こることがあります。<br>この場合には、クライアントのキャッシュなどの影響で反映が遅くなっている可能性があるため、ゲスト ユーザー側でキャッシュクリアをお試しいただき、事象が解消するかご確認ください。</p>
+<blockquote>
+<p>・Microsoft Teams のクライアントアプリのキャッシュ削除の方法</p>
+<ol>
+<li>Microsoft Teams を終了します。</li>
+<li>Windows キーを押したまま、[R] キーを押します。</li>
+<li>[ファイル名を指定して実行] のダイアログに、[名前] に “%AppData%\Microsoft” を入力し、[OK] をクリックします。</li>
+<li>[Teams] フォルダーを削除します。 ※ 削除できない場合は、Microsoft Teams が起動している可能性がございます。</li>
+<li>Microsoft Teams を起動し、事象が改善されるかを確認します。</li>
+</ol>
+</blockquote>
+<p>キャッシュクリアを試しても事象が解消しない場合や、それ以外の事象の場合には、一度テナント A の Azure AD からゲスト ユーザーを削除して再度招待することで問題が解決する場合もあります。</p>
+<h3 id="E-注意事項"><a href="#E-注意事項" class="headerlink" title="E. 注意事項"></a>E. 注意事項</h3><h4 id="ゲスト-ユーザーの情報が変更された場合"><a href="#ゲスト-ユーザーの情報が変更された場合" class="headerlink" title="ゲスト ユーザーの情報が変更された場合"></a>ゲスト ユーザーの情報が変更された場合</h4><p>テナント A が、テナント B からゲスト ユーザーの情報を取得するタイミングは、ゲスト ユーザー側でアクセス許可を承諾したタイミングのみとなります。<br>そのため、テナント B にてユーザーの情報（UPN や Display Name）が変更された場合には、再度テナント A でゲスト ユーザーを再招待または修正作業を行う必要があります。<br>特に UPN が変更された場合には、ゲスト ユーザーがテナント A にゲスト ユーザーとしてサインインできなくなりますので、情報変更前の対応を推奨しております。</p>
+<h4 id="ゲスト-ユーザーのメールアドレスの有無について"><a href="#ゲスト-ユーザーのメールアドレスの有無について" class="headerlink" title="ゲスト ユーザーのメールアドレスの有無について"></a>ゲスト ユーザーのメールアドレスの有無について</h4><p>テナント A に、メール連絡先などで既に テナント B のゲスト ユーザーのメールアドレスが登録されている場合には、ゲスト ユーザーのアカウントのメールアドレスの情報が null となった状態で、テナントに登録されます。<br>しかしながら、Microsoft Teams では、ゲスト ユーザーのメールアドレスが必須となっているため、メールアドレスの情報がない状態のゲスト ユーザーはサポートされません。<br>そのため、ゲスト ユーザーのメール連絡先がすでに存在する場合には、ゲスト ユーザー招待前にメール連絡先を削除する必要があります。</p>
+<h3 id="F-参考情報"><a href="#F-参考情報" class="headerlink" title="F. 参考情報"></a>F. 参考情報</h3><p>Title : Teams でのゲスト エクスペリエンス<br>URL : <a href="https://docs.microsoft.com/ja-jp/microsoftteams/guest-experience" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/microsoftteams/guest-experience</a></p>
+<p>Title : Microsoft Teams でのゲスト アクセス<br>URL : <a href="https://docs.microsoft.com/ja-jp/microsoftteams/guest-access" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/microsoftteams/guest-access</a></p>
+<p>Title : ゲスト アクセスと外部アクセスを使用して、組織外の人々とコラボレーションする<br>URL : <a href="https://docs.microsoft.com/ja-jp/microsoftteams/communicate-with-users-from-other-organizations" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/microsoftteams/communicate-with-users-from-other-organizations</a></p>
+
+      
+      
+        <div class="article-disclaimer">
+        
+          <p>※本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。</p>
+        
+        </div>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Guest-User/" rel="tag">Guest User</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li></ul>
+
+        
+        <a href="https://github.com/jpucsupport/blog/edit/master/articles/teams/Teams%20-%20ゲスト%20ユーザーを招待した際の動作.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="../Teams%20-%20%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC%E3%82%92%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%82%8B%E9%9A%9B%E3%81%AB%E8%A6%81%E3%81%99%E3%82%8B%E6%99%82%E9%96%93%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">次の記事</strong>
+      <div class="article-nav-title">
+        
+          Teams - ポリシーを割り当てる際に要する時間について
+        
+      </div>
+    </a>
+  
+  
+    <a href="../Teams%20-%20Teams%20%E4%BC%9A%E8%AD%B0%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E5%93%81%E8%B3%AA/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前の記事</strong>
+      <div class="article-nav-title">Teams - Teams 会議レコーディングの品質</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近の投稿</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="../Teams%20-%20%E5%85%A8%E8%A7%92%E3%81%A7%E3%83%A1%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3%EF%BC%88@%EF%BC%89%E3%81%99%E3%82%8B%E3%81%A8%E6%96%87%E5%AD%97%E3%81%8C%E5%A4%AA%E6%96%87%E5%AD%97%E3%81%AB%E3%81%AA%E3%82%8B/">Teams - 全角でメンション（@）すると文字が太文字になる</a>
+          </li>
+        
+          <li>
+            <a href="../Teams%20-%20%E6%96%B0%E3%81%97%E3%81%84%20EXE%20%E7%89%88%20Teams%20%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A9%E3%83%BC%E3%81%AE%E8%AA%8D%E8%A8%BC%E3%83%97%E3%83%AD%E3%82%AD%E3%82%B7%E5%AF%BE%E5%BF%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Teams - 新しい EXE 版 Teams インストーラーの認証プロキシ対応について</a>
+          </li>
+        
+          <li>
+            <a href="../Teams%20-%20msExchHideFromAddressLists%20%E3%82%92%20True%20(%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E5%B8%B3%E3%81%AB%E8%A1%A8%E7%A4%BA%E3%81%97%E3%81%AA%E3%81%84%E3%82%92%E3%82%AA%E3%83%B3)%20%E3%81%AB%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE%20Teams%20%E3%81%B8%E3%81%AE%E5%BD%B1%E9%9F%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Teams - msExchHideFromAddressLists を True (アドレス帳に表示しないをオン) にした場合の Teams への影響について</a>
+          </li>
+        
+          <li>
+            <a href="../Teams%20-%20Proxy%20%E7%92%B0%E5%A2%83%E3%81%A7%E3%80%81Teams%20%E3%81%AE%20Powershell%202.0.0%20%E4%BB%A5%E9%99%8D%E3%81%AE%20Teams%20Powershell%20%E3%81%A7%20Get-csOnlineUser%20%E3%81%AA%E3%81%A9%E3%81%AE%20YYY-csXXX%20%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%80%81Winhttp%20%E5%81%B4%E3%81%B8%E3%81%AE%20Proxy%20%E8%A8%AD%E5%AE%9A%E3%81%8C%E5%BF%85%E8%A6%81/">Teams - Proxy 環境で、Teams の PowerShell 2.0.0 以降の Teams PowerShell で Get-csOnlineUser などの YYY-csXXX のコマンドを実行する場合、Winhttp 側への Proxy 設定が必要</a>
+          </li>
+        
+          <li>
+            <a href="../Teams%20-%20EXE%20%E7%89%88%E3%81%AE%20Teams%20%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A9%E3%83%BC%E3%81%AE%E5%A4%89%E6%9B%B4%E3%81%AB%E3%82%88%E3%82%8B%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%B8%E3%81%AE%E5%BD%B1%E9%9F%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">EXE 版の Teams のインストーラーの変更によるインストールへの影響について</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグ</h3>
+    <div class="widget">
+      <!-- <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Client/" rel="tag">Client</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Edge/" rel="tag">Edge</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Guest-User/" rel="tag">Guest User</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Information/" rel="tag">Information</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Install/" rel="tag">Install</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Introduction/" rel="tag">Introduction</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Live-Events-Live-Events-Assitance-Program/" rel="tag">Live Events / Live Events Assitance Program</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Lync-Server-Skype-for-Business-Server/" rel="tag">Lync Server / Skype for Business Server</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Media/" rel="tag">Media</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Meeting/" rel="tag">Meeting</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Mobile/" rel="tag">Mobile</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/PowerShell/" rel="tag">PowerShell</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Proxy/" rel="tag">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Recording/" rel="tag">Recording</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Search/" rel="tag">Search</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Settings/" rel="tag">Settings</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Skype-for-Business-Online/" rel="tag">Skype for Business Online</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Troubleshooting/" rel="tag">Troubleshooting</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/VDI/" rel="tag">VDI</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Windows/" rel="tag">Windows</a></li></ul>  -->
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Skype-for-Business-Online/">Skype for Business Online</a><span class="tag-list-count">1</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Skype-for-Business-Online/Client">Client</a><span class="tag-list-count">1</span></li></ul></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Lync-Server-Skype-for-Business-Server/">Lync Server / Skype for Business Server</a><span class="tag-list-count">1</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Lync-Server-Skype-for-Business-Server/Edge">Edge</a><span class="tag-list-count">1</span></li></ul></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Information/">Information</a><span class="tag-list-count">11</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Guest-User">Guest User</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Install">Install</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Meeting">Meeting</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/PowerShell">PowerShell</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Search">Search</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Settings">Settings</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Teams">Teams</a><span class="tag-list-count">10</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/VDI">VDI</a><span class="tag-list-count">1</span></li></ul></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Live-Events-Live-Events-Assitance-Program/">Live Events / Live Events Assitance Program</a><span class="tag-list-count">5</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Live-Events-Live-Events-Assitance-Program/Introduction">Introduction</a><span class="tag-list-count">1</span></li></ul></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Teams/">Teams</a><span class="tag-list-count">17</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Client">Client</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Guest-User">Guest User</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Information">Information</a><span class="tag-list-count">10</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Install">Install</a><span class="tag-list-count">3</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Media">Media</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Meeting">Meeting</a><span class="tag-list-count">3</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Mobile">Mobile</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/PowerShell">PowerShell</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Proxy">Proxy</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Recording">Recording</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Search">Search</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Settings">Settings</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Troubleshooting">Troubleshooting</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/VDI">VDI</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Windows">Windows</a><span class="tag-list-count">1</span></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">アーカイブ</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/05/">2022 / 05</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/04/">2022 / 04</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/03/">2022 / 03</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/02/">2022 / 02</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/09/">2021 / 09</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/08/">2021 / 08</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/07/">2021 / 07</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/05/">2021 / 05</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/04/">2021 / 04</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグクラウド</h3>
+    <div class="widget tagcloud">
+      <a href="../../tags/Client/" style="font-size: 12px;">Client</a> <a href="../../tags/Edge/" style="font-size: 10px;">Edge</a> <a href="../../tags/Guest-User/" style="font-size: 12px;">Guest User</a> <a href="../../tags/Information/" style="font-size: 18px;">Information</a> <a href="../../tags/Install/" style="font-size: 14px;">Install</a> <a href="../../tags/Introduction/" style="font-size: 10px;">Introduction</a> <a href="../../tags/Live-Events-Live-Events-Assitance-Program/" style="font-size: 16px;">Live Events / Live Events Assitance Program</a> <a href="../../tags/Lync-Server-Skype-for-Business-Server/" style="font-size: 10px;">Lync Server / Skype for Business Server</a> <a href="../../tags/Media/" style="font-size: 10px;">Media</a> <a href="../../tags/Meeting/" style="font-size: 14px;">Meeting</a> <a href="../../tags/Mobile/" style="font-size: 10px;">Mobile</a> <a href="../../tags/PowerShell/" style="font-size: 12px;">PowerShell</a> <a href="../../tags/Proxy/" style="font-size: 10px;">Proxy</a> <a href="../../tags/Recording/" style="font-size: 10px;">Recording</a> <a href="../../tags/Search/" style="font-size: 10px;">Search</a> <a href="../../tags/Settings/" style="font-size: 10px;">Settings</a> <a href="../../tags/Skype-for-Business-Online/" style="font-size: 10px;">Skype for Business Online</a> <a href="../../tags/Teams/" style="font-size: 20px;">Teams</a> <a href="../../tags/Troubleshooting/" style="font-size: 10px;">Troubleshooting</a> <a href="../../tags/VDI/" style="font-size: 10px;">VDI</a> <a href="../../tags/Windows/" style="font-size: 10px;">Windows</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 CSS Japan<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="../../index.html" class="mobile-nav-link">Home</a>
+  
+    <a href="../../archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="../../js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
