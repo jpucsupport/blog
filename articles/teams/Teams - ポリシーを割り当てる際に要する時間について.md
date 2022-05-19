@@ -4,6 +4,8 @@ date: 2021-07-06 9:00:00
 tags:
   - Settings
   - Teams
+  - Information
+
 ---
 
 # Teams - ポリシーを割り当てる際に要する時間について

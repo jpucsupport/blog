@@ -1,5 +1,5 @@
 ---
-title: Skype for Business アプリケーションの起動抑止について
+title: Skype - Skype for Business アプリケーションの起動抑止について
 date: 2021-05-17 00:00:00
 tags:
  - Skype for Business Online
