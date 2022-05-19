@@ -1,5 +1,5 @@
 ---
-title: EXE 版の Teams のインストーラーの変更によるインストールへの影響について
+title: Teams - EXE 版の Teams のインストーラーの変更によるインストールへの影響について
 date: 2022-04-15 00:00:00
 tags:
   - Teams
