@@ -1,6 +1,6 @@
 ---
 title: Teams - 全角でメンション（@）すると文字が太文字になる
-date: 2022-05-19 15:00:00
+date: 2022-05-25 18:00:00
 tags:
   - Teams
   - Information
@@ -21,11 +21,17 @@ Microsoft Teams のデスクトップ アプリを使用し、チャネルやチ
 IME で半角英数字にして「@」を入力する場合には、本事象は発生しません。
 また、IME の設定で、以前のバージョンの Microsoft IME を使用する設定をすることで回避することが可能です。
 詳細な設定方法については、以下のサポート情報をご参照ください。
-
 [以前のバージョンの IME (入力方式エディター) に戻す](https://support.microsoft.com/ja-jp/office/adcc9caa-17cb-44d8-b46e-f5b473b4dd77)
+
+なお、該当設定を変えた場合の違いについては、以下のWindows サポートのBlog 記事をご参照ください。
+[Windows 10 version 2004 からの新しい Microsoft IME (Input Method Editor) について](https://jpwinsup.github.io/blog/2021/02/26/UserInterfaceAndApps/ServerManagement/new_microsoft_IME/)
 <br />
 
 ### その他
 本問題は、Microsoft Teams において、IME 入力に関連して発生している問題です。
 今後の修正等の対応予定は、現時点では明確な日程や対応方法については未定となっておりますが、引き続き、本 Blog にてご案内予定となっております。
 お客様には、ご不便をおかけしており、大変申し訳ございません。
+
+NOTE:  
+- 2022 年 5 月 19 日に、初版を公開しました。  
+- 2022 年 5 月 25 日に、記事を追記しました。  
