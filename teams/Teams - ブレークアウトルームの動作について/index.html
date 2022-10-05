@@ -4,22 +4,23 @@
   <meta charset="utf-8">
   
   
-  <title>Live Events - 本番でトラブルが起きたときの対処 | Japan Unified Communications Support Blog</title>
+  <title>Teams - ブレークアウトルームの動作について | Japan Unified Communications Support Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="こんにちは。いつも Microsoft Teams をご利用いただきありがとうございます。Live Events Assistance Program (LEAP) 担当の吉井です。 今回は、ライブ イベントの本番でトラブルが発生したときに、まず確認・実施する作業をご案内いたします。時間が限られているライブ イベントでトラブルが発生すると、かなり焦ってしまいますし、様々なことを見落としてしまいがち">
+  <meta name="description" content="こんにちは。Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。   マルチデバイス(複数デバイス)での会議参加時おいて、ブレークアウトルームへ遷移される場合、いずれか 1 台のデバイスのみが遷移対象となる動作となっておりますことをご紹介いたします。具体的には、マルチデバイスでの会議参加、ブレークアウトル">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Live Events - 本番でトラブルが起きたときの対処">
-<meta property="og:url" content="https://jpucsupport.github.io/blog/live%20event/Live%20Events%20-%20%E6%9C%AC%E7%95%AA%E3%81%A7%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%81%8C%E8%B5%B7%E3%81%8D%E3%81%9F%E3%81%A8%E3%81%8D%E3%81%AE%E5%AF%BE%E5%87%A6/index.html">
+<meta property="og:title" content="Teams - ブレークアウトルームの動作について">
+<meta property="og:url" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AF%E3%82%A2%E3%82%A6%E3%83%88%E3%83%AB%E3%83%BC%E3%83%A0%E3%81%AE%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/index.html">
 <meta property="og:site_name" content="Japan Unified Communications Support Blog">
-<meta property="og:description" content="こんにちは。いつも Microsoft Teams をご利用いただきありがとうございます。Live Events Assistance Program (LEAP) 担当の吉井です。 今回は、ライブ イベントの本番でトラブルが発生したときに、まず確認・実施する作業をご案内いたします。時間が限られているライブ イベントでトラブルが発生すると、かなり焦ってしまいますし、様々なことを見落としてしまいがち">
+<meta property="og:description" content="こんにちは。Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。   マルチデバイス(複数デバイス)での会議参加時おいて、ブレークアウトルームへ遷移される場合、いずれか 1 台のデバイスのみが遷移対象となる動作となっておりますことをご紹介いたします。具体的には、マルチデバイスでの会議参加、ブレークアウトル">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:image" content="https://jpucsupport.github.io/blog/live%20event/Live%20Events%20-%20%E6%9C%AC%E7%95%AA%E3%81%A7%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%81%8C%E8%B5%B7%E3%81%8D%E3%81%9F%E3%81%A8%E3%81%8D%E3%81%AE%E5%AF%BE%E5%87%A6/image.png">
-<meta property="article:published_time" content="2021-04-26T06:00:00.000Z">
-<meta property="article:modified_time" content="2022-10-05T02:54:12.317Z">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AF%E3%82%A2%E3%82%A6%E3%83%88%E3%83%AB%E3%83%BC%E3%83%A0%E3%81%AE%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/AddDevice.jpg">
+<meta property="article:published_time" content="2022-10-05T03:00:00.000Z">
+<meta property="article:modified_time" content="2022-10-05T02:54:12.321Z">
 <meta property="article:author" content="CSS Japan">
-<meta property="article:tag" content="Live Events &#x2F; Live Events Assitance Program">
+<meta property="article:tag" content="Information">
+<meta property="article:tag" content="Teams">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://jpucsupport.github.io/blog/live%20event/Live%20Events%20-%20%E6%9C%AC%E7%95%AA%E3%81%A7%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%81%8C%E8%B5%B7%E3%81%8D%E3%81%9F%E3%81%A8%E3%81%8D%E3%81%AE%E5%AF%BE%E5%87%A6/image.png">
+<meta name="twitter:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AF%E3%82%A2%E3%82%A6%E3%83%88%E3%83%AB%E3%83%BC%E3%83%A0%E3%81%AE%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/AddDevice.jpg">
   
     <link rel="alternate" href="../../atom.xml" title="Japan Unified Communications Support Blog" type="application/atom+xml">
   
@@ -81,7 +82,7 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-live event/Live Events - 本番でトラブルが起きたときの対処" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-teams/Teams - ブレークアウトルームの動作について" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     
@@ -90,7 +91,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Live Events - 本番でトラブルが起きたときの対処
+      Teams - ブレークアウトルームの動作について
     </h1>
   
 
@@ -98,57 +99,28 @@
       <div class="article-share">
         Last Update: 
         <a href="" class="article-date-single">
-  <time datetime="2021-04-26T06:00:00.000Z" itemprop="datePublished">2021-04-26</time>
+  <time datetime="2022-10-05T03:00:00.000Z" itemprop="datePublished">2022-10-05</time>
 </a>
         
         
-        <a href="https://github.com/jpucsupport/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+6ffd8751-fdf9-5497-a0b8-d0bd7318a549%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BLive+Events+-+%E6%9C%AC%E7%95%AA%E3%81%A7%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%81%8C%E8%B5%B7%E3%81%8D%E3%81%9F%E3%81%A8%E3%81%8D%E3%81%AE%E5%AF%BE%E5%87%A6%5D%28https%3A%2F%2Fjpucsupport.github.io%2Fblog%2Flive%2520event%2FLive%2520Events%2520-%2520%E6%9C%AC%E7%95%AA%E3%81%A7%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%81%8C%E8%B5%B7%E3%81%8D%E3%81%9F%E3%81%A8%E3%81%8D%E3%81%AE%E5%AF%BE%E5%87%A6%2F%29%0A*+Content+Source%3A+%5Barticles%2Flive+event%2FLive+Events+-+%E6%9C%AC%E7%95%AA%E3%81%A7%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%81%8C%E8%B5%B7%E3%81%8D%E3%81%9F%E3%81%A8%E3%81%8D%E3%81%AE%E5%AF%BE%E5%87%A6.md%5D%28https%3A%2F%2Fgithub.com%2Fjpucsupport%2Fblog%2Fblob%2Fmaster%2Farticles%2Flive%2520event%2FLive%2520Events%2520-%2520%E6%9C%AC%E7%95%AA%E3%81%A7%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%81%8C%E8%B5%B7%E3%81%8D%E3%81%9F%E3%81%A8%E3%81%8D%E3%81%AE%E5%AF%BE%E5%87%A6.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        <a href="https://github.com/jpucsupport/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+b9ac4484-e88f-5d3d-908f-c43d42403008%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BTeams+-+%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AF%E3%82%A2%E3%82%A6%E3%83%88%E3%83%AB%E3%83%BC%E3%83%A0%E3%81%AE%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%5D%28https%3A%2F%2Fjpucsupport.github.io%2Fblog%2Fteams%2FTeams%2520-%2520%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AF%E3%82%A2%E3%82%A6%E3%83%88%E3%83%AB%E3%83%BC%E3%83%A0%E3%81%AE%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%2F%29%0A*+Content+Source%3A+%5Barticles%2Fteams%2FTeams+-+%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AF%E3%82%A2%E3%82%A6%E3%83%88%E3%83%AB%E3%83%BC%E3%83%A0%E3%81%AE%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.md%5D%28https%3A%2F%2Fgithub.com%2Fjpucsupport%2Fblog%2Fblob%2Fmaster%2Farticles%2Fteams%2FTeams%2520-%2520%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AF%E3%82%A2%E3%82%A6%E3%83%88%E3%83%AB%E3%83%BC%E3%83%A0%E3%81%AE%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpucsupport.github.io/blog/live%20event/Live%20Events%20-%20%E6%9C%AC%E7%95%AA%E3%81%A7%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%81%8C%E8%B5%B7%E3%81%8D%E3%81%9F%E3%81%A8%E3%81%8D%E3%81%AE%E5%AF%BE%E5%87%A6/" data-id="cl8v1d9kc000a9doc6rzd79w7" class="article-share-link">共有</a>
+        <a data-url="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AF%E3%82%A2%E3%82%A6%E3%83%88%E3%83%AB%E3%83%BC%E3%83%A0%E3%81%AE%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" data-id="cl8v1d9m0003a9doc8vfsegh2" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>こんにちは。いつも Microsoft Teams をご利用いただきありがとうございます。Live Events Assistance Program (LEAP) 担当の吉井です。<br></p>
-<p>今回は、ライブ イベントの本番でトラブルが発生したときに、まず確認・実施する作業をご案内いたします。<br>時間が限られているライブ イベントでトラブルが発生すると、かなり焦ってしまいますし、様々なことを見落としてしまいがちです。<br>そういう時こそ、一度落ち着いて、1 つ 1 つ情報を確認していくことが重要です。<br></p>
-<p>ライブ イベントの問題の場合、開催者の操作で確認可能なものと参加者側での確認が必要なものの 2 種類があります。<br>よくある問題ごとに、確認事項・対処方法をまとめたので、参考にしてください。<br>参加者側で確認が必要なものについては、簡単なものが多く、事前に参加者に周知しておくことをおすすめしています。</p>
-<h2 id="A-開催者側で確認ができること"><a href="#A-開催者側で確認ができること" class="headerlink" title="A. 開催者側で確認ができること"></a>A. 開催者側で確認ができること</h2><h4 id="a-音が配信されない場合"><a href="#a-音が配信されない場合" class="headerlink" title="a. 音が配信されない場合"></a>a. 音が配信されない場合</h4><p>音声および音が配信されない場合には、配信画面選択時に “コンピューターの サウンドを含める” にチェックが入っていない状態だった可能性があります。<br>その場合には、一度画面の配信を中断し、改めて “コンピューターの サウンドを含める” にチェックが入った状態であることを確認のうえ、配信画面をキューに送信しなおしてください。</p>
-<p>&lt;参考情報&gt;<br><a href="https://support.microsoft.com/ja-jp/office/dddede9f-e3d0-4330-873a-fa061a0d8e3b" target="_blank" rel="noopener">Teams の会議またはライブイベントでコンピューターからサウンドを共有する</a><br>  ・コンピューターのサウンドを含める</p>
-<h4 id="b-配信画面では音が聞こえているが、参加者側の画面で音が聞こえない場合"><a href="#b-配信画面では音が聞こえているが、参加者側の画面で音が聞こえない場合" class="headerlink" title="b. 配信画面では音が聞こえているが、参加者側の画面で音が聞こえない場合"></a>b. 配信画面では音が聞こえているが、参加者側の画面で音が聞こえない場合</h4><p>開催者にて操作する画面上で音が聞こえていても、参加者側の画面で音が聞こえない場合があります。<br>その場合には、正常に配信が行えていない可能性があるので、一度画面の配信を停止し、改めて画面を選択して、配信画面をキューに送信しなおしてください。<br>また、それでも改善しない場合には、開催者の端末を変更する、別の開催者がキューを送信する、といった方法をお試しください。</p>
-<h4 id="c-映像が止まってしまう場合"><a href="#c-映像が止まってしまう場合" class="headerlink" title="c. 映像が止まってしまう場合"></a>c. 映像が止まってしまう場合</h4><p>開催者にて操作する画面上の映像自体が止まってしまう場合には、開催者側の端末に問題がある可能性が最も高いです。<br>その場合には以下の対処をお試しください。</p>
+        <p>こんにちは。Unified Communications サポート チームです。<br>いつも Microsoft Teams をご利用いただきありがとうございます。  </p>
+<p>マルチデバイス(複数デバイス)での会議参加時おいて、ブレークアウトルームへ遷移される場合、いずれか 1 台のデバイスのみが遷移対象となる動作となっておりますことをご紹介いたします。<br>具体的には、マルチデバイスでの会議参加、ブレークアウトルームへの遷移において、以下の動作となります。</p>
+<h2 id="1-動作について"><a href="#1-動作について" class="headerlink" title="1. 動作について"></a>1. 動作について</h2><p>Microsoft Teams (デスクトップ版、およびモバイル版) では、同じ会議に 2 台目のデバイスで参加する際、以下の画面で確認することができますが、デバイスの追加、あるいは転送を選択する以下スクリーンショットのポップアップが表示され、デバイスの追加が機能として選択できます。<br>この際、デバイス追加を選択した場合、該当デバイスは会議への同じユーザーとして 2 台目のデバイスとして参加が可能になりますが、内部的には、1 台目に参加したデバイスが主たるデバイスとして扱われる形となっており、2 台目のデバイスについては、ブレイクアウトルームの遷移の通知や処理を受け取り、処理できない制限がございます。</p>
+<p>そのため、マルチ (複数) デバイスでの会議参加において、ブレークアウトルームへの遷移についてはいずれか 1 台のデバイスのみが遷移対象となり、現状想定の制限事項でございます。<br><img src="./AddDevice.jpg" alt="breakout image"></p>
+<p>上記機能により、マルチ (複数) デバイスでの会議参加において、ブレークアウトルームへの遷移についてはいずれか 1 台のデバイスのみが遷移対象となります。<br>また、もしデスクトップ版とモバイル版の 2 台で利用している場合、モバイル版が優先してブレークアウトルームに遷移する対象となっております。</p>
+<h2 id="2-回避策について"><a href="#2-回避策について" class="headerlink" title="2. 回避策について"></a>2. 回避策について</h2><p>PC 上からのブラウザ版 Teams をご利用の場合、マルチ (複数) デバイスを考慮した実装が、現在されていない状況であることから、ブラウザ版 Teams (PC) およびモバイルクライアントの組み合わせでご利用された場合には、双方の環境でブレークアウトルームに遷移が可能となります。<br>そのため、現時点での回避方法としてご検討いただけるものかと存じます。<br><br /></p>
+<p>NOTE:  </p>
 <ul>
-<li>一度画面の配信を停止して、改めて画面を選択し、配信画面をキューに送信しなおす</li>
-<li>配信している端末を交換する</li>
-<li>配信操作をするユーザーを別のユーザーにする（可能であれば別端末から操作）</li>
-<li>Teams 以外に起動しているアプリケーションを終了する</li>
-<li>使用しているネットワークを切り替える（可能であれば有線にする）</li>
-<li>映像に外部のデバイスを使用している場合には、外部のデバイスとの接続を切断してつなぎ直す。</li>
+<li>2022 年 10 月 5 日に、初版を公開しました。</li>
 </ul>
-<h4 id="d-それ以外の問題の場合"><a href="#d-それ以外の問題の場合" class="headerlink" title="d. それ以外の問題の場合"></a>d. それ以外の問題の場合</h4><p>上記の a - c の問題以外の問題が起こった場合、a - c の対処で問題が解消しない場合には、以下の対処をお試しください。</p>
-<ul>
-<li>配信用の端末のキャッシュ削除 (“C. キャッシュ削除の方法” 参照)</li>
-<li>ライブ イベントをバックアップ用のライブ イベントに切り替える</li>
-</ul>
-<h2 id="B-参加者側で確認ができること"><a href="#B-参加者側で確認ができること" class="headerlink" title="B. 参加者側で確認ができること"></a>B. 参加者側で確認ができること</h2><h4 id="a-映像が乱れる・止まる場合"><a href="#a-映像が乱れる・止まる場合" class="headerlink" title="a. 映像が乱れる・止まる場合"></a>a. 映像が乱れる・止まる場合</h4><p>視聴環境のスペックや負荷状況によって、ライブ イベントの映像が重く、映像が乱れる、止まってしまう状況が考えられます。<br>その場合には、参加者側で視聴時のライブ イベントの品質を下げて問題が解消するか確認してください。</p>
-<ol>
-<li>ライブ イベント視聴画面の右下の歯車アイコンをクリックし、[品質] 項目をクリックします。</li>
-<li>通常は [自動] になっていますが、”360p-350Kbps” または “240p-90Kbps” のどちらを選択し、ライブ イベントの配信の品質を下げます。<br><img src="./image.png" alt=""> </li>
-</ol>
-<h4 id="b-それ以外の問題の場合"><a href="#b-それ以外の問題の場合" class="headerlink" title="b. それ以外の問題の場合"></a>b. それ以外の問題の場合</h4><p>“a. 映像が乱れる・止まる場合” の解消策で問題が解決しない、それ以外の問題が起こっている場合には、以下の対処をお試しください。</p>
-<ul>
-<li>ブラウザからアクセスする</li>
-<li>Teams 以外に起動しているアプリを終了する</li>
-<li>キャッシュ削除 (“c. キャッシュ削除の方法” 参照)</li>
-</ul>
-<h2 id="C-キャッシュ削除の方法"><a href="#C-キャッシュ削除の方法" class="headerlink" title="C. キャッシュ削除の方法"></a>C. キャッシュ削除の方法</h2><ol>
-<li>Microsoft Teams を終了します。</li>
-<li>Windows キーを押したまま、[R] キーを押します。</li>
-<li>[ファイル名を指定して実行] のダイアログに、[名前] に “%AppData%\Microsoft” を入力し、[OK] をクリックします。</li>
-<li>[Teams] フォルダーを削除します。 ※ 削除できない場合は、Microsoft Teams が起動している可能性があります。</li>
-<li>Microsoft Teams を起動し、事象が改善されるかを確認します。</li>
-</ol>
-<p>イベント本番でのトラブルはどうしても焦りが出てしまい重要な確認が漏れてしまいがちです。<br>そういう時こそ落ち着いて、この記事を参考にトラブルに対処いただければと思います。</p>
-<h3 id="ライブ-イベントを計画の際には、お気軽に-Live-Events-Assistance-Program-までご連絡ください。"><a href="#ライブ-イベントを計画の際には、お気軽に-Live-Events-Assistance-Program-までご連絡ください。" class="headerlink" title="ライブ イベントを計画の際には、お気軽に Live Events Assistance Program までご連絡ください。"></a>ライブ イベントを計画の際には、お気軽に <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRyDjDy_PXI5OtUv8Q_mW3a5UOUZYOTg2TjZMQzRSWTFUVFU4S0YyT1dORiQlQCN0PWcu" target="_blank" rel="noopener">Live Events Assistance Program</a> までご連絡ください。</h3>
+
       
       
         <div class="article-disclaimer">
@@ -161,10 +133,10 @@
     <footer class="article-footer">
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Live-Events-Live-Events-Assitance-Program/" rel="tag">Live Events / Live Events Assitance Program</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Information/" rel="tag">Information</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li></ul>
 
         
-        <a href="https://github.com/jpucsupport/blog/edit/master/articles/live%20event/Live%20Events%20-%20本番でトラブルが起きたときの対処.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        <a href="https://github.com/jpucsupport/blog/edit/master/articles/teams/Teams%20-%20ブレークアウトルームの動作について.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
         
     </footer>
   </div>
@@ -172,19 +144,10 @@
     
 <nav id="article-nav">
   
-    <a href="../Live%20Events%20-%20%E3%83%90%E3%83%83%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%20%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%20URL%20%E3%81%AE%E5%B7%AE%E3%81%97%E6%9B%BF%E3%81%88%E6%96%B9%E6%B3%95/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">次の記事</strong>
-      <div class="article-nav-title">
-        
-          Live Events - バックアップ イベント URL の差し替え方法
-        
-      </div>
-    </a>
   
-  
-    <a href="../Live%20Events%20%E2%80%93%20%E6%9C%AC%E7%95%AA%E3%81%BE%E3%81%A7%E3%81%AE%E6%BA%96%E5%82%99/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="../../information/%E3%82%AD%E3%83%A3%E3%83%AA%E3%82%A2%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%20%E3%80%8C%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%20%20%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%81%8B%E3%82%89%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%81%B8%E3%81%AE%E8%BB%A2%E8%BA%AB%E3%80%8D%20%E3%81%AE%E3%81%94%E6%A1%88%E5%86%85%20(2022%E5%B9%B411%E6%9C%8816%E6%97%A5%E9%96%8B%E5%82%AC)/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前の記事</strong>
-      <div class="article-nav-title">Live Events – 本番までの準備</div>
+      <div class="article-nav-title">キャリアイベント 「オンプレミス / ネットワークエンジニアからクラウドエンジニアへの転身」 のご案内 (2022年11月16日開催)</div>
     </a>
   
 </nav>
@@ -203,7 +166,7 @@
       <ul>
         
           <li>
-            <a href="../../teams/Teams%20-%20%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AF%E3%82%A2%E3%82%A6%E3%83%88%E3%83%AB%E3%83%BC%E3%83%A0%E3%81%AE%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Teams - ブレークアウトルームの動作について</a>
+            <a href="">Teams - ブレークアウトルームの動作について</a>
           </li>
         
           <li>
@@ -211,15 +174,15 @@
           </li>
         
           <li>
-            <a href="../../teams/Teams%20-%20VDI%20%E7%92%B0%E5%A2%83%E3%81%AA%E3%81%A9%E3%81%A7%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E6%AF%8E%E3%81%A7%20Teams%20%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE%20Outlook%20%E3%81%A8%E3%81%AE%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%82%B9%E9%80%A3%E6%90%BA%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Teams - VDI 環境などでコンピュータ毎で Teams をインストールした場合の Outlook とのプレゼンス連携について</a>
+            <a href="../Teams%20-%20VDI%20%E7%92%B0%E5%A2%83%E3%81%AA%E3%81%A9%E3%81%A7%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E6%AF%8E%E3%81%A7%20Teams%20%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE%20Outlook%20%E3%81%A8%E3%81%AE%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%82%B9%E9%80%A3%E6%90%BA%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Teams - VDI 環境などでコンピュータ毎で Teams をインストールした場合の Outlook とのプレゼンス連携について</a>
           </li>
         
           <li>
-            <a href="../../teams/Teams%20-%20@outlook.com%E3%81%AE%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%81%8B%E3%82%89Teams%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB%E3%81%B8%E3%81%AE%E6%8A%95%E7%A8%BF%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/">Teams - @outlook.comのメールアドレスからTeamsチャネルへの投稿ができない</a>
+            <a href="../Teams%20-%20@outlook.com%E3%81%AE%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%81%8B%E3%82%89Teams%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB%E3%81%B8%E3%81%AE%E6%8A%95%E7%A8%BF%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/">Teams - @outlook.comのメールアドレスからTeamsチャネルへの投稿ができない</a>
           </li>
         
           <li>
-            <a href="../../teams/Teams%20-%20MC350372%20%E3%81%8A%E3%82%88%E3%81%B3%20MC411463%20%E3%81%AE%E3%82%A2%E3%83%8A%E3%82%A6%E3%83%B3%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Teams - MC350372 および MC411463 のアナウンスについて</a>
+            <a href="../Teams%20-%20MC350372%20%E3%81%8A%E3%82%88%E3%81%B3%20MC411463%20%E3%81%AE%E3%82%A2%E3%83%8A%E3%82%A6%E3%83%B3%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Teams - MC350372 および MC411463 のアナウンスについて</a>
           </li>
         
       </ul>
