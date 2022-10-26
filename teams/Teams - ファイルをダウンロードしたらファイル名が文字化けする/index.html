@@ -4,29 +4,21 @@
   <meta charset="utf-8">
   
   
-  <title>Teams - メディア通信を Proxy Server 経由で接続する際の注意事項 | Japan Unified Communications Support Blog</title>
+  <title>Teams - ファイルをダウンロードしたらファイル名が文字化けする | Japan Unified Communications Support Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="こんにちは、Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。   Teams を用いた通話や会議は、リモートワークの需要が増加する昨今の状況におけるコミュニケーション手段として非常に重要な機能といえます。オンライン会議で利用されるモダリティのうち、音声&#x2F;ビデオ&#x2F;デスクトップ・アプリケーション共有はまと">
+  <meta name="description" content="こんにちは。Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。   現在、Microsoft Teams をご利用のお客様において、Teams からファイルをダウンロードする際、ダウンロードしたファイル名が文字化けた形になる状況が発生しております。本事象はファイル名に UTF-8 エンコード文字が含まれ">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Teams - メディア通信を Proxy Server 経由で接続する際の注意事項">
-<meta property="og:url" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E9%80%9A%E4%BF%A1%E3%82%92%20Proxy%20Server%20%E7%B5%8C%E7%94%B1%E3%81%A7%E6%8E%A5%E7%B6%9A%E3%81%99%E3%82%8B%E9%9A%9B%E3%81%AE%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85/index.html">
+<meta property="og:title" content="Teams - ファイルをダウンロードしたらファイル名が文字化けする">
+<meta property="og:url" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%81%97%E3%81%9F%E3%82%89%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%90%8D%E3%81%8C%E6%96%87%E5%AD%97%E5%8C%96%E3%81%91%E3%81%99%E3%82%8B/index.html">
 <meta property="og:site_name" content="Japan Unified Communications Support Blog">
-<meta property="og:description" content="こんにちは、Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。   Teams を用いた通話や会議は、リモートワークの需要が増加する昨今の状況におけるコミュニケーション手段として非常に重要な機能といえます。オンライン会議で利用されるモダリティのうち、音声&#x2F;ビデオ&#x2F;デスクトップ・アプリケーション共有はまと">
+<meta property="og:description" content="こんにちは。Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。   現在、Microsoft Teams をご利用のお客様において、Teams からファイルをダウンロードする際、ダウンロードしたファイル名が文字化けた形になる状況が発生しております。本事象はファイル名に UTF-8 エンコード文字が含まれ">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E9%80%9A%E4%BF%A1%E3%82%92%20Proxy%20Server%20%E7%B5%8C%E7%94%B1%E3%81%A7%E6%8E%A5%E7%B6%9A%E3%81%99%E3%82%8B%E9%9A%9B%E3%81%AE%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85/teams-proxy-01.png">
-<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E9%80%9A%E4%BF%A1%E3%82%92%20Proxy%20Server%20%E7%B5%8C%E7%94%B1%E3%81%A7%E6%8E%A5%E7%B6%9A%E3%81%99%E3%82%8B%E9%9A%9B%E3%81%AE%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85/teams-proxy-02.png">
-<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E9%80%9A%E4%BF%A1%E3%82%92%20Proxy%20Server%20%E7%B5%8C%E7%94%B1%E3%81%A7%E6%8E%A5%E7%B6%9A%E3%81%99%E3%82%8B%E9%9A%9B%E3%81%AE%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85/teams-proxy-03.png">
-<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E9%80%9A%E4%BF%A1%E3%82%92%20Proxy%20Server%20%E7%B5%8C%E7%94%B1%E3%81%A7%E6%8E%A5%E7%B6%9A%E3%81%99%E3%82%8B%E9%9A%9B%E3%81%AE%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85/teams-proxy-04.png">
-<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E9%80%9A%E4%BF%A1%E3%82%92%20Proxy%20Server%20%E7%B5%8C%E7%94%B1%E3%81%A7%E6%8E%A5%E7%B6%9A%E3%81%99%E3%82%8B%E9%9A%9B%E3%81%AE%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85/teams-proxy-05.png">
-<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E9%80%9A%E4%BF%A1%E3%82%92%20Proxy%20Server%20%E7%B5%8C%E7%94%B1%E3%81%A7%E6%8E%A5%E7%B6%9A%E3%81%99%E3%82%8B%E9%9A%9B%E3%81%AE%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85/teams-proxy-06.png">
-<meta property="article:published_time" content="2021-05-11T15:00:00.000Z">
+<meta property="article:published_time" content="2022-10-26T07:00:00.000Z">
 <meta property="article:modified_time" content="2022-10-26T06:59:57.316Z">
 <meta property="article:author" content="CSS Japan">
+<meta property="article:tag" content="Information">
 <meta property="article:tag" content="Teams">
-<meta property="article:tag" content="Media">
-<meta property="article:tag" content="Proxy">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E9%80%9A%E4%BF%A1%E3%82%92%20Proxy%20Server%20%E7%B5%8C%E7%94%B1%E3%81%A7%E6%8E%A5%E7%B6%9A%E3%81%99%E3%82%8B%E9%9A%9B%E3%81%AE%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85/teams-proxy-01.png">
   
     <link rel="alternate" href="../../atom.xml" title="Japan Unified Communications Support Blog" type="application/atom+xml">
   
@@ -88,7 +80,7 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-teams/Teams - メディア通信を Proxy Server 経由で接続する際の注意事項" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-teams/Teams - ファイルをダウンロードしたらファイル名が文字化けする" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     
@@ -97,7 +89,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Teams - メディア通信を Proxy Server 経由で接続する際の注意事項
+      Teams - ファイルをダウンロードしたらファイル名が文字化けする
     </h1>
   
 
@@ -105,86 +97,31 @@
       <div class="article-share">
         Last Update: 
         <a href="" class="article-date-single">
-  <time datetime="2021-05-11T15:00:00.000Z" itemprop="datePublished">2021-05-12</time>
+  <time datetime="2022-10-26T07:00:00.000Z" itemprop="datePublished">2022-10-26</time>
 </a>
         
         
-        <a href="https://github.com/jpucsupport/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+5dedcaf7-fdd6-5547-b9be-51fd35f56701%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BTeams+-+%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E9%80%9A%E4%BF%A1%E3%82%92+Proxy+Server+%E7%B5%8C%E7%94%B1%E3%81%A7%E6%8E%A5%E7%B6%9A%E3%81%99%E3%82%8B%E9%9A%9B%E3%81%AE%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85%5D%28https%3A%2F%2Fjpucsupport.github.io%2Fblog%2Fteams%2FTeams%2520-%2520%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E9%80%9A%E4%BF%A1%E3%82%92%2520Proxy%2520Server%2520%E7%B5%8C%E7%94%B1%E3%81%A7%E6%8E%A5%E7%B6%9A%E3%81%99%E3%82%8B%E9%9A%9B%E3%81%AE%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85%2F%29%0A*+Content+Source%3A+%5Barticles%2Fteams%2FTeams+-+%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E9%80%9A%E4%BF%A1%E3%82%92+Proxy+Server+%E7%B5%8C%E7%94%B1%E3%81%A7%E6%8E%A5%E7%B6%9A%E3%81%99%E3%82%8B%E9%9A%9B%E3%81%AE%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85.md%5D%28https%3A%2F%2Fgithub.com%2Fjpucsupport%2Fblog%2Fblob%2Fmaster%2Farticles%2Fteams%2FTeams%2520-%2520%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E9%80%9A%E4%BF%A1%E3%82%92%2520Proxy%2520Server%2520%E7%B5%8C%E7%94%B1%E3%81%A7%E6%8E%A5%E7%B6%9A%E3%81%99%E3%82%8B%E9%9A%9B%E3%81%AE%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        <a href="https://github.com/jpucsupport/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+f6ad68f2-29d6-54db-a6cb-417300b74817%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BTeams+-+%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%81%97%E3%81%9F%E3%82%89%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%90%8D%E3%81%8C%E6%96%87%E5%AD%97%E5%8C%96%E3%81%91%E3%81%99%E3%82%8B%5D%28https%3A%2F%2Fjpucsupport.github.io%2Fblog%2Fteams%2FTeams%2520-%2520%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%81%97%E3%81%9F%E3%82%89%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%90%8D%E3%81%8C%E6%96%87%E5%AD%97%E5%8C%96%E3%81%91%E3%81%99%E3%82%8B%2F%29%0A*+Content+Source%3A+%5Barticles%2Fteams%2FTeams+-+%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%81%97%E3%81%9F%E3%82%89%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%90%8D%E3%81%8C%E6%96%87%E5%AD%97%E5%8C%96%E3%81%91%E3%81%99%E3%82%8B.md%5D%28https%3A%2F%2Fgithub.com%2Fjpucsupport%2Fblog%2Fblob%2Fmaster%2Farticles%2Fteams%2FTeams%2520-%2520%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%81%97%E3%81%9F%E3%82%89%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%90%8D%E3%81%8C%E6%96%87%E5%AD%97%E5%8C%96%E3%81%91%E3%81%99%E3%82%8B.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E9%80%9A%E4%BF%A1%E3%82%92%20Proxy%20Server%20%E7%B5%8C%E7%94%B1%E3%81%A7%E6%8E%A5%E7%B6%9A%E3%81%99%E3%82%8B%E9%9A%9B%E3%81%AE%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85/" data-id="cl9pae6zj00159dmq7a7e46is" class="article-share-link">共有</a>
+        <a data-url="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%81%97%E3%81%9F%E3%82%89%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%90%8D%E3%81%8C%E6%96%87%E5%AD%97%E5%8C%96%E3%81%91%E3%81%99%E3%82%8B/" data-id="cl9pae70s004f9dmqbkz94pc3" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>こんにちは、Unified Communications サポート チームです。<br>いつも Microsoft Teams をご利用いただきありがとうございます。  </p>
-<p>Teams を用いた通話や会議は、リモートワークの需要が増加する昨今の状況におけるコミュニケーション手段として非常に重要な機能といえます。<br>オンライン会議で利用されるモダリティのうち、音声/ビデオ/デスクトップ・アプリケーション共有はまとめてメディア通信と呼ばれており、可能な限り高い品質、並びに高いリアルタイム性の通信要件が求められます。<br>そのため、通信経路を最適化し、品質劣化要因を排除することを目的とし、UDP を用いた Proxy Server を経由しない接続が可能な構成を強く推奨しております。<br>しかしながら、お客様のセキュリティポリシーによっては通信品質よりもセキュリティが優先され、すべての通信を Proxy Server 経由としなければいけないケースもあります。<br>今回は Proxy Server のバイパスについて改めて説明させていただいたうえで、メディア通信を Proxy Server 経由とする際の注意点について説明いたします。</p>
-<h2 id="メディア通信の-Proxy-バイパス"><a href="#メディア通信の-Proxy-バイパス" class="headerlink" title="メディア通信の Proxy バイパス"></a>メディア通信の Proxy バイパス</h2><p>Teams (および Skype for Business) の Proxy Server に関する推奨事項については、以下の公開情報に詳細が記載されています。</p>
+        <p>こんにちは。Unified Communications サポート チームです。<br>いつも Microsoft Teams をご利用いただきありがとうございます。  </p>
+<p>現在、Microsoft Teams をご利用のお客様において、Teams からファイルをダウンロードする際、ダウンロードしたファイル名が文字化けた形になる状況が発生しております。<br>本事象はファイル名に UTF-8 エンコード文字が含まれ、デスクトップ 版 Teams のチャネルからダウンロードした時のみに文字化けが発生する事象となります。<br>同一事象をご確認した場合は、本記事をご参照頂ければと存じます。</p>
+<h3 id="1-回避策について"><a href="#1-回避策について" class="headerlink" title="1. 回避策について"></a>1. 回避策について</h3><p>本事象はファイル名に UTF-8 エンコード文字が含まれ、デスクトップ 版 Teams のチャネルからダウンロードした時のみに発生する事象となります。<br>そのため、WEB 版 Teams からは正常にダウンロードされる動作となります。<br>加えて、デスクトップ 版 Teams のチャネルの [ファイル] をクリックして、右側の […] のプルダウンメニューより [SharePoint で開く] からファイルをダウンロードしても、文字化けせずにダウンロードいただくことが可能となります。<br>当面の回避策としては、こちらの方法をご利用のユーザー様にはご案内を頂けますと幸いでございます。</p>
+<h3 id="2-原因について"><a href="#2-原因について" class="headerlink" title="2. 原因について"></a>2. 原因について</h3><p>本問題の原因としましては、直近で実施致しましたアップデートにコードの問題が含まれており、UTF-8 でエンコードされたファイルをデスクトップ 版 Teams 経由でダウンロードすると、ファイル名が文字化けして表示される問題が内在している状況となっております。</p>
+<h3 id="3-今後の修正の展開について"><a href="#3-今後の修正の展開について" class="headerlink" title="3. 今後の修正の展開について"></a>3. 今後の修正の展開について</h3><p>現在弊社内で原因を特定の上、修正を進めておりますが、本件の修正につきましては通常のデスクトップ クライアントの更新プロセスのタイミングで、配信をされる予定となっております。<br>お待たせをしまして誠に恐れ入りますが、現時点では、日本時間では 2022 年 11 月 29 日ごろを目途に、ご利用の環境での修正が展開される予定となっております。</p>
+<p>参考情報 : <a href="https://learn.microsoft.com/ja-jp/microsoftteams/teams-client-update" target="_blank" rel="noopener">Teams の更新プロセス</a></p>
+<p>本件につきましては、現在弊社内で原因を特定の上、修正を進めておりますが、修正の内容から展開まで時間を要する見込みとなっております。<br>現時点では、お待たせをしまして誠に恐れ入りますが、2022 年 11 月 29 日を目途に、ご利用の環境での修正が展開される予定となっております。</p>
+<p>それまでの間、大変ご不便をおかけしまして申し訳ありませんが、上記に記載いたしました回避策などをご確認のうえ、引き続き Microsoft Teamsのご利用をお願いできれば幸いでございます。<br>今後の修正等の対応予定にアップデートがあり次第、引き続き、本公開情報にてご案内致します。</p>
+<br />
+
+<p>NOTE:  </p>
 <ul>
-<li>Teams または Skype for Business Online 向けのプロキシ サーバー<br><a href="https://docs.microsoft.com/ja-jp/microsoftteams/proxy-servers-for-skype-for-business-online" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/microsoftteams/proxy-servers-for-skype-for-business-online</a>  </li>
+<li>2022 年 10 月 26 日に、初版を公開しました。</li>
 </ul>
-<p>メディア通信は高いリアルタイム性が求められるため、遅延や揺らぎ、ロストの発生を可能な限り低減することが重要です。また、再送による恩恵が得られないため、オーバーヘッドの多い TCP よりも UDP を用いた接続が品質面では優位であるとされています。Teams は UDP/TCP、および Proxy Server を経由する TCP の接続に対応していますが、品質面で優位性が低い TCP を用い、さらにサーバーの負荷やホップ数の増加による影響を受けやすい Proxy Server を経由した接続は品質を考慮すると推奨されないこととなります。そのため、メディア通信だけでも Proxy Server をバイパスするネットワーク構成を推奨しており、要件をまとめると以下となります。</p>
-<ul>
-<li>クライアント自身が外部の DNS ゾーンを名前解決可能であること。  <blockquote>
-<p>Skype for Business では必須要件でしたが、Teams の実装においては必須ではありません。</p>
-</blockquote>
-</li>
-<li>UDP トラフィックが直接インターネットへ接続できるようにルーティングされること。  <blockquote>
-<p>NAT 処理においてソースポートが変換されることは、Teams の動作に影響しません。</p>
-</blockquote>
-</li>
-<li>経路上のファイアウォール等において UDP ポートが開放されていること。  <blockquote>
-<p>詳細は後述します。</p>
-</blockquote>
-</li>
-<li>その他の要件は以下をご参照ください。  <blockquote>
-<p>Microsoft Teams 用に組織のネットワークを準備する<br><a href="https://docs.microsoft.com/ja-jp/microsoftteams/prepare-network" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/microsoftteams/prepare-network</a> </md>   </p>
-</blockquote>
-</li>
-</ul>
-<p>ファイアウォールで開放が必要な宛先とポートは以下のとおりです。</p>
-<ul>
-<li><p>宛先アドレス  </p>
-<blockquote>
-<p>13.107.64.0/18, 52.112.0.0/14, 52.120.0.0/14</p>
-</blockquote>
-</li>
-<li><p>宛先ポート  </p>
-<blockquote>
-<p>UDP: 3478、3479、3480、3481<br>※UDP を開放している場合、TCP:443 は開放されていなくても問題ありません。</p>
-</blockquote>
-</li>
-<li><p>最新の情報は以下をご確認ください。</p>
-<blockquote>
-<p>Office 365 URL および IP アドレス範囲<br><a href="https://docs.microsoft.com/ja-jp/microsoft-365/enterprise/urls-and-ip-address-ranges" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/microsoft-365/enterprise/urls-and-ip-address-ranges</a><br>※”Skype for Business Online および Microsoft Teams” の ID:11 が該当します。  </p>
-</blockquote>
-<p>＜ バイパス構成のイメージ ＞<br><img src="./teams-proxy-01.png" alt="">  </p>
-</li>
-</ul>
-<h2 id="Proxy-Server-経由で接続する場合の注意点"><a href="#Proxy-Server-経由で接続する場合の注意点" class="headerlink" title="Proxy Server 経由で接続する場合の注意点"></a>Proxy Server 経由で接続する場合の注意点</h2><p>セキュリティ面を優先し、ファイアウォールで UDP を開放せずにメディア通信が Proxy Server を経由するネットワーク構成にする必要がある場合、Proxy Server で次の点を考慮する必要があります。  </p>
-<ul>
-<li><p>接続先の URL で FQDN を用いない  </p>
-<blockquote>
-<p>Teams が利用する Transport Relay Protool の実装に基づき、メディア通信をリレーする Media Processor サーバーの接続先情報は FQDN ではなく IP アドレスが用いられます。<br><img src="./teams-proxy-02.png" alt=""><br>そのため、Proxy Server で接続先を制限している場合は以下の IP アドレス範囲で許可していただく必要があります。許可が必要な IP アドレス範囲は、”Office 365 URL および IP アドレス範囲” で記載されている ID 11 が該当します。<br><img src="./teams-proxy-03.png" alt=""><br>&lt;&lt; 13.107.64.0/18, 52.112.0.0/14, 52.120.0.0/14 &gt;&gt;  </p>
-<p>ID:11 自体は Proxy バイパスを目的として UDP が示されますが、TCP:443 としては ID:12 以降に含まれており、宛先 IP アドレス範囲自体は ID:11 と同じ範囲となります。</p>
-</blockquote>
-</li>
-<li><p>TLS バージョンが 1.0  </p>
-<blockquote>
-<p>メディア通信の暗号化には SRTP が用いられています。重複した暗号化処理による無駄を避けるため、TLS における暗号化は実施されていませんが、Proxy Server を経由した接続を実現するためにも TLS のフォーマットが用いられています。ただし、Lync/Skype for Business といった古い製品との相互接続を考慮する必要があり、見かけ上は TLS バージョンに 1.0 が定義されています。<br><img src="./teams-proxy-04.png" alt=""><br>Proxy Server で TLS 1.0 がブロックされている場合、対象となる IP アドレス範囲に対しては除外する必要があります。</p>
-</blockquote>
-</li>
-<li><p>TLS の Client Hello に Server Name Indicator が含まれない  </p>
-<blockquote>
-<p>前述のとおりフォーマットとしては TLS に準じていますが、含まれる属性は簡略化されています。Client Hello に含まれる属性のうち、SNI (Server Name Indicator) 属性が無いことにより接続に失敗する場合があります。SNI 属性は Proxy Server や Firewall 等が接続先を判断するために用いる製品があり、SNI 属性自体が無い場合に宛先不明な通信としてブロックされるケースがあります。<br><img src="./teams-proxy-05.png" alt=""><br>ホワイトリストを構成する必要がある場合、CONNECT リクエストに含まれる URL を用いてチェックする必要があります。  </p>
-</blockquote>
-</li>
-<li><p>TLS の Server Hello でサーバー証明書が提示されない  </p>
-<blockquote>
-<p> 前述のとおり暗号化は SRTP で行われ、TLS の暗号化は用いれていません。そのため、Server Hello には TLS 暗号化で必要なサーバー証明書が含まれていません。<br><img src="./teams-proxy-06.png" alt=""><br>SSL インスペクションなどのセキュリティ機能を有する Proxy Server の場合、不正な TLS 接続と判断して切断してしまうケースもあります。Proxy Server のログをご確認いただき、Microsoft 365 宛の通信で切断している状況が確認される場合は、ホワイトリストに登録してインスペクションの対象から除外する必要があります。  </p>
-</blockquote>
-</li>
-</ul>
-<h2 id="まとめ"><a href="#まとめ" class="headerlink" title="まとめ"></a>まとめ</h2><p>高い通信品質を求める Teams のメディア通信は、柔軟で確実な接続と高い品質確保を両立するため、複雑な実装により UDP/TCP での接続、さらには Proxy Server を経由する接続のいずれにも対応します。この複雑な実装により Proxy Server を用いたインターネットアクセス環境であっても、特定の条件で UDP ポートが開放されていれば品質面で優位性の高い UDP での接続が利用されます。繰り返しとなりますが、Microsoft Teams としてはメディア通信の品質は優先事項であると考えており、UDP ポート開放による Proxy Server をバイパスする構成を強く推奨しています。セキュリティ要件が優先される等の理由により UDP ポートの開放が困難な場合は、今回説明させていただいた Teams の実装を十分にご理解いただき、Proxy Server でブロックされることの無いように設定や構成を考慮いただきますようお願いいたします。なお、Proxy Server を経由する場合でも可能な限り高い通信品質が確保できるように、Proxy Server のリソース状況や回線のリソースについても十分にご配慮いただけますようお願いいたします。</p>
 
       
       
@@ -198,10 +135,10 @@
     <footer class="article-footer">
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Media/" rel="tag">Media</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Proxy/" rel="tag">Proxy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Information/" rel="tag">Information</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li></ul>
 
         
-        <a href="https://github.com/jpucsupport/blog/edit/master/articles/teams/Teams%20-%20メディア通信を%20Proxy%20Server%20経由で接続する際の注意事項.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        <a href="https://github.com/jpucsupport/blog/edit/master/articles/teams/Teams%20-%20ファイルをダウンロードしたらファイル名が文字化けする.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
         
     </footer>
   </div>
@@ -209,19 +146,10 @@
     
 <nav id="article-nav">
   
-    <a href="../Teams%20-%20%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%20UPN%20%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE%E5%BD%B1%E9%9F%BF/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">次の記事</strong>
-      <div class="article-nav-title">
-        
-          Teams - ユーザーの UPN を変更した場合の影響
-        
-      </div>
-    </a>
   
-  
-    <a href="../../live%20event/Live%20Events%20-%20%E3%83%90%E3%83%83%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%20%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%20URL%20%E3%81%AE%E5%B7%AE%E3%81%97%E6%9B%BF%E3%81%88%E6%96%B9%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="../Teams%20-%20%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%85%A5%E5%8A%9B%E6%99%82%E3%81%AB%E7%94%BB%E9%9D%A2%E5%B7%A6%E4%B8%8A%E3%81%AB%E5%A4%89%E6%8F%9B%E5%80%99%E8%A3%9C%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前の記事</strong>
-      <div class="article-nav-title">Live Events - バックアップ イベント URL の差し替え方法</div>
+      <div class="article-nav-title">Teams - 日本語入力時に画面左上に変換候補が表示される</div>
     </a>
   
 </nav>
@@ -240,7 +168,7 @@
       <ul>
         
           <li>
-            <a href="../Teams%20-%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%81%97%E3%81%9F%E3%82%89%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%90%8D%E3%81%8C%E6%96%87%E5%AD%97%E5%8C%96%E3%81%91%E3%81%99%E3%82%8B/">Teams - ファイルをダウンロードしたらファイル名が文字化けする</a>
+            <a href="">Teams - ファイルをダウンロードしたらファイル名が文字化けする</a>
           </li>
         
           <li>
