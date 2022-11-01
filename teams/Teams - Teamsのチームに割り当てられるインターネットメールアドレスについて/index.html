@@ -4,24 +4,24 @@
   <meta charset="utf-8">
   
   
-  <title>Teams - Teams 会議レコーディングの品質 | Japan Unified Communications Support Blog</title>
+  <title>Teams - チームに割り当てられるインターネットメールアドレスについて | Japan Unified Communications Support Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="こんにちは、Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。   Microsoft Teams でオンライン会議を開催する際、ナレッジ共有や議事の記録を目的としてレコーディング機能をご利用いただく機会も多いかと思います。今回、レコーディングした動画ファイルの品質について、現時点の実装をもとに説明いた">
+  <meta name="description" content="こんにちは。Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。   Microsoft Teams では、チャネルにメッセージを送ることが出来るアドレスがあります。アドレスを取得するためには、チャネルを選択して、チャネル名の右横に出てくる […] をクリックすると出てくる [メールアドレスを取得] を押">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Teams - Teams 会議レコーディングの品質">
-<meta property="og:url" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Teams%20%E4%BC%9A%E8%AD%B0%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E5%93%81%E8%B3%AA/index.html">
+<meta property="og:title" content="Teams - チームに割り当てられるインターネットメールアドレスについて">
+<meta property="og:url" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Teams%E3%81%AE%E3%83%81%E3%83%BC%E3%83%A0%E3%81%AB%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%82%89%E3%82%8C%E3%82%8B%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/index.html">
 <meta property="og:site_name" content="Japan Unified Communications Support Blog">
-<meta property="og:description" content="こんにちは、Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。   Microsoft Teams でオンライン会議を開催する際、ナレッジ共有や議事の記録を目的としてレコーディング機能をご利用いただく機会も多いかと思います。今回、レコーディングした動画ファイルの品質について、現時点の実装をもとに説明いた">
+<meta property="og:description" content="こんにちは。Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。   Microsoft Teams では、チャネルにメッセージを送ることが出来るアドレスがあります。アドレスを取得するためには、チャネルを選択して、チャネル名の右横に出てくる […] をクリックすると出てくる [メールアドレスを取得] を押">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Teams%20%E4%BC%9A%E8%AD%B0%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E5%93%81%E8%B3%AA/Teams-Recording-01.png">
-<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Teams%20%E4%BC%9A%E8%AD%B0%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E5%93%81%E8%B3%AA/Teams-Recording-02.png">
-<meta property="article:published_time" content="2021-06-30T15:00:00.000Z">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Teams%E3%81%AE%E3%83%81%E3%83%BC%E3%83%A0%E3%81%AB%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%82%89%E3%82%8C%E3%82%8B%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/TeamForMail1.jpg">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Teams%E3%81%AE%E3%83%81%E3%83%BC%E3%83%A0%E3%81%AB%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%82%89%E3%82%8C%E3%82%8B%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/TeamForMail2.jpg">
+<meta property="article:published_time" content="2022-11-01T02:00:00.000Z">
 <meta property="article:modified_time" content="2022-11-01T01:36:55.382Z">
 <meta property="article:author" content="CSS Japan">
+<meta property="article:tag" content="Information">
 <meta property="article:tag" content="Teams">
-<meta property="article:tag" content="Recording">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Teams%20%E4%BC%9A%E8%AD%B0%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E5%93%81%E8%B3%AA/Teams-Recording-01.png">
+<meta name="twitter:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Teams%E3%81%AE%E3%83%81%E3%83%BC%E3%83%A0%E3%81%AB%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%82%89%E3%82%8C%E3%82%8B%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/TeamForMail1.jpg">
   
     <link rel="alternate" href="../../atom.xml" title="Japan Unified Communications Support Blog" type="application/atom+xml">
   
@@ -83,7 +83,7 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-teams/Teams - Teams 会議レコーディングの品質" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-teams/Teams - Teamsのチームに割り当てられるインターネットメールアドレスについて" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     
@@ -92,7 +92,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Teams - Teams 会議レコーディングの品質
+      Teams - チームに割り当てられるインターネットメールアドレスについて
     </h1>
   
 
@@ -100,58 +100,35 @@
       <div class="article-share">
         Last Update: 
         <a href="" class="article-date-single">
-  <time datetime="2021-06-30T15:00:00.000Z" itemprop="datePublished">2021-07-01</time>
+  <time datetime="2022-11-01T02:00:00.000Z" itemprop="datePublished">2022-11-01</time>
 </a>
         
         
-        <a href="https://github.com/jpucsupport/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+0bbd4a53-0275-50eb-a7db-3d8e2788506b%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BTeams+-+Teams+%E4%BC%9A%E8%AD%B0%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E5%93%81%E8%B3%AA%5D%28https%3A%2F%2Fjpucsupport.github.io%2Fblog%2Fteams%2FTeams%2520-%2520Teams%2520%E4%BC%9A%E8%AD%B0%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E5%93%81%E8%B3%AA%2F%29%0A*+Content+Source%3A+%5Barticles%2Fteams%2FTeams+-+Teams+%E4%BC%9A%E8%AD%B0%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E5%93%81%E8%B3%AA.md%5D%28https%3A%2F%2Fgithub.com%2Fjpucsupport%2Fblog%2Fblob%2Fmaster%2Farticles%2Fteams%2FTeams%2520-%2520Teams%2520%E4%BC%9A%E8%AD%B0%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E5%93%81%E8%B3%AA.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        <a href="https://github.com/jpucsupport/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+b169f482-3386-5dba-addd-eae47263e679%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BTeams+-+%E3%83%81%E3%83%BC%E3%83%A0%E3%81%AB%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%82%89%E3%82%8C%E3%82%8B%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%5D%28https%3A%2F%2Fjpucsupport.github.io%2Fblog%2Fteams%2FTeams%2520-%2520Teams%E3%81%AE%E3%83%81%E3%83%BC%E3%83%A0%E3%81%AB%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%82%89%E3%82%8C%E3%82%8B%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%2F%29%0A*+Content+Source%3A+%5Barticles%2Fteams%2FTeams+-+Teams%E3%81%AE%E3%83%81%E3%83%BC%E3%83%A0%E3%81%AB%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%82%89%E3%82%8C%E3%82%8B%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.md%5D%28https%3A%2F%2Fgithub.com%2Fjpucsupport%2Fblog%2Fblob%2Fmaster%2Farticles%2Fteams%2FTeams%2520-%2520Teams%E3%81%AE%E3%83%81%E3%83%BC%E3%83%A0%E3%81%AB%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%82%89%E3%82%8C%E3%82%8B%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpucsupport.github.io/blog/teams/Teams%20-%20Teams%20%E4%BC%9A%E8%AD%B0%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E5%93%81%E8%B3%AA/" data-id="cl9xjhvlz000p9dtdewwfd8t5" class="article-share-link">共有</a>
+        <a data-url="https://jpucsupport.github.io/blog/teams/Teams%20-%20Teams%E3%81%AE%E3%83%81%E3%83%BC%E3%83%A0%E3%81%AB%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%82%89%E3%82%8C%E3%82%8B%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" data-id="cl9xjhvm0000q9dtd7952hzzz" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>こんにちは、Unified Communications サポート チームです。<br>いつも Microsoft Teams をご利用いただきありがとうございます。  </p>
-<p>Microsoft Teams でオンライン会議を開催する際、ナレッジ共有や議事の記録を目的としてレコーディング機能をご利用いただく機会も多いかと思います。今回、レコーディングした動画ファイルの品質について、現時点の実装をもとに説明いたします。</p>
-<h2 id="オンライン会議におけるレコーディング"><a href="#オンライン会議におけるレコーディング" class="headerlink" title="オンライン会議におけるレコーディング"></a>オンライン会議におけるレコーディング</h2><p>Microsoft Teams のレコーディング ファイルについては、以下の公開情報におおよそのファイルサイズが示されています。 </p>
+        <p>こんにちは。Unified Communications サポート チームです。<br>いつも Microsoft Teams をご利用いただきありがとうございます。  </p>
+<p>Microsoft Teams では、チャネルにメッセージを送ることが出来るアドレスがあります。<br>アドレスを取得するためには、チャネルを選択して、チャネル名の右横に出てくる […] をクリックすると出てくる [メールアドレスを取得] を押下して取得することが可能です。<br>この際のメールアドレスのフォーマットは以下のようになります。<br><a href="mailto:xxxxxx.xxxxxxx.onmicrosoft.com@jp.teams.ms">xxxxxx.xxxxxxx.onmicrosoft.com@jp.teams.ms</a></p>
+<p>参考情報 : <a href="https://support.microsoft.com/ja-jp/office/teams-%E3%81%A7%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB%E3%81%AB%E9%9B%BB%E5%AD%90%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%92%E9%80%81%E4%BF%A1%E3%81%99%E3%82%8B-d91db004-d9d7-4a47-82e6-fb1b16dfd51e" target="_blank" rel="noopener">Teams でチャネルに電子メールを送信する</a></p>
+<p>一方で、これに類似したものとして、Microsoft Teams で、チームを作成した際に自動で割り当てられるインターネットメールアドレスが存在しています。<br>このアドレスについては、冒頭のチャネル投稿用のアドレスとは異なり、チーム作成時にチーム名に基づいて自動で以下にメールアドレスが割り当てられるもので、Teams 管理センター &gt; [チーム] &gt; [チームを管理] から特定のチームをクリックすることにより確認することが可能です。</p>
+<p>このアドレスについて、利用用途や存在の意味などについてのお問合せを受けることがございますが、このメールアドレスは投稿されたチームの情報を格納するために自動生成されるもので、実際にユーザーが利用するためのものではなく、そのため運用上注意を払う必要はありません。<br>本ブログでは、チーム作成時にチーム名から、Teams 管理センターにて確認できる自動生成されるメールアドレスに反映される文字についてご紹介いたします。</p>
+<p>また、このアドレスについては、以下のようなアドレスの命名規則が反映されますが、上記の通り、ユーザーがご利用いただくことのないアドレスですが、お客様によっては、チーム名と該当アドレスをなるべく整合させたいというご要望を受けることがあり、以下は参考としてご案内をいたします。<br>チーム名が、メールアドレスに反映される文字、反映されない文字は、現在以下のようになっています。</p>
+<p>a.    [メール] に反映される文字<br>‘-_`|~</p>
+<p>例<br><img src="./TeamForMail1.jpg" alt="TAC image"></p>
+<p>b.    [メール] に反映されない文字<br>(.!#$%&amp;*+/=?^{})</p>
+<p>例<br><img src="./TeamForMail2.jpg" alt="TAC image"></p>
+<p>※なお、動作については予告なく変更される可能性があり、今後にわたり本動作が保証されるものではございませんことを予めご了承ください。</p>
+<p>以上の動作から、[メール] にチーム名と同様に名前の反映をご希望の場合は、上記反映されない文字を使用をしないようにお願いいたします。<br>なお、万が一重複したチーム名が作成されました場合には、[メール] のアドレスが変更されてしまう動作となりますのでご了承ください。<br>重ねまして、本動作に関しましては、今後予告なく変更される可能性がございますことを、ご承知おきくださいますようお願いいたします。</p>
+<br />
+
+<p>NOTE:  </p>
 <ul>
-<li>Teams のクラウド会議のレコーディング<br><a href="https://docs.microsoft.com/ja-jp/microsoftteams/cloud-recording" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/microsoftteams/cloud-recording</a>  <blockquote>
-<p><strong>ストレージの計画</strong><br>1 時間のレコーディングのサイズは 400 MB です。 記録されたファイルに必要な容量を理解していること、および Microsoft Stream で使用できる十分なストレージがあることを確認します。  </p>
-</blockquote>
-</li>
+<li>2022 年 11 月 1 日に、初版を公開しました。</li>
 </ul>
-<p>1 時間のレコーディング ファイルが 400 MByte 程度となるため、動画のビットレートは以下計算結果のとおりおおよそ 900 kbps となります。</p>
-<ul>
-<li>レコーディング ファイルのビットレート  <blockquote>
-<p>400 MByte × 8 ＝ 3200 Mbit<br>3200 Mbit ÷ 3600 sec ≒ 900 kbps  </p>
-</blockquote>
-</li>
-</ul>
-<p>実際のレコーディングファイルのプロパティを確認すると以下のとおりで、おおよそ上記計算結果どおりとなります。  </p>
-<ul>
-<li>レコーディング ファイルのプロパティ（オンライン会議）  <blockquote>
-<p><img src="./Teams-Recording-01.png" alt="">  </p>
-</blockquote>
-</li>
-</ul>
-<p>ビデオのビットレートが 1000 kbps 程度で、フレームレートが 8 fps であることが分かります。画像サイズは 1920 × 1080 とフル HD サイズではあるものの、ビットレートとフレームレートは非常に低く抑えられています。動画の種類や圧縮率にもよりますが、高画質と言える フル HD / 30 fps の MPEG-4 動画のビットレートが 12 Mbps を超えることを考えると、Microsoft Teams のレコーディングファイルはそれほど高画質ではないことが分かります。  </p>
-<p>一般的なオンライン会議においては、デスクトップ共有や PowerPoint 共有を用いてドキュメントを表示しているシーンが多くなります。ドキュメントの表示は動きが少ないため、低いフレームレートの影響は小さく、一方、文字や図面を精細に表示する必要があるため高い解像度が求められます。ファイルサイズとの兼ね合いを考慮し、なめらかな動きを犠牲にして解像度を高めたチューニングとなっています。  </p>
-<h2 id="ライブイベントのレコーディング"><a href="#ライブイベントのレコーディング" class="headerlink" title="ライブイベントのレコーディング"></a>ライブイベントのレコーディング</h2><p>ライブイベントのレコーディングに関しては公開された情報がありませんが、実際のレコーディングファイルを確認すると 1280 x 720 で解像度が低い一方、フレームレートは 30 FPS と高めになっていることが分かります。</p>
-<ul>
-<li>レコーディング ファイルのプロパティ（ライブイベント）  <blockquote>
-<p><img src="./Teams-Recording-02.png" alt="">   </p>
-</blockquote>
-</li>
-</ul>
-<p>ライブイベントはプレゼンテーションやセミナーといった目的で利用されるケースが多く、一般的な会議の様に精細な情報を共有するシーンは少ないと言えます。また、動画や発表者が話をする姿を映すなど、比較的動きのある画像を表示するケースが多く、解像度よりもなめらかな動きを重視する必要があります。そのため、解像度を下げてフレームレートを高めるチューニングとなっています。  </p>
-<h2 id="まとめ"><a href="#まとめ" class="headerlink" title="まとめ"></a>まとめ</h2><p>以上のようにファイルサイズとの兼ね合いを考慮し、会議の種類に応じたチューニングが行われているため、会議で表示している画像のソースによっては期待する品質が得られない場合も出てきます。レコーディング品質については、処理をするサーバーの負荷や、レコーディングファイルのサイズを考慮してハードコートされており、現在の実装では調整する機能が提供されておりません。そのため、レコーディング ファイルの画質が利用目的に耐えうるものか、あらかじめテストしておくことをお勧めします。何らかの目的において高画質な動画を記録する必要がある場合は、対象となるソースを別途撮影したり、PC 上でデスクトップやウインドウを録画するツールの利用もご検討ください。  </p>
-<ul>
-<li><p>PowerPoint で画面を記録する<br><a href="https://support.microsoft.com/ja-jp/office/powerpoint-で画面を記録する-0b4c3f65-534c-4cf1-9c59-402b6e9d79d0" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/office/powerpoint-で画面を記録する-0b4c3f65-534c-4cf1-9c59-402b6e9d79d0</a>  </p>
-</li>
-<li><p>Xbox Game Bar を使って PC でゲーム クリップを録画する<br><a href="https://support.microsoft.com/ja-jp/windows/xbox-game-bar-を使って-pc-でゲーム-クリップを録画する-2f477001-54d4-1276-9144-b0416a307f3c" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/windows/xbox-game-bar-を使って-pc-でゲーム-クリップを録画する-2f477001-54d4-1276-9144-b0416a307f3c</a>  </p>
-</li>
-</ul>
-<p>※レコーディングの負荷も考慮する必要があるため、PC スペックの考慮や、3rd Party 製品の利用もご検討ください。</p>
 
       
       
@@ -165,10 +142,10 @@
     <footer class="article-footer">
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Recording/" rel="tag">Recording</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Information/" rel="tag">Information</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li></ul>
 
         
-        <a href="https://github.com/jpucsupport/blog/edit/master/articles/teams/Teams%20-%20Teams%20会議レコーディングの品質.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        <a href="https://github.com/jpucsupport/blog/edit/master/articles/teams/Teams%20-%20Teamsのチームに割り当てられるインターネットメールアドレスについて.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
         
     </footer>
   </div>
@@ -176,19 +153,10 @@
     
 <nav id="article-nav">
   
-    <a href="../Teams%20-%20%E3%82%B2%E3%82%B9%E3%83%88%20%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%92%E6%8B%9B%E5%BE%85%E3%81%97%E3%81%9F%E9%9A%9B%E3%81%AE%E5%8B%95%E4%BD%9C/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">次の記事</strong>
-      <div class="article-nav-title">
-        
-          Teams - ゲスト ユーザーを招待した際の動作
-        
-      </div>
-    </a>
   
-  
-    <a href="../../Skype%20for%20business/Skype%20-%20Skype%20for%20Business%20%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E8%B5%B7%E5%8B%95%E6%8A%91%E6%AD%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="../Teams%20-%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%81%97%E3%81%9F%E3%82%89%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%90%8D%E3%81%8C%E6%96%87%E5%AD%97%E5%8C%96%E3%81%91%E3%81%99%E3%82%8B/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前の記事</strong>
-      <div class="article-nav-title">Skype - Skype for Business アプリケーションの起動抑止について</div>
+      <div class="article-nav-title">Teams - ファイルをダウンロードしたらファイル名が文字化けする</div>
     </a>
   
 </nav>
@@ -207,7 +175,7 @@
       <ul>
         
           <li>
-            <a href="../Teams%20-%20Teams%E3%81%AE%E3%83%81%E3%83%BC%E3%83%A0%E3%81%AB%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%82%89%E3%82%8C%E3%82%8B%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Teams - チームに割り当てられるインターネットメールアドレスについて</a>
+            <a href="">Teams - チームに割り当てられるインターネットメールアドレスについて</a>
           </li>
         
           <li>
