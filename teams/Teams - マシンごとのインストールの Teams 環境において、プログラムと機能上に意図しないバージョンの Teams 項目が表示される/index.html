@@ -4,25 +4,21 @@
   <meta charset="utf-8">
   
   
-  <title>Teams - msExchHideFromAddressLists を True (アドレス帳に表示しないをオン) にした場合の Teams への影響について | Japan Unified Communications Support Blog</title>
+  <title>Teams - マシンごとのインストールの Teams 環境において、&#34;プログラムと機能&#34; 上に意図しないバージョンの Teams 項目が表示される | Japan Unified Communications Support Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="こんにちは。Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。 Exchange Server&#x2F;Online 側にて msExchHideFromAddressLists を True (アドレス帳に表示しないをオン) にした場合、Teams 上でのユーザー検索へ影響が発生します。ただし、Teams は">
+  <meta name="description" content="こんにちは。Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。 現在、マシンごとのインストール方法 (ALLUSER&#x3D;1 オプション) を利用して Microsoft Teams クライアントを導入した VDI 環境において、”プログラムと機能” の項目に、期待されないバージョンの “Microsoft">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Teams - msExchHideFromAddressLists を True (アドレス帳に表示しないをオン) にした場合の Teams への影響について">
-<meta property="og:url" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20msExchHideFromAddressLists%20%E3%82%92%20True%20(%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E5%B8%B3%E3%81%AB%E8%A1%A8%E7%A4%BA%E3%81%97%E3%81%AA%E3%81%84%E3%82%92%E3%82%AA%E3%83%B3)%20%E3%81%AB%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE%20Teams%20%E3%81%B8%E3%81%AE%E5%BD%B1%E9%9F%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/index.html">
+<meta property="og:title" content="Teams - マシンごとのインストールの Teams 環境において、&quot;プログラムと機能&quot; 上に意図しないバージョンの Teams 項目が表示される">
+<meta property="og:url" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%9E%E3%82%B7%E3%83%B3%E3%81%94%E3%81%A8%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%AE%20Teams%20%E7%92%B0%E5%A2%83%E3%81%AB%E3%81%8A%E3%81%84%E3%81%A6%E3%80%81%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%A8%E6%A9%9F%E8%83%BD%E4%B8%8A%E3%81%AB%E6%84%8F%E5%9B%B3%E3%81%97%E3%81%AA%E3%81%84%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%AE%20Teams%20%E9%A0%85%E7%9B%AE%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B/index.html">
 <meta property="og:site_name" content="Japan Unified Communications Support Blog">
-<meta property="og:description" content="こんにちは。Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。 Exchange Server&#x2F;Online 側にて msExchHideFromAddressLists を True (アドレス帳に表示しないをオン) にした場合、Teams 上でのユーザー検索へ影響が発生します。ただし、Teams は">
+<meta property="og:description" content="こんにちは。Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。 現在、マシンごとのインストール方法 (ALLUSER&#x3D;1 オプション) を利用して Microsoft Teams クライアントを導入した VDI 環境において、”プログラムと機能” の項目に、期待されないバージョンの “Microsoft">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20msExchHideFromAddressLists%20%E3%82%92%20True%20(%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E5%B8%B3%E3%81%AB%E8%A1%A8%E7%A4%BA%E3%81%97%E3%81%AA%E3%81%84%E3%82%92%E3%82%AA%E3%83%B3)%20%E3%81%AB%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE%20Teams%20%E3%81%B8%E3%81%AE%E5%BD%B1%E9%9F%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/chat.png">
-<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20msExchHideFromAddressLists%20%E3%82%92%20True%20(%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E5%B8%B3%E3%81%AB%E8%A1%A8%E7%A4%BA%E3%81%97%E3%81%AA%E3%81%84%E3%82%92%E3%82%AA%E3%83%B3)%20%E3%81%AB%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE%20Teams%20%E3%81%B8%E3%81%AE%E5%BD%B1%E9%9F%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/PowerBar.png">
-<meta property="article:published_time" content="2022-04-18T06:00:00.000Z">
-<meta property="article:modified_time" content="2022-12-08T05:44:56.110Z">
+<meta property="article:published_time" content="2022-12-08T06:00:00.000Z">
+<meta property="article:modified_time" content="2022-12-08T05:44:56.114Z">
 <meta property="article:author" content="CSS Japan">
 <meta property="article:tag" content="Information">
 <meta property="article:tag" content="Teams">
-<meta property="article:tag" content="Search">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20msExchHideFromAddressLists%20%E3%82%92%20True%20(%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E5%B8%B3%E3%81%AB%E8%A1%A8%E7%A4%BA%E3%81%97%E3%81%AA%E3%81%84%E3%82%92%E3%82%AA%E3%83%B3)%20%E3%81%AB%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE%20Teams%20%E3%81%B8%E3%81%AE%E5%BD%B1%E9%9F%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/chat.png">
   
     <link rel="alternate" href="../../atom.xml" title="Japan Unified Communications Support Blog" type="application/atom+xml">
   
@@ -84,7 +80,7 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-teams/Teams - msExchHideFromAddressLists を True (アドレス帳に表示しないをオン) にした場合の Teams への影響について" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-teams/Teams - マシンごとのインストールの Teams 環境において、プログラムと機能上に意図しないバージョンの Teams 項目が表示される" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     
@@ -93,7 +89,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Teams - msExchHideFromAddressLists を True (アドレス帳に表示しないをオン) にした場合の Teams への影響について
+      Teams - マシンごとのインストールの Teams 環境において、&#34;プログラムと機能&#34; 上に意図しないバージョンの Teams 項目が表示される
     </h1>
   
 
@@ -101,32 +97,31 @@
       <div class="article-share">
         Last Update: 
         <a href="" class="article-date-single">
-  <time datetime="2022-04-18T06:00:00.000Z" itemprop="datePublished">2022-04-18</time>
+  <time datetime="2022-12-08T06:00:00.000Z" itemprop="datePublished">2022-12-08</time>
 </a>
         
         
-        <a href="https://github.com/jpucsupport/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+52030a07-51d8-5485-b4b7-72346529bc09%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BTeams+-+msExchHideFromAddressLists+%E3%82%92+True+%28%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E5%B8%B3%E3%81%AB%E8%A1%A8%E7%A4%BA%E3%81%97%E3%81%AA%E3%81%84%E3%82%92%E3%82%AA%E3%83%B3%29+%E3%81%AB%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE+Teams+%E3%81%B8%E3%81%AE%E5%BD%B1%E9%9F%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%5D%28https%3A%2F%2Fjpucsupport.github.io%2Fblog%2Fteams%2FTeams%2520-%2520msExchHideFromAddressLists%2520%E3%82%92%2520True%2520%28%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E5%B8%B3%E3%81%AB%E8%A1%A8%E7%A4%BA%E3%81%97%E3%81%AA%E3%81%84%E3%82%92%E3%82%AA%E3%83%B3%29%2520%E3%81%AB%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE%2520Teams%2520%E3%81%B8%E3%81%AE%E5%BD%B1%E9%9F%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%2F%29%0A*+Content+Source%3A+%5Barticles%2Fteams%2FTeams+-+msExchHideFromAddressLists+%E3%82%92+True+%28%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E5%B8%B3%E3%81%AB%E8%A1%A8%E7%A4%BA%E3%81%97%E3%81%AA%E3%81%84%E3%82%92%E3%82%AA%E3%83%B3%29+%E3%81%AB%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE+Teams+%E3%81%B8%E3%81%AE%E5%BD%B1%E9%9F%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.md%5D%28https%3A%2F%2Fgithub.com%2Fjpucsupport%2Fblog%2Fblob%2Fmaster%2Farticles%2Fteams%2FTeams%2520-%2520msExchHideFromAddressLists%2520%E3%82%92%2520True%2520%28%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E5%B8%B3%E3%81%AB%E8%A1%A8%E7%A4%BA%E3%81%97%E3%81%AA%E3%81%84%E3%82%92%E3%82%AA%E3%83%B3%29%2520%E3%81%AB%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE%2520Teams%2520%E3%81%B8%E3%81%AE%E5%BD%B1%E9%9F%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        <a href="https://github.com/jpucsupport/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+38b9038a-21d1-5bb2-ad42-ae7d88eafefc%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BTeams+-+%E3%83%9E%E3%82%B7%E3%83%B3%E3%81%94%E3%81%A8%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%AE+Teams+%E7%92%B0%E5%A2%83%E3%81%AB%E3%81%8A%E3%81%84%E3%81%A6%E3%80%81%22%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%A8%E6%A9%9F%E8%83%BD%22+%E4%B8%8A%E3%81%AB%E6%84%8F%E5%9B%B3%E3%81%97%E3%81%AA%E3%81%84%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%AE+Teams+%E9%A0%85%E7%9B%AE%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B%5D%28https%3A%2F%2Fjpucsupport.github.io%2Fblog%2Fteams%2FTeams%2520-%2520%E3%83%9E%E3%82%B7%E3%83%B3%E3%81%94%E3%81%A8%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%AE%2520Teams%2520%E7%92%B0%E5%A2%83%E3%81%AB%E3%81%8A%E3%81%84%E3%81%A6%E3%80%81%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%A8%E6%A9%9F%E8%83%BD%E4%B8%8A%E3%81%AB%E6%84%8F%E5%9B%B3%E3%81%97%E3%81%AA%E3%81%84%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%AE%2520Teams%2520%E9%A0%85%E7%9B%AE%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B%2F%29%0A*+Content+Source%3A+%5Barticles%2Fteams%2FTeams+-+%E3%83%9E%E3%82%B7%E3%83%B3%E3%81%94%E3%81%A8%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%AE+Teams+%E7%92%B0%E5%A2%83%E3%81%AB%E3%81%8A%E3%81%84%E3%81%A6%E3%80%81%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%A8%E6%A9%9F%E8%83%BD%E4%B8%8A%E3%81%AB%E6%84%8F%E5%9B%B3%E3%81%97%E3%81%AA%E3%81%84%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%AE+Teams+%E9%A0%85%E7%9B%AE%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B.md%5D%28https%3A%2F%2Fgithub.com%2Fjpucsupport%2Fblog%2Fblob%2Fmaster%2Farticles%2Fteams%2FTeams%2520-%2520%E3%83%9E%E3%82%B7%E3%83%B3%E3%81%94%E3%81%A8%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%AE%2520Teams%2520%E7%92%B0%E5%A2%83%E3%81%AB%E3%81%8A%E3%81%84%E3%81%A6%E3%80%81%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%A8%E6%A9%9F%E8%83%BD%E4%B8%8A%E3%81%AB%E6%84%8F%E5%9B%B3%E3%81%97%E3%81%AA%E3%81%84%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%AE%2520Teams%2520%E9%A0%85%E7%9B%AE%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpucsupport.github.io/blog/teams/Teams%20-%20msExchHideFromAddressLists%20%E3%82%92%20True%20(%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E5%B8%B3%E3%81%AB%E8%A1%A8%E7%A4%BA%E3%81%97%E3%81%AA%E3%81%84%E3%82%92%E3%82%AA%E3%83%B3)%20%E3%81%AB%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE%20Teams%20%E3%81%B8%E3%81%AE%E5%BD%B1%E9%9F%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" data-id="clbenncha001j9fqqbno6fmfk" class="article-share-link">共有</a>
+        <a data-url="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%9E%E3%82%B7%E3%83%B3%E3%81%94%E3%81%A8%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%AE%20Teams%20%E7%92%B0%E5%A2%83%E3%81%AB%E3%81%8A%E3%81%84%E3%81%A6%E3%80%81%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%A8%E6%A9%9F%E8%83%BD%E4%B8%8A%E3%81%AB%E6%84%8F%E5%9B%B3%E3%81%97%E3%81%AA%E3%81%84%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%AE%20Teams%20%E9%A0%85%E7%9B%AE%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B/" data-id="clbennchh001x9fqq6265h4fb" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
         <p>こんにちは。Unified Communications サポート チームです。<br>いつも Microsoft Teams をご利用いただきありがとうございます。</p>
-<p>Exchange Server/Online 側にて msExchHideFromAddressLists を True (アドレス帳に表示しないをオン) にした場合、Teams 上でのユーザー検索へ影響が発生します。<br>ただし、Teams は検索を行う場所により動作が異なりますので、注意が必要となります。</p>
-<h3 id="1-検索箇所について"><a href="#1-検索箇所について" class="headerlink" title="1. 検索箇所について"></a>1. 検索箇所について</h3><p>Teams でのユーザー検索は、大きく以下の 2 つがあります。</p>
-<ol>
-<li>[チャット] ＞ [新しいチャット] を選択し、ユーザー検索をする場合<br><img src="./chat.png" alt="チャット"> </li>
-<li>Teams 上部にある PowerBar でユーザーを検索する場合<br><img src="./PowerBar.png" alt="チャット"> </li>
-</ol>
-<h3 id="2-それぞれの影響について"><a href="#2-それぞれの影響について" class="headerlink" title="2. それぞれの影響について"></a>2. それぞれの影響について</h3><p>以下のように、検索箇所で動作が異なりますので、ご注意ください。</p>
-<ol>
-<li><p>[チャット] ＞ [新しいチャット] を選択し、ユーザー検索をする場合<br>基本的には影響はなく、ユーザーを検索することが可能です。<br>ただし、<a href="https://docs.microsoft.com/ja-jp/microsoftteams/teams-scoped-directory-search#turn-on-scoped-directory-search" target="_blank" rel="noopener">Exchange アドレス帳ポリシーを使用したディレクトリ検索の範囲指定</a> の設定をオンにしている場合は、ユーザー検索が出来なくなる場合があります。  </p>
-</li>
-<li><p>Teams 上部にある PowerBar でユーザーを検索する場合<br>msExchHideFromAddressLists を True (アドレス帳に表示しないをオン) にしたユーザーは検索出来なくなります。</p>
-</li>
-</ol>
-<p>今回は、msExchHideFromAddressLists を True (アドレス帳に表示しないをオン) にした場合の Teams への影響についてご案内いたしました。<br>設定による動作の違いに注意いただき、Teams ライフをお楽しみください。</p>
+<p>現在、マシンごとのインストール方法 (ALLUSER=1 オプション) を利用して Microsoft Teams クライアントを導入した VDI 環境において、”プログラムと機能” の項目に、期待されないバージョンの “Microsoft Teams” の項目が追加されてしまうという事象が確認されております。<br>本事象は、特定のシナリオのみで事象が発生するものとなりますが、もし同様の動作をご確認された場合には、本記事をご参考としていただけますと幸いでございます。</p>
+<h2 id="1-発生事象について"><a href="#1-発生事象について" class="headerlink" title="1. 発生事象について"></a>1. 発生事象について</h2><p>VDI をご利用の環境において、マシンごとのインストール方法 (ALLUSER=1 オプション) で Teams クライアントをインストールしている場合に、ビルドイン管理者で OS にログインすると、”プログラムと機能” の項目に、期待されないバージョンの “Microsoft Teams” の項目が追加されてしまうという事象となります。<br>具体的には、コントロール パネル ＞ “プログラム” ＞ “プログラムと機能” (appwiz.cpl) の一覧において、MSI インストーラで Teams を導入した際のバージョンではなく、展開済みの最新のバージョン番号で、”Microsoft Teams” の項目が追加されてしまっている状態となります。<br>※ 本来、マシンごとのインストール方法で Teams を導入した環境の場合には、”Microsoft Teams” の項目自体が表示されない想定となります。</p>
+<p>なお “プログラムと機能” に、意図しない最新バージョンの “Microsoft Teams” の項目が追加された場合でも、下記の公開情報に記載がございます通り、マシンごとのインストール方法で導入した Teams クライアントでは、自動更新は行われません。</p>
+<p>Title: 仮想デスクトップ インフラストラクチャ用の Teams ＞ VDI で Teams デスクトップ アプリをインストールまたは更新する<br>URL: <a href="https://docs.microsoft.com/ja-jp/microsoftteams/teams-for-vdi#install-or-update-the-teams-desktop-app-on-vdi" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/microsoftteams/teams-for-vdi#install-or-update-the-teams-desktop-app-on-vdi</a><br>＞ マシンごとのインストールでは、自動更新は無効になっています。</p>
+<p>本事象はあくまでも “プログラムと機能” 上での表示に不整合が生じている状況であり、実際には Teams クライアントが、予期せずアップデートされることはございませんため、どうぞご安心いただけますと幸いでございます。</p>
+<p>また上述にてご説明させていただきました通り、本事象は、ビルドイン管理者で OS にログインしている場合にのみ、事象が発生するものとなります。<br>そのため、ローカル管理者や、一般ユーザーで OS にログインした場合には、本事象は発生せず、基本的には一般ユーザー様がお気づきになることはございませんため、その点につきまして、ユーザー様への混乱を生じる可能性が低いものとなっておりますため、どうぞご安心いただけますと幸いでございます。</p>
+<h2 id="2-回避策"><a href="#2-回避策" class="headerlink" title="2. 回避策"></a>2. 回避策</h2><p>上記シナリオに該当する環境をご利用されている場合、大変恐縮ではございますが、現時点では “プログラムと機能” 上の表示項目の不整合を回避いただく方法はございません。<br>そのため、もし現在導入されている Teams クライアントのバージョンのご確認をご希望の場合には、以下の何れかの方法をご利用いただき、ご判断くださいますようお願い申し上げます。<br>・”プログラムと機能” 内、”Teams Machine-Wide Installer” の項目で記載のバージョンを確認<br>・Teams インストール時に利用した MSI インストーラのバージョンを確認</p>
+<h2 id="3-その他"><a href="#3-その他" class="headerlink" title="3. その他"></a>3. その他</h2><p>本問題につきましては、現在、弊社内で事象の改善可否に関する確認を進めている状況でございます。<br>今後の改善等の対応につきましては、現時点では明確な内容や日程等が未定となっておりますが、進捗がございましたら、引き続き、本ブログにてご案内いたします。<br>本事象により、お客様にはご不便をおかけしており申し訳ございません。</p>
+<p>なお先述させていただきました通り、本事象は限定されたシナリオにおいてのみ事象が再現するものになります。<br>あくまでも “プログラムと機能” 上での表示の問題となり、実際には Teams クライアントのバージョンは更新されておりませんことから、ご利用ユーザー様への影響はございませんことを、重ねましてご理解を頂けますと幸いに存じます。<br><br /><br><br /><br><br /></p>
+<p>NOTE:  </p>
+<ul>
+<li>2022 年 12 月 08 日に、初版を公開しました。  </li>
+</ul>
 
       
       
@@ -140,10 +135,10 @@
     <footer class="article-footer">
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Information/" rel="tag">Information</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Search/" rel="tag">Search</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Information/" rel="tag">Information</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li></ul>
 
         
-        <a href="https://github.com/jpucsupport/blog/edit/master/articles/teams/Teams%20-%20msExchHideFromAddressLists%20を%20True%20(アドレス帳に表示しないをオン)%20にした場合の%20Teams%20への影響について.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        <a href="https://github.com/jpucsupport/blog/edit/master/articles/teams/Teams%20-%20マシンごとのインストールの%20Teams%20環境において、プログラムと機能上に意図しないバージョンの%20Teams%20項目が表示される.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
         
     </footer>
   </div>
@@ -151,19 +146,10 @@
     
 <nav id="article-nav">
   
-    <a href="../Teams%20-%20%E6%96%B0%E3%81%97%E3%81%84%20EXE%20%E7%89%88%20Teams%20%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A9%E3%83%BC%E3%81%AE%E8%AA%8D%E8%A8%BC%E3%83%97%E3%83%AD%E3%82%AD%E3%82%B7%E5%AF%BE%E5%BF%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">次の記事</strong>
-      <div class="article-nav-title">
-        
-          Teams - 新しい EXE 版 Teams インストーラーの認証プロキシ対応について
-        
-      </div>
-    </a>
   
-  
-    <a href="../Teams%20-%20Proxy%20%E7%92%B0%E5%A2%83%E3%81%A7%E3%80%81Teams%20%E3%81%AE%20Powershell%202.0.0%20%E4%BB%A5%E9%99%8D%E3%81%AE%20Teams%20Powershell%20%E3%81%A7%20Get-csOnlineUser%20%E3%81%AA%E3%81%A9%E3%81%AE%20YYY-csXXX%20%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%80%81Winhttp%20%E5%81%B4%E3%81%B8%E3%81%AE%20Proxy%20%E8%A8%AD%E5%AE%9A%E3%81%8C%E5%BF%85%E8%A6%81/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="../Teams%20-%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%81%97%E3%81%9F%E3%82%89%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%90%8D%E3%81%8C%E6%96%87%E5%AD%97%E5%8C%96%E3%81%91%E3%81%99%E3%82%8B/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前の記事</strong>
-      <div class="article-nav-title">Teams - Proxy 環境で、Teams の PowerShell 2.0.0 以降の Teams PowerShell で Get-csOnlineUser などの YYY-csXXX のコマンドを実行する場合、Winhttp 側への Proxy 設定が必要</div>
+      <div class="article-nav-title">Teams - ファイルをダウンロードしたらファイル名が文字化けする</div>
     </a>
   
 </nav>
@@ -182,7 +168,7 @@
       <ul>
         
           <li>
-            <a href="../Teams%20-%20%E3%83%9E%E3%82%B7%E3%83%B3%E3%81%94%E3%81%A8%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%AE%20Teams%20%E7%92%B0%E5%A2%83%E3%81%AB%E3%81%8A%E3%81%84%E3%81%A6%E3%80%81%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%A8%E6%A9%9F%E8%83%BD%E4%B8%8A%E3%81%AB%E6%84%8F%E5%9B%B3%E3%81%97%E3%81%AA%E3%81%84%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%AE%20Teams%20%E9%A0%85%E7%9B%AE%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B/">Teams - マシンごとのインストールの Teams 環境において、&#34;プログラムと機能&#34; 上に意図しないバージョンの Teams 項目が表示される</a>
+            <a href="">Teams - マシンごとのインストールの Teams 環境において、&#34;プログラムと機能&#34; 上に意図しないバージョンの Teams 項目が表示される</a>
           </li>
         
           <li>
