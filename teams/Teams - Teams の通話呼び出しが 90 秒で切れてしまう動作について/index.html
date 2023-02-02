@@ -4,22 +4,24 @@
   <meta charset="utf-8">
   
   
-  <title>Teams - 新しい EXE 版 Teams インストーラーの認証プロキシ対応について | Japan Unified Communications Support Blog</title>
+  <title>Teams の通話呼び出しが 90 秒で切れてしまう動作について | Japan Unified Communications Support Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="こんにちは。Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。   次の記事でもご案内したとおり、EXE 版の Teams インストーラーが新しい実装に変更されました。EXE 版の Teams のインストーラーの変更によるインストールへの影響について   新しいインストーラーは最新バージョンの Team">
+  <meta name="description" content="こんにちは。 Unified Communication サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。 今回は、Microsoft Teams クライアントから発信し、一定時間呼び出し中となった際の動作についてご案内します。 呼び出し中の動作について電話を発信した後、相手が応答しない場合、通話は呼び出し中の状態となります。発信側のユーザーが切">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Teams - 新しい EXE 版 Teams インストーラーの認証プロキシ対応について">
-<meta property="og:url" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E6%96%B0%E3%81%97%E3%81%84%20EXE%20%E7%89%88%20Teams%20%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A9%E3%83%BC%E3%81%AE%E8%AA%8D%E8%A8%BC%E3%83%97%E3%83%AD%E3%82%AD%E3%82%B7%E5%AF%BE%E5%BF%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/index.html">
+<meta property="og:title" content="Teams の通話呼び出しが 90 秒で切れてしまう動作について">
+<meta property="og:url" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Teams%20%E3%81%AE%E9%80%9A%E8%A9%B1%E5%91%BC%E3%81%B3%E5%87%BA%E3%81%97%E3%81%8C%2090%20%E7%A7%92%E3%81%A7%E5%88%87%E3%82%8C%E3%81%A6%E3%81%97%E3%81%BE%E3%81%86%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/index.html">
 <meta property="og:site_name" content="Japan Unified Communications Support Blog">
-<meta property="og:description" content="こんにちは。Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。   次の記事でもご案内したとおり、EXE 版の Teams インストーラーが新しい実装に変更されました。EXE 版の Teams のインストーラーの変更によるインストールへの影響について   新しいインストーラーは最新バージョンの Team">
+<meta property="og:description" content="こんにちは。 Unified Communication サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。 今回は、Microsoft Teams クライアントから発信し、一定時間呼び出し中となった際の動作についてご案内します。 呼び出し中の動作について電話を発信した後、相手が応答しない場合、通話は呼び出し中の状態となります。発信側のユーザーが切">
 <meta property="og:locale" content="ja_JP">
-<meta property="article:published_time" content="2022-04-26T07:00:00.000Z">
-<meta property="article:modified_time" content="2023-02-02T08:24:41.038Z">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Teams%20%E3%81%AE%E9%80%9A%E8%A9%B1%E5%91%BC%E3%81%B3%E5%87%BA%E3%81%97%E3%81%8C%2090%20%E7%A7%92%E3%81%A7%E5%88%87%E3%82%8C%E3%81%A6%E3%81%97%E3%81%BE%E3%81%86%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/timeout.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Teams%20%E3%81%AE%E9%80%9A%E8%A9%B1%E5%91%BC%E3%81%B3%E5%87%BA%E3%81%97%E3%81%8C%2090%20%E7%A7%92%E3%81%A7%E5%88%87%E3%82%8C%E3%81%A6%E3%81%97%E3%81%BE%E3%81%86%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/navdial.png">
+<meta property="article:published_time" content="2023-02-02T08:30:00.000Z">
+<meta property="article:modified_time" content="2023-02-02T08:24:41.026Z">
 <meta property="article:author" content="CSS Japan">
 <meta property="article:tag" content="Information">
 <meta property="article:tag" content="Teams">
-<meta property="article:tag" content="Install">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Teams%20%E3%81%AE%E9%80%9A%E8%A9%B1%E5%91%BC%E3%81%B3%E5%87%BA%E3%81%97%E3%81%8C%2090%20%E7%A7%92%E3%81%A7%E5%88%87%E3%82%8C%E3%81%A6%E3%81%97%E3%81%BE%E3%81%86%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/timeout.png">
   
     <link rel="alternate" href="../../atom.xml" title="Japan Unified Communications Support Blog" type="application/atom+xml">
   
@@ -81,7 +83,7 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-teams/Teams - 新しい EXE 版 Teams インストーラーの認証プロキシ対応について" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-teams/Teams - Teams の通話呼び出しが 90 秒で切れてしまう動作について" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     
@@ -90,7 +92,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Teams - 新しい EXE 版 Teams インストーラーの認証プロキシ対応について
+      Teams の通話呼び出しが 90 秒で切れてしまう動作について
     </h1>
   
 
@@ -98,34 +100,37 @@
       <div class="article-share">
         Last Update: 
         <a href="" class="article-date-single">
-  <time datetime="2022-04-26T07:00:00.000Z" itemprop="datePublished">2022-04-26</time>
+  <time datetime="2023-02-02T08:30:00.000Z" itemprop="datePublished">2023-02-02</time>
 </a>
         
         
-        <a href="https://github.com/jpucsupport/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+c57fd0a3-382d-5d94-b01e-041ccba26122%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BTeams+-+%E6%96%B0%E3%81%97%E3%81%84+EXE+%E7%89%88+Teams+%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A9%E3%83%BC%E3%81%AE%E8%AA%8D%E8%A8%BC%E3%83%97%E3%83%AD%E3%82%AD%E3%82%B7%E5%AF%BE%E5%BF%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%5D%28https%3A%2F%2Fjpucsupport.github.io%2Fblog%2Fteams%2FTeams%2520-%2520%E6%96%B0%E3%81%97%E3%81%84%2520EXE%2520%E7%89%88%2520Teams%2520%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A9%E3%83%BC%E3%81%AE%E8%AA%8D%E8%A8%BC%E3%83%97%E3%83%AD%E3%82%AD%E3%82%B7%E5%AF%BE%E5%BF%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%2F%29%0A*+Content+Source%3A+%5Barticles%2Fteams%2FTeams+-+%E6%96%B0%E3%81%97%E3%81%84+EXE+%E7%89%88+Teams+%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A9%E3%83%BC%E3%81%AE%E8%AA%8D%E8%A8%BC%E3%83%97%E3%83%AD%E3%82%AD%E3%82%B7%E5%AF%BE%E5%BF%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.md%5D%28https%3A%2F%2Fgithub.com%2Fjpucsupport%2Fblog%2Fblob%2Fmaster%2Farticles%2Fteams%2FTeams%2520-%2520%E6%96%B0%E3%81%97%E3%81%84%2520EXE%2520%E7%89%88%2520Teams%2520%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A9%E3%83%BC%E3%81%AE%E8%AA%8D%E8%A8%BC%E3%83%97%E3%83%AD%E3%82%AD%E3%82%B7%E5%AF%BE%E5%BF%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        <a href="https://github.com/jpucsupport/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+024ff5e2-ddad-5569-9418-2285669e6403%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BTeams+%E3%81%AE%E9%80%9A%E8%A9%B1%E5%91%BC%E3%81%B3%E5%87%BA%E3%81%97%E3%81%8C+90+%E7%A7%92%E3%81%A7%E5%88%87%E3%82%8C%E3%81%A6%E3%81%97%E3%81%BE%E3%81%86%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%5D%28https%3A%2F%2Fjpucsupport.github.io%2Fblog%2Fteams%2FTeams%2520-%2520Teams%2520%E3%81%AE%E9%80%9A%E8%A9%B1%E5%91%BC%E3%81%B3%E5%87%BA%E3%81%97%E3%81%8C%252090%2520%E7%A7%92%E3%81%A7%E5%88%87%E3%82%8C%E3%81%A6%E3%81%97%E3%81%BE%E3%81%86%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%2F%29%0A*+Content+Source%3A+%5Barticles%2Fteams%2FTeams+-+Teams+%E3%81%AE%E9%80%9A%E8%A9%B1%E5%91%BC%E3%81%B3%E5%87%BA%E3%81%97%E3%81%8C+90+%E7%A7%92%E3%81%A7%E5%88%87%E3%82%8C%E3%81%A6%E3%81%97%E3%81%BE%E3%81%86%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.md%5D%28https%3A%2F%2Fgithub.com%2Fjpucsupport%2Fblog%2Fblob%2Fmaster%2Farticles%2Fteams%2FTeams%2520-%2520Teams%2520%E3%81%AE%E9%80%9A%E8%A9%B1%E5%91%BC%E3%81%B3%E5%87%BA%E3%81%97%E3%81%8C%252090%2520%E7%A7%92%E3%81%A7%E5%88%87%E3%82%8C%E3%81%A6%E3%81%97%E3%81%BE%E3%81%86%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E6%96%B0%E3%81%97%E3%81%84%20EXE%20%E7%89%88%20Teams%20%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A9%E3%83%BC%E3%81%AE%E8%AA%8D%E8%A8%BC%E3%83%97%E3%83%AD%E3%82%AD%E3%82%B7%E5%AF%BE%E5%BF%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" data-id="cldmu0hnb003o9eosgjx406lg" class="article-share-link">共有</a>
+        <a data-url="https://jpucsupport.github.io/blog/teams/Teams%20-%20Teams%20%E3%81%AE%E9%80%9A%E8%A9%B1%E5%91%BC%E3%81%B3%E5%87%BA%E3%81%97%E3%81%8C%2090%20%E7%A7%92%E3%81%A7%E5%88%87%E3%82%8C%E3%81%A6%E3%81%97%E3%81%BE%E3%81%86%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" data-id="cldmu0hll000o9eosaiq1enok" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>こんにちは。Unified Communications サポート チームです。<br>いつも Microsoft Teams をご利用いただきありがとうございます。  </p>
-<p>次の記事でもご案内したとおり、EXE 版の Teams インストーラーが新しい実装に変更されました。<br><a href="https://jpucsupport.github.io/blog/teams/Teams%20-%20EXE%20%E7%89%88%E3%81%AE%20Teams%20%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A9%E3%83%BC%E3%81%AE%E5%A4%89%E6%9B%B4%E3%81%AB%E3%82%88%E3%82%8B%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%B8%E3%81%AE%E5%BD%B1%E9%9F%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">EXE 版の Teams のインストーラーの変更によるインストールへの影響について</a>  </p>
-<p>新しいインストーラーは最新バージョンの Teams がインストールされるよう、最新のモジュールをダウンロードする仕組みとなりました。<br>そのため、インストールを実行するとインターネットへのアクセスが発生し、アクセスに失敗する環境ではインストール自体も失敗することとなります。<br>プロキシ サーバーを利用する一部環境においてインストールに失敗する事例より、現時点のインストーラーにおける制限事項であることが確認されましたのでご報告いたします。<br><br /></p>
-<h2 id="インストールに失敗する環境"><a href="#インストールに失敗する環境" class="headerlink" title="インストールに失敗する環境"></a>インストールに失敗する環境</h2><p>新しいインストーラーは OS のプロキシ設定に従い、プロキシ サーバーを経由したインターネットアクセス自体には対応しています。<br>しかしながら、認証プロキシには対応しておらず、407 Proxy Authentication Required が返されても、認証ダイアログを表示して認証要求に対応する実装がありません。<br>また、その他資格情報を用いた認証にも対応しておらず、結果、通信が成立しないことからインストールに失敗することとなります。<br>弊社開発部門への確認の結果、現時点の実装では認証プロキシへは対応しておらず制限事項となります。<br>また、今後の対応については未定となります。<br><br /></p>
-<h2 id="回避策について"><a href="#回避策について" class="headerlink" title="回避策について"></a>回避策について</h2><p>認証プロキシ サーバーに対応していないことから、現時点では以下の回避策をご検討いただきますようお願い申し上げます。</p>
-<ol>
-<li><p>MSI 版のインストーラーを利用する<br>MSI 版のインストーラーはオフラインでのインストールが可能となっております。<br>インストールには管理者権限が必要となりますが、要件に添える場合は代替えとしてご検討頂けますようお願い致します。<br>Title: Windows インストーラー (MSI) を使用して Teams を一括インストールする &gt; MSI ファイル<br>URL: <a href="https://docs.microsoft.com/ja-jp/MicrosoftTeams/msi-deployment#msi-files" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/MicrosoftTeams/msi-deployment#msi-files</a>  </p>
-</li>
-<li><p>インストール時のみ認証プロキシ サーバーを迂回する<br>可能であれば、インストール時のみプロキシを経由しないか、非認証のプロキシをご利用ください。  </p>
-<br />
+        <p>こんにちは。 Unified Communication サポート チームです。<br>いつも Microsoft Teams をご利用いただきありがとうございます。</p>
+<p>今回は、Microsoft Teams クライアントから発信し、一定時間呼び出し中となった際の動作についてご案内します。</p>
+<h2 id="呼び出し中の動作について"><a href="#呼び出し中の動作について" class="headerlink" title="呼び出し中の動作について"></a>呼び出し中の動作について</h2><p>電話を発信した後、相手が応答しない場合、通話は呼び出し中の状態となります。<br>発信側のユーザーが切断しない場合に、通話が切断されずコールし続けることを防ぐため、呼び出し中の時間が一定時間を経過するとタイムアウトとなる実装が施されており、それに伴い、通話は一定時間を経過すると自動的に切断される動作となります。<br>この切断までの時間は、最新の実装により Microsoft Teams サービスでは、タイムアウト時間が <strong>90 秒</strong> に設定されました。<br>そのため、Teams クライアント間の通話や、Teams クライアントから外線に発信した場合などにおいては、呼び出し中の時間が 90 秒となった段階で呼び出し処理を終了し、通話はキャンセルされる動作となります。</p>
+<p><img src="./timeout.png" alt="図1. タイムアウトで通話が終了する動作イメージ"></p>
+<div style="text-align: center">
+    図 1. タイムアウトで通話が終了する動作イメージ
+</div>
 
-</li>
-</ol>
-<p>NOTE:  </p>
-<ul>
-<li>2022 年 4 月 26 日に、初版を公開しました。  </li>
-</ul>
+<p>なお、上記のタイムアウトの発生を判断する条件としては、通話に対して応答 (SIP プロトコルの “200 OK”) の有無を判断条件としております。<br>しかし、フリーダイアルやナビダイアルなどの一部のサービスでは、通話開始後も応答 (“200 OK”) が返されないケースがございます。<br>その場合、Teams サービスの実装に基づき 90 秒で通話が切断されることとなります。</p>
+<p><img src="./navdial.png" alt="図2. ナビダイアルで通話開始後に切断される例"></p>
+<div style="text-align: center">
+図 2. ナビダイアルで自動音声開始後に切断される例
+</div>
+
+<h2 id="タイムアウト時間の設定について"><a href="#タイムアウト時間の設定について" class="headerlink" title="タイムアウト時間の設定について"></a>タイムアウト時間の設定について</h2><p>タイムアウト時間につきましては、Teams サービス全体で固定されているものでございます。<br>そのため、恐れ入りますが、タイムアウト時間は弊社側でお客様のご利用状況などに基づき変更する場合がございますが、お客様側でこの設定を変更することはできません。<br>上記に基づき、現在のタイムアウト時間は、以前のタイムアウト時間は 60 秒でしたが、多数のお客様からのフィードバックを受け、最新の状況に更新されて、現在の 90 秒に、直近で実装が変更されております。<br>さらに長い時間への延長もいただいておりますが、長時間のタイムアウト時間の実装になる場合、関連する製品やサービス側でも実装の大幅な変更が必要となること、またグローバルの様々なユーザーやパートナーに影響が生じることから、上述の通り、変更の申し込みなどの既定の変更要望の方法がございませんことを何卒ご理解いただけると幸いです。</p>
+<br />
+<br />
+<br />
+NOTE:
+- 2023 年 2 月 2 日に、初版を公開しました。
 
       
       
@@ -139,10 +144,10 @@
     <footer class="article-footer">
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Information/" rel="tag">Information</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Install/" rel="tag">Install</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Information/" rel="tag">Information</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li></ul>
 
         
-        <a href="https://github.com/jpucsupport/blog/edit/master/articles/teams/Teams%20-%20新しい%20EXE%20版%20Teams%20インストーラーの認証プロキシ対応について.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        <a href="https://github.com/jpucsupport/blog/edit/master/articles/teams/Teams%20-%20Teams%20の通話呼び出しが%2090%20秒で切れてしまう動作について.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
         
     </footer>
   </div>
@@ -150,19 +155,10 @@
     
 <nav id="article-nav">
   
-    <a href="../Teams%20-%20%E5%85%A8%E8%A7%92%E3%81%A7%E3%83%A1%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3%EF%BC%88@%EF%BC%89%E3%81%99%E3%82%8B%E3%81%A8%E6%96%87%E5%AD%97%E3%81%8C%E5%A4%AA%E6%96%87%E5%AD%97%E3%81%AB%E3%81%AA%E3%82%8B/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">次の記事</strong>
-      <div class="article-nav-title">
-        
-          Teams - 全角でメンション（@）すると文字が太文字になる
-        
-      </div>
-    </a>
   
-  
-    <a href="../Teams%20-%20msExchHideFromAddressLists%20%E3%82%92%20True%20(%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E5%B8%B3%E3%81%AB%E8%A1%A8%E7%A4%BA%E3%81%97%E3%81%AA%E3%81%84%E3%82%92%E3%82%AA%E3%83%B3)%20%E3%81%AB%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE%20Teams%20%E3%81%B8%E3%81%AE%E5%BD%B1%E9%9F%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="../Teams%20-%20iPhone%E3%81%A7%E5%8F%97%E8%A9%B1%E3%81%97%E3%81%9FTeams%E9%9B%BB%E8%A9%B1%E3%82%92%E5%88%A5%E3%81%AE%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AB%E8%BB%A2%E9%80%81%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前の記事</strong>
-      <div class="article-nav-title">Teams - msExchHideFromAddressLists を True (アドレス帳に表示しないをオン) にした場合の Teams への影響について</div>
+      <div class="article-nav-title">Teams - iPhoneで受話したTeams電話を別のユーザーに転送できない </div>
     </a>
   
 </nav>
@@ -181,7 +177,7 @@
       <ul>
         
           <li>
-            <a href="../Teams%20-%20Teams%20%E3%81%AE%E9%80%9A%E8%A9%B1%E5%91%BC%E3%81%B3%E5%87%BA%E3%81%97%E3%81%8C%2090%20%E7%A7%92%E3%81%A7%E5%88%87%E3%82%8C%E3%81%A6%E3%81%97%E3%81%BE%E3%81%86%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Teams の通話呼び出しが 90 秒で切れてしまう動作について</a>
+            <a href="">Teams の通話呼び出しが 90 秒で切れてしまう動作について</a>
           </li>
         
           <li>
