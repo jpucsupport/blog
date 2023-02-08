@@ -19,7 +19,7 @@ tags:
 iOS 版 Teams アプリ内で、チャネルのタブなどに追加されている Lists にアクセスしようとすると、下記のエラーが表示されてアクセスができません。
 
 Sorry, something went wrong. An unexpected error has occurred.
-![Lists にアクセスできない](./UCBlog20230208_lists unavailable.png) 
+![Listsにアクセスできない](./UCBlog20230208_lists unavailable.png) 
 
 ### 回避策について
 本事象は、Teams デスクトップ クライアント、Web 版 Teams アプリ、Android 版 Teams アプリ、および iOS 版 Lists アプリでは発生せず、Lists のご利用が可能となっております。
