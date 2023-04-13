@@ -4,24 +4,25 @@
   <meta charset="utf-8">
   
   
-  <title>Teams - Teams 会議レコーディングの品質 | Japan Unified Communications Support Blog</title>
+  <title>Teams - Microsoft Graph API で作成した &#34;HiddenMembership&#34; の M365 グループから、チームを作成した場合の Teams クライアント上の表示の問題について | Japan Unified Communications Support Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="こんにちは、Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。   Microsoft Teams でオンライン会議を開催する際、ナレッジ共有や議事の記録を目的としてレコーディング機能をご利用いただく機会も多いかと思います。今回、レコーディングした動画ファイルの品質について、現時点の実装をもとに説明いた">
+  <meta name="description" content="こんにちは。Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。 現在、Microsoft Graph API で visibility 属性を “HiddenMembership” に設定した Microsoft 365 グループを利用して Microsoft Teams のチームを作成した際、当該チー">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Teams - Teams 会議レコーディングの品質">
-<meta property="og:url" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Teams%20%E4%BC%9A%E8%AD%B0%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E5%93%81%E8%B3%AA/index.html">
+<meta property="og:title" content="Teams - Microsoft Graph API で作成した &quot;HiddenMembership&quot; の M365 グループから、チームを作成した場合の Teams クライアント上の表示の問題について">
+<meta property="og:url" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Microsoft%20Graph%20API%C2%A0%E3%81%A7%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F%20HiddenMembership%20%E3%81%AE%20M365%20%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%8B%E3%82%89%E3%80%81%E3%83%81%E3%83%BC%E3%83%A0%E3%82%92%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE%20Teams%20%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E4%B8%8A%E3%81%AE%E8%A1%A8%E7%A4%BA%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/index.html">
 <meta property="og:site_name" content="Japan Unified Communications Support Blog">
-<meta property="og:description" content="こんにちは、Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。   Microsoft Teams でオンライン会議を開催する際、ナレッジ共有や議事の記録を目的としてレコーディング機能をご利用いただく機会も多いかと思います。今回、レコーディングした動画ファイルの品質について、現時点の実装をもとに説明いた">
+<meta property="og:description" content="こんにちは。Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。 現在、Microsoft Graph API で visibility 属性を “HiddenMembership” に設定した Microsoft 365 グループを利用して Microsoft Teams のチームを作成した際、当該チー">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Teams%20%E4%BC%9A%E8%AD%B0%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E5%93%81%E8%B3%AA/Teams-Recording-01.png">
-<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Teams%20%E4%BC%9A%E8%AD%B0%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E5%93%81%E8%B3%AA/Teams-Recording-02.png">
-<meta property="article:published_time" content="2021-06-30T15:00:00.000Z">
-<meta property="article:modified_time" content="2023-04-13T08:06:16.230Z">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Microsoft%20Graph%20API%C2%A0%E3%81%A7%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F%20HiddenMembership%20%E3%81%AE%20M365%20%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%8B%E3%82%89%E3%80%81%E3%83%81%E3%83%BC%E3%83%A0%E3%82%92%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE%20Teams%20%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E4%B8%8A%E3%81%AE%E8%A1%A8%E7%A4%BA%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/001.jpg">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Microsoft%20Graph%20API%C2%A0%E3%81%A7%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F%20HiddenMembership%20%E3%81%AE%20M365%20%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%8B%E3%82%89%E3%80%81%E3%83%81%E3%83%BC%E3%83%A0%E3%82%92%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE%20Teams%20%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E4%B8%8A%E3%81%AE%E8%A1%A8%E7%A4%BA%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/002.jpg">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Microsoft%20Graph%20API%C2%A0%E3%81%A7%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F%20HiddenMembership%20%E3%81%AE%20M365%20%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%8B%E3%82%89%E3%80%81%E3%83%81%E3%83%BC%E3%83%A0%E3%82%92%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE%20Teams%20%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E4%B8%8A%E3%81%AE%E8%A1%A8%E7%A4%BA%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/003.jpg">
+<meta property="article:published_time" content="2023-04-13T08:30:00.000Z">
+<meta property="article:modified_time" content="2023-04-13T08:06:16.222Z">
 <meta property="article:author" content="CSS Japan">
+<meta property="article:tag" content="Information">
 <meta property="article:tag" content="Teams">
-<meta property="article:tag" content="Recording">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Teams%20%E4%BC%9A%E8%AD%B0%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E5%93%81%E8%B3%AA/Teams-Recording-01.png">
+<meta name="twitter:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Microsoft%20Graph%20API%C2%A0%E3%81%A7%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F%20HiddenMembership%20%E3%81%AE%20M365%20%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%8B%E3%82%89%E3%80%81%E3%83%81%E3%83%BC%E3%83%A0%E3%82%92%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE%20Teams%20%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E4%B8%8A%E3%81%AE%E8%A1%A8%E7%A4%BA%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/001.jpg">
   
     <link rel="alternate" href="../../atom.xml" title="Japan Unified Communications Support Blog" type="application/atom+xml">
   
@@ -83,7 +84,7 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-teams/Teams - Teams 会議レコーディングの品質" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-teams/Teams - Microsoft Graph API で作成した HiddenMembership の M365 グループから、チームを作成した場合の Teams クライアント上の表示の問題について" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     
@@ -92,7 +93,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Teams - Teams 会議レコーディングの品質
+      Teams - Microsoft Graph API で作成した &#34;HiddenMembership&#34; の M365 グループから、チームを作成した場合の Teams クライアント上の表示の問題について
     </h1>
   
 
@@ -100,58 +101,49 @@
       <div class="article-share">
         Last Update: 
         <a href="" class="article-date-single">
-  <time datetime="2021-06-30T15:00:00.000Z" itemprop="datePublished">2021-07-01</time>
+  <time datetime="2023-04-13T08:30:00.000Z" itemprop="datePublished">2023-04-13</time>
 </a>
         
         
-        <a href="https://github.com/jpucsupport/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+0bbd4a53-0275-50eb-a7db-3d8e2788506b%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BTeams+-+Teams+%E4%BC%9A%E8%AD%B0%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E5%93%81%E8%B3%AA%5D%28https%3A%2F%2Fjpucsupport.github.io%2Fblog%2Fteams%2FTeams%2520-%2520Teams%2520%E4%BC%9A%E8%AD%B0%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E5%93%81%E8%B3%AA%2F%29%0A*+Content+Source%3A+%5Barticles%2Fteams%2FTeams+-+Teams+%E4%BC%9A%E8%AD%B0%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E5%93%81%E8%B3%AA.md%5D%28https%3A%2F%2Fgithub.com%2Fjpucsupport%2Fblog%2Fblob%2Fmaster%2Farticles%2Fteams%2FTeams%2520-%2520Teams%2520%E4%BC%9A%E8%AD%B0%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E5%93%81%E8%B3%AA.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        <a href="https://github.com/jpucsupport/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+8ace1d46-f942-5fbd-a9cd-65287a94aec6%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BTeams+-+Microsoft+Graph+API%C2%A0%E3%81%A7%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F+%22HiddenMembership%22+%E3%81%AE+M365+%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%8B%E3%82%89%E3%80%81%E3%83%81%E3%83%BC%E3%83%A0%E3%82%92%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE+Teams+%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E4%B8%8A%E3%81%AE%E8%A1%A8%E7%A4%BA%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%5D%28https%3A%2F%2Fjpucsupport.github.io%2Fblog%2Fteams%2FTeams%2520-%2520Microsoft%2520Graph%2520API%C2%A0%E3%81%A7%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F%2520HiddenMembership%2520%E3%81%AE%2520M365%2520%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%8B%E3%82%89%E3%80%81%E3%83%81%E3%83%BC%E3%83%A0%E3%82%92%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE%2520Teams%2520%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E4%B8%8A%E3%81%AE%E8%A1%A8%E7%A4%BA%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%2F%29%0A*+Content+Source%3A+%5Barticles%2Fteams%2FTeams+-+Microsoft+Graph+API%C2%A0%E3%81%A7%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F+HiddenMembership+%E3%81%AE+M365+%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%8B%E3%82%89%E3%80%81%E3%83%81%E3%83%BC%E3%83%A0%E3%82%92%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE+Teams+%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E4%B8%8A%E3%81%AE%E8%A1%A8%E7%A4%BA%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.md%5D%28https%3A%2F%2Fgithub.com%2Fjpucsupport%2Fblog%2Fblob%2Fmaster%2Farticles%2Fteams%2FTeams%2520-%2520Microsoft%2520Graph%2520API%C2%A0%E3%81%A7%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F%2520HiddenMembership%2520%E3%81%AE%2520M365%2520%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%8B%E3%82%89%E3%80%81%E3%83%81%E3%83%BC%E3%83%A0%E3%82%92%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE%2520Teams%2520%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E4%B8%8A%E3%81%AE%E8%A1%A8%E7%A4%BA%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpucsupport.github.io/blog/teams/Teams%20-%20Teams%20%E4%BC%9A%E8%AD%B0%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E5%93%81%E8%B3%AA/" data-id="clgeu6g9b000s9cp098spfnzn" class="article-share-link">共有</a>
+        <a data-url="https://jpucsupport.github.io/blog/teams/Teams%20-%20Microsoft%20Graph%20API%C2%A0%E3%81%A7%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F%20HiddenMembership%20%E3%81%AE%20M365%20%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%8B%E3%82%89%E3%80%81%E3%83%81%E3%83%BC%E3%83%A0%E3%82%92%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE%20Teams%20%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E4%B8%8A%E3%81%AE%E8%A1%A8%E7%A4%BA%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" data-id="clgeu6g93000k9cp0anysenbp" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>こんにちは、Unified Communications サポート チームです。<br>いつも Microsoft Teams をご利用いただきありがとうございます。  </p>
-<p>Microsoft Teams でオンライン会議を開催する際、ナレッジ共有や議事の記録を目的としてレコーディング機能をご利用いただく機会も多いかと思います。今回、レコーディングした動画ファイルの品質について、現時点の実装をもとに説明いたします。</p>
-<h2 id="オンライン会議におけるレコーディング"><a href="#オンライン会議におけるレコーディング" class="headerlink" title="オンライン会議におけるレコーディング"></a>オンライン会議におけるレコーディング</h2><p>Microsoft Teams のレコーディング ファイルについては、以下の公開情報におおよそのファイルサイズが示されています。 </p>
+        <p>こんにちは。Unified Communications サポート チームです。<br>いつも Microsoft Teams をご利用いただきありがとうございます。</p>
+<p>現在、Microsoft Graph API で visibility 属性を “HiddenMembership” に設定した Microsoft 365 グループを利用して Microsoft Teams のチームを作成した際、当該チームに関する Teams クライアント上でのプライバシー設定の表示に不整合が生じる状況となることを確認しております。<br>本事象は、特定のシナリオで Microsoft 365 グループ、および Microsoft Teams チームの作成を行う場合にのみ事象が発生するものとなりますが、もし同様の動作を確認された場合には、本記事の内容をご参照いただけますと幸いでございます。</p>
+<p>現時点では visibility 属性を “HiddenMembership” に設定した Microsoft 365 グループを利用して Microsoft Teams のチームを作成することは、本ブログ記事に記載の問題の影響を受けるため、予めご承知おきのうえ、実装や運用をご検討くださいますようお願いいたします。</p>
+<h3 id="1-発生事象について"><a href="#1-発生事象について" class="headerlink" title="1. 発生事象について"></a>1. 発生事象について</h3><p>Microsoft Graph API を利用し、visibility 属性を “HiddenMembership” に設定した Microsoft 365 グループの作成を行い、その後、作成したグループを基にして Microsoft Teams のチームを作成します。<br>その場合、Teams クライアント上の “チームを管理” と “チームを編集” の各画面において、当該チームのプライバシー設定の表示に差異が生じる状況となります。</p>
+<p>具体的な事象再現シナリオは、以下の手順となります。</p>
+<p>〇 事象再現シナリオ</p>
+<ol>
+<li>Microsoft Graph API を利用し、”HiddenMembership” の Microsoft 365 グループを作成します。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; リクエスト例</span><br><span class="line">POST https:&#x2F;&#x2F;graph.microsoft.com&#x2F;v1.0&#x2F;groups</span><br><span class="line">Content-type: application&#x2F;json</span><br><span class="line">&#123;</span><br><span class="line">  &quot;displayName&quot;: &quot;グループサンプル01&quot;,</span><br><span class="line">  &quot;groupTypes&quot;: [</span><br><span class="line">    &quot;Unified&quot;</span><br><span class="line">  ],</span><br><span class="line">  &quot;mailNickname&quot;: &quot;groupsample01&quot;,</span><br><span class="line">  &quot;mailEnabled&quot;: false,</span><br><span class="line">  &quot;securityEnabled&quot;: false,</span><br><span class="line">  &quot;visibility&quot; : &quot;HiddenMembership&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>Microsoft Graph API または Teams クライアントより、手順 1 にて作成した Microsoft 365 グループを利用し、Microsoft Teams のチームを作成します。</li>
+<li>Teams クライアント上から作成したチームを確認した際、”チームを管理” と “チームを編集” で、プライバシー設定の表示に以下のような差異が発生いたします。</li>
+</ol>
 <ul>
-<li>Teams のクラウド会議のレコーディング<br><a href="https://docs.microsoft.com/ja-jp/microsoftteams/cloud-recording" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/microsoftteams/cloud-recording</a>  <blockquote>
-<p><strong>ストレージの計画</strong><br>1 時間のレコーディングのサイズは 400 MB です。 記録されたファイルに必要な容量を理解していること、および Microsoft Stream で使用できる十分なストレージがあることを確認します。  </p>
-</blockquote>
-</li>
+<li>“チームを管理” (<a href="https://teams.microsoft.com/_#/manageteams/myteams/" target="_blank" rel="noopener">https://teams.microsoft.com/_#/manageteams/myteams/</a>) のチーム一覧内の “種類” 列では、【パブリック】チーム (地球儀のアイコン) として表示されます</li>
+<li>作成したチームの “チームを編集” 画面では、【プライベート】チーム (“プライベート : チーム所有者のみがメンバーを追加できます” のプルダウン) として表示されます</li>
 </ul>
-<p>1 時間のレコーディング ファイルが 400 MByte 程度となるため、動画のビットレートは以下計算結果のとおりおおよそ 900 kbps となります。</p>
+<p><img src="./001.jpg" alt="&quot;チームを管理&quot; 画面"><br><img src="./002.jpg" alt="&quot;チームを編集&quot; 画面"><br><img src="./003.jpg" alt="">　<br>　<br>※ Microsoft 365 グループの作成に関する Graph API および “HiddenMembership” 属性に関する詳細につきましては、以下の公開情報をご参照ください。<br>   Title: group リソースの種類<br>   URL: <a href="https://learn.microsoft.com/ja-jp/graph/api/resources/group?view=graph-rest-1.0" target="_blank" rel="noopener">https://learn.microsoft.com/ja-jp/graph/api/resources/group?view=graph-rest-1.0</a></p>
+<p>本問題が生じる要因としては、visibility 属性に設定した “hiddenmembership” の設定値が、現状の Microsoft Teams サービスの実装上考慮されていないことに起因しております。</p>
+<p>“hiddenmembership” の設定値は、上記 Graph API に関する公開情報内にも記載がございます通り、Microsoft 365 グループの作成時において利用が可能な属性値となります。<br>しかしながら、現在の Microsoft Teams サービスにおいて、当該の値が設定された M365 グループを利用した Teams チームの作成、および表示が考慮された実装とはなっていないことから、Teams クライアント上での表示に不整合が生じる状況が発生します。<br>※ Teams クライアントにおける実際の動作としては、プライベート チームと同様に、チームに参加を行う際にチーム所有者への参加申請が必要な動作となります。</p>
+<h3 id="2-今後の対応について"><a href="#2-今後の対応について" class="headerlink" title="2. 今後の対応について"></a>2. 今後の対応について</h3><p>本事象につきましては、既に弊社開発部門において、実装上の不備が認識されている状況でございます。<br>しかしながら、誠に恐れ入りますが、検討の結果、修正による副次的な問題の発生が懸念されることから、表示の改修が非常に困難であり、直近での修正を見送らざるを得ない状況となっております。<br>そのため、今後の対応につきましては、現時点では明確な内容や日程等の詳細は未定となっておりますが、進捗がございましたら、引き続き本ブログにてご案内いたします。</p>
+<p>本事象により、お客様にはご不便をおかけしており誠に申し訳ございません。</p>
+<br />
+<br />
+<br />
+
+<p>NOTE:  </p>
 <ul>
-<li>レコーディング ファイルのビットレート  <blockquote>
-<p>400 MByte × 8 ＝ 3200 Mbit<br>3200 Mbit ÷ 3600 sec ≒ 900 kbps  </p>
-</blockquote>
-</li>
+<li>2023 年 4 月 13 日に、初版を公開しました。 </li>
 </ul>
-<p>実際のレコーディングファイルのプロパティを確認すると以下のとおりで、おおよそ上記計算結果どおりとなります。  </p>
-<ul>
-<li>レコーディング ファイルのプロパティ（オンライン会議）  <blockquote>
-<p><img src="./Teams-Recording-01.png" alt="">  </p>
-</blockquote>
-</li>
-</ul>
-<p>ビデオのビットレートが 1000 kbps 程度で、フレームレートが 8 fps であることが分かります。画像サイズは 1920 × 1080 とフル HD サイズではあるものの、ビットレートとフレームレートは非常に低く抑えられています。動画の種類や圧縮率にもよりますが、高画質と言える フル HD / 30 fps の MPEG-4 動画のビットレートが 12 Mbps を超えることを考えると、Microsoft Teams のレコーディングファイルはそれほど高画質ではないことが分かります。  </p>
-<p>一般的なオンライン会議においては、デスクトップ共有や PowerPoint 共有を用いてドキュメントを表示しているシーンが多くなります。ドキュメントの表示は動きが少ないため、低いフレームレートの影響は小さく、一方、文字や図面を精細に表示する必要があるため高い解像度が求められます。ファイルサイズとの兼ね合いを考慮し、なめらかな動きを犠牲にして解像度を高めたチューニングとなっています。  </p>
-<h2 id="ライブイベントのレコーディング"><a href="#ライブイベントのレコーディング" class="headerlink" title="ライブイベントのレコーディング"></a>ライブイベントのレコーディング</h2><p>ライブイベントのレコーディングに関しては公開された情報がありませんが、実際のレコーディングファイルを確認すると 1280 x 720 で解像度が低い一方、フレームレートは 30 FPS と高めになっていることが分かります。</p>
-<ul>
-<li>レコーディング ファイルのプロパティ（ライブイベント）  <blockquote>
-<p><img src="./Teams-Recording-02.png" alt="">   </p>
-</blockquote>
-</li>
-</ul>
-<p>ライブイベントはプレゼンテーションやセミナーといった目的で利用されるケースが多く、一般的な会議の様に精細な情報を共有するシーンは少ないと言えます。また、動画や発表者が話をする姿を映すなど、比較的動きのある画像を表示するケースが多く、解像度よりもなめらかな動きを重視する必要があります。そのため、解像度を下げてフレームレートを高めるチューニングとなっています。  </p>
-<h2 id="まとめ"><a href="#まとめ" class="headerlink" title="まとめ"></a>まとめ</h2><p>以上のようにファイルサイズとの兼ね合いを考慮し、会議の種類に応じたチューニングが行われているため、会議で表示している画像のソースによっては期待する品質が得られない場合も出てきます。レコーディング品質については、処理をするサーバーの負荷や、レコーディングファイルのサイズを考慮してハードコートされており、現在の実装では調整する機能が提供されておりません。そのため、レコーディング ファイルの画質が利用目的に耐えうるものか、あらかじめテストしておくことをお勧めします。何らかの目的において高画質な動画を記録する必要がある場合は、対象となるソースを別途撮影したり、PC 上でデスクトップやウインドウを録画するツールの利用もご検討ください。  </p>
-<ul>
-<li><p>PowerPoint で画面を記録する<br><a href="https://support.microsoft.com/ja-jp/office/powerpoint-で画面を記録する-0b4c3f65-534c-4cf1-9c59-402b6e9d79d0" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/office/powerpoint-で画面を記録する-0b4c3f65-534c-4cf1-9c59-402b6e9d79d0</a>  </p>
-</li>
-<li><p>Xbox Game Bar を使って PC でゲーム クリップを録画する<br><a href="https://support.microsoft.com/ja-jp/windows/xbox-game-bar-を使って-pc-でゲーム-クリップを録画する-2f477001-54d4-1276-9144-b0416a307f3c" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/windows/xbox-game-bar-を使って-pc-でゲーム-クリップを録画する-2f477001-54d4-1276-9144-b0416a307f3c</a>  </p>
-</li>
-</ul>
-<p>※レコーディングの負荷も考慮する必要があるため、PC スペックの考慮や、3rd Party 製品の利用もご検討ください。</p>
 
       
       
@@ -165,10 +157,10 @@
     <footer class="article-footer">
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Recording/" rel="tag">Recording</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Information/" rel="tag">Information</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li></ul>
 
         
-        <a href="https://github.com/jpucsupport/blog/edit/master/articles/teams/Teams%20-%20Teams%20会議レコーディングの品質.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        <a href="https://github.com/jpucsupport/blog/edit/master/articles/teams/Teams%20-%20Microsoft%20Graph%20API で作成した%20HiddenMembership%20の%20M365%20グループから、チームを作成した場合の%20Teams%20クライアント上の表示の問題について.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
         
     </footer>
   </div>
@@ -176,19 +168,10 @@
     
 <nav id="article-nav">
   
-    <a href="../Teams%20-%20%E3%82%B2%E3%82%B9%E3%83%88%20%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%92%E6%8B%9B%E5%BE%85%E3%81%97%E3%81%9F%E9%9A%9B%E3%81%AE%E5%8B%95%E4%BD%9C/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">次の記事</strong>
-      <div class="article-nav-title">
-        
-          Teams - ゲスト ユーザーを招待した際の動作
-        
-      </div>
-    </a>
   
-  
-    <a href="../../Skype%20for%20business/Skype%20-%20Skype%20for%20Business%20%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E8%B5%B7%E5%8B%95%E6%8A%91%E6%AD%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="../Teams%20-%20Teams%E7%AE%A1%E7%90%86%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E4%BD%BF%E7%94%A8%E7%8A%B6%E6%B3%81%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88%E3%81%AE%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%8A%E3%82%88%E3%81%B3Web%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%AE%E5%80%A4%E3%81%8C%E5%8F%8D%E5%AF%BE%E3%81%AB%E3%81%AA%E3%82%8B/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前の記事</strong>
-      <div class="article-nav-title">Skype - Skype for Business アプリケーションの起動抑止について</div>
+      <div class="article-nav-title">Teams - Teams 管理センター &#34;アプリの使用状況レポート&#34; の &#34;モバイルで使用&#34; および &#34;Webで使用&#34; の値が反対になる</div>
     </a>
   
 </nav>
@@ -207,7 +190,7 @@
       <ul>
         
           <li>
-            <a href="../Teams%20-%20Microsoft%20Graph%20API%C2%A0%E3%81%A7%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F%20HiddenMembership%20%E3%81%AE%20M365%20%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%8B%E3%82%89%E3%80%81%E3%83%81%E3%83%BC%E3%83%A0%E3%82%92%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE%20Teams%20%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E4%B8%8A%E3%81%AE%E8%A1%A8%E7%A4%BA%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Teams - Microsoft Graph API で作成した &#34;HiddenMembership&#34; の M365 グループから、チームを作成した場合の Teams クライアント上の表示の問題について</a>
+            <a href="">Teams - Microsoft Graph API で作成した &#34;HiddenMembership&#34; の M365 グループから、チームを作成した場合の Teams クライアント上の表示の問題について</a>
           </li>
         
           <li>
