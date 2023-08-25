@@ -4,22 +4,24 @@
   <meta charset="utf-8">
   
   
-  <title>Teams - Proxy 環境で、Teams の PowerShell 2.0.0 以降の Teams PowerShell で Get-csOnlineUser などの YYY-csXXX のコマンドを実行する場合、Winhttp 側への Proxy 設定が必要 | Japan Unified Communications Support Blog</title>
+  <title>Teams – チャットやチャネルの投稿の編集、返信方法の改善について | Japan Unified Communications Support Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="こんにちは。Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。 企業様のご環境では、インターネットへの接続は Proxy Server を経由しない限りできない場合があるかと思います。このような Proxy Server を経由しない限りインターネットへの接続ができないご環境で、Teams の Powe">
+  <meta name="description" content="こんにちは。Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。 今回は、最近の Microsoft Teams の変更により、チャットやチャネルでの投稿の編集ができなくなった、というお問合せを頂戴することがあり、それに対する情報と、対応方法についてご案内させていただきます。 これまで、チャットやチャネル">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Teams - Proxy 環境で、Teams の PowerShell 2.0.0 以降の Teams PowerShell で Get-csOnlineUser などの YYY-csXXX のコマンドを実行する場合、Winhttp 側への Proxy 設定が必要">
-<meta property="og:url" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Proxy%20%E7%92%B0%E5%A2%83%E3%81%A7%E3%80%81Teams%20%E3%81%AE%20Powershell%202.0.0%20%E4%BB%A5%E9%99%8D%E3%81%AE%20Teams%20Powershell%20%E3%81%A7%20Get-csOnlineUser%20%E3%81%AA%E3%81%A9%E3%81%AE%20YYY-csXXX%20%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%80%81Winhttp%20%E5%81%B4%E3%81%B8%E3%81%AE%20Proxy%20%E8%A8%AD%E5%AE%9A%E3%81%8C%E5%BF%85%E8%A6%81/index.html">
+<meta property="og:title" content="Teams – チャットやチャネルの投稿の編集、返信方法の改善について">
+<meta property="og:url" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%82%84%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB%E3%81%AE%E6%8A%95%E7%A8%BF%E3%81%AE%E7%B7%A8%E9%9B%86%E3%80%81%E8%BF%94%E4%BF%A1%E6%96%B9%E6%B3%95%E3%81%AE%E6%94%B9%E5%96%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/index.html">
 <meta property="og:site_name" content="Japan Unified Communications Support Blog">
-<meta property="og:description" content="こんにちは。Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。 企業様のご環境では、インターネットへの接続は Proxy Server を経由しない限りできない場合があるかと思います。このような Proxy Server を経由しない限りインターネットへの接続ができないご環境で、Teams の Powe">
+<meta property="og:description" content="こんにちは。Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。 今回は、最近の Microsoft Teams の変更により、チャットやチャネルでの投稿の編集ができなくなった、というお問合せを頂戴することがあり、それに対する情報と、対応方法についてご案内させていただきます。 これまで、チャットやチャネル">
 <meta property="og:locale" content="ja_JP">
-<meta property="article:published_time" content="2022-04-17T15:00:00.000Z">
-<meta property="article:modified_time" content="2023-08-25T06:42:14.004Z">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%82%84%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB%E3%81%AE%E6%8A%95%E7%A8%BF%E3%81%AE%E7%B7%A8%E9%9B%86%E3%80%81%E8%BF%94%E4%BF%A1%E6%96%B9%E6%B3%95%E3%81%AE%E6%94%B9%E5%96%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/NewEditMenu.jpg">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%82%84%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB%E3%81%AE%E6%8A%95%E7%A8%BF%E3%81%AE%E7%B7%A8%E9%9B%86%E3%80%81%E8%BF%94%E4%BF%A1%E6%96%B9%E6%B3%95%E3%81%AE%E6%94%B9%E5%96%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/NewReply.jpg">
+<meta property="article:published_time" content="2023-08-25T07:00:00.000Z">
+<meta property="article:modified_time" content="2023-08-25T06:42:14.012Z">
 <meta property="article:author" content="CSS Japan">
 <meta property="article:tag" content="Information">
 <meta property="article:tag" content="Teams">
-<meta property="article:tag" content="PowerShell">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%82%84%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB%E3%81%AE%E6%8A%95%E7%A8%BF%E3%81%AE%E7%B7%A8%E9%9B%86%E3%80%81%E8%BF%94%E4%BF%A1%E6%96%B9%E6%B3%95%E3%81%AE%E6%94%B9%E5%96%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/NewEditMenu.jpg">
   
     <link rel="alternate" href="../../atom.xml" title="Japan Unified Communications Support Blog" type="application/atom+xml">
   
@@ -81,7 +83,7 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-teams/Teams - Proxy 環境で、Teams の Powershell 2.0.0 以降の Teams Powershell で Get-csOnlineUser などの YYY-csXXX のコマンドを実行する場合、Winhttp 側への Proxy 設定が必要" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-teams/Teams - チャットやチャネルの投稿の編集、返信方法の改善について" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     
@@ -90,7 +92,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Teams - Proxy 環境で、Teams の PowerShell 2.0.0 以降の Teams PowerShell で Get-csOnlineUser などの YYY-csXXX のコマンドを実行する場合、Winhttp 側への Proxy 設定が必要
+      Teams – チャットやチャネルの投稿の編集、返信方法の改善について
     </h1>
   
 
@@ -98,31 +100,30 @@
       <div class="article-share">
         Last Update: 
         <a href="" class="article-date-single">
-  <time datetime="2022-04-17T15:00:00.000Z" itemprop="datePublished">2022-04-18</time>
+  <time datetime="2023-08-25T07:00:00.000Z" itemprop="datePublished">2023-08-25</time>
 </a>
         
         
-        <a href="https://github.com/jpucsupport/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+5744fe65-ea06-56e7-9abf-7e3839ea2342%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BTeams+-+Proxy+%E7%92%B0%E5%A2%83%E3%81%A7%E3%80%81Teams+%E3%81%AE+PowerShell+2.0.0+%E4%BB%A5%E9%99%8D%E3%81%AE+Teams+PowerShell+%E3%81%A7+Get-csOnlineUser+%E3%81%AA%E3%81%A9%E3%81%AE+YYY-csXXX+%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%80%81Winhttp+%E5%81%B4%E3%81%B8%E3%81%AE+Proxy+%E8%A8%AD%E5%AE%9A%E3%81%8C%E5%BF%85%E8%A6%81%5D%28https%3A%2F%2Fjpucsupport.github.io%2Fblog%2Fteams%2FTeams%2520-%2520Proxy%2520%E7%92%B0%E5%A2%83%E3%81%A7%E3%80%81Teams%2520%E3%81%AE%2520Powershell%25202.0.0%2520%E4%BB%A5%E9%99%8D%E3%81%AE%2520Teams%2520Powershell%2520%E3%81%A7%2520Get-csOnlineUser%2520%E3%81%AA%E3%81%A9%E3%81%AE%2520YYY-csXXX%2520%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%80%81Winhttp%2520%E5%81%B4%E3%81%B8%E3%81%AE%2520Proxy%2520%E8%A8%AD%E5%AE%9A%E3%81%8C%E5%BF%85%E8%A6%81%2F%29%0A*+Content+Source%3A+%5Barticles%2Fteams%2FTeams+-+Proxy+%E7%92%B0%E5%A2%83%E3%81%A7%E3%80%81Teams+%E3%81%AE+Powershell+2.0.0+%E4%BB%A5%E9%99%8D%E3%81%AE+Teams+Powershell+%E3%81%A7+Get-csOnlineUser+%E3%81%AA%E3%81%A9%E3%81%AE+YYY-csXXX+%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%80%81Winhttp+%E5%81%B4%E3%81%B8%E3%81%AE+Proxy+%E8%A8%AD%E5%AE%9A%E3%81%8C%E5%BF%85%E8%A6%81.md%5D%28https%3A%2F%2Fgithub.com%2Fjpucsupport%2Fblog%2Fblob%2Fmaster%2Farticles%2Fteams%2FTeams%2520-%2520Proxy%2520%E7%92%B0%E5%A2%83%E3%81%A7%E3%80%81Teams%2520%E3%81%AE%2520Powershell%25202.0.0%2520%E4%BB%A5%E9%99%8D%E3%81%AE%2520Teams%2520Powershell%2520%E3%81%A7%2520Get-csOnlineUser%2520%E3%81%AA%E3%81%A9%E3%81%AE%2520YYY-csXXX%2520%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%80%81Winhttp%2520%E5%81%B4%E3%81%B8%E3%81%AE%2520Proxy%2520%E8%A8%AD%E5%AE%9A%E3%81%8C%E5%BF%85%E8%A6%81.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        <a href="https://github.com/jpucsupport/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+57d87c13-704e-5b39-9bf5-8fa1de6494e7%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BTeams+%E2%80%93+%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%82%84%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB%E3%81%AE%E6%8A%95%E7%A8%BF%E3%81%AE%E7%B7%A8%E9%9B%86%E3%80%81%E8%BF%94%E4%BF%A1%E6%96%B9%E6%B3%95%E3%81%AE%E6%94%B9%E5%96%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%5D%28https%3A%2F%2Fjpucsupport.github.io%2Fblog%2Fteams%2FTeams%2520-%2520%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%82%84%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB%E3%81%AE%E6%8A%95%E7%A8%BF%E3%81%AE%E7%B7%A8%E9%9B%86%E3%80%81%E8%BF%94%E4%BF%A1%E6%96%B9%E6%B3%95%E3%81%AE%E6%94%B9%E5%96%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%2F%29%0A*+Content+Source%3A+%5Barticles%2Fteams%2FTeams+-+%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%82%84%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB%E3%81%AE%E6%8A%95%E7%A8%BF%E3%81%AE%E7%B7%A8%E9%9B%86%E3%80%81%E8%BF%94%E4%BF%A1%E6%96%B9%E6%B3%95%E3%81%AE%E6%94%B9%E5%96%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.md%5D%28https%3A%2F%2Fgithub.com%2Fjpucsupport%2Fblog%2Fblob%2Fmaster%2Farticles%2Fteams%2FTeams%2520-%2520%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%82%84%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB%E3%81%AE%E6%8A%95%E7%A8%BF%E3%81%AE%E7%B7%A8%E9%9B%86%E3%80%81%E8%BF%94%E4%BF%A1%E6%96%B9%E6%B3%95%E3%81%AE%E6%94%B9%E5%96%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpucsupport.github.io/blog/teams/Teams%20-%20Proxy%20%E7%92%B0%E5%A2%83%E3%81%A7%E3%80%81Teams%20%E3%81%AE%20Powershell%202.0.0%20%E4%BB%A5%E9%99%8D%E3%81%AE%20Teams%20Powershell%20%E3%81%A7%20Get-csOnlineUser%20%E3%81%AA%E3%81%A9%E3%81%AE%20YYY-csXXX%20%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%80%81Winhttp%20%E5%81%B4%E3%81%B8%E3%81%AE%20Proxy%20%E8%A8%AD%E5%AE%9A%E3%81%8C%E5%BF%85%E8%A6%81/" data-id="cllq86ilo000o9fnj3j7ohde6" class="article-share-link">共有</a>
+        <a data-url="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%82%84%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB%E3%81%AE%E6%8A%95%E7%A8%BF%E3%81%AE%E7%B7%A8%E9%9B%86%E3%80%81%E8%BF%94%E4%BF%A1%E6%96%B9%E6%B3%95%E3%81%AE%E6%94%B9%E5%96%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" data-id="cllq86in2002z9fnjedtr372q" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>こんにちは。Unified Communications サポート チームです。<br>いつも Microsoft Teams をご利用いただきありがとうございます。</p>
-<p>企業様のご環境では、インターネットへの接続は Proxy Server を経由しない限りできない場合があるかと思います。<br>このような Proxy Server を経由しない限りインターネットへの接続ができないご環境で、Teams の PowerShell 2.0.0 をご使用いただく場合には、WinHttp の設定で、Proxy Server を使用する設定をしていただく必要がございます。<br>この設定を行わない場合、以下のエラーが発生します。</p>
-<p>■ エラーメッセージ例 （以下は 2.3.1 の Teams PowerShell での実行した場合のエラー）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Get-CsOnlineSession : リモート サーバー api.interfaces.records.teams.microsoft.com への接続に失敗し、次のエラー メッセ </span><br><span class="line">ージが返されました: WinRM クライアントは、サーバー名を解決できないため、要求を処理できません。詳細については、about_Rem</span><br><span class="line">ote_Troubleshooting のヘルプ トピックを参照してください。</span><br><span class="line">発生場所 C:\Program Files\WindowsPowerShell\Modules\MicrosoftTeams\2.3.1\net472\SfBORemotePowerShellModule.psm1:63 文字:22</span><br><span class="line">+     $remoteSession &#x3D; &amp; (Get-CsOnlineSessionCommand)</span><br><span class="line">+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span><br><span class="line">    + CategoryInfo          : NotSpecified: (:) [Get-CsOnlineSession], PSRemotingTransportException</span><br><span class="line">    + FullyQualifiedErrorId : PSRemotingTransportException,Microsoft.Teams.ConfigApi.Cmdlets.GetCsOnlineSession</span><br><span class="line"></span><br><span class="line">Invoke-Command : パラメーター &#39;Session の引数を確認できません。引数が null または空です。null または空でない引数を指定して、コマンドを再度実行してください。</span><br><span class="line">発生場所 C:\Program Files\WindowsPowerShell\Modules\MicrosoftTeams\2.3.1\net472\SfBORemotePowerShellModule.psm1:9490 文字:38</span><br><span class="line">+ ...    -Session (Get-PSImplicitRemotingSession -CommandName &#39;Get-CsOnline ...</span><br><span class="line">+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span><br><span class="line">    + CategoryInfo          : InvalidData: (:) [Invoke-Command]、ParentContainsErrorRecordException</span><br></pre></td></tr></table></figure>
+        <p>こんにちは。<br>Unified Communications サポート チームです。<br>いつも Microsoft Teams をご利用いただきありがとうございます。</p>
+<p>今回は、最近の Microsoft Teams の変更により、チャットやチャネルでの投稿の編集ができなくなった、というお問合せを頂戴することがあり、それに対する情報と、対応方法についてご案内させていただきます。</p>
+<p>これまで、チャットやチャネルの投稿後、事後で編集する場合、投稿したメッセージをマウスでフォーカスした際に表示される [・・・] のメニューから、[編集] をクリックして、2 段階のメニュー操作でメッセージの編集を行うようになっておりました。<br>しかし、最近の Microsoft Teams の変更で、以下画像のように、マウスフォーカスした際にポップアップするメニュー上の鉛筆マーク（以下、赤丸部分）のメニューをクリックすることで、より迅速にメッセージの編集機能が利用ができるようになりました。<br><img src="./NewEditMenu.jpg" alt=""></p>
+<p>また、同様にチャットの返信についても、以下の画像のように返信ボタンへ、より迅速にアクセスできるように改善されております。</p>
+<p><img src="./NewReply.jpg" alt=""></p>
+<p>この実装変更は、上記にも記載の通り、これまで 2 段階のメニュー操作が必要だったメッセージの編集機能に、多くのお客様から改善のご要望を頂き、それを取り入れ、よりすばやくアクセスできるよう改善されたものです。<br>しかしながら、この変更についてメッセージセンターを含めた、公開情報などでの情報公開がされておらず、ご利用のユーザー様には混乱を招きましたことをお詫び申し上げます。</p>
+<p>※なお、製品の動作については予告なく変更される可能性があり、今後にわたり本動作が保証されるものではございませんことを予めご了承ください。</p>
+<br />
 
-<h3 id="原因について"><a href="#原因について" class="headerlink" title="原因について"></a>原因について</h3><p>Teams の PowerShell のバージョンが 2.0.0 以降では、Teams 系のコマンドと Skype for Business 系のコマンドの 2 種類が含まれております。<br>Teams 系のコマンドは通常のプロキシ設定を使用いたしますが、Skype for Business 系のコマンドは、WinHttp を使用するようになっておりますが、WinHttp の既定の設定では、Proxy Server を使用せず、直接接続をする設定のため、Proxy Server を経由した通信ではなく、直接接続を試そうとし、インターネットとの通信ができないため、エラーとなります。</p>
-<p>上述のため、Windows Server 2012 上で Teams の PowerShell 2.0.0 以降を使用した場合に、Skype for Business 系のコマンドだけが TLS 1.2 の通信ができないため、コマンドの実行が失敗します。</p>
-<h3 id="対処策について"><a href="#対処策について" class="headerlink" title="対処策について"></a>対処策について</h3><p>管理者でコマンドプロンプトを起動いただき、以下のk万度を実行いただくことで、Proxy Server の設定をしていただくことが可能です。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- WININET と同じ設定を WINHTTP で行う場合は以下のコマンドを実行します</span><br><span class="line">  netsh winhttp import proxy source&#x3D;ie</span><br><span class="line"></span><br><span class="line">- WINHTTP 独自の Proxy 設定を行う場合は以下のコマンドを実行します</span><br><span class="line">  netsh winhttp set proxy &lt;ProxyServer&gt;:&lt;Port&gt;</span><br><span class="line">  * &lt;ProxyServer&gt; には Proxy Server の HOSTNAME または FQDN、&lt;Port&gt; には Proxy Server のポート番号を指定します</span><br><span class="line">  * 必要に応じてオプション &quot;bypass-list&quot; を用いてバイパスする宛先を指定します</span><br></pre></td></tr></table></figure>
-<p>現在の設定を確認されたい場合は、以下を実行することで確認が可能です。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh winhttp show proxy</span><br></pre></td></tr></table></figure>
-
-<p>なお、WinHttp につきましては、通常のプロキシ設定では設定可能な PAC ファイルを用いた設定ができません。大変恐れ入りますが、PAC ではなく Proxy Server の指定で設定をしていただきますようお願いいたします。</p>
-<h3 id="関連情報"><a href="#関連情報" class="headerlink" title="関連情報"></a>関連情報</h3><p><a href="https://jpucsupport.github.io/blog/teams/Teams%20-%20Windows%20Server%202012%20%E3%81%AE%20OS%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E7%92%B0%E5%A2%83%E3%81%A7%20Teams%20%E3%81%AE%20Powershell%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88/">Windows Server 2012 の OS を使用している環境で、Teams の PowerShell を使用する場合には、Winhttp の TLS1.2 対応の修正プログラムが必要</a></p>
+<p>NOTE:  </p>
+<ul>
+<li>2023 年 8 月 25 日に、初版を公開しました。</li>
+</ul>
 
       
       
@@ -136,10 +137,10 @@
     <footer class="article-footer">
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Information/" rel="tag">Information</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/PowerShell/" rel="tag">PowerShell</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Information/" rel="tag">Information</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li></ul>
 
         
-        <a href="https://github.com/jpucsupport/blog/edit/master/articles/teams/Teams%20-%20Proxy%20環境で、Teams%20の%20Powershell%202.0.0%20以降の%20Teams%20Powershell%20で%20Get-csOnlineUser%20などの%20YYY-csXXX%20のコマンドを実行する場合、Winhttp%20側への%20Proxy%20設定が必要.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        <a href="https://github.com/jpucsupport/blog/edit/master/articles/teams/Teams%20-%20チャットやチャネルの投稿の編集、返信方法の改善について.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
         
     </footer>
   </div>
@@ -147,19 +148,10 @@
     
 <nav id="article-nav">
   
-    <a href="../Teams%20-%20msExchHideFromAddressLists%20%E3%82%92%20True%20(%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E5%B8%B3%E3%81%AB%E8%A1%A8%E7%A4%BA%E3%81%97%E3%81%AA%E3%81%84%E3%82%92%E3%82%AA%E3%83%B3)%20%E3%81%AB%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE%20Teams%20%E3%81%B8%E3%81%AE%E5%BD%B1%E9%9F%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">次の記事</strong>
-      <div class="article-nav-title">
-        
-          Teams - msExchHideFromAddressLists を True (アドレス帳に表示しないをオン) にした場合の Teams への影響について
-        
-      </div>
-    </a>
   
-  
-    <a href="../Teams%20-%20Windows%20Server%202012%20%E3%81%AE%20OS%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E7%92%B0%E5%A2%83%E3%81%A7%20Teams%20%E3%81%AE%20Powershell%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="../Teams%20-%20%E6%96%B0%E8%A6%8F%E3%81%AB%E4%BD%9C%E6%88%90%E3%81%95%E3%82%8C%E3%81%9F%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB%E3%81%AENotes%20%E3%82%BF%E3%83%96%E3%81%AB%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前の記事</strong>
-      <div class="article-nav-title">Teams - Windows Server 2012 の OS を使用している環境で Teams の Powershell を使用する場合</div>
+      <div class="article-nav-title">Teams - 新規に作成されたチャネルの Notes タブにアクセスできない</div>
     </a>
   
 </nav>
@@ -178,7 +170,7 @@
       <ul>
         
           <li>
-            <a href="../Teams%20-%20%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%82%84%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB%E3%81%AE%E6%8A%95%E7%A8%BF%E3%81%AE%E7%B7%A8%E9%9B%86%E3%80%81%E8%BF%94%E4%BF%A1%E6%96%B9%E6%B3%95%E3%81%AE%E6%94%B9%E5%96%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Teams – チャットやチャネルの投稿の編集、返信方法の改善について</a>
+            <a href="">Teams – チャットやチャネルの投稿の編集、返信方法の改善について</a>
           </li>
         
           <li>
