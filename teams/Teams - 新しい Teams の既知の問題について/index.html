@@ -4,21 +4,22 @@
   <meta charset="utf-8">
   
   
-  <title>Teams - Proxy 環境で、Teams の PowerShell 2.0.0 以降の Teams PowerShell で Get-csOnlineUser などの YYY-csXXX のコマンドを実行する場合、Winhttp 側への Proxy 設定が必要 | Japan Unified Communications Support Blog</title>
+  <title>Teams - 新しい Teams の既知の問題について | Japan Unified Communications Support Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="こんにちは。Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。 企業様のご環境では、インターネットへの接続は Proxy Server を経由しない限りできない場合があるかと思います。このような Proxy Server を経由しない限りインターネットへの接続ができないご環境で、Teams の Powe">
+  <meta name="description" content="こんにちは。Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。既に、新しい Teams の提供を開始し、多くのお客様が新しい Teams への移行計画を進めていただいている状況かと存じます。一方で、新しい Teams において、いくつかの問題が確認されており、特定の言語環境でのみ発生する問題などの情報に">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Teams - Proxy 環境で、Teams の PowerShell 2.0.0 以降の Teams PowerShell で Get-csOnlineUser などの YYY-csXXX のコマンドを実行する場合、Winhttp 側への Proxy 設定が必要">
-<meta property="og:url" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Proxy%20%E7%92%B0%E5%A2%83%E3%81%A7%E3%80%81Teams%20%E3%81%AE%20Powershell%202.0.0%20%E4%BB%A5%E9%99%8D%E3%81%AE%20Teams%20Powershell%20%E3%81%A7%20Get-csOnlineUser%20%E3%81%AA%E3%81%A9%E3%81%AE%20YYY-csXXX%20%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%80%81Winhttp%20%E5%81%B4%E3%81%B8%E3%81%AE%20Proxy%20%E8%A8%AD%E5%AE%9A%E3%81%8C%E5%BF%85%E8%A6%81/index.html">
+<meta property="og:title" content="Teams - 新しい Teams の既知の問題について">
+<meta property="og:url" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E6%96%B0%E3%81%97%E3%81%84%20Teams%20%E3%81%AE%E6%97%A2%E7%9F%A5%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/index.html">
 <meta property="og:site_name" content="Japan Unified Communications Support Blog">
-<meta property="og:description" content="こんにちは。Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。 企業様のご環境では、インターネットへの接続は Proxy Server を経由しない限りできない場合があるかと思います。このような Proxy Server を経由しない限りインターネットへの接続ができないご環境で、Teams の Powe">
+<meta property="og:description" content="こんにちは。Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。既に、新しい Teams の提供を開始し、多くのお客様が新しい Teams への移行計画を進めていただいている状況かと存じます。一方で、新しい Teams において、いくつかの問題が確認されており、特定の言語環境でのみ発生する問題などの情報に">
 <meta property="og:locale" content="ja_JP">
-<meta property="article:published_time" content="2022-04-17T15:00:00.000Z">
-<meta property="article:modified_time" content="2024-01-18T00:14:01.536Z">
+<meta property="article:published_time" content="2024-01-18T00:00:00.000Z">
+<meta property="article:modified_time" content="2024-01-18T00:14:01.544Z">
 <meta property="article:author" content="CSS Japan">
 <meta property="article:tag" content="Information">
 <meta property="article:tag" content="Teams">
-<meta property="article:tag" content="PowerShell">
+<meta property="article:tag" content="New Teams">
+<meta property="article:tag" content="Teams 2.1">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="../../atom.xml" title="Japan Unified Communications Support Blog" type="application/atom+xml">
@@ -81,7 +82,7 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-teams/Teams - Proxy 環境で、Teams の Powershell 2.0.0 以降の Teams Powershell で Get-csOnlineUser などの YYY-csXXX のコマンドを実行する場合、Winhttp 側への Proxy 設定が必要" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-teams/Teams - 新しい Teams の既知の問題について" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     
@@ -90,7 +91,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Teams - Proxy 環境で、Teams の PowerShell 2.0.0 以降の Teams PowerShell で Get-csOnlineUser などの YYY-csXXX のコマンドを実行する場合、Winhttp 側への Proxy 設定が必要
+      Teams - 新しい Teams の既知の問題について
     </h1>
   
 
@@ -98,31 +99,100 @@
       <div class="article-share">
         Last Update: 
         <a href="" class="article-date-single">
-  <time datetime="2022-04-17T15:00:00.000Z" itemprop="datePublished">2022-04-18</time>
+  <time datetime="2024-01-18T00:00:00.000Z" itemprop="datePublished">2024-01-18</time>
 </a>
         
         
-        <a href="https://github.com/jpucsupport/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+5744fe65-ea06-56e7-9abf-7e3839ea2342%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BTeams+-+Proxy+%E7%92%B0%E5%A2%83%E3%81%A7%E3%80%81Teams+%E3%81%AE+PowerShell+2.0.0+%E4%BB%A5%E9%99%8D%E3%81%AE+Teams+PowerShell+%E3%81%A7+Get-csOnlineUser+%E3%81%AA%E3%81%A9%E3%81%AE+YYY-csXXX+%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%80%81Winhttp+%E5%81%B4%E3%81%B8%E3%81%AE+Proxy+%E8%A8%AD%E5%AE%9A%E3%81%8C%E5%BF%85%E8%A6%81%5D%28https%3A%2F%2Fjpucsupport.github.io%2Fblog%2Fteams%2FTeams%2520-%2520Proxy%2520%E7%92%B0%E5%A2%83%E3%81%A7%E3%80%81Teams%2520%E3%81%AE%2520Powershell%25202.0.0%2520%E4%BB%A5%E9%99%8D%E3%81%AE%2520Teams%2520Powershell%2520%E3%81%A7%2520Get-csOnlineUser%2520%E3%81%AA%E3%81%A9%E3%81%AE%2520YYY-csXXX%2520%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%80%81Winhttp%2520%E5%81%B4%E3%81%B8%E3%81%AE%2520Proxy%2520%E8%A8%AD%E5%AE%9A%E3%81%8C%E5%BF%85%E8%A6%81%2F%29%0A*+Content+Source%3A+%5Barticles%2Fteams%2FTeams+-+Proxy+%E7%92%B0%E5%A2%83%E3%81%A7%E3%80%81Teams+%E3%81%AE+Powershell+2.0.0+%E4%BB%A5%E9%99%8D%E3%81%AE+Teams+Powershell+%E3%81%A7+Get-csOnlineUser+%E3%81%AA%E3%81%A9%E3%81%AE+YYY-csXXX+%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%80%81Winhttp+%E5%81%B4%E3%81%B8%E3%81%AE+Proxy+%E8%A8%AD%E5%AE%9A%E3%81%8C%E5%BF%85%E8%A6%81.md%5D%28https%3A%2F%2Fgithub.com%2Fjpucsupport%2Fblog%2Fblob%2Fmaster%2Farticles%2Fteams%2FTeams%2520-%2520Proxy%2520%E7%92%B0%E5%A2%83%E3%81%A7%E3%80%81Teams%2520%E3%81%AE%2520Powershell%25202.0.0%2520%E4%BB%A5%E9%99%8D%E3%81%AE%2520Teams%2520Powershell%2520%E3%81%A7%2520Get-csOnlineUser%2520%E3%81%AA%E3%81%A9%E3%81%AE%2520YYY-csXXX%2520%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%80%81Winhttp%2520%E5%81%B4%E3%81%B8%E3%81%AE%2520Proxy%2520%E8%A8%AD%E5%AE%9A%E3%81%8C%E5%BF%85%E8%A6%81.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        <a href="https://github.com/jpucsupport/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+faaae6f9-15bb-5e3b-a64f-9b3cb8140f70%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BTeams+-+%E6%96%B0%E3%81%97%E3%81%84+Teams+%E3%81%AE%E6%97%A2%E7%9F%A5%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%5D%28https%3A%2F%2Fjpucsupport.github.io%2Fblog%2Fteams%2FTeams%2520-%2520%E6%96%B0%E3%81%97%E3%81%84%2520Teams%2520%E3%81%AE%E6%97%A2%E7%9F%A5%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%2F%29%0A*+Content+Source%3A+%5Barticles%2Fteams%2FTeams+-+%E6%96%B0%E3%81%97%E3%81%84+Teams+%E3%81%AE%E6%97%A2%E7%9F%A5%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.md%5D%28https%3A%2F%2Fgithub.com%2Fjpucsupport%2Fblog%2Fblob%2Fmaster%2Farticles%2Fteams%2FTeams%2520-%2520%E6%96%B0%E3%81%97%E3%81%84%2520Teams%2520%E3%81%AE%E6%97%A2%E7%9F%A5%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpucsupport.github.io/blog/teams/Teams%20-%20Proxy%20%E7%92%B0%E5%A2%83%E3%81%A7%E3%80%81Teams%20%E3%81%AE%20Powershell%202.0.0%20%E4%BB%A5%E9%99%8D%E3%81%AE%20Teams%20Powershell%20%E3%81%A7%20Get-csOnlineUser%20%E3%81%AA%E3%81%A9%E3%81%AE%20YYY-csXXX%20%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%80%81Winhttp%20%E5%81%B4%E3%81%B8%E3%81%AE%20Proxy%20%E8%A8%AD%E5%AE%9A%E3%81%8C%E5%BF%85%E8%A6%81/" data-id="clriglnej000n9eo3fx2e20u3" class="article-share-link">共有</a>
+        <a data-url="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E6%96%B0%E3%81%97%E3%81%84%20Teams%20%E3%81%AE%E6%97%A2%E7%9F%A5%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" data-id="clriglng400489eo3hsrw8a8t" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>こんにちは。Unified Communications サポート チームです。<br>いつも Microsoft Teams をご利用いただきありがとうございます。</p>
-<p>企業様のご環境では、インターネットへの接続は Proxy Server を経由しない限りできない場合があるかと思います。<br>このような Proxy Server を経由しない限りインターネットへの接続ができないご環境で、Teams の PowerShell 2.0.0 をご使用いただく場合には、WinHttp の設定で、Proxy Server を使用する設定をしていただく必要がございます。<br>この設定を行わない場合、以下のエラーが発生します。</p>
-<p>■ エラーメッセージ例 （以下は 2.3.1 の Teams PowerShell での実行した場合のエラー）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Get-CsOnlineSession : リモート サーバー api.interfaces.records.teams.microsoft.com への接続に失敗し、次のエラー メッセ </span><br><span class="line">ージが返されました: WinRM クライアントは、サーバー名を解決できないため、要求を処理できません。詳細については、about_Rem</span><br><span class="line">ote_Troubleshooting のヘルプ トピックを参照してください。</span><br><span class="line">発生場所 C:\Program Files\WindowsPowerShell\Modules\MicrosoftTeams\2.3.1\net472\SfBORemotePowerShellModule.psm1:63 文字:22</span><br><span class="line">+     $remoteSession &#x3D; &amp; (Get-CsOnlineSessionCommand)</span><br><span class="line">+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span><br><span class="line">    + CategoryInfo          : NotSpecified: (:) [Get-CsOnlineSession], PSRemotingTransportException</span><br><span class="line">    + FullyQualifiedErrorId : PSRemotingTransportException,Microsoft.Teams.ConfigApi.Cmdlets.GetCsOnlineSession</span><br><span class="line"></span><br><span class="line">Invoke-Command : パラメーター &#39;Session の引数を確認できません。引数が null または空です。null または空でない引数を指定して、コマンドを再度実行してください。</span><br><span class="line">発生場所 C:\Program Files\WindowsPowerShell\Modules\MicrosoftTeams\2.3.1\net472\SfBORemotePowerShellModule.psm1:9490 文字:38</span><br><span class="line">+ ...    -Session (Get-PSImplicitRemotingSession -CommandName &#39;Get-CsOnline ...</span><br><span class="line">+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span><br><span class="line">    + CategoryInfo          : InvalidData: (:) [Invoke-Command]、ParentContainsErrorRecordException</span><br></pre></td></tr></table></figure>
+        <p>こんにちは。Unified Communications サポート チームです。<br>いつも Microsoft Teams をご利用いただきありがとうございます。<br>既に、新しい Teams の提供を開始し、多くのお客様が新しい Teams への移行計画を進めていただいている状況かと存じます。一方で、新しい Teams において、いくつかの問題が確認されており、特定の言語環境でのみ発生する問題などの情報については、弊社の<a href="https://learn.microsoft.com/ja-jp/microsoftteams/new-teams-known-issues" target="_blank" rel="noopener">公開情報</a>が、全体に関連する問題についての情報提供になっておりますため、情報の提供に至れておりません。そのため、今回は新しい Teams の既知の問題に関しての補完情報をお伝えいたします。併せて、よくお問い合わせをいただく制限事項関連につきましても、まとめてご提供させていただき、皆様が快適に新しい Teams をご利用いただくための、一助となりますと幸いでございます。     </p>
+<p>なお、本記事については、最大限定期的な更新を努めて参りますが、新しい Teams の開発が日々進められていることから、一部の情報については、リアルタイムでの更新が叶わない可能性もございますこと、あらかじめご理解いただけますと幸いでございます。また、今回の記事では、主にお問い合わせいただいた事象の内、弊社開発部門によって既知の問題や制限事項として認定されたものをご案内しております。その他にも、問題として考えられる事象を確認された場合には、ぜひ弊社サポートまでお問い合わせいただけますと幸いでございます。  </p>
+<h2 id="日本語環境で確認された問題"><a href="#日本語環境で確認された問題" class="headerlink" title="日本語環境で確認された問題"></a>日本語環境で確認された問題</h2><p>日本語環境で発生が確認された問題として、下記のような事象を確認しております。</p>
+<table width="250" border="1">
+    <tr>
+        <td>問題の内容</td>
+        <td>対応状況</td>
+        <td>回避策</td>
+        <td>補足事項</td>   
+    </tr>
+    <tr>
+        <td>チャットへの文字入力が出来ない状況が発生する</td>
+        <td>修正を展開済み</td>
+        <td></td>
+        <td>こちらの<a href="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%81%B8%E3%81%AE%E6%96%87%E5%AD%97%E5%85%A5%E5%8A%9B%E3%81%8C%E5%87%BA%E6%9D%A5%E3%81%AA%E3%81%84%E7%8A%B6%E6%B3%81%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/" title="Title">ブログ</a>にて記載の内容と同様。</td>
+    </tr>
+    <tr>
+        <td>ファイル名に日本語を含む場合、ダウンロードしたファイル名が文字化けする</td>
+        <td>修正を展開済み</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Web 版において、会議通知の会議タイトルが文字化けする</td>
+        <td>弊社開発部門にて、調査および修正が進められている状況。修正時期は現時点で未定。</td>
+        <td>会議のタイトルについて、２バイト文字を使用しない。</td>
+        <td></td>
+    </tr>
+</table>
 
-<h3 id="原因について"><a href="#原因について" class="headerlink" title="原因について"></a>原因について</h3><p>Teams の PowerShell のバージョンが 2.0.0 以降では、Teams 系のコマンドと Skype for Business 系のコマンドの 2 種類が含まれております。<br>Teams 系のコマンドは通常のプロキシ設定を使用いたしますが、Skype for Business 系のコマンドは、WinHttp を使用するようになっておりますが、WinHttp の既定の設定では、Proxy Server を使用せず、直接接続をする設定のため、Proxy Server を経由した通信ではなく、直接接続を試そうとし、インターネットとの通信ができないため、エラーとなります。</p>
-<p>上述のため、Windows Server 2012 上で Teams の PowerShell 2.0.0 以降を使用した場合に、Skype for Business 系のコマンドだけが TLS 1.2 の通信ができないため、コマンドの実行が失敗します。</p>
-<h3 id="対処策について"><a href="#対処策について" class="headerlink" title="対処策について"></a>対処策について</h3><p>管理者でコマンドプロンプトを起動いただき、以下のk万度を実行いただくことで、Proxy Server の設定をしていただくことが可能です。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- WININET と同じ設定を WINHTTP で行う場合は以下のコマンドを実行します</span><br><span class="line">  netsh winhttp import proxy source&#x3D;ie</span><br><span class="line"></span><br><span class="line">- WINHTTP 独自の Proxy 設定を行う場合は以下のコマンドを実行します</span><br><span class="line">  netsh winhttp set proxy &lt;ProxyServer&gt;:&lt;Port&gt;</span><br><span class="line">  * &lt;ProxyServer&gt; には Proxy Server の HOSTNAME または FQDN、&lt;Port&gt; には Proxy Server のポート番号を指定します</span><br><span class="line">  * 必要に応じてオプション &quot;bypass-list&quot; を用いてバイパスする宛先を指定します</span><br></pre></td></tr></table></figure>
-<p>現在の設定を確認されたい場合は、以下を実行することで確認が可能です。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh winhttp show proxy</span><br></pre></td></tr></table></figure>
+<h2 id="重要性が高いと判断される問題"><a href="#重要性が高いと判断される問題" class="headerlink" title="重要性が高いと判断される問題"></a>重要性が高いと判断される問題</h2><p>弊社公開情報にてお伝えできていないものの、現在対応が進められている問題として、下記のような事象がございます。</p>
+<table width="200" border="1">
+    <tr>
+        <td>問題の内容</td>
+        <td>対応状況</td>
+        <td>回避策</td>
+        <td>補足事項</td>   
+    </tr>
+    <tr>
+        <td>発表者ツール バーの注釈機能を利用できない</td>
+        <td>既に機能の展開完了済み</td>
+        <td></td>
+        <td><a href="https://learn.microsoft.com/ja-jp/microsoftteams/new-teams-known-issues" target="_blank" rel="noopener" title="Title">公開情報</a>で更新されていない。</td>
+    </tr>
+    <tr>
+        <td>ダウンロードした PDF ファイルを [ファイルを開く] より開けない</td>
+        <td>弊社開発部門にて、調査および修正が進められている状況。修正時期は現時点で未定。</td>
+        <td>Teams のダウンロード通知上の、ファイルアイコンからエクスプローラーを開き、ダウンロード ファルダから開く。</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>VDI 環境において、ステータスメッセージを設定できない</td>
+        <td>修正を展開済み</td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
 
-<p>なお、WinHttp につきましては、通常のプロキシ設定では設定可能な PAC ファイルを用いた設定ができません。大変恐れ入りますが、PAC ではなく Proxy Server の指定で設定をしていただきますようお願いいたします。</p>
-<h3 id="関連情報"><a href="#関連情報" class="headerlink" title="関連情報"></a>関連情報</h3><p><a href="https://jpucsupport.github.io/blog/teams/Teams%20-%20Windows%20Server%202012%20%E3%81%AE%20OS%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E7%92%B0%E5%A2%83%E3%81%A7%20Teams%20%E3%81%AE%20Powershell%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88/">Windows Server 2012 の OS を使用している環境で、Teams の PowerShell を使用する場合には、Winhttp の TLS1.2 対応の修正プログラムが必要</a></p>
+<h2 id="重要性が高いと判断される制限事項"><a href="#重要性が高いと判断される制限事項" class="headerlink" title="重要性が高いと判断される制限事項"></a>重要性が高いと判断される制限事項</h2><p>現時点では、下記のような機能が、新しい Teams の制限事項として認識されております。</p>
+<table width="300" border="1">
+    <tr>
+        <td>制限事項の内容</td>
+        <td>補足事項</td>   
+    </tr>
+    <tr>
+        <td>配信の最適化 (DO) について、ダウンロード モード 100 はサポートされない</td>
+        <td><a href="https://learn.microsoft.com/ja-jp/microsoftteams/new-teams-deploy-using-policies?tabs=teams-admin-center#prerequisite" target="_blank" rel="noopener" title="Title">公開情報</a>に記載<br>DO が 100 に設定されている場合には、新しい Teams の自動更新が失敗する等の事象が発生する。<br>※ DO の概要は<a href="https://learn.microsoft.com/ja-jp/windows/deployment/do/waas-delivery-optimization" target="_blank" rel="noopener" title="Title">公開情報</a>を、設定方法につきましては<a href="https://jpwinsup.github.io/blog/2022/02/28/WindowsUpdate/DO/AboutDO_2/" target="_blank" rel="noopener" title="Title">サポートブログ</a>をご参照ください。</td>
+    </tr>
+    <tr>
+        <td>タスク バー (システム トレイ) の右端にある通知領域からサインアウトする機能が利用できない</td>
+        <td><a href="https://learn.microsoft.com/ja-jp/microsoftteams/new-teams-whats-changing" target="_blank" rel="noopener" title="Title">公開情報</a>に掲載<br>同様の方法として、コマンドプロンプトで Taskkill コマンドを実行することで完全にプロセスを終了する方法がある。<br>コマンド例: <code>taskkill /IM ms-teams.exe /F</code><br>* 強制的に ms-teams.exe のプロセスを終了する </td>
+    </tr>
+    <tr>
+        <td>VDI 環境において、通知がタスクバーよりも上部に表示される</td>
+        <td>入力エリアや他のアプリのトースト通知による遮蔽を避けるための仕様。</td>
+    </tr>
+</table>
+
+<p>New Teams への切り替えにより、さらに快適なクライアント環境を提供させていただくことを目指しております。<br>大幅なアーキテクチャの変更に伴いご迷惑をおかけしており恐縮ではございますが、ご理解いただけますと幸いです。</p>
+<p>NOTE:  </p>
+<ul>
+<li>2024 年 1 月 18 日に、初版を公開しました。</li>
+</ul>
 
       
       
@@ -136,10 +206,10 @@
     <footer class="article-footer">
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Information/" rel="tag">Information</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/PowerShell/" rel="tag">PowerShell</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Information/" rel="tag">Information</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/New-Teams/" rel="tag">New Teams</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Teams-2-1/" rel="tag">Teams 2.1</a></li></ul>
 
         
-        <a href="https://github.com/jpucsupport/blog/edit/master/articles/teams/Teams%20-%20Proxy%20環境で、Teams%20の%20Powershell%202.0.0%20以降の%20Teams%20Powershell%20で%20Get-csOnlineUser%20などの%20YYY-csXXX%20のコマンドを実行する場合、Winhttp%20側への%20Proxy%20設定が必要.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        <a href="https://github.com/jpucsupport/blog/edit/master/articles/teams/Teams%20-%20新しい%20Teams%20の既知の問題について.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
         
     </footer>
   </div>
@@ -147,19 +217,10 @@
     
 <nav id="article-nav">
   
-    <a href="../Teams%20-%20msExchHideFromAddressLists%20%E3%82%92%20True%20(%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E5%B8%B3%E3%81%AB%E8%A1%A8%E7%A4%BA%E3%81%97%E3%81%AA%E3%81%84%E3%82%92%E3%82%AA%E3%83%B3)%20%E3%81%AB%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE%20Teams%20%E3%81%B8%E3%81%AE%E5%BD%B1%E9%9F%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">次の記事</strong>
-      <div class="article-nav-title">
-        
-          Teams - msExchHideFromAddressLists を True (アドレス帳に表示しないをオン) にした場合の Teams への影響について
-        
-      </div>
-    </a>
   
-  
-    <a href="../Teams%20-%20Windows%20Server%202012%20%E3%81%AE%20OS%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E7%92%B0%E5%A2%83%E3%81%A7%20Teams%20%E3%81%AE%20Powershell%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="../Teams%20-%20%E6%96%B0%E3%81%97%E3%81%84%20Microsoft%20Teams%20%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前の記事</strong>
-      <div class="article-nav-title">Teams - Windows Server 2012 の OS を使用している環境で Teams の Powershell を使用する場合</div>
+      <div class="article-nav-title">Teams - 新しい Microsoft Teams クライアントのインストール方法</div>
     </a>
   
 </nav>
@@ -178,7 +239,7 @@
       <ul>
         
           <li>
-            <a href="../Teams%20-%20%E6%96%B0%E3%81%97%E3%81%84%20Teams%20%E3%81%AE%E6%97%A2%E7%9F%A5%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Teams - 新しい Teams の既知の問題について</a>
+            <a href="">Teams - 新しい Teams の既知の問題について</a>
           </li>
         
           <li>
