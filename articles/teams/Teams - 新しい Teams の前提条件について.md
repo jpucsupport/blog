@@ -13,7 +13,7 @@ tags:
 今回は新しい Teams のアーキテクチャや、クライアントごとの前提条件、前提条件に関する事象について、公開情報内に記載がございます内容等を補足説明させていただきます。
 
 ## 新しい Teams の対象となるクライアントについて
-新しい Teams のコンセプトは、Teams デスクトップクライアント (Windows, Mac, VDI) と、Teams for the Web のみを対象としています。
+新しい Teams のコンセプトは、Teams デスクトップクライアント (Windows, Mac, VDI) と、Teams for Web のみを対象としています。
 そのため、モバイル (iOS, Andoroid, iPad OS) や Microsoft Teams Rooms、Surface Hub については、新しい Teams はリリースされず、これまでのアプリに対して更新が行われます。
 
 ## 新しい Teams の前提条件について
@@ -93,11 +93,11 @@ tags:
 
 参考情報: [新しい Teams for Mac - 概要と前提条件](https://learn.microsoft.com/ja-jp/microsoftteams/new-teams-mac-install-prerequisites)
 
-### 新しい Teams for the Web の前提条件について
+### 新しい Teams for Web の前提条件について
 - サードパーティの Cookie を許可するようにブラウザーを構成する必要があります。
 - ブラウザーはデスクトップ コンピューターで実行される必要があります。
 - ブラウザーは、Microsoft Edge または Chrome の 3 つの最新バージョンがサポートされます。  
-※ 新しい Teams for the Web の前提条件に、WebView2 は含まれません。  
+※ 新しい Teams for Web の前提条件に、WebView2 は含まれません。  
 
 参考情報: [新しい Teams for Web - 概要と前提条件](https://learn.microsoft.com/ja-jp/microsoftteams/new-teams-web)
   
