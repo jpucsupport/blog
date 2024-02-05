@@ -1,6 +1,6 @@
 ---
 title: Teams - 新しい Teams の前提条件について
-date: 2024-01-31 15:00:00
+date: 2024-02-05 13:00:00
 tags:
  - Teams
  - New Teams
@@ -14,7 +14,7 @@ tags:
 
 ## 新しい Teams の対象となるクライアントについて
 新しい Teams のコンセプトは、Teams デスクトップクライアント (Windows, Mac, VDI) と、Teams for Web のみを対象としています。
-そのため、モバイル (iOS, Andoroid, iPad OS) や Microsoft Teams Rooms、Surface Hub については、新しい Teams はリリースされず、これまでのアプリに対して更新が行われます。
+そのため、モバイル (iOS, Andoroid, iPad OS) や Microsoft Teams Rooms、Surface Hub、Microsoft Teams Phone については、新しい Teams はリリースされず、これまでのアプリに対して更新が行われます。
 
 ## 新しい Teams の前提条件について
 ここからは、クライアントごとに、新しい Teams を正常にインストールするための、ターゲット PC の前提条件をお伝えいたします。
@@ -125,3 +125,5 @@ tags:
 
 NOTE:  
 - 2024 年 1 月 31 日に、初版を公開しました。
+- 2024 年 2 月 5 日に、追記しました。
+  
