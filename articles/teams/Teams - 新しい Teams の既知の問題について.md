@@ -7,7 +7,6 @@ tags:
 - New Teams
 - Teams 2.1
 ---
----
 # 新しい Teams の既知の問題について
 こんにちは。Unified Communications サポート チームです。  
 いつも Microsoft Teams をご利用いただきありがとうございます。  
