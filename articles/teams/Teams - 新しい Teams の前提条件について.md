@@ -1,6 +1,6 @@
 ---
 title: Teams - 新しい Teams の前提条件について
-date: 2024-02-05 13:00:00
+date: 2024-02-28 14:30:00
 tags:
  - Teams
  - New Teams
@@ -39,10 +39,6 @@ tags:
     <tr>
         <td>Webview2</td>
         <td>最新バージョンに更新します。 詳細情報:<a href="https://learn.microsoft.com/ja-jp/microsoft-edge/webview2/concepts/enterprise" title="Title">WebView2 ランタイムのエンタープライズ管理</a></td>
-    </tr>
-    <tr>
-        <td>アプリサイドローディングが有効</td>
-        <td>インストールするすべてのコンピューターでサイドローディングが有効になっていることを確認します。 詳細情報: <a href="https://learn.microsoft.com/ja-jp/windows/application-management/sideload-apps-in-windows" title="Title"> Windows クライアント デバイスでの基幹業務 (LOB) アプリのサイドロード</a></td>
     </tr>
     <tr>
         <td>配信の最適化 (DO)</td>
@@ -126,4 +122,5 @@ tags:
 NOTE:  
 - 2024 年 1 月 31 日に、初版を公開しました。
 - 2024 年 2 月 5 日に、追記しました。
+- 2024 年 2 月 28 日に、追記しました。
   
