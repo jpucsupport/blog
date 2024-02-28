@@ -56,7 +56,7 @@ tags:
         <td>発表者ツール バーの注釈機能を利用できない</td>
         <td>既に機能の展開完了済み</td>
         <td></td>
-        <td><a href="https://learn.microsoft.com/ja-jp/microsoftteams/new-teams-known-issues" title="Title">公開情報</a>で更新されていない。</td>
+        <td></td>
     </tr>
     <tr>
         <td>ダウンロードした PDF ファイルを [ファイルを開く] より開けない</td>
@@ -129,3 +129,4 @@ NOTE:
 - 2024 年 2 月 21 日に、第 6 版を公開しました。
 - 2024 年 2 月 28 日に、第 7 版を公開しました。
 - 2024 年 2 月 28 日に、第 8 版を公開しました。
+- 2024 年 2 月 28 日に、第 9 版を公開しました。
