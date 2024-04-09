@@ -7,7 +7,6 @@ tags:
  - Teams 2.1
  - VDI
 ---
-
 # Teams - 新しい Teams インストール時のアプリ インストーラーについて
 こんにちは。Unified Communications サポート チームです。
 いつも Microsoft Teams をご利用いただきありがとうございます。
