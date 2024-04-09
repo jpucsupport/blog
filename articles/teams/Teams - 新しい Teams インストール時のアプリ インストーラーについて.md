@@ -1,11 +1,13 @@
 ---
 title: Teams - 新しい Teams インストール時のアプリ インストーラーについて
-date: 2024-04-09 13:00:00
+date: 2024-04-09 12:00:00
 tags:
  - Classic Teams
  - New Teams
  - Teams 2.1
- ---
+ - VDI
+---
+
 # Teams - 新しい Teams インストール時のアプリ インストーラーについて
 こんにちは。Unified Communications サポート チームです。
 いつも Microsoft Teams をご利用いただきありがとうございます。
