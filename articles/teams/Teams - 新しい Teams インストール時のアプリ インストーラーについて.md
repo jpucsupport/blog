@@ -31,7 +31,7 @@ tags:
 - アプリ インストーラーのバージョンの確認方法
 1．Powershell を起動します。
 2．以下のコマンドを実行して Version を確認します。
-(Get-AppXPackage *DesktopAppInstaller*).version
+(Get-AppxPackage Microsoft.DesktopAppInstaller).Version
 * 万が一、表示されない場合、Get-AppXPackage *DesktopAppInstaller* を実行して Version 情報が表示されるかご確認ください
 
 - バージョンを更新する方法
@@ -60,8 +60,8 @@ https://aka.ms/getwinget
 Add-AppxPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle
 
 9. 手順8 でエラーにならずにインストールできた場合は、次のコマンドでバージョン情報が表示されるか確認ください。
-     (Get-AppxPackage Microsoft.DesktopAppInstaller).Version
-     #Version が 1.22.10861.0 になっていることを確認します。
+(Get-AppxPackage Microsoft.DesktopAppInstaller).Version
+#Version が 1.22.10861.0 になっていることを確認します。
 
 
 <br />
