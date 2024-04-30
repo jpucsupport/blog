@@ -52,7 +52,7 @@ VDI 環境の場合には、通常のクラシック Teams デスクトップと
 現時点では、クラシック Teams for VDI は、2024 年 6 月 30 日に可用性が終了する予定となります。
 可用性終了後は、クラシック Teams を利用できなくなりますため、新しい Teams への移行に向けた準備を進めていただきますようお願い申し上げます。
 
-![](./teams-client-eoa-timeline-vdi.png)
+![](./new-teams-vdi-timeline.png)
 
 参考情報: [新しい Teams for Virtualized Desktop Infrastructure (VDI) へのアップグレード](https://learn.microsoft.com/ja-jp/microsoftteams/new-teams-vdi-requirements-deploy
 
