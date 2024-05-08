@@ -1,6 +1,6 @@
 ---
 title: Teams - クラシック Teams の可用性について
-date: 2024-05-08 10:00:00
+date: 2024-03-01 10:00:00
 tags:
  - Classic Teams
  - New Teams
@@ -47,14 +47,14 @@ MC783985 でアナウンスされた変更について、追記しています�
 参考情報: [End of availability for classic Teams client](https://learn.microsoft.com/en-us/microsoftteams/teams-classic-client-end-of-availability)
 ※ 日本語翻訳のページでは、一部の内容について更新が行われておりませんため、原文ページのご案内となります。
 
-## VDI 環境のスケジュールについて
+## VDI 環境のスケジュール
 VDI 環境の場合には、通常のクラシック Teams デスクトップとは異なるスケジュールが設けられています。
-現時点では、クラシック Teams for VDI は、2024 年 7 月 1 日にサポートが終了する予定となります。
+現時点では、クラシック Teams for VDI は、2024 年 10 月 1 日にサポートが終了する予定となります。
 そして、2025 年 7 月 1 日に可用性の終了が予定されており、それ以降はクラシック Teams を利用できなくなりますため、新しい Teams への移行に向けた準備を進めていただきますようお願い申し上げます。
 
 ![](./new-teams-vdi-timeline.png)
 
-参考情報: [新しい Teams for Virtualized Desktop Infrastructure (VDI) へのアップグレード](https://learn.microsoft.com/ja-jp/microsoftteams/new-teams-vdi-requirements-deploy
+参考情報: [新しい Teams for Virtualized Desktop Infrastructure (VDI) へのアップグレード](https://learn.microsoft.com/ja-jp/microsoftteams/new-teams-vdi-requirements-deploy)
 
 
 なお、スケジュールについては、今後変更となる可能性もございます。
@@ -65,5 +65,5 @@ VDI 環境の場合には、通常のクラシック Teams デスクトップと
 NOTE
 - 2024 年 3 月 1 日に、初版を公開しました。
 - 2024 年 3 月 4 日に、第二版を公開しました。
-- 2024 年 4 月 30 日に、第三版を公開しました。
+- 2024 年 4 月 30　日に、第三版を公開しました。
 - 2024 年 5 月 8 日に、第四版を公開しました。
