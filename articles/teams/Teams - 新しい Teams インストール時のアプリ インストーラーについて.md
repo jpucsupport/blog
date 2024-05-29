@@ -1,6 +1,6 @@
 ---
 title: Teams - 新しい Teams インストール時のアプリ インストーラーについて
-date: 2024-04-09 12:00:00
+date: 2024-05-29 16:00:00
 tags:
  - Classic Teams
  - New Teams
@@ -31,8 +31,8 @@ tags:
 - アプリ インストーラーのバージョンの確認方法
 1．Powershell を起動します。
 2．以下のコマンドを実行して Version を確認します。
-(Get-AppxPackage Microsoft.DesktopAppInstaller).Version
-* 万が一、表示されない場合、Get-AppxPackage Microsoft.DesktopAppInstaller を実行して Version 情報が表示されるかご確認ください
+(Get-AppXPackage *DesktopAppInstaller*).version
+* 万が一、表示されない場合、Get-AppXPackage *DesktopAppInstaller* を実行して Version 情報が表示されるかご確認ください
 
 - バージョンを更新する方法
 1. 以下の URL にアクセスして、Microsoft.VCLibs.x64.14.00.Desktop.appx を入手します。
@@ -41,30 +41,25 @@ https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx
 2. PowerShell から以下のコマンドを実行し、Microsoft.VCLibs.x64.14.00.Desktop.appx をインストールします。
 Add-AppxPackage Microsoft.VCLibs.x64.14.00.Desktop.appx
 
-3. 以下の URL にアクセスして、Microsoft.UI.Xaml.2.7.x64.appx を入手します。
-https://github.com/microsoft/microsoft-ui-xaml/releases/download/v2.7.3/Microsoft.UI.Xaml.2.7.x64.appx
-
-4. PowerShell から以下のコマンドを実行し、Microsoft.UI.Xaml.2.7.x64.appx をインストールします。
-Add-AppxPackage Microsoft.UI.Xaml.2.7.x64.appx
-
-5. 以下の URL にアクセスして、Microsoft.UI.Xaml.2.8.x64.appx を入手します。
+3. 以下の URL にアクセスして、Microsoft.UI.Xaml.2.8.x64.appx を入手します。
 https://github.com/microsoft/microsoft-ui-xaml/releases/download/v2.8.6/Microsoft.UI.Xaml.2.8.x64.appx
 
-6. PowerShell から以下のコマンドを実行し、Microsoft.UI.Xaml.2.8.x64.appx をインストールします。
+4. PowerShell から以下のコマンドを実行し、Microsoft.UI.Xaml.2.8.x64.appx をインストールします。
 Add-AppxPackage Microsoft.UI.Xaml.2.8.x64.appx
 
-7. 以下の URL にアクセスして、Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle を入手します。
+5. 以下の URL にアクセスして、Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle を入手します。
 https://aka.ms/getwinget
 
-8. PowerShell から以下のコマンドを実行し、Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle をインストールします。
+6. PowerShell から以下のコマンドを実行し、Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle をインストールします。
 Add-AppxPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle
 
-9. 手順8 でエラーにならずにインストールできた場合は、次のコマンドでバージョン情報が表示されるか確認ください。
-(Get-AppxPackage Microsoft.DesktopAppInstaller).Version
-#Version が 1.22.10861.0 になっていることを確認します。
+7. 手順8 でエラーにならずにインストールできた場合は、次のコマンドでバージョン情報が表示されるか確認ください。
+     (Get-AppxPackage Microsoft.DesktopAppInstaller).Version
+     #Version が 1.22.10861.0 になっていることを確認します。
 
 
 <br />
 
 NOTE:  
 - 2024 年 4 月 9 日に、初版を公開しました。
+- 2024 年 5 月 29 日に、一部訂正しました。
