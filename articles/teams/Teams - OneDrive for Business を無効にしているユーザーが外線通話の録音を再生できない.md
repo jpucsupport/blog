@@ -1,4 +1,4 @@
-﻿---
+---
 title: Teams - OneDrive for Business を無効にしているユーザーが外線通話の録音を再生できない
 date: 2024-11-12 14:30:00
 tags:
@@ -24,7 +24,7 @@ tags:
  > 「この記録を OneDrive にアップロードするときに問題が発生しました。」
  > 「所有者の OneDrive が設定されていないため、レコーディングのアップロードに失敗しました。」
 
-![メッセージ例](./OneDrive upload failure.png)
+![メッセージ例](./UploadFailure.png)
 
 ## 回避策について
 モバイル版のTeams アプリ (iOS / Android) から録音を再生することが可能です。
