@@ -9,14 +9,14 @@ tags:
 ---
 # Teams - Teams 会議での Intelligent Speaker (音声認識) について <!-- omit in toc -->
 
-- [Intelligent Speaker (音声認識) とは](#intelligent-speaker-音声認識-とは)
+- [Intelligent Speaker (音声認識) とは](#Intelligent-Speaker-音声認識-とは)
   - [必須要件](#必須要件)
-  - [BYOD ルームとは](#byod-ルームとは)
+  - [BYOD ルームとは](#BYOD-ルームとは)
 - [よくある質問](#よくある質問)
-  - [Q1. Intelligent Speaker を利用するために必要なライセンスは何ですか？](#q1-intelligent-speaker-を利用するために必要なライセンスは何ですか)
-  - [Q2. トランスクリプトにて名前が表示されず、"話者 1" と表示されるのはなぜですか？](#q2-トランスクリプトにて名前が表示されず話者-1-と表示されるのはなぜですか)
-  - [Q3. ゲスト ユーザーおよび外部ユーザーは Intelligent Speaker を利用できますか？](#q3-ゲスト-ユーザーおよび外部ユーザーは-intelligent-speaker-を利用できますか)
-  - [Q4. Intelligent Speaker を利用するために Teams Rooms Pro Management Portal への登録は必要ですか？](#q4-intelligent-speaker-を利用するために-teams-rooms-pro-management-portal-への登録は必要ですか)
+  - [Q1. Intelligent Speaker を利用するために必要なライセンスは何ですか？](#Q1-Intelligent-Speaker-を利用するために必要なライセンスは何ですか？)
+  - [Q2. トランスクリプトにて名前が表示されず、"話者 1" と表示されるのはなぜですか？](#Q2-トランスクリプトにて名前が表示されず、”話者-1”-と表示されるのはなぜですか？)
+  - [Q3. ゲスト ユーザーおよび外部ユーザーは Intelligent Speaker を利用できますか？](#Q3-ゲスト-ユーザーおよび外部ユーザーは-Intelligent-Speaker-を利用できますか？)
+  - [Q4. Intelligent Speaker を利用するために Teams Rooms Pro Management Portal への登録は必要ですか？](#Q4-Intelligent-Speaker-を利用するために-Teams-Rooms-Pro-Management-Portal-への登録は必要ですか？)
 
 こんにちは。 Unified Communications サポート チームです。
 いつも Microsoft Teams をご利用いただきありがとうございます。
