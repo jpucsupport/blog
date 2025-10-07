@@ -13,7 +13,7 @@ tags:
 いつも Microsoft Teams をご利用いただきありがとうございます。
 
 <div style="color: red;">
-**[2025/10/XX - Update !!]** <br>
+**[2025/10/07 - Update !!]** <br>
 バージョン 5.0.0 以降の Teams の PowerShell モジュールをご使用の場合、Teams 関連の各種コマンドレット (Get-CsOnlineUser 等) 実行時に Teams サービス側との通信において WinHttp を利用しない (WinInet を利用する) 動作へと変更・統合されました。
 WinHttp による通信制御を行っている環境で、当該バージョン以上の Teams PowerShell モジュールを利用されている場合にはご留意ください。
 </div>
