@@ -13,7 +13,7 @@ tags:
 いつも Microsoft Teams をご利用いただきありがとうございます。
 
 <div style="color: red;">
-**[2025/10/XX - Update !!]**
+**[2025/10/XX - Update !!]** <br>
 バージョン 5.0.0 以降の Teams の PowerShell モジュールをご使用の場合、Teams 関連の各種コマンドレット (Get-CsOnlineUser 等) 実行時に Teams サービス側との通信において WinHttp を利用しない (WinInet を利用する) 動作へと変更・統合されました。
 WinHttp による通信制御を行っている環境で、当該バージョン以上の Teams PowerShell モジュールを利用されている場合にはご留意ください。
 </div>
@@ -69,3 +69,9 @@ netsh winhttp show proxy
 
 ### 関連情報
 [Windows Server 2012 の OS を使用している環境で、Teams の PowerShell を使用する場合には、Winhttp の TLS1.2 対応の修正プログラムが必要](https://jpucsupport.github.io/blog/teams/Teams%20-%20Windows%20Server%202012%20%E3%81%AE%20OS%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E7%92%B0%E5%A2%83%E3%81%A7%20Teams%20%E3%81%AE%20Powershell%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88/)
+
+<br />
+
+NOTE
+- 2022 年 4 月 18 日に、初版を公開しました。
+- 2025 年 10 月 7 日に、第 2 版を公開しました。
