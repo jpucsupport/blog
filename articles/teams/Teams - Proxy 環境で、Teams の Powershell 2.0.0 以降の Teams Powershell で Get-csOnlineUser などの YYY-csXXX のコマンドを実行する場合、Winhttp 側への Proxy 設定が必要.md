@@ -1,6 +1,6 @@
 ---
 title: Teams - Proxy 環境で、Teams の PowerShell 2.0.0 以降の Teams PowerShell で Get-csOnlineUser などの YYY-csXXX のコマンドを実行する場合、Winhttp 側への Proxy 設定が必要
-date: 2025-10-XX 00:00:00
+date: 2025-10-14 17:00:00
 tags:
   - Teams
   - Information
@@ -49,7 +49,7 @@ Teams 系のコマンドは通常のプロキシ設定を使用いたします�
 上述のため、Windows Server 2012 上で Teams の PowerShell 2.0.0 以降を使用した場合に、Skype for Business 系のコマンドだけが TLS 1.2 の通信ができないため、コマンドの実行が失敗します。
 
 ### 対処策について
-管理者でコマンドプロンプトを起動いただき、以下のk万度を実行いただくことで、Proxy Server の設定をしていただくことが可能です。
+管理者でコマンドプロンプトを起動いただき、以下のコマンドを実行いただくことで、Proxy Server の設定をしていただくことが可能です。
 ```
  - WININET と同じ設定を WINHTTP で行う場合は以下のコマンドを実行します
    netsh winhttp import proxy source=ie
