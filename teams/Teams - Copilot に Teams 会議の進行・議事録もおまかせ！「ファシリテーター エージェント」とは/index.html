@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Teams - Copilot に Teams 会議の進行・議事録もおまかせ！「ファシリテーター エージェント」とは | Japan Unified Communications Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="はじめに Teams 会議の「ファシリテーター」とは ファシリテーターのここがすごい  1. 会議チャットに AI が同席。聞き逃した部分もすぐに質問できます💭 2. アジェンダタイマーで時間配分もスムーズに⏰ 3. 自動で議事録を作成。タスク管理もします⚡ 4. Word や Loop ドキュメントとしてのまとめも作れる📝   おわりに   はじめにこんにちは、 Unified Commu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Teams - Copilot に Teams 会議の進行・議事録もおまかせ！「ファシリテーター エージェント」とは">
+<meta property="og:url" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Copilot%20%E3%81%AB%20Teams%20%E4%BC%9A%E8%AD%B0%E3%81%AE%E9%80%B2%E8%A1%8C%E3%83%BB%E8%AD%B0%E4%BA%8B%E9%8C%B2%E3%82%82%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%EF%BC%81%E3%80%8C%E3%83%95%E3%82%A1%E3%82%B7%E3%83%AA%E3%83%86%E3%83%BC%E3%82%BF%E3%83%BC%20%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%80%8D%E3%81%A8%E3%81%AF/index.html">
+<meta property="og:site_name" content="Japan Unified Communications Support Blog">
+<meta property="og:description" content="はじめに Teams 会議の「ファシリテーター」とは ファシリテーターのここがすごい  1. 会議チャットに AI が同席。聞き逃した部分もすぐに質問できます💭 2. アジェンダタイマーで時間配分もスムーズに⏰ 3. 自動で議事録を作成。タスク管理もします⚡ 4. Word や Loop ドキュメントとしてのまとめも作れる📝   おわりに   はじめにこんにちは、 Unified Commu">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Copilot%20%E3%81%AB%20Teams%20%E4%BC%9A%E8%AD%B0%E3%81%AE%E9%80%B2%E8%A1%8C%E3%83%BB%E8%AD%B0%E4%BA%8B%E9%8C%B2%E3%82%82%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%EF%BC%81%E3%80%8C%E3%83%95%E3%82%A1%E3%82%B7%E3%83%AA%E3%83%86%E3%83%BC%E3%82%BF%E3%83%BC%20%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%80%8D%E3%81%A8%E3%81%AF/image-01.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Copilot%20%E3%81%AB%20Teams%20%E4%BC%9A%E8%AD%B0%E3%81%AE%E9%80%B2%E8%A1%8C%E3%83%BB%E8%AD%B0%E4%BA%8B%E9%8C%B2%E3%82%82%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%EF%BC%81%E3%80%8C%E3%83%95%E3%82%A1%E3%82%B7%E3%83%AA%E3%83%86%E3%83%BC%E3%82%BF%E3%83%BC%20%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%80%8D%E3%81%A8%E3%81%AF/image-02.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Copilot%20%E3%81%AB%20Teams%20%E4%BC%9A%E8%AD%B0%E3%81%AE%E9%80%B2%E8%A1%8C%E3%83%BB%E8%AD%B0%E4%BA%8B%E9%8C%B2%E3%82%82%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%EF%BC%81%E3%80%8C%E3%83%95%E3%82%A1%E3%82%B7%E3%83%AA%E3%83%86%E3%83%BC%E3%82%BF%E3%83%BC%20%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%80%8D%E3%81%A8%E3%81%AF/image-03.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Copilot%20%E3%81%AB%20Teams%20%E4%BC%9A%E8%AD%B0%E3%81%AE%E9%80%B2%E8%A1%8C%E3%83%BB%E8%AD%B0%E4%BA%8B%E9%8C%B2%E3%82%82%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%EF%BC%81%E3%80%8C%E3%83%95%E3%82%A1%E3%82%B7%E3%83%AA%E3%83%86%E3%83%BC%E3%82%BF%E3%83%BC%20%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%80%8D%E3%81%A8%E3%81%AF/image-04.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Copilot%20%E3%81%AB%20Teams%20%E4%BC%9A%E8%AD%B0%E3%81%AE%E9%80%B2%E8%A1%8C%E3%83%BB%E8%AD%B0%E4%BA%8B%E9%8C%B2%E3%82%82%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%EF%BC%81%E3%80%8C%E3%83%95%E3%82%A1%E3%82%B7%E3%83%AA%E3%83%86%E3%83%BC%E3%82%BF%E3%83%BC%20%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%80%8D%E3%81%A8%E3%81%AF/image-05.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Copilot%20%E3%81%AB%20Teams%20%E4%BC%9A%E8%AD%B0%E3%81%AE%E9%80%B2%E8%A1%8C%E3%83%BB%E8%AD%B0%E4%BA%8B%E9%8C%B2%E3%82%82%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%EF%BC%81%E3%80%8C%E3%83%95%E3%82%A1%E3%82%B7%E3%83%AA%E3%83%86%E3%83%BC%E3%82%BF%E3%83%BC%20%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%80%8D%E3%81%A8%E3%81%AF/image-06.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Copilot%20%E3%81%AB%20Teams%20%E4%BC%9A%E8%AD%B0%E3%81%AE%E9%80%B2%E8%A1%8C%E3%83%BB%E8%AD%B0%E4%BA%8B%E9%8C%B2%E3%82%82%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%EF%BC%81%E3%80%8C%E3%83%95%E3%82%A1%E3%82%B7%E3%83%AA%E3%83%86%E3%83%BC%E3%82%BF%E3%83%BC%20%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%80%8D%E3%81%A8%E3%81%AF/image-07.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Copilot%20%E3%81%AB%20Teams%20%E4%BC%9A%E8%AD%B0%E3%81%AE%E9%80%B2%E8%A1%8C%E3%83%BB%E8%AD%B0%E4%BA%8B%E9%8C%B2%E3%82%82%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%EF%BC%81%E3%80%8C%E3%83%95%E3%82%A1%E3%82%B7%E3%83%AA%E3%83%86%E3%83%BC%E3%82%BF%E3%83%BC%20%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%80%8D%E3%81%A8%E3%81%AF/image-08.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Copilot%20%E3%81%AB%20Teams%20%E4%BC%9A%E8%AD%B0%E3%81%AE%E9%80%B2%E8%A1%8C%E3%83%BB%E8%AD%B0%E4%BA%8B%E9%8C%B2%E3%82%82%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%EF%BC%81%E3%80%8C%E3%83%95%E3%82%A1%E3%82%B7%E3%83%AA%E3%83%86%E3%83%BC%E3%82%BF%E3%83%BC%20%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%80%8D%E3%81%A8%E3%81%AF/image-09.png">
+<meta property="article:published_time" content="2025-11-20T06:30:00.000Z">
+<meta property="article:modified_time" content="2025-11-20T06:03:29.635Z">
+<meta property="article:author" content="CSS Japan">
+<meta property="article:tag" content="Teams">
+<meta property="article:tag" content="Copilot">
+<meta property="article:tag" content="Meeting">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Copilot%20%E3%81%AB%20Teams%20%E4%BC%9A%E8%AD%B0%E3%81%AE%E9%80%B2%E8%A1%8C%E3%83%BB%E8%AD%B0%E4%BA%8B%E9%8C%B2%E3%82%82%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%EF%BC%81%E3%80%8C%E3%83%95%E3%82%A1%E3%82%B7%E3%83%AA%E3%83%86%E3%83%BC%E3%82%BF%E3%83%BC%20%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%80%8D%E3%81%A8%E3%81%AF/image-01.png">
+  
+    <link rel="alternate" href="../../atom.xml" title="Japan Unified Communications Support Blog" type="application/atom+xml">
+  
+
+  <link rel="icon" href="../../favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="../../css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        <div id="ms-logo"></div>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+        <a class="main-nav-link" href="https://cssjpn.github.io/" target="_blank" rel="noopener">サポート情報</a>
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="../../atom.xml" title="RSSフィード"></a>
+        
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//www.bing.com/search" method="get" accept-charset="UTF-8" name="bing-search" onsubmit="var f=this;if(f['q'].value){var searchUrl =  'https://www.bing.com/search?q=' +  encodeURIComponent(f['q'].value + ' site:' + f['sitesearch'].value) ;window.open(searchUrl, 'blank') };return false;" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="検索"><button type="submit" id="nav-search-btn" class="search-form-submit"></button><input type="hidden" name="sitesearch" value="https://jpucsupport.github.io/blog"></form>
+      </div>
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="../../index.html" id="logo">Japan Unified Communications Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="../../index.html" id="subtitle">日本マイクロソフトの Teams と Skype for Business に関するサポート情報のブログです。</a>
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-teams/Teams - Copilot に Teams 会議の進行・議事録もおまかせ！「ファシリテーター エージェント」とは" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Teams - Copilot に Teams 会議の進行・議事録もおまかせ！「ファシリテーター エージェント」とは
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="" class="article-date-single">
+  <time datetime="2025-11-20T06:30:00.000Z" itemprop="datePublished">2025-11-20</time>
+</a>
+        
+        
+        <a href="https://github.com/jpucsupport/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+0bb07c73-d78e-511e-b282-d7d28ea1d334%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BTeams+-+Copilot+%E3%81%AB+Teams+%E4%BC%9A%E8%AD%B0%E3%81%AE%E9%80%B2%E8%A1%8C%E3%83%BB%E8%AD%B0%E4%BA%8B%E9%8C%B2%E3%82%82%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%EF%BC%81%E3%80%8C%E3%83%95%E3%82%A1%E3%82%B7%E3%83%AA%E3%83%86%E3%83%BC%E3%82%BF%E3%83%BC+%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%80%8D%E3%81%A8%E3%81%AF%5D%28https%3A%2F%2Fjpucsupport.github.io%2Fblog%2Fteams%2FTeams%2520-%2520Copilot%2520%E3%81%AB%2520Teams%2520%E4%BC%9A%E8%AD%B0%E3%81%AE%E9%80%B2%E8%A1%8C%E3%83%BB%E8%AD%B0%E4%BA%8B%E9%8C%B2%E3%82%82%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%EF%BC%81%E3%80%8C%E3%83%95%E3%82%A1%E3%82%B7%E3%83%AA%E3%83%86%E3%83%BC%E3%82%BF%E3%83%BC%2520%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%80%8D%E3%81%A8%E3%81%AF%2F%29%0A*+Content+Source%3A+%5Barticles%2Fteams%2FTeams+-+Copilot+%E3%81%AB+Teams+%E4%BC%9A%E8%AD%B0%E3%81%AE%E9%80%B2%E8%A1%8C%E3%83%BB%E8%AD%B0%E4%BA%8B%E9%8C%B2%E3%82%82%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%EF%BC%81%E3%80%8C%E3%83%95%E3%82%A1%E3%82%B7%E3%83%AA%E3%83%86%E3%83%BC%E3%82%BF%E3%83%BC+%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%80%8D%E3%81%A8%E3%81%AF.md%5D%28https%3A%2F%2Fgithub.com%2Fjpucsupport%2Fblog%2Fblob%2Fmaster%2Farticles%2Fteams%2FTeams%2520-%2520Copilot%2520%E3%81%AB%2520Teams%2520%E4%BC%9A%E8%AD%B0%E3%81%AE%E9%80%B2%E8%A1%8C%E3%83%BB%E8%AD%B0%E4%BA%8B%E9%8C%B2%E3%82%82%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%EF%BC%81%E3%80%8C%E3%83%95%E3%82%A1%E3%82%B7%E3%83%AA%E3%83%86%E3%83%BC%E3%82%BF%E3%83%BC%2520%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%80%8D%E3%81%A8%E3%81%AF.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        
+        <a data-url="https://jpucsupport.github.io/blog/teams/Teams%20-%20Copilot%20%E3%81%AB%20Teams%20%E4%BC%9A%E8%AD%B0%E3%81%AE%E9%80%B2%E8%A1%8C%E3%83%BB%E8%AD%B0%E4%BA%8B%E9%8C%B2%E3%82%82%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%EF%BC%81%E3%80%8C%E3%83%95%E3%82%A1%E3%82%B7%E3%83%AA%E3%83%86%E3%83%BC%E3%82%BF%E3%83%BC%20%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%80%8D%E3%81%A8%E3%81%AF/" data-id="cmi70zijo000g9elhdn2f4nyu" class="article-share-link">共有</a>
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><a href="#はじめに">はじめに</a></li>
+<li><a href="#teams-会議のファシリテーターとは">Teams 会議の「ファシリテーター」とは</a></li>
+<li><a href="#ファシリテーターのここがすごい">ファシリテーターのここがすごい</a> <ul>
+<li><a href="#1-会議チャットに-ai-が同席聞き逃した部分もすぐに質問できます💭">1. 会議チャットに AI が同席。聞き逃した部分もすぐに質問できます💭</a></li>
+<li><a href="#2-アジェンダタイマーで時間配分もスムーズに⏰">2. アジェンダタイマーで時間配分もスムーズに⏰</a></li>
+<li><a href="#3-自動で議事録を作成タスク管理もします⚡">3. 自動で議事録を作成。タスク管理もします⚡</a></li>
+<li><a href="#4-word-や-loop-ドキュメントとしてのまとめも作れる📝">4. Word や Loop ドキュメントとしてのまとめも作れる📝</a></li>
+</ul>
+</li>
+<li><a href="#おわりに">おわりに</a></li>
+</ul>
+<hr>
+<h2 id="はじめに"><a href="#はじめに" class="headerlink" title="はじめに"></a>はじめに</h2><p>こんにちは、 Unified Communications サポート チームです。<br>いつも Microsoft Teams をご利用いただきありがとうございます。</p>
+<p>本記事では Teams 会議の「ファシリテーター」エージェントについてご紹介いたします。ファシリテーターは、Teams 会議でのコラボレーションを強化する AI エージェントです。<br>そんなファシリテーターについて、本記事では “こんなところがスゴイ✨” にスポットライトを当ててご紹介いたします！</p>
+<p><em>※ 本記事の内容は執筆時点 (2025 年 11 月現在) の情報・動作に基づくものとなります。最新の動作については公開情報の更新をご確認ください。</em></p>
+<p>📖 関連公開情報</p>
+<ul>
+<li><a href="https://support.microsoft.com/ja-jp/office/microsoft-teams-37657f91-39b5-40eb-9421-45141e3ce9f6" target="_blank" rel="noopener" title="Microsoft Teams会議のファシリテーター">Microsoft Teams会議のファシリテーター</a></li>
+<li><a href="https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams" target="_blank" rel="noopener" title="Microsoft Teamsでファシリテーターを設定する">Microsoft Teamsでファシリテーターを設定する</a></li>
+</ul>
+<h2 id="Teams-会議の「ファシリテーター」とは"><a href="#Teams-会議の「ファシリテーター」とは" class="headerlink" title="Teams 会議の「ファシリテーター」とは"></a>Teams 会議の「ファシリテーター」とは</h2><p>ファシリテーター ( Facilitator ) は、Teams 会議の中で動作する AI エージェントです。</p>
+<p><img src="image-01.png" alt="alt text"></p>
+<p>機能の概要や前提条件については<a href="https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams" target="_blank" rel="noopener" title="Microsoft Teamsでファシリテーターを設定する">こちら</a>の公開情報をご参照ください。また、ファシリテーターを会議に追加する方法については<a href="https://support.microsoft.com/ja-jp/office/microsoft-teams-37657f91-39b5-40eb-9421-45141e3ce9f6" target="_blank" rel="noopener" title="Microsoft Teams会議のファシリテーター">こちら</a>の公開情報に記載がございます。</p>
+<h2 id="ファシリテーターのここがすごい"><a href="#ファシリテーターのここがすごい" class="headerlink" title="ファシリテーターのここがすごい"></a>ファシリテーターのここがすごい</h2><p>そんなファシリテーターエージェントについて、「ここがすごい✨」な機能・特徴を 4 つご紹介します。</p>
+<ol>
+<li>会議チャットに AI が同席。聞き逃した部分もすぐに質問できます💭</li>
+<li>アジェンダタイマーで時間配分もスムーズに⏰</li>
+<li>自動で議事録を作成。タスク管理もします⚡</li>
+<li>Word や Loop ドキュメントとしてのまとめも作れる📝</li>
+</ol>
+<h3 id="1-会議チャットに-AI-が同席。聞き逃した部分もすぐに質問できます💭"><a href="#1-会議チャットに-AI-が同席。聞き逃した部分もすぐに質問できます💭" class="headerlink" title="1. 会議チャットに AI が同席。聞き逃した部分もすぐに質問できます💭"></a>1. 会議チャットに AI が同席。聞き逃した部分もすぐに質問できます💭</h3><p>ファシリテーターが会議に追加され、 <strong>@facilitator</strong> とファシリテーターにメンションすることで、会議内容に基づく質問や Web 検索ベースの質問 ( プロンプト ) を送ることができます。</p>
+<div style="color: #8A77B7;"> 📍こんなところがスゴイ </div>
+- 会議に途中参加したり 会議から離席したりしたとき、聞き逃した部分について会議進行を止めることなく質問ができる
+- 会議の途中でも決定した内容やサマリーを確認することができる
+- 例えば、会議で話されている専門用語について調べ、他の参加者にも共有することができる
+
+<p>例えば、以下のようなプロンプトを送り、AI からの回答を得ることが可能です。</p>
+<ul>
+<li><strong>@facilitator</strong> 会話のハイライト</li>
+<li><strong>@facilitator</strong> どのような決定が下されましたか?</li>
+<li><strong>@facilitator</strong> Web で次を検索してださい: AI とはなんですか？</li>
+</ul>
+<p>// ファシリテーターへのプロンプト・回答例<br><img src="image-02.png" alt="alt text"></p>
+<h3 id="2-アジェンダタイマーで時間配分もスムーズに⏰"><a href="#2-アジェンダタイマーで時間配分もスムーズに⏰" class="headerlink" title="2. アジェンダタイマーで時間配分もスムーズに⏰"></a>2. アジェンダタイマーで時間配分もスムーズに⏰</h3><p>ファシリテーターを使うことで、会議にアジェンダタイマーを追加することができます。</p>
+<div style="color: #8A77B7;"> 📍こんなところがスゴイ </div>
+- ついつい話し込んで、いつの間にか終わりの時間を迎えてしまう… な状況を防ぐことができる
+- 話す議題を参加者一覧に共有しながら、会話することができる
+
+<p>会議招待時、会議説明に議題内容を記載している場合、ファシリテーターは自動でアジェンダタイマーを開始します。</p>
+<p><img src="image-03.png" alt="alt text"></p>
+<p>アジェンダタイマーを手動で開始したい場合は、以下のようなプロンプトを使います。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@facilitator アジェンダタイマーを作成してください。</span><br><span class="line"> </span><br><span class="line">議題は以下です：</span><br><span class="line">- アジェンダ A</span><br><span class="line">- アジェンダ B</span><br><span class="line">- アジェンダ C ...</span><br></pre></td></tr></table></figure>
+
+<p>アジェンダタイマーが作成されると会議画面にタイムライン マーカーが表示されます。<br>この時間配分は会議時間に応じて自動で配分されますが、プロンプトで調整することも可能です。</p>
+<p>例えば、下図では 60 分の時間で招待した Teams 会議に対して 4 つのアジェンダの時間配分を行った状態になります。</p>
+<p><img src="image-04.png" alt="alt text"></p>
+<p>Teams 会議の中で各アジェンダの内容が話されたとファシリテーターが判断すると、トラッカーに ✅ が入ります。<br><img src="image-05.png" alt="alt text"></p>
+<p>📎 「 <strong>@facilitator</strong> xxx の議題のトラッカーにチェックを入れて 」といったプロンプトを用いることで、手動で完了とすることも可能です。<br><img src="image-06.png" alt="alt text"></p>
+<h3 id="3-自動で議事録を作成。タスク管理もします⚡"><a href="#3-自動で議事録を作成。タスク管理もします⚡" class="headerlink" title="3. 自動で議事録を作成。タスク管理もします⚡"></a>3. 自動で議事録を作成。タスク管理もします⚡</h3><p>ファシリテーターは、会議の「メモ」として会議の議事録を作成します。会議中の [メモ] タブや会議後に送られるチャット内の Loop コンポーネント ( 下図 ) から作成された内容を確認することが可能です。</p>
+<p><img src="image-07.png" alt="alt text"></p>
+<div style="color: #8A77B7;"> 📍こんなところがスゴイ </div>
+- 自動で会議のメモ（議事録）が作成される
+- 会議で話された内容からタスクの洗い出しまで自動化
+
+<p>また、ファシリテーターは会議で話されたタスク事項やプロンプトで指示された内容から自動的にタスク作成を行うことも可能です。作成されたタスクは Plannner に同期されます。<br>例えば下図の場合、 ✨ アイコンのあるタスクがファシリテーターが自動的に作成したタスクになります。</p>
+<p><img src="image-08.png" alt="alt text"></p>
+<p>※ Plannner と連携するタスク作成機能は、 2025 年 11 月現在パブリック プレビューの機能となります。</p>
+<h3 id="4-Word-や-Loop-ドキュメントとしてのまとめも作れる📝"><a href="#4-Word-や-Loop-ドキュメントとしてのまとめも作れる📝" class="headerlink" title="4. Word や Loop ドキュメントとしてのまとめも作れる📝"></a>4. Word や Loop ドキュメントとしてのまとめも作れる📝</h3><p>ファシリテーターを用いて会議内容をまとめたドキュメント ( Loop ページ 、Word ファイル ) を作成することができます。</p>
+<div style="color: #8A77B7;"> 📍こんなところがスゴイ </div>
+- 会議の報告に使える Word / Loop のドキュメントが自動で作成できる
+
+<p>例えば、Word ファイルを作成するには以下のようなプロンプトで指示をします。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@facilitator この会話のハイライトを盛り込んだ Word ドキュメントを作成してください。</span><br></pre></td></tr></table></figure>
+<p>作成されたドキュメントは、会議チャット内でファシリテーターから送信されます。</p>
+<p><img src="image-09.png" alt="alt text"></p>
+<p>※ 本機能は 2025 年 11 月現在パブリック プレビューの機能となります。</p>
+<h2 id="おわりに"><a href="#おわりに" class="headerlink" title="おわりに"></a>おわりに</h2><p>本記事では、Teams 会議のファシリテーター機能についてご紹介させていただきました。ファシリテーターエージェントは、アジェンダタイマーによる進行状況の可視化や、AI による議事録作成支援など、会議運営をサポートする様々な機能を備えています🤖<br>会議中の時間管理や議事録作成といった作業を AI がサポートすることで、会議参加者はより会議の議論により注力しやすくなります。また、会議後の決定事項やタスクの整理もスムーズに行うことが可能となります。<br>本記事がファシリテーター機能活用にあたり、本記事が少しでもご参考となりましたら、幸いです。</p>
+<p>(文責 : 山上)</p>
+<br />
+NOTE:  
+- 2025 年 11 月 20 日に、初版を公開しました。
+      
+      
+        <div class="article-disclaimer">
+        
+          <p>※本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。</p>
+        
+        </div>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Copilot/" rel="tag">Copilot</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Meeting/" rel="tag">Meeting</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li></ul>
+
+        
+        <a href="https://github.com/jpucsupport/blog/edit/master/articles/teams/Teams%20-%20Copilot%20に%20Teams%20会議の進行・議事録もおまかせ！「ファシリテーター%20エージェント」とは.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="../Teams%20-%20%E6%96%B0%E3%81%97%E3%81%84%20Teams%20%E3%81%AE%E6%97%A2%E7%9F%A5%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前の記事</strong>
+      <div class="article-nav-title">新しい Teams の既知の問題について</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近の投稿</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="">Teams - Copilot に Teams 会議の進行・議事録もおまかせ！「ファシリテーター エージェント」とは</a>
+          </li>
+        
+          <li>
+            <a href="../Teams%20-%20%E6%96%B0%E3%81%97%E3%81%84%20Teams%20%E3%81%AE%E6%97%A2%E7%9F%A5%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">新しい Teams の既知の問題について</a>
+          </li>
+        
+          <li>
+            <a href="../Teams%20-%20%E3%82%BF%E3%82%A6%E3%83%B3%E3%83%9B%E3%83%BC%E3%83%AB%E3%81%AE%20%5B%E4%BC%9A%E8%AD%B0%E3%82%92%E9%96%8B%E5%A7%8B%5D%20%E3%82%92%E5%AE%9F%E8%A1%8C%E5%BE%8C%E3%80%812%20%E3%81%8B%E6%9C%88%E4%BB%A5%E9%99%8D%E3%81%AB%E5%86%8D%E5%BA%A6%E5%8F%82%E5%8A%A0%E3%81%97%E3%81%9F%E9%9A%9B%E3%81%AB%20Teams%20%E4%BC%9A%E8%AD%B0%E5%BD%A2%E5%BC%8F%E3%81%A7%E3%81%AE%E5%8F%82%E5%8A%A0%E3%81%A8%E3%81%AA%E3%82%8B/">Teams - タウン ホールの [会議を開始] を実行後、2 か月以降に再度参加した際に Teams 会議形式での参加となる</a>
+          </li>
+        
+          <li>
+            <a href="../Teams%20-%20Proxy%20%E7%92%B0%E5%A2%83%E3%81%A7%E3%80%81Teams%20%E3%81%AE%20Powershell%202.0.0%20%E4%BB%A5%E9%99%8D%E3%81%AE%20Teams%20Powershell%20%E3%81%A7%20Get-csOnlineUser%20%E3%81%AA%E3%81%A9%E3%81%AE%20YYY-csXXX%20%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%80%81Winhttp%20%E5%81%B4%E3%81%B8%E3%81%AE%20Proxy%20%E8%A8%AD%E5%AE%9A%E3%81%8C%E5%BF%85%E8%A6%81/">Teams - Proxy 環境で、Teams の PowerShell 2.0.0 以降の Teams PowerShell で Get-csOnlineUser などの YYY-csXXX のコマンドを実行する場合、Winhttp 側への Proxy 設定が必要</a>
+          </li>
+        
+          <li>
+            <a href="../Teams%20-%20Teams%20%E4%BC%9A%E8%AD%B0%E3%81%A7%E3%81%AE%20Intelligent%20Speaker%20(%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98)%20%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Teams - Teams 会議での Intelligent Speaker (音声認識) について</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグ</h3>
+    <div class="widget">
+      <!-- <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/BYOD-%E3%83%AB%E3%83%BC%E3%83%A0/" rel="tag">BYOD ルーム</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Classic-Teams/" rel="tag">Classic Teams</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Client/" rel="tag">Client</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Copilot/" rel="tag">Copilot</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Edge/" rel="tag">Edge</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Guest-User/" rel="tag">Guest User</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Information/" rel="tag">Information</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Install/" rel="tag">Install</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Intelligent-Speaker/" rel="tag">Intelligent Speaker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Introduction/" rel="tag">Introduction</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Live-Events-Live-Events-Assitance-Program/" rel="tag">Live Events / Live Events Assitance Program</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Lync-Server-Skype-for-Business-Server/" rel="tag">Lync Server / Skype for Business Server</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Media/" rel="tag">Media</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Meeting/" rel="tag">Meeting</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Mobile/" rel="tag">Mobile</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/New-Teams/" rel="tag">New Teams</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Outlook/" rel="tag">Outlook</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/PowerShell/" rel="tag">PowerShell</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Presence/" rel="tag">Presence</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Proxy/" rel="tag">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Recording/" rel="tag">Recording</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Search/" rel="tag">Search</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Settings/" rel="tag">Settings</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Skype-for-Business-Online/" rel="tag">Skype for Business Online</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Teams-2-1/" rel="tag">Teams 2.1</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Troubleshooting/" rel="tag">Troubleshooting</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/VDI/" rel="tag">VDI</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Windows/" rel="tag">Windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98/" rel="tag">音声認識</a></li></ul>  -->
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Skype-for-Business-Online/">Skype for Business Online</a><span class="tag-list-count">2</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Skype-for-Business-Online/Client">Client</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Skype-for-Business-Online/Information">Information</a><span class="tag-list-count">1</span></li></ul></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Lync-Server-Skype-for-Business-Server/">Lync Server / Skype for Business Server</a><span class="tag-list-count">1</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Lync-Server-Skype-for-Business-Server/Edge">Edge</a><span class="tag-list-count">1</span></li></ul></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Information/">Information</a><span class="tag-list-count">33</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Client">Client</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Guest-User">Guest User</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Install">Install</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Meeting">Meeting</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Mobile">Mobile</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/New-Teams">New Teams</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/PowerShell">PowerShell</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Search">Search</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Settings">Settings</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Skype-for-Business-Online">Skype for Business Online</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Teams">Teams</a><span class="tag-list-count">30</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Teams-2-1">Teams 2.1</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/VDI">VDI</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Windows">Windows</a><span class="tag-list-count">1</span></li></ul></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Live-Events-Live-Events-Assitance-Program/">Live Events / Live Events Assitance Program</a><span class="tag-list-count">5</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Live-Events-Live-Events-Assitance-Program/Introduction">Introduction</a><span class="tag-list-count">1</span></li></ul></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Teams/">Teams</a><span class="tag-list-count">47</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/BYOD-%E3%83%AB%E3%83%BC%E3%83%A0">BYOD ルーム</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Client">Client</a><span class="tag-list-count">4</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Copilot">Copilot</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Guest-User">Guest User</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Information">Information</a><span class="tag-list-count">30</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Install">Install</a><span class="tag-list-count">4</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Intelligent-Speaker">Intelligent Speaker</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Media">Media</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Meeting">Meeting</a><span class="tag-list-count">4</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Mobile">Mobile</a><span class="tag-list-count">5</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/New-Teams">New Teams</a><span class="tag-list-count">3</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Outlook">Outlook</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/PowerShell">PowerShell</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Presence">Presence</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Proxy">Proxy</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Recording">Recording</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Search">Search</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Settings">Settings</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Teams-2-1">Teams 2.1</a><span class="tag-list-count">3</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Troubleshooting">Troubleshooting</a><span class="tag-list-count">1</span></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">アーカイブ</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2025/11/">2025 / 11</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2025/10/">2025 / 10</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2025/07/">2025 / 07</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2025/06/">2025 / 06</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/12/">2024 / 12</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/11/">2024 / 11</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/07/">2024 / 07</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/05/">2024 / 05</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/04/">2024 / 04</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/03/">2024 / 03</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/01/">2024 / 01</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/11/">2023 / 11</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/09/">2023 / 09</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/08/">2023 / 08</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/06/">2023 / 06</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/05/">2023 / 05</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/04/">2023 / 04</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/03/">2023 / 03</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/02/">2023 / 02</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/01/">2023 / 01</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/12/">2022 / 12</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/11/">2022 / 11</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/10/">2022 / 10</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/09/">2022 / 09</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/06/">2022 / 06</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/04/">2022 / 04</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/03/">2022 / 03</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/02/">2022 / 02</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/09/">2021 / 09</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/08/">2021 / 08</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/07/">2021 / 07</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/05/">2021 / 05</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/04/">2021 / 04</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグクラウド</h3>
+    <div class="widget tagcloud">
+      <a href="../../tags/BYOD-%E3%83%AB%E3%83%BC%E3%83%A0/" style="font-size: 10px;">BYOD ルーム</a> <a href="../../tags/Classic-Teams/" style="font-size: 11.67px;">Classic Teams</a> <a href="../../tags/Client/" style="font-size: 16.67px;">Client</a> <a href="../../tags/Copilot/" style="font-size: 10px;">Copilot</a> <a href="../../tags/Edge/" style="font-size: 10px;">Edge</a> <a href="../../tags/Guest-User/" style="font-size: 11.67px;">Guest User</a> <a href="../../tags/Information/" style="font-size: 18.33px;">Information</a> <a href="../../tags/Install/" style="font-size: 15px;">Install</a> <a href="../../tags/Intelligent-Speaker/" style="font-size: 10px;">Intelligent Speaker</a> <a href="../../tags/Introduction/" style="font-size: 10px;">Introduction</a> <a href="../../tags/Live-Events-Live-Events-Assitance-Program/" style="font-size: 16.67px;">Live Events / Live Events Assitance Program</a> <a href="../../tags/Lync-Server-Skype-for-Business-Server/" style="font-size: 10px;">Lync Server / Skype for Business Server</a> <a href="../../tags/Media/" style="font-size: 10px;">Media</a> <a href="../../tags/Meeting/" style="font-size: 15px;">Meeting</a> <a href="../../tags/Mobile/" style="font-size: 16.67px;">Mobile</a> <a href="../../tags/New-Teams/" style="font-size: 16.67px;">New Teams</a> <a href="../../tags/Outlook/" style="font-size: 10px;">Outlook</a> <a href="../../tags/PowerShell/" style="font-size: 11.67px;">PowerShell</a> <a href="../../tags/Presence/" style="font-size: 10px;">Presence</a> <a href="../../tags/Proxy/" style="font-size: 10px;">Proxy</a> <a href="../../tags/Recording/" style="font-size: 10px;">Recording</a> <a href="../../tags/Search/" style="font-size: 10px;">Search</a> <a href="../../tags/Settings/" style="font-size: 10px;">Settings</a> <a href="../../tags/Skype-for-Business-Online/" style="font-size: 11.67px;">Skype for Business Online</a> <a href="../../tags/Teams/" style="font-size: 20px;">Teams</a> <a href="../../tags/Teams-2-1/" style="font-size: 16.67px;">Teams 2.1</a> <a href="../../tags/Troubleshooting/" style="font-size: 10px;">Troubleshooting</a> <a href="../../tags/VDI/" style="font-size: 15px;">VDI</a> <a href="../../tags/Windows/" style="font-size: 13.33px;">Windows</a> <a href="../../tags/%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98/" style="font-size: 10px;">音声認識</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2025 CSS Japan<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="../../index.html" class="mobile-nav-link">Home</a>
+  
+    <a href="../../archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="../../js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
