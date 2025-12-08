@@ -4,24 +4,29 @@
   <meta charset="utf-8">
   
   
-  <title>Skype - Skype for Business アプリケーションの起動抑止について | Japan Unified Communications Support Blog</title>
+  <title>Teams - ワークフローアプリに AI が登場！Teams の AI ワークフローで業務をもっとスマートに | Japan Unified Communications Support Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="こんにちは、Unified Communications サポート チームです。いつも Lync&#x2F;Skype for Business をご利用いただきありがとうございます。   2021 年 7 月 31 日で Skype for Business Online のサービス提供を終了させていただくため、ご利用中のお客様は Microsoft Teams への移行を進めていただいているかと存じます">
+  <meta name="description" content="はじめに AI ワークフローとは テンプレート例 個人用のテンプレート チャネル用テンプレート   おわりに   はじめにこんにちは、 Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。本記事では 、Teams のワークフローアプリに新しく追加された「AI ワークフロー」について、どんなことができるか">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Skype - Skype for Business アプリケーションの起動抑止について">
-<meta property="og:url" content="https://jpucsupport.github.io/blog/Skype%20for%20business/Skype%20-%20Skype%20for%20Business%20%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E8%B5%B7%E5%8B%95%E6%8A%91%E6%AD%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/index.html">
+<meta property="og:title" content="Teams - ワークフローアプリに AI が登場！Teams の AI ワークフローで業務をもっとスマートに">
+<meta property="og:url" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AB%20AI%20%E3%81%8C%E7%99%BB%E5%A0%B4%EF%BC%81Teams%20%E3%81%AE%20AI%20%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%A7%E6%A5%AD%E5%8B%99%E3%82%92%E3%82%82%E3%81%A3%E3%81%A8%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%81%AB/index.html">
 <meta property="og:site_name" content="Japan Unified Communications Support Blog">
-<meta property="og:description" content="こんにちは、Unified Communications サポート チームです。いつも Lync&#x2F;Skype for Business をご利用いただきありがとうございます。   2021 年 7 月 31 日で Skype for Business Online のサービス提供を終了させていただくため、ご利用中のお客様は Microsoft Teams への移行を進めていただいているかと存じます">
+<meta property="og:description" content="はじめに AI ワークフローとは テンプレート例 個人用のテンプレート チャネル用テンプレート   おわりに   はじめにこんにちは、 Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。本記事では 、Teams のワークフローアプリに新しく追加された「AI ワークフロー」について、どんなことができるか">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:image" content="https://jpucsupport.github.io/blog/Skype%20for%20business/Skype%20-%20Skype%20for%20Business%20%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E8%B5%B7%E5%8B%95%E6%8A%91%E6%AD%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/sfb-preventrun01.png">
-<meta property="og:image" content="https://jpucsupport.github.io/blog/Skype%20for%20business/Skype%20-%20Skype%20for%20Business%20%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E8%B5%B7%E5%8B%95%E6%8A%91%E6%AD%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/sfb-preventrun02.png">
-<meta property="article:published_time" content="2021-05-16T15:00:00.000Z">
-<meta property="article:modified_time" content="2025-12-08T05:06:23.387Z">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AB%20AI%20%E3%81%8C%E7%99%BB%E5%A0%B4%EF%BC%81Teams%20%E3%81%AE%20AI%20%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%A7%E6%A5%AD%E5%8B%99%E3%82%92%E3%82%82%E3%81%A3%E3%81%A8%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%81%AB/image-01.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AB%20AI%20%E3%81%8C%E7%99%BB%E5%A0%B4%EF%BC%81Teams%20%E3%81%AE%20AI%20%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%A7%E6%A5%AD%E5%8B%99%E3%82%92%E3%82%82%E3%81%A3%E3%81%A8%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%81%AB/image-02.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AB%20AI%20%E3%81%8C%E7%99%BB%E5%A0%B4%EF%BC%81Teams%20%E3%81%AE%20AI%20%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%A7%E6%A5%AD%E5%8B%99%E3%82%92%E3%82%82%E3%81%A3%E3%81%A8%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%81%AB/image-03.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AB%20AI%20%E3%81%8C%E7%99%BB%E5%A0%B4%EF%BC%81Teams%20%E3%81%AE%20AI%20%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%A7%E6%A5%AD%E5%8B%99%E3%82%92%E3%82%82%E3%81%A3%E3%81%A8%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%81%AB/image-04.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AB%20AI%20%E3%81%8C%E7%99%BB%E5%A0%B4%EF%BC%81Teams%20%E3%81%AE%20AI%20%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%A7%E6%A5%AD%E5%8B%99%E3%82%92%E3%82%82%E3%81%A3%E3%81%A8%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%81%AB/image-05.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AB%20AI%20%E3%81%8C%E7%99%BB%E5%A0%B4%EF%BC%81Teams%20%E3%81%AE%20AI%20%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%A7%E6%A5%AD%E5%8B%99%E3%82%92%E3%82%82%E3%81%A3%E3%81%A8%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%81%AB/image-06.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AB%20AI%20%E3%81%8C%E7%99%BB%E5%A0%B4%EF%BC%81Teams%20%E3%81%AE%20AI%20%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%A7%E6%A5%AD%E5%8B%99%E3%82%92%E3%82%82%E3%81%A3%E3%81%A8%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%81%AB/image-07.png">
+<meta property="article:published_time" content="2025-12-08T06:00:00.000Z">
+<meta property="article:modified_time" content="2025-12-08T05:06:23.413Z">
 <meta property="article:author" content="CSS Japan">
-<meta property="article:tag" content="Skype for Business Online">
-<meta property="article:tag" content="Client">
+<meta property="article:tag" content="Teams">
+<meta property="article:tag" content="Copilot">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://jpucsupport.github.io/blog/Skype%20for%20business/Skype%20-%20Skype%20for%20Business%20%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E8%B5%B7%E5%8B%95%E6%8A%91%E6%AD%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/sfb-preventrun01.png">
+<meta name="twitter:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AB%20AI%20%E3%81%8C%E7%99%BB%E5%A0%B4%EF%BC%81Teams%20%E3%81%AE%20AI%20%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%A7%E6%A5%AD%E5%8B%99%E3%82%92%E3%82%82%E3%81%A3%E3%81%A8%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%81%AB/image-01.png">
   
     <link rel="alternate" href="../../atom.xml" title="Japan Unified Communications Support Blog" type="application/atom+xml">
   
@@ -83,7 +88,7 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-Skype for business/Skype - Skype for Business アプリケーションの起動抑止について" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-teams/Teams - ワークフローアプリに AI が登場！Teams の AI ワークフローで業務をもっとスマートに" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     
@@ -92,7 +97,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Skype - Skype for Business アプリケーションの起動抑止について
+      Teams - ワークフローアプリに AI が登場！Teams の AI ワークフローで業務をもっとスマートに
     </h1>
   
 
@@ -100,82 +105,63 @@
       <div class="article-share">
         Last Update: 
         <a href="" class="article-date-single">
-  <time datetime="2021-05-16T15:00:00.000Z" itemprop="datePublished">2021-05-17</time>
+  <time datetime="2025-12-08T06:00:00.000Z" itemprop="datePublished">2025-12-08</time>
 </a>
         
         
-        <a href="https://github.com/jpucsupport/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+834232dd-9864-5b89-b681-198a017148b4%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BSkype+-+Skype+for+Business+%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E8%B5%B7%E5%8B%95%E6%8A%91%E6%AD%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%5D%28https%3A%2F%2Fjpucsupport.github.io%2Fblog%2FSkype%2520for%2520business%2FSkype%2520-%2520Skype%2520for%2520Business%2520%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E8%B5%B7%E5%8B%95%E6%8A%91%E6%AD%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%2F%29%0A*+Content+Source%3A+%5Barticles%2FSkype+for+business%2FSkype+-+Skype+for+Business+%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E8%B5%B7%E5%8B%95%E6%8A%91%E6%AD%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.md%5D%28https%3A%2F%2Fgithub.com%2Fjpucsupport%2Fblog%2Fblob%2Fmaster%2Farticles%2FSkype%2520for%2520business%2FSkype%2520-%2520Skype%2520for%2520Business%2520%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E8%B5%B7%E5%8B%95%E6%8A%91%E6%AD%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        <a href="https://github.com/jpucsupport/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+5045df50-5629-59cb-9e54-5226879e559a%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BTeams+-+%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AB+AI+%E3%81%8C%E7%99%BB%E5%A0%B4%EF%BC%81Teams+%E3%81%AE+AI+%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%A7%E6%A5%AD%E5%8B%99%E3%82%92%E3%82%82%E3%81%A3%E3%81%A8%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%81%AB%5D%28https%3A%2F%2Fjpucsupport.github.io%2Fblog%2Fteams%2FTeams%2520-%2520%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AB%2520AI%2520%E3%81%8C%E7%99%BB%E5%A0%B4%EF%BC%81Teams%2520%E3%81%AE%2520AI%2520%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%A7%E6%A5%AD%E5%8B%99%E3%82%92%E3%82%82%E3%81%A3%E3%81%A8%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%81%AB%2F%29%0A*+Content+Source%3A+%5Barticles%2Fteams%2FTeams+-+%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AB+AI+%E3%81%8C%E7%99%BB%E5%A0%B4%EF%BC%81Teams+%E3%81%AE+AI+%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%A7%E6%A5%AD%E5%8B%99%E3%82%92%E3%82%82%E3%81%A3%E3%81%A8%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%81%AB.md%5D%28https%3A%2F%2Fgithub.com%2Fjpucsupport%2Fblog%2Fblob%2Fmaster%2Farticles%2Fteams%2FTeams%2520-%2520%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AB%2520AI%2520%E3%81%8C%E7%99%BB%E5%A0%B4%EF%BC%81Teams%2520%E3%81%AE%2520AI%2520%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%A7%E6%A5%AD%E5%8B%99%E3%82%92%E3%82%82%E3%81%A3%E3%81%A8%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%81%AB.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpucsupport.github.io/blog/Skype%20for%20business/Skype%20-%20Skype%20for%20Business%20%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E8%B5%B7%E5%8B%95%E6%8A%91%E6%AD%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" data-id="cmiwove8100009eo80ake3p0r" class="article-share-link">共有</a>
+        <a data-url="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AB%20AI%20%E3%81%8C%E7%99%BB%E5%A0%B4%EF%BC%81Teams%20%E3%81%AE%20AI%20%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%A7%E6%A5%AD%E5%8B%99%E3%82%92%E3%82%82%E3%81%A3%E3%81%A8%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%81%AB/" data-id="cmiwove9b002h9eo86xgi9di0" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>こんにちは、Unified Communications サポート チームです。<br>いつも Lync/Skype for Business をご利用いただきありがとうございます。  </p>
-<p>2021 年 7 月 31 日で Skype for Business Online のサービス提供を終了させていただくため、ご利用中のお客様は Microsoft Teams への移行を進めていただいているかと存じます。Microsoft Teams への移行が完了し、Skype for Business の利用は停止したいものの、何らかの理由によりアプリケーションのアンインストールは実施したくないといったお問い合わせをいただくことがございます。今回は Skype for Business の起動を防止する方法について紹介させていただきます。</p>
-<h2 id="Office-の管理テンプレートを用いる方法"><a href="#Office-の管理テンプレートを用いる方法" class="headerlink" title="Office の管理テンプレートを用いる方法"></a>Office の管理テンプレートを用いる方法</h2><p>Skype for Business クライアントが起動しないように防止する設定が、Office の管理用テンプレートで提供されています。管理用テンプレートの [Microsoft Lync の実行を防止する] を有効にすると、ユーザーが Skype for Business クライアントを起動しても、即座に終了する動作となります。  </p>
-<ul>
-<li>[ユーザーの構成] &gt; [ポリシー] &gt; [管理テンプレート] &gt; [Skype for Business 2016] &gt; [Microsoft Lync 機能のポリシー]  <blockquote>
-<p><img src="./sfb-preventrun01.png" alt=""><br>※ Office 2013(Lync 2013/SfB 2015) の場合は、[Microsoft Lync 2013] &gt; [Microsoft Lync 機能のポリシー] です。  </p>
-</blockquote>
-</li>
-<li>[Microsoft Lync の実行を防止する] を有効に設定  <blockquote>
-<p><img src="./sfb-preventrun02.png" alt=""><br>※コンピューターに対して適用する場合は、[コンピューターの構成] をご利用ください。  </p>
-</blockquote>
-</li>
+        <ul>
+<li><a href="#はじめに">はじめに</a></li>
+<li><a href="#AI-ワークフローとは">AI ワークフローとは</a></li>
+<li><a href="#テンプレート例">テンプレート例</a><ul>
+<li><a href="#個人用のテンプレート">個人用のテンプレート</a></li>
+<li><a href="#チャネル用のテンプレート">チャネル用テンプレート</a></li>
 </ul>
-<p>管理用テンプレートに関する詳細について、以下に関連する公開情報を提示いたします。</p>
-<ul>
-<li><p>Lync / Skype for Business クライアントのポリシーに関して  </p>
-<blockquote>
-<p>クライアント ブートストラップ ポリシーの構成<br><a href="https://docs.microsoft.com/ja-jp/skypeforbusiness/deploy/deploy-clients/configure-client-bootstrapping-policies" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/skypeforbusiness/deploy/deploy-clients/configure-client-bootstrapping-policies</a>  </p>
-</blockquote>
 </li>
-<li><p>Office 管理用テンプレートの使い方について  </p>
-<blockquote>
-<p>Office の管理用テンプレートを使用してグループ ポリシー (GPO) で Office 365 ProPlus を制御する<br><a href="https://answers.microsoft.com/ja-jp/msoffice/forum/msoffice_o365admin-mso_dep365-mso_o365b/office/3ec9d79c-44ec-4273-97e2-2a6f3a1fd8ef" target="_blank" rel="noopener">https://answers.microsoft.com/ja-jp/msoffice/forum/msoffice_o365admin-mso_dep365-mso_o365b/office/3ec9d79c-44ec-4273-97e2-2a6f3a1fd8ef</a>  </p>
-</blockquote>
-</li>
-<li><p>Office 管理用テンプレートのダウンロードサイト  </p>
-<blockquote>
-<p>Office 2013 (Lync 2013/Skype for Business 2015)<br><a href="https://www.microsoft.com/en-us/download/details.aspx?id=35554" target="_blank" rel="noopener">https://www.microsoft.com/en-us/download/details.aspx?id=35554</a>  </p>
-</blockquote>
-<blockquote>
-<p>Microsoft 365 Apps / Office 2016 / Office 2019  (Skype for Business 2016)<br><a href="https://www.microsoft.com/en-us/download/details.aspx?id=49030" target="_blank" rel="noopener">https://www.microsoft.com/en-us/download/details.aspx?id=49030</a>  </p>
-</blockquote>
-</li>
+<li><a href="#おわりに">おわりに</a></li>
 </ul>
-<h2 id="レジストリを追加する方法"><a href="#レジストリを追加する方法" class="headerlink" title="レジストリを追加する方法"></a>レジストリを追加する方法</h2><p>ワークグループ環境など、管理テンプレートを用いた配布が行えない環境などにおいては、以下のレジストリを直接追加して対応します。  </p>
-<ul>
-<li><p>コンピューター単位の場合  </p>
+<hr>
+<h2 id="はじめに"><a href="#はじめに" class="headerlink" title="はじめに"></a>はじめに</h2><p>こんにちは、 Unified Communications サポート チームです。<br>いつも Microsoft Teams をご利用いただきありがとうございます。<br>本記事では 、Teams のワークフローアプリに新しく追加された「<strong>AI ワークフロー</strong>」について、どんなことができるか？ 実際の応答例は？ にスポットライトを当てて紹介したいと思います。<br>AI ワークフローは現在パブリックプレビューの機能となります。展開前のイメージ作りにあたってご参考となりましたら幸いです。<br>📍 展開時期や前提条件などの詳細については MC1147389 をご参照ください。<br><em>※ 本記事の内容は執筆時点 (2025 年 12 月現在) の情報・動作に基づくものとなります。</em></p>
+<h2 id="AI-ワークフローとは"><a href="#AI-ワークフローとは" class="headerlink" title="AI ワークフローとは"></a>AI ワークフローとは</h2><p>Teams のワークフロー アプリでは、Teams のアクティビティを自動化したり Teams を他のアプリやサービスに接続したりすることができます。<br>📖 Teams のワークフロー アプリに関する概要は、<a href="https://support.microsoft.com/ja-jp/office/microsoft-teams-b7023604-c62a-44d3-a097-fddb68e41ff3" target="_blank" rel="noopener">こちら</a> の公開情報をご参照ください。</p>
+<p>その中で、今回追加された AI ワークフローでは、AI を用いた自動化機能を利用することが可能です。ワークフロー アプリには、複数の AI ワークフロー向けテンプレートが用意されており、それらのテンプレートをカスタイズすることで任意の形で運用することができます。</p>
+<p>ロードマップのページでは以下のように説明されています：</p>
 <blockquote>
-<p>Office 2013 (Lync 2013/Skype for Business 2015)<br>  レジストリ：HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Office\15.0\Lync<br>  値の名前　：PreventRun<br>  値の種類　：REG_DWORD<br>  値　　　　：1  </p>
+<p>With AI Workflows in the Workflows app, you will have access to custom AI-powered templates to automate complex tasks and streamline daily operations. AI Workflows enhance productivity by simplifying task execution and helping users stay organized throughout the day. Admins can enable this feature to equip users with intelligent automation tools that make managing work more efficient and intuitive. (<a href="https://www.microsoft.com/ja-jp/microsoft-365/roadmap?filters=&searchterms=500379" target="_blank" rel="noopener">Roadmap ID 500379</a>  から抜粋)<br>📍  ワークフローアプリ内で、AI ワークフローにアクセスするには Microsoft 365 Copilot ライセンスが必要です。</p>
 </blockquote>
-<blockquote>
-<p>Microsoft 365 Apps / Office 2016 / Office 2019 (Skype for Business 2016)<br>  レジストリ：HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Office\16.0\Lync<br>  値の名前　：PreventRun<br>  値の種類　：REG_DWORD<br>  値　　　　：1  </p>
-</blockquote>
-</li>
-<li><p>ユーザー単位の場合</p>
-<blockquote>
-<p>Office 2013 (Lync 2013/Skype for Business 2015)<br>  レジストリ：HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Office\15.0\Lync<br>  値の名前　：PreventRun<br>  値の種類　：REG_DWORD<br>  値　　　　：1  </p>
-</blockquote>
-<blockquote>
-<p>Microsoft 365 Apps / Office 2016 / Office 2019 (Skype for Business 2016)<br>  レジストリ：HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Office\16.0\Lync<br>  値の名前　：PreventRun<br>  値の種類　：REG_DWORD<br>  値　　　　：1  </p>
-</blockquote>
-</li>
-</ul>
-<h2 id="初回起動時に自動起動を有効化しない方法"><a href="#初回起動時に自動起動を有効化しない方法" class="headerlink" title="初回起動時に自動起動を有効化しない方法"></a>初回起動時に自動起動を有効化しない方法</h2><p>Skype for Business クライアントは、初回起動時に自動起動を有効化します。起動を防止する設定を実施したとしても、あくまで起動直後に強制終了する動作となるため、ユーザーが Skype for Business クライアントの起動を試みてしまうと自動起動の設定が有効化されてしまいます。あらかじめ以下のレジストリを配布することにより、すでに起動したことがある環境と判断させ、自動起動の有効化を防ぐことが可能です。</p>
-<ul>
-<li><p>ユーザー単位のみとなります  </p>
-<blockquote>
-<p>Office 2013 (Lync 2013/Skype for Business 2015)<br>レジストリ：HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Lync<br>値の名前　：FirstRun<br>値の種類　：REG_DWORD<br>値　　　　：1  </p>
-</blockquote>
-<blockquote>
-<p>Microsoft 365 Apps / Office 2016 / Office 2019 (Skype for Business 2016)<br>レジストリ：HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Lync<br>値の名前　：FirstRun<br>値の種類　：REG_DWORD<br>値　　　　：1  </p>
-</blockquote>
-</li>
-</ul>
-
+<h2 id="テンプレート例"><a href="#テンプレート例" class="headerlink" title="テンプレート例"></a>テンプレート例</h2><p>現在 AI ワークフローのテンプレートとしては大きく 2 種類 用意されています。</p>
+<ol>
+<li>個人用のテンプレート</li>
+<li>チャネル用のテンプレート</li>
+</ol>
+<p>📝 ワークフロー アプリの [テンプレート] タブ &gt; [フィルター] の [AI ワークフロー] を選択することで、AI ワークフローのテンプレート一覧を確認することが可能です。<br><img src="image-01.png" alt=""></p>
+<p>以下でそれぞれのテンプレートについて、実際の画面例と合わせて活用例を紹介します✍</p>
+<h3 id="個人用のテンプレート"><a href="#個人用のテンプレート" class="headerlink" title="個人用のテンプレート"></a>個人用のテンプレート</h3><p>個人用のテンプレートはユーザー個々人に向けたフローで、ワークフロー アプリとの 1:1 チャットから自動化された通知を受け取ることができるものです。<br>例えば「コミュニケーションを要約し、実施項目をハイライトする」というテンプレートでは、指定されたユーザーとのチャット履歴から 内容の要約・今後のタスク をまとめて通知するフローが作成することができます ✨</p>
+<p>〇 設定方法</p>
+<ol>
+<li>テンプレート一覧から任意のテンプレートを選択。ここでは「コミュニケーションを要約し、実施項目をハイライトする」を選択します。<br><img src="image-02.png" alt=""></li>
+<li>どのユーザーとのコミュニケーションを対象とするか・いつ・どの頻度で通知を受け取りたいか などの設定を行います。ここでは、”Luna Meowell” というユーザーとの Teams チャットの内容を要約するように指定しています。<br><img src="image-03.png" alt=""></li>
+<li>[保存] ボタンをクリックすれば、作成は完了です。</li>
+</ol>
+<p>〇 動作例<br>ワークフローが作成したフローを完了すると、ワークフロー アプリとの 1:1 チャットに実行結果が送信されます。AI によってまとめられたコンテンツは Loop コンポーネントの形式で送られます。<br><img src="image-04.png" alt="クリスマスパーティーの計画をしていたようですね🎄"></p>
+<h3 id="チャネル用のテンプレート"><a href="#チャネル用のテンプレート" class="headerlink" title="チャネル用のテンプレート"></a>チャネル用のテンプレート</h3><p>チャネル用のテンプレートはチャネルの中で動作するフローで、チャネル エージェントを自動化して動作させるものになります。<br>例えば「Search the web using your channel’s dedicated agent」のテンプレートは指定された内容をチャネルエージェントが Web 上で調査し、その結果をチャネルに投稿するフローが作成することができます✨</p>
+<p>〇 設定方法</p>
+<ol>
+<li>使用したいチャネルにチャネル エージェントを追加します<br>📖 チャネル エージェントの追加方法については、<a href="https://learn.microsoft.com/ja-jp/microsoftteams/set-up-channel-agent-teams" target="_blank" rel="noopener">こちら</a> の公開情報をご参照ください。</li>
+<li>テンプレート一覧から任意のテンプレートを選択。ここでは「Search the web using your channel’s dedicated agent」を選択します。<br><img src="image-05.png" alt=""></li>
+<li>フローの中身を設定します。ここでは 毎週金曜の 17 時に [🌱 Catnip Ideas] というチャネルに猫に関するニュースやブログ記事のリサーチ結果を投稿してもらうように指示しています。<br><img src="image-06.png" alt=""></li>
+</ol>
+<p>〇 動作例<br>ワークフローで指定された時間になると、指定されたチャネルに対して、チャネル エージェントにメンションする形でプロンプトが自動的に投稿が送信されます。<br>またチャネル エージェントからの応答は、投稿への返信として返されます。🐈<br><img src="image-07.png" alt=""></p>
+<h2 id="おわりに"><a href="#おわりに" class="headerlink" title="おわりに"></a>おわりに</h2><p>AI ワークフローを活用することで、日々の定型的なタスクや会話の振り返りなどの作業を自動化することが可能です。本記事でご案内したテンプレート以外にも「直近の会議内容を要約するフロー」や「予定を確認してまとめるフロー」など日々の業務を進めるうえで役に立つテンプレートが用意されています。ぜひお試しください。</p>
+<p>(文責 : 山上)</p>
+<br />
+NOTE:  
+- 2025 年 12 月 08 日に、初版を公開しました。
       
       
         <div class="article-disclaimer">
@@ -188,10 +174,10 @@
     <footer class="article-footer">
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Client/" rel="tag">Client</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Skype-for-Business-Online/" rel="tag">Skype for Business Online</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Copilot/" rel="tag">Copilot</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li></ul>
 
         
-        <a href="https://github.com/jpucsupport/blog/edit/master/articles/Skype%20for%20business/Skype%20-%20Skype%20for%20Business%20アプリケーションの起動抑止について.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        <a href="https://github.com/jpucsupport/blog/edit/master/articles/teams/Teams%20-%20ワークフローアプリに%20AI%20が登場！Teams%20の%20AI%20ワークフローで業務をもっとスマートに.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
         
     </footer>
   </div>
@@ -199,19 +185,10 @@
     
 <nav id="article-nav">
   
-    <a href="../../teams/Teams%20-%20Teams%20%E4%BC%9A%E8%AD%B0%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E5%93%81%E8%B3%AA/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">次の記事</strong>
-      <div class="article-nav-title">
-        
-          Teams - Teams 会議レコーディングの品質
-        
-      </div>
-    </a>
   
-  
-    <a href="../../teams/Teams%20-%20%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%20UPN%20%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AE%E5%BD%B1%E9%9F%BF/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="../Teams%20-%20%E6%96%B0%E3%81%97%E3%81%84%20Teams%20%E3%81%AE%E6%97%A2%E7%9F%A5%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前の記事</strong>
-      <div class="article-nav-title">Teams - ユーザーの UPN を変更した場合の影響</div>
+      <div class="article-nav-title">新しい Teams の既知の問題について</div>
     </a>
   
 </nav>
@@ -230,23 +207,23 @@
       <ul>
         
           <li>
-            <a href="../../teams/Teams%20-%20%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AB%20AI%20%E3%81%8C%E7%99%BB%E5%A0%B4%EF%BC%81Teams%20%E3%81%AE%20AI%20%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%A7%E6%A5%AD%E5%8B%99%E3%82%92%E3%82%82%E3%81%A3%E3%81%A8%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%81%AB/">Teams - ワークフローアプリに AI が登場！Teams の AI ワークフローで業務をもっとスマートに</a>
+            <a href="">Teams - ワークフローアプリに AI が登場！Teams の AI ワークフローで業務をもっとスマートに</a>
           </li>
         
           <li>
-            <a href="../../teams/Teams%20-%20%E6%96%B0%E3%81%97%E3%81%84%20Teams%20%E3%81%AE%E6%97%A2%E7%9F%A5%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">新しい Teams の既知の問題について</a>
+            <a href="../Teams%20-%20%E6%96%B0%E3%81%97%E3%81%84%20Teams%20%E3%81%AE%E6%97%A2%E7%9F%A5%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">新しい Teams の既知の問題について</a>
           </li>
         
           <li>
-            <a href="../../teams/Teams%20-%20Copilot%20%E3%81%AB%20Teams%20%E4%BC%9A%E8%AD%B0%E3%81%AE%E9%80%B2%E8%A1%8C%E3%83%BB%E8%AD%B0%E4%BA%8B%E9%8C%B2%E3%82%82%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%EF%BC%81%E3%80%8C%E3%83%95%E3%82%A1%E3%82%B7%E3%83%AA%E3%83%86%E3%83%BC%E3%82%BF%E3%83%BC%20%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%80%8D%E3%81%A8%E3%81%AF/">Teams - Copilot に Teams 会議の進行・議事録もおまかせ！「ファシリテーター エージェント」とは</a>
+            <a href="../Teams%20-%20Copilot%20%E3%81%AB%20Teams%20%E4%BC%9A%E8%AD%B0%E3%81%AE%E9%80%B2%E8%A1%8C%E3%83%BB%E8%AD%B0%E4%BA%8B%E9%8C%B2%E3%82%82%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%EF%BC%81%E3%80%8C%E3%83%95%E3%82%A1%E3%82%B7%E3%83%AA%E3%83%86%E3%83%BC%E3%82%BF%E3%83%BC%20%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%80%8D%E3%81%A8%E3%81%AF/">Teams - Copilot に Teams 会議の進行・議事録もおまかせ！「ファシリテーター エージェント」とは</a>
           </li>
         
           <li>
-            <a href="../../teams/Teams%20-%20%E3%82%BF%E3%82%A6%E3%83%B3%E3%83%9B%E3%83%BC%E3%83%AB%E3%81%AE%20%5B%E4%BC%9A%E8%AD%B0%E3%82%92%E9%96%8B%E5%A7%8B%5D%20%E3%82%92%E5%AE%9F%E8%A1%8C%E5%BE%8C%E3%80%812%20%E3%81%8B%E6%9C%88%E4%BB%A5%E9%99%8D%E3%81%AB%E5%86%8D%E5%BA%A6%E5%8F%82%E5%8A%A0%E3%81%97%E3%81%9F%E9%9A%9B%E3%81%AB%20Teams%20%E4%BC%9A%E8%AD%B0%E5%BD%A2%E5%BC%8F%E3%81%A7%E3%81%AE%E5%8F%82%E5%8A%A0%E3%81%A8%E3%81%AA%E3%82%8B/">Teams - タウン ホールの [会議を開始] を実行後、2 か月以降に再度参加した際に Teams 会議形式での参加となる</a>
+            <a href="../Teams%20-%20%E3%82%BF%E3%82%A6%E3%83%B3%E3%83%9B%E3%83%BC%E3%83%AB%E3%81%AE%20%5B%E4%BC%9A%E8%AD%B0%E3%82%92%E9%96%8B%E5%A7%8B%5D%20%E3%82%92%E5%AE%9F%E8%A1%8C%E5%BE%8C%E3%80%812%20%E3%81%8B%E6%9C%88%E4%BB%A5%E9%99%8D%E3%81%AB%E5%86%8D%E5%BA%A6%E5%8F%82%E5%8A%A0%E3%81%97%E3%81%9F%E9%9A%9B%E3%81%AB%20Teams%20%E4%BC%9A%E8%AD%B0%E5%BD%A2%E5%BC%8F%E3%81%A7%E3%81%AE%E5%8F%82%E5%8A%A0%E3%81%A8%E3%81%AA%E3%82%8B/">Teams - タウン ホールの [会議を開始] を実行後、2 か月以降に再度参加した際に Teams 会議形式での参加となる</a>
           </li>
         
           <li>
-            <a href="../../teams/Teams%20-%20Proxy%20%E7%92%B0%E5%A2%83%E3%81%A7%E3%80%81Teams%20%E3%81%AE%20Powershell%202.0.0%20%E4%BB%A5%E9%99%8D%E3%81%AE%20Teams%20Powershell%20%E3%81%A7%20Get-csOnlineUser%20%E3%81%AA%E3%81%A9%E3%81%AE%20YYY-csXXX%20%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%80%81Winhttp%20%E5%81%B4%E3%81%B8%E3%81%AE%20Proxy%20%E8%A8%AD%E5%AE%9A%E3%81%8C%E5%BF%85%E8%A6%81/">Teams - Proxy 環境で、Teams の PowerShell 2.0.0 以降の Teams PowerShell で Get-csOnlineUser などの YYY-csXXX のコマンドを実行する場合、Winhttp 側への Proxy 設定が必要</a>
+            <a href="../Teams%20-%20Proxy%20%E7%92%B0%E5%A2%83%E3%81%A7%E3%80%81Teams%20%E3%81%AE%20Powershell%202.0.0%20%E4%BB%A5%E9%99%8D%E3%81%AE%20Teams%20Powershell%20%E3%81%A7%20Get-csOnlineUser%20%E3%81%AA%E3%81%A9%E3%81%AE%20YYY-csXXX%20%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%80%81Winhttp%20%E5%81%B4%E3%81%B8%E3%81%AE%20Proxy%20%E8%A8%AD%E5%AE%9A%E3%81%8C%E5%BF%85%E8%A6%81/">Teams - Proxy 環境で、Teams の PowerShell 2.0.0 以降の Teams PowerShell で Get-csOnlineUser などの YYY-csXXX のコマンドを実行する場合、Winhttp 側への Proxy 設定が必要</a>
           </li>
         
       </ul>
