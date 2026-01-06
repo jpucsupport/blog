@@ -1449,6 +1449,57 @@ a#issue-header:hover {
   box-shadow: 1px 2px 3px #ddd;
   border-bottom: 1px solid #d2d2d2;
 }
+.markdown-alert {
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.75rem;
+  border-left: 3px solid;
+  font-size: 0.95rem;
+}
+.markdown-alert .markdown-alert-title {
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-box;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+  margin-right: 0.5rem;
+}
+.markdown-alert p {
+  margin: 0.25rem 0;
+}
+.markdown-alert-note {
+  background-color: #f0f9ff;
+  border-color: #7dd3fc;
+  color: #0c4a6e;
+}
+.markdown-alert-tip {
+  background-color: #f0fdf9;
+  border-color: #6ee7b7;
+  color: #065f46;
+}
+.markdown-alert-important {
+  background-color: #faf5ff;
+  border-color: #c4b5fd;
+  color: #6b21a8;
+}
+.markdown-alert-warning {
+  background-color: #fffbeb;
+  border-color: #fcd34d;
+  color: #78350f;
+}
+.markdown-alert-caution {
+  background-color: #fff1f2;
+  border-color: #fca5a5;
+  color: #991b1b;
+}
 @media screen and (min-width: 768px) {
   #sidebar {
     display: inline;
