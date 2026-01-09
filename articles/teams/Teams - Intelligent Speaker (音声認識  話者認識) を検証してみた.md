@@ -10,7 +10,7 @@ tags:
 # Teams - Intelligent Speaker (音声認識 話者認識) を検証してみた <!-- omit in toc -->
 
 - [はじめに](#はじめに)
-- [Intelligent Speaker とは？](#intelligent-speaker-とは)
+- [Intelligent Speaker とは？](#intelligent-Speaker-とは)
 - [検証する環境](#検証する環境)
 - [検証してみた](#検証してみた)  
   [1. 自然な抑揚のパターン](#1-自然な抑揚のパターン)  
@@ -76,6 +76,7 @@ Intelligent Speaker を利用するための前提条件などは以下の公開
 ![](image-5.png)
 
 人と MTR デバイス群をそれぞれ以下のように配置します。MTR マイクの指向性は机の方面です。
+![](image-5-1.png)
 
 ## 検証してみた
 それではそれぞれ実際に検証してみましょう！検証シナリオは大きく分けて以下の 6 パターン、用意しました。
