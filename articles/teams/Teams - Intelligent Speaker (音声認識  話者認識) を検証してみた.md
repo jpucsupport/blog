@@ -10,7 +10,7 @@ tags:
 # Teams - Intelligent Speaker (音声認識 話者認識) を検証してみた <!-- omit in toc -->
 
 - [はじめに](#はじめに)
-- [Intelligent Speaker とは？](#intelligent-Speaker-とは)
+- [Intelligent Speaker とは？](#intelligent-Speaker-とは？)
 - [検証する環境](#検証する環境)
 - [検証してみた](#検証してみた)  
   [1. 自然な抑揚のパターン](#1-自然な抑揚のパターン)  
