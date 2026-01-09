@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Teams - Intelligent Speaker (音声認識 話者認識) を検証してみた | Japan Unified Communications Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="はじめに Intelligent Speaker とは？ 検証する環境 検証してみた1. 自然な抑揚のパターン2. 抑揚を不自然にしたパターン3. 抑揚を抑えたパターン4. ノイズがある状態で話すパターン5. 話者を変更しながら連続して話すパターン6. 同時に発話 (オーバーラップ) するパターン まとめ 補足   はじめにこんにちは、Unified Communications サポート チー">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Teams - Intelligent Speaker (音声認識 話者認識) を検証してみた">
+<meta property="og:url" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Intelligent%20Speaker%20(%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98%20%20%E8%A9%B1%E8%80%85%E8%AA%8D%E8%AD%98)%20%E3%82%92%E6%A4%9C%E8%A8%BC%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/index.html">
+<meta property="og:site_name" content="Japan Unified Communications Support Blog">
+<meta property="og:description" content="はじめに Intelligent Speaker とは？ 検証する環境 検証してみた1. 自然な抑揚のパターン2. 抑揚を不自然にしたパターン3. 抑揚を抑えたパターン4. ノイズがある状態で話すパターン5. 話者を変更しながら連続して話すパターン6. 同時に発話 (オーバーラップ) するパターン まとめ 補足   はじめにこんにちは、Unified Communications サポート チー">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Intelligent%20Speaker%20(%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98%20%20%E8%A9%B1%E8%80%85%E8%AA%8D%E8%AD%98)%20%E3%82%92%E6%A4%9C%E8%A8%BC%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Intelligent%20Speaker%20(%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98%20%20%E8%A9%B1%E8%80%85%E8%AA%8D%E8%AD%98)%20%E3%82%92%E6%A4%9C%E8%A8%BC%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-1.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Intelligent%20Speaker%20(%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98%20%20%E8%A9%B1%E8%80%85%E8%AA%8D%E8%AD%98)%20%E3%82%92%E6%A4%9C%E8%A8%BC%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-2.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Intelligent%20Speaker%20(%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98%20%20%E8%A9%B1%E8%80%85%E8%AA%8D%E8%AD%98)%20%E3%82%92%E6%A4%9C%E8%A8%BC%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-3.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Intelligent%20Speaker%20(%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98%20%20%E8%A9%B1%E8%80%85%E8%AA%8D%E8%AD%98)%20%E3%82%92%E6%A4%9C%E8%A8%BC%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-4.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Intelligent%20Speaker%20(%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98%20%20%E8%A9%B1%E8%80%85%E8%AA%8D%E8%AD%98)%20%E3%82%92%E6%A4%9C%E8%A8%BC%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-5.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Intelligent%20Speaker%20(%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98%20%20%E8%A9%B1%E8%80%85%E8%AA%8D%E8%AD%98)%20%E3%82%92%E6%A4%9C%E8%A8%BC%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-6.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Intelligent%20Speaker%20(%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98%20%20%E8%A9%B1%E8%80%85%E8%AA%8D%E8%AD%98)%20%E3%82%92%E6%A4%9C%E8%A8%BC%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-7.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Intelligent%20Speaker%20(%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98%20%20%E8%A9%B1%E8%80%85%E8%AA%8D%E8%AD%98)%20%E3%82%92%E6%A4%9C%E8%A8%BC%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-8.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Intelligent%20Speaker%20(%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98%20%20%E8%A9%B1%E8%80%85%E8%AA%8D%E8%AD%98)%20%E3%82%92%E6%A4%9C%E8%A8%BC%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-9.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Intelligent%20Speaker%20(%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98%20%20%E8%A9%B1%E8%80%85%E8%AA%8D%E8%AD%98)%20%E3%82%92%E6%A4%9C%E8%A8%BC%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-10.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Intelligent%20Speaker%20(%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98%20%20%E8%A9%B1%E8%80%85%E8%AA%8D%E8%AD%98)%20%E3%82%92%E6%A4%9C%E8%A8%BC%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-11.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Intelligent%20Speaker%20(%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98%20%20%E8%A9%B1%E8%80%85%E8%AA%8D%E8%AD%98)%20%E3%82%92%E6%A4%9C%E8%A8%BC%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-12.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Intelligent%20Speaker%20(%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98%20%20%E8%A9%B1%E8%80%85%E8%AA%8D%E8%AD%98)%20%E3%82%92%E6%A4%9C%E8%A8%BC%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-13.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Intelligent%20Speaker%20(%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98%20%20%E8%A9%B1%E8%80%85%E8%AA%8D%E8%AD%98)%20%E3%82%92%E6%A4%9C%E8%A8%BC%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-14.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Intelligent%20Speaker%20(%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98%20%20%E8%A9%B1%E8%80%85%E8%AA%8D%E8%AD%98)%20%E3%82%92%E6%A4%9C%E8%A8%BC%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-15.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Intelligent%20Speaker%20(%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98%20%20%E8%A9%B1%E8%80%85%E8%AA%8D%E8%AD%98)%20%E3%82%92%E6%A4%9C%E8%A8%BC%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-16.png">
+<meta property="article:published_time" content="2026-01-09T02:00:00.000Z">
+<meta property="article:modified_time" content="2026-01-09T01:55:36.317Z">
+<meta property="article:author" content="CSS Japan">
+<meta property="article:tag" content="Teams">
+<meta property="article:tag" content="Copilot">
+<meta property="article:tag" content="MTR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20Intelligent%20Speaker%20(%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98%20%20%E8%A9%B1%E8%80%85%E8%AA%8D%E8%AD%98)%20%E3%82%92%E6%A4%9C%E8%A8%BC%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image.png">
+  
+    <link rel="alternate" href="../../atom.xml" title="Japan Unified Communications Support Blog" type="application/atom+xml">
+  
+
+  <link rel="icon" href="../../favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="../../css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        <div id="ms-logo"></div>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+        <a class="main-nav-link" href="https://cssjpn.github.io/" target="_blank" rel="noopener">サポート情報</a>
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="../../atom.xml" title="RSSフィード"></a>
+        
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//www.bing.com/search" method="get" accept-charset="UTF-8" name="bing-search" onsubmit="var f=this;if(f['q'].value){var searchUrl =  'https://www.bing.com/search?q=' +  encodeURIComponent(f['q'].value + ' site:' + f['sitesearch'].value) ;window.open(searchUrl, 'blank') };return false;" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="検索"><button type="submit" id="nav-search-btn" class="search-form-submit"></button><input type="hidden" name="sitesearch" value="https://jpucsupport.github.io/blog"></form>
+      </div>
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="../../index.html" id="logo">Japan Unified Communications Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="../../index.html" id="subtitle">日本マイクロソフトの Teams と Skype for Business に関するサポート情報のブログです。</a>
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-teams/Teams - Intelligent Speaker (音声認識  話者認識) を検証してみた" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Teams - Intelligent Speaker (音声認識 話者認識) を検証してみた
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="" class="article-date-single">
+  <time datetime="2026-01-09T02:00:00.000Z" itemprop="datePublished">2026-01-09</time>
+</a>
+        
+        
+        <a href="https://github.com/jpucsupport/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+c80d3c6b-ed55-57a3-8bf9-3a5785b352b6%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BTeams+-+Intelligent+Speaker+%28%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98+%E8%A9%B1%E8%80%85%E8%AA%8D%E8%AD%98%29+%E3%82%92%E6%A4%9C%E8%A8%BC%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F%5D%28https%3A%2F%2Fjpucsupport.github.io%2Fblog%2Fteams%2FTeams%2520-%2520Intelligent%2520Speaker%2520%28%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98%2520%2520%E8%A9%B1%E8%80%85%E8%AA%8D%E8%AD%98%29%2520%E3%82%92%E6%A4%9C%E8%A8%BC%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F%2F%29%0A*+Content+Source%3A+%5Barticles%2Fteams%2FTeams+-+Intelligent+Speaker+%28%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98++%E8%A9%B1%E8%80%85%E8%AA%8D%E8%AD%98%29+%E3%82%92%E6%A4%9C%E8%A8%BC%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F.md%5D%28https%3A%2F%2Fgithub.com%2Fjpucsupport%2Fblog%2Fblob%2Fmaster%2Farticles%2Fteams%2FTeams%2520-%2520Intelligent%2520Speaker%2520%28%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98%2520%2520%E8%A9%B1%E8%80%85%E8%AA%8D%E8%AD%98%29%2520%E3%82%92%E6%A4%9C%E8%A8%BC%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        
+        <a data-url="https://jpucsupport.github.io/blog/teams/Teams%20-%20Intelligent%20Speaker%20(%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98%20%20%E8%A9%B1%E8%80%85%E8%AA%8D%E8%AD%98)%20%E3%82%92%E6%A4%9C%E8%A8%BC%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/" data-id="cmk685bin000k9equ6jhn3p5e" class="article-share-link">共有</a>
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><a href="#はじめに">はじめに</a></li>
+<li><a href="#intelligent-speaker-とは">Intelligent Speaker とは？</a></li>
+<li><a href="#検証する環境">検証する環境</a></li>
+<li><a href="#検証してみた">検証してみた</a><br><a href="#1-自然な抑揚のパターン">1. 自然な抑揚のパターン</a><br><a href="#2-抑揚を不自然にしたパターン">2. 抑揚を不自然にしたパターン</a><br><a href="#3-抑揚を抑えたパターン">3. 抑揚を抑えたパターン</a><br><a href="#4-ノイズがある状態で話すパターン">4. ノイズがある状態で話すパターン</a><br><a href="#5-話者を変更しながら連続して話すパターン">5. 話者を変更しながら連続して話すパターン</a><br><a href="#6-同時に発話-オーバーラップ-するパターン">6. 同時に発話 (オーバーラップ) するパターン</a></li>
+<li><a href="#まとめ">まとめ</a></li>
+<li><a href="#補足">補足</a></li>
+</ul>
+<hr>
+<h2 id="はじめに"><a href="#はじめに" class="headerlink" title="はじめに"></a>はじめに</h2><p>こんにちは、Unified Communications サポート チームです。<br>いつも Microsoft Teams をご利用いただきありがとうございます。  </p>
+<p>近年、多くのお客様に会議などで音声認識 / 話者認識 (Intelligent Speaker) をご活用いただいております。<br>Intelligent Speaker で利用する AI は入力する音声や環境などによって、結果がある程度変動します。<br>このこと自体はサービスとして正常な動作の範囲内の挙動ですが、「じゃあ実際にどういう音声が認識されうるのか？またはされにくいのか？」という点が気になる方も多いかと思います。  </p>
+<p>そこで本記事では、実際の会議室環境で Intelligent Speaker の精度や話者識別性能を検証し、どのような条件で精度が変わるのかを評価してまとめてみました。<br>Intelligent Speaker を利用する上でのご参考となりましたら幸いです。<br>なお、検証の際に利用された Microsoft Teams Rooms デバイス (MTR) の具体的な製品名やメーカー名は本記事で公開しておりませんので、予めご了承ください。</p>
+<p><em>※ 本記事の内容は執筆時点 (2025 年 12 月) の情報・動作に基づくものとなります。</em></p>
+<h2 id="Intelligent-Speaker-とは？"><a href="#Intelligent-Speaker-とは？" class="headerlink" title="Intelligent Speaker とは？"></a>Intelligent Speaker とは？</h2><p>Microsoft Teams では、会議室等の会話において AI が「誰が話しているか」を認識し、字幕やトランスクリプトに話者名を表示する、「Intelligent Speaker」 という機能があります。<br>日本語では「音声認識」や「話者認識」と呼称することもあります。<br>当該機能を使うことで会議の記録を後から見返したときに「誰が何を言ったか」が分かりやすくなるメリットがあります。</p>
+<p><img src="image.png" alt=""><br>※会議中の文字起こしで Intelligent Speaker が動作している様子(赤枠)  </p>
+<p>Intelligent Speaker を利用するための前提条件などは以下の公開情報やブログ記事をご参照ください。  </p>
+<p><a href="https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-recognition" target="_blank" rel="noopener">Teams Roomsでの音声認識 (音声プロファイル) のテナント管理コントロール - Microsoft Teams | Microsoft Learn  </a></p>
+<p><a href="https://learn.microsoft.com/ja-jp/microsoftteams/rooms/teams-rooms-people-recognition" target="_blank" rel="noopener">Teams RoomsでPeople認識を有効にする - Microsoft Teams | Microsoft Learn</a></p>
+<p><a href="https://support.microsoft.com/ja-jp/office/a075d6c0-30b3-44b9-b218-556a87fadc00" target="_blank" rel="noopener">Microsoft Teamsインテリジェント スピーカーを使用して会議の文字起こしで室内の参加者を識別する - Microsoft サポート</a></p>
+<p><a href="https://jpucsupport.github.io/blog/teams/Teams%20-%20Teams%20%E4%BC%9A%E8%AD%B0%E3%81%A7%E3%81%AE%20Intelligent%20Speaker%20(%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98)%20%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Teams - Teams 会議での Intelligent Speaker (音声認識) について | Japan Unified Communications Support Blog  </a></p>
+<h2 id="検証する環境"><a href="#検証する環境" class="headerlink" title="検証する環境"></a>検証する環境</h2><p>今回の検証は 4 ～ 5 名が入れる会議室環境を想定し、複数話者・異なる声質・性別を含む実運用に近い条件で評価を行いました。<br>音声プロファイルを登録して検証に臨むユーザーは以下の 3 名です。<br>※再生ボタンから各ユーザーが Microsoft Teams に登録している音声プロファイルを再生することが出来ます。</p>
+<p><img src="image-1.png" alt=""> 30 代、男性 (A さん)<br><audio controls src="km_VoiceRecording.wav" title=""></audio>  </p>
+<p><img src="image-2.png" alt=""> 20 代、男性 (B さん)<br><audio controls src="iy_VoiceRecording.wav" title=""></audio>  </p>
+<p><img src="image-3.png" alt=""> 20 代、女性 (C さん)<br><audio controls src="yr_VoiceRecording.wav" title=""></audio>  </p>
+<p>以下のような一般的な会議室で検証を行います。<br><img src="image-4.png" alt="">  </p>
+<p><img src="image-5.png" alt=""></p>
+<p>人と MTR デバイス群をそれぞれ以下のように配置します。MTR マイクの指向性は机の方面です。</p>
+<h2 id="検証してみた"><a href="#検証してみた" class="headerlink" title="検証してみた"></a>検証してみた</h2><p>それではそれぞれ実際に検証してみましょう！検証シナリオは大きく分けて以下の 6 パターン、用意しました。</p>
+<ol>
+<li>自然な抑揚のパターン</li>
+<li>抑揚を不自然にしたパターン</li>
+<li>抑揚を抑えたパターン</li>
+<li>ノイズがある状態で話すパターン</li>
+<li>話者を変更しながら連続して話すパターン</li>
+<li>同時に発話 (オーバーラップ) するパターン</li>
+</ol>
+<p>各パターンで出力されたトランスクリプション (文字起こし)、MTR マイクが音声を拾ったレコーディングを中心に検証結果を記載します。  </p>
+<p>※太文字が実際に発した言葉です。<br>※話者のプライバシー保護の観点よりトランスクリプションでアカウントの表示名が表示される箇所を、A さん、B さん、C さんにそれぞれ置換しています。</p>
+<hr>
+<h3 id="1-自然な抑揚のパターン"><a href="#1-自然な抑揚のパターン" class="headerlink" title="1. 自然な抑揚のパターン"></a>1. 自然な抑揚のパターン</h3><p>最初のテストですので、話者として認識されるかどうかという確認も含めて「<strong>今日は Teams の話者認識テストを始めます。</strong>」というセリフを全員に読んでもらいます。</p>
+<p>まずは A さん:  </p>
+<p><img src="image-6.png" alt=""><br><audio controls src="1-a.wav" title=""></audio></p>
+<p>A さんを話者として認識してくれました。<br>“日” の読み (ひ、び、にち等) は声に出していないので、”今日” という言葉自体は認識しているのではないかと推測できますが、”今” だけがなぜか抜けてしまいましたね。<br>また、”話者” が “馬車” になっていますが、”は” と “ば” で母音は a で共通しているため、概ね聞き取れているといってよいのではないでしょうか。</p>
+<p>次は B さん:  </p>
+<p><img src="image-7.png" alt=""><br><audio controls src="1-b.wav" title=""></audio>  </p>
+<p>こちらも B さんを話者と認識しています。<br>“今日は、” のセリフを読んでいましたがそちらは文字起こしされず、”あとは、” と本来発していない声が文字起こしされました。<br>あとは、B さんのテストだけ “チームズ” ではなく、”Teams” と文字起こしされているのも印象的です。</p>
+<p>最後に C さん:  </p>
+<p><img src="image-8.png" alt=""><br><audio controls src="1-c.wav" title=""></audio>  </p>
+<p>C さんも話者として認識してくれていますね。<br>このテストの中では A さん、B さんと比較すると、”チームズ” と認識されていますが最も想定通りに文字起こしが出来ています。  </p>
+<p>以上のテストより、話者を認識するための環境は整っていることが確認できました。</p>
+<hr>
+<h3 id="2-抑揚を不自然にしたパターン"><a href="#2-抑揚を不自然にしたパターン" class="headerlink" title="2. 抑揚を不自然にしたパターン"></a>2. 抑揚を不自然にしたパターン</h3><p>次に、「<strong>変な抑揚の声で Teams の話者認識テストをはーじーめーまーす！</strong>」（語尾を強調、抑揚を不自然にする）と言うパターンと、「<strong>変な抑揚の声で Teams の話者認識テストをはじめます。</strong>」（声の高さを上げ下げさせながら話す）の、2 つのパターンで試します。  </p>
+<p>今回のパターンは A さんだけに実施してもらいます。</p>
+<h4 id="2-1-語尾を強調、抑揚を不自然にするパターン"><a href="#2-1-語尾を強調、抑揚を不自然にするパターン" class="headerlink" title="2-1. 語尾を強調、抑揚を不自然にするパターン"></a>2-1. 語尾を強調、抑揚を不自然にするパターン</h4><p><img src="image-9.png" alt=""><br><audio controls src="2-1-a.wav" title=""></audio>  </p>
+<p>“欲用” と “抑揚” の誤変換がありますが、発声はあっていますね。<br>“話者認識” の “者” が抜けていることも気になりますが、注目すべきはその後の “テスト” 以降に発せられた声の話者を急に認識しなくなった点です。<br>前後の単語の抑揚もくみ取った結果、A さんを話者として認識・評価しなくなったのかもしれません。</p>
+<h4 id="2-2-声の高さを上げ下げさせながら話すパターン"><a href="#2-2-声の高さを上げ下げさせながら話すパターン" class="headerlink" title="2-2. 声の高さを上げ下げさせながら話すパターン"></a>2-2. 声の高さを上げ下げさせながら話すパターン</h4><p><img src="image-10.png" alt=""><br><audio controls src="2-2-a.wav" title=""></audio><br>高い声から低い声まで連続的に声の高さが変化し、抑揚をつけています。<br>“チームズの” が “チームズが” となっているものの、概ね聞き取れていますね。<br>声の高低ではなく、明瞭さが評価されていた可能性があります。</p>
+<hr>
+<h3 id="3-抑揚を抑えたパターン"><a href="#3-抑揚を抑えたパターン" class="headerlink" title="3. 抑揚を抑えたパターン"></a>3. 抑揚を抑えたパターン</h3><p>今度はパターン 2 とは逆に「<strong>抑揚がない声で Teams の話者認識テストをはじめます。</strong>」と、抑揚を抑えたパターンで試します。  </p>
+<p>今回のパターンは B さんが実施します。  </p>
+<p><img src="image-11.png" alt=""><br><audio controls src="3-b.wav" title=""></audio>  </p>
+<p>“Teams の” の後半が “その” に変化しました。<br>そしてこの “その” に続けて発声していると判断されたのか、”話者” が “まま” に変化し、”そのまま” という単語として出力されています。<br>棒読みの発声ではありますが、概ね聞き取れているのではないかと思われます。</p>
+<hr>
+<h3 id="4-ノイズがある状態で話すパターン"><a href="#4-ノイズがある状態で話すパターン" class="headerlink" title="4. ノイズがある状態で話すパターン"></a>4. ノイズがある状態で話すパターン</h3><p>雑音 (会社での作業音など) を流して疑似的にノイズがある状態を作り出し、「<strong>ノイズがある環境で Teams の話者認識テストをはじめます</strong>」の聞き取りが成功するか否かを確認します。<br>なお、Teams にはノイズを検知し、排除するノイズ キャンセリングの機能が既定で有効となっています (参考: <a href="https://support.microsoft.com/ja-jp/office/microsoft-teams%E4%BC%9A%E8%AD%B0%E3%81%AE%E3%83%90%E3%83%83%E3%82%AF%E3%82%B0%E3%83%A9%E3%82%A6%E3%83%B3%E3%83%89-%E3%83%8E%E3%82%A4%E3%82%BA%E3%82%92%E8%BB%BD%E6%B8%9B%E3%81%99%E3%82%8B-1a9c6819-137d-4b3b-a1c8-4ab20b234c0d" target="_blank" rel="noopener">Microsoft Teams会議のバックグラウンド ノイズを軽減する - Microsoft サポート</a>)。<br>ノイズが活発な状態でノイズ キャンセリングを無効とした場合において話者の音声が拾いづらくなることは自明なため、ノイズ キャンセリングが有効となっている状態で「<strong>ノイズがある環境で Teams の話者認識テストをはじめます</strong>」を聞き取り、認識するか確認します。  </p>
+<p>C さんが今回のパターンを検証します。  </p>
+<p><img src="image-12.png" alt=""><br><audio controls src="4-c.wav" title=""></audio>   </p>
+<p>有効となっているノイズ キャンセリングのためか、レコーディング データ上はかろうじて言葉を聞き取れるレベルの録音となっていました。<br>そしてこの録音レベルに沿うような形で話者も認識出来ず、なぜか “すみません。” と謝罪から入るほぼ想定外の文字起こしとなってしまっています。</p>
+<hr>
+<h3 id="5-話者を変更しながら連続して話すパターン"><a href="#5-話者を変更しながら連続して話すパターン" class="headerlink" title="5. 話者を変更しながら連続して話すパターン"></a>5. 話者を変更しながら連続して話すパターン</h3><p>以下のように立て続けに話者を変更しながら発声し、認識するかどうかを確認します。  </p>
+<p>A：「<strong>私の次は B が話します</strong>」<br>B：「<strong>そして私の次は C が話します</strong>」<br>C：「<strong>そして最後に私が話して終わりです</strong>」  </p>
+<p>A さんから C さんまで全員登場するパターンとなります。</p>
+<p><img src="image-13.png" alt=""><br><audio controls src="5-abc.wav" title=""></audio>  </p>
+<p>完璧ですね！B や C もちゃんとアルファベットとして認識して文字起こしをしてくれているのも Good です。</p>
+<hr>
+<h3 id="6-同時に発話-オーバーラップ-するパターン"><a href="#6-同時に発話-オーバーラップ-するパターン" class="headerlink" title="6. 同時に発話 (オーバーラップ) するパターン"></a>6. 同時に発話 (オーバーラップ) するパターン</h3><p>最後に、話者が同時に発話した時にどのように認識されるかを試します。<br>以下のように A さんと B さんが同時に発声し、C さんもそれにかぶせるように発声したときにどうなるかの確認です。  </p>
+<p>A と B（同時）：「<strong>A と B が同時に話しています</strong>」<br>C：「<strong>そして最後に私が話します</strong>」</p>
+<p>こちらもパターン 5 同様、全員登場するパターンです。</p>
+<p><img src="image-14.png" alt=""><br><audio controls src="6-abc.wav" title=""></audio>  </p>
+<p>最初のセリフ自体の認識は完璧ですが、A さんと B さんが同時に発声しているにもかかわらず、A さんのみが発声していることになってしまいました。<br>また、”いいなあ” と誰も発声していないのですが、なぜか認識されています。<br>C さんのセリフについては、C さんを話者として認識してくれていますね。<br>最後にひとりで発声している時のセリフ (～～私が話しています) は正しく文字起こしされているものの、やはり声が重なっている部分の文字起こしは少々不正確です。</p>
+<h2 id="まとめ"><a href="#まとめ" class="headerlink" title="まとめ"></a>まとめ</h2><p>以上の検証の結果を表にまとめました。</p>
+<table>
+<thead>
+<tr>
+<th>パターン</th>
+<th>30代、男性 (Aさん)</th>
+<th>20代、男性 (Bさん)</th>
+<th>20代、女性 (Cさん)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1. 自然な抑揚のパターン</td>
+<td>〇</td>
+<td>〇</td>
+<td>◎</td>
+</tr>
+<tr>
+<td>2. 抑揚を不自然にしたパターン</td>
+<td>△</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>3. 抑揚を抑えたパターン</td>
+<td>–</td>
+<td>○</td>
+<td>–</td>
+</tr>
+<tr>
+<td>4. ノイズがある状態で話すパターン</td>
+<td>–</td>
+<td>–</td>
+<td>×</td>
+</tr>
+<tr>
+<td>5. 話者を変更しながら連続して話すパターン</td>
+<td>◎</td>
+<td>◎</td>
+<td>◎</td>
+</tr>
+<tr>
+<td>6. 同時に発話 (オーバーラップ) するパターン</td>
+<td>◎</td>
+<td>×</td>
+<td>△</td>
+</tr>
+</tbody></table>
+<p>【評価】<br>◎ … ほぼ完璧に認識されている<br>○ … 一部不明瞭ながらも概ね認識されている<br>△ … 不明瞭な部分が多く概ね認識されていない<br>× … 不明瞭であり認識されていない<br>– … 未実施  </p>
+<p>いかがだったでしょうか？<br>本検証では、Teams の Intelligent Speaker がどのような条件で話者を正しく認識し、どのような場面で誤認識が起こりやすいかを多角的に確認しました。<br>結果、今回の検証では自然な話し方や話者が明確に分かれている状況では高い精度を示す一方、複数人が同時に話す場面やノイズが強い環境では認識が難しくなる傾向が見られました。<br>皆さまがより快適で効率的な Teams 活用を進めていくうえで、本記事が少しでもお役に立てば幸いです。</p>
+<p><img src="image-15.png" alt=""></p>
+<h2 id="補足"><a href="#補足" class="headerlink" title="補足"></a>補足</h2><p>冒頭の通り、Intelligent Speaker で利用する AI は入力する音声や環境などによって、結果がある程度変動します。<br>弊社では日々この AI の精度向上に努めておりますが、状況によっては期待通りに文字起こしがなされなかったり、話者を認識しづらかったりする場合があります。</p>
+<p>そんなときは、トランスクリプト内の “このトランスクリプトは役に立ちますか?” のサムズ アップ / サムズ ダウンのボタン (下図参照) より弊社までフィードバック (日本語可) をお寄せください！<br>こちらのフィードバックは弊社開発部門が直接確認し、製品品質の向上の参考としております。<br>AI の特性上、フィードバックを多くお寄せいただければいただけるほど、精度向上が期待できるものとなりますので是非忌憚なきご意見を頂戴できればと思います。</p>
+<p><img src="image-16.png" alt=""><br>※トランスクリプト内の “このトランスクリプトは役立ちますか?” の箇所 (赤枠) </p>
+<!-- 文書の最後に -->
+<p><a href="#">トップへ戻る</a><br>(文責: 粂田)</p>
+<p>NOTE : </p>
+<ul>
+<li>2026年01月09日に、初版を公開しました。</li>
+</ul>
+
+      
+      
+        <div class="article-disclaimer">
+        
+          <p>※本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。</p>
+        
+        </div>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Copilot/" rel="tag">Copilot</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/MTR/" rel="tag">MTR</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li></ul>
+
+        
+        <a href="https://github.com/jpucsupport/blog/edit/master/articles/teams/Teams%20-%20Intelligent%20Speaker%20(音声認識%20%20話者認識)%20を検証してみた.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="../Teams%20-%20%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AB%20AI%20%E3%81%8C%E7%99%BB%E5%A0%B4%EF%BC%81Teams%20%E3%81%AE%20AI%20%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%A7%E6%A5%AD%E5%8B%99%E3%82%92%E3%82%82%E3%81%A3%E3%81%A8%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%81%AB/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前の記事</strong>
+      <div class="article-nav-title">Teams - ワークフローアプリに AI が登場！Teams の AI ワークフローで業務をもっとスマートに</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近の投稿</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="">Teams - Intelligent Speaker (音声認識 話者認識) を検証してみた</a>
+          </li>
+        
+          <li>
+            <a href="../Teams%20-%20%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AB%20AI%20%E3%81%8C%E7%99%BB%E5%A0%B4%EF%BC%81Teams%20%E3%81%AE%20AI%20%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%A7%E6%A5%AD%E5%8B%99%E3%82%92%E3%82%82%E3%81%A3%E3%81%A8%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%81%AB/">Teams - ワークフローアプリに AI が登場！Teams の AI ワークフローで業務をもっとスマートに</a>
+          </li>
+        
+          <li>
+            <a href="../Teams%20-%20%E6%96%B0%E3%81%97%E3%81%84%20Teams%20%E3%81%AE%E6%97%A2%E7%9F%A5%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">新しい Teams の既知の問題について</a>
+          </li>
+        
+          <li>
+            <a href="../Teams%20-%20Copilot%20%E3%81%AB%20Teams%20%E4%BC%9A%E8%AD%B0%E3%81%AE%E9%80%B2%E8%A1%8C%E3%83%BB%E8%AD%B0%E4%BA%8B%E9%8C%B2%E3%82%82%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%EF%BC%81%E3%80%8C%E3%83%95%E3%82%A1%E3%82%B7%E3%83%AA%E3%83%86%E3%83%BC%E3%82%BF%E3%83%BC%20%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%80%8D%E3%81%A8%E3%81%AF/">Teams - Copilot に Teams 会議の進行・議事録もおまかせ！「ファシリテーター エージェント」とは</a>
+          </li>
+        
+          <li>
+            <a href="../Teams%20-%20%E3%82%BF%E3%82%A6%E3%83%B3%E3%83%9B%E3%83%BC%E3%83%AB%E3%81%AE%20%5B%E4%BC%9A%E8%AD%B0%E3%82%92%E9%96%8B%E5%A7%8B%5D%20%E3%82%92%E5%AE%9F%E8%A1%8C%E5%BE%8C%E3%80%812%20%E3%81%8B%E6%9C%88%E4%BB%A5%E9%99%8D%E3%81%AB%E5%86%8D%E5%BA%A6%E5%8F%82%E5%8A%A0%E3%81%97%E3%81%9F%E9%9A%9B%E3%81%AB%20Teams%20%E4%BC%9A%E8%AD%B0%E5%BD%A2%E5%BC%8F%E3%81%A7%E3%81%AE%E5%8F%82%E5%8A%A0%E3%81%A8%E3%81%AA%E3%82%8B/">Teams - タウン ホールの [会議を開始] を実行後、2 か月以降に再度参加した際に Teams 会議形式での参加となる</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグ</h3>
+    <div class="widget">
+      <!-- <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/BYOD-%E3%83%AB%E3%83%BC%E3%83%A0/" rel="tag">BYOD ルーム</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Classic-Teams/" rel="tag">Classic Teams</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Client/" rel="tag">Client</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Copilot/" rel="tag">Copilot</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Edge/" rel="tag">Edge</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Guest-User/" rel="tag">Guest User</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Information/" rel="tag">Information</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Install/" rel="tag">Install</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Intelligent-Speaker/" rel="tag">Intelligent Speaker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Introduction/" rel="tag">Introduction</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Live-Events-Live-Events-Assitance-Program/" rel="tag">Live Events / Live Events Assitance Program</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Lync-Server-Skype-for-Business-Server/" rel="tag">Lync Server / Skype for Business Server</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/MTR/" rel="tag">MTR</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Media/" rel="tag">Media</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Meeting/" rel="tag">Meeting</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Mobile/" rel="tag">Mobile</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/New-Teams/" rel="tag">New Teams</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Outlook/" rel="tag">Outlook</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/PowerShell/" rel="tag">PowerShell</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Presence/" rel="tag">Presence</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Proxy/" rel="tag">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Recording/" rel="tag">Recording</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Search/" rel="tag">Search</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Settings/" rel="tag">Settings</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Skype-for-Business-Online/" rel="tag">Skype for Business Online</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Teams-2-1/" rel="tag">Teams 2.1</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Troubleshooting/" rel="tag">Troubleshooting</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/VDI/" rel="tag">VDI</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Windows/" rel="tag">Windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98/" rel="tag">音声認識</a></li></ul>  -->
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Skype-for-Business-Online/">Skype for Business Online</a><span class="tag-list-count">2</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Skype-for-Business-Online/Client">Client</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Skype-for-Business-Online/Information">Information</a><span class="tag-list-count">1</span></li></ul></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Lync-Server-Skype-for-Business-Server/">Lync Server / Skype for Business Server</a><span class="tag-list-count">1</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Lync-Server-Skype-for-Business-Server/Edge">Edge</a><span class="tag-list-count">1</span></li></ul></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Information/">Information</a><span class="tag-list-count">33</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Client">Client</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Guest-User">Guest User</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Install">Install</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Meeting">Meeting</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Mobile">Mobile</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/New-Teams">New Teams</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/PowerShell">PowerShell</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Search">Search</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Settings">Settings</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Skype-for-Business-Online">Skype for Business Online</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Teams">Teams</a><span class="tag-list-count">30</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Teams-2-1">Teams 2.1</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/VDI">VDI</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Windows">Windows</a><span class="tag-list-count">1</span></li></ul></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Live-Events-Live-Events-Assitance-Program/">Live Events / Live Events Assitance Program</a><span class="tag-list-count">5</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Live-Events-Live-Events-Assitance-Program/Introduction">Introduction</a><span class="tag-list-count">1</span></li></ul></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Teams/">Teams</a><span class="tag-list-count">49</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/BYOD-%E3%83%AB%E3%83%BC%E3%83%A0">BYOD ルーム</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Client">Client</a><span class="tag-list-count">4</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Copilot">Copilot</a><span class="tag-list-count">3</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Guest-User">Guest User</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Information">Information</a><span class="tag-list-count">30</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Install">Install</a><span class="tag-list-count">4</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Intelligent-Speaker">Intelligent Speaker</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/MTR">MTR</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Media">Media</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Meeting">Meeting</a><span class="tag-list-count">4</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Mobile">Mobile</a><span class="tag-list-count">5</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/New-Teams">New Teams</a><span class="tag-list-count">3</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Outlook">Outlook</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/PowerShell">PowerShell</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Presence">Presence</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Proxy">Proxy</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Recording">Recording</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Search">Search</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Settings">Settings</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Teams-2-1">Teams 2.1</a><span class="tag-list-count">3</span></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">アーカイブ</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2026/01/">2026 / 01</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2025/12/">2025 / 12</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2025/11/">2025 / 11</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2025/10/">2025 / 10</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2025/07/">2025 / 07</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2025/06/">2025 / 06</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/12/">2024 / 12</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/11/">2024 / 11</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/07/">2024 / 07</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/05/">2024 / 05</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/04/">2024 / 04</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/03/">2024 / 03</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/01/">2024 / 01</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/11/">2023 / 11</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/09/">2023 / 09</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/08/">2023 / 08</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/06/">2023 / 06</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/05/">2023 / 05</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/04/">2023 / 04</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/03/">2023 / 03</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/02/">2023 / 02</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/01/">2023 / 01</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/12/">2022 / 12</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/11/">2022 / 11</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/10/">2022 / 10</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/09/">2022 / 09</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/06/">2022 / 06</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/04/">2022 / 04</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/03/">2022 / 03</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/02/">2022 / 02</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/09/">2021 / 09</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/08/">2021 / 08</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/07/">2021 / 07</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/05/">2021 / 05</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/04/">2021 / 04</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグクラウド</h3>
+    <div class="widget tagcloud">
+      <a href="../../tags/BYOD-%E3%83%AB%E3%83%BC%E3%83%A0/" style="font-size: 10px;">BYOD ルーム</a> <a href="../../tags/Classic-Teams/" style="font-size: 11.67px;">Classic Teams</a> <a href="../../tags/Client/" style="font-size: 16.67px;">Client</a> <a href="../../tags/Copilot/" style="font-size: 13.33px;">Copilot</a> <a href="../../tags/Edge/" style="font-size: 10px;">Edge</a> <a href="../../tags/Guest-User/" style="font-size: 11.67px;">Guest User</a> <a href="../../tags/Information/" style="font-size: 18.33px;">Information</a> <a href="../../tags/Install/" style="font-size: 15px;">Install</a> <a href="../../tags/Intelligent-Speaker/" style="font-size: 10px;">Intelligent Speaker</a> <a href="../../tags/Introduction/" style="font-size: 10px;">Introduction</a> <a href="../../tags/Live-Events-Live-Events-Assitance-Program/" style="font-size: 16.67px;">Live Events / Live Events Assitance Program</a> <a href="../../tags/Lync-Server-Skype-for-Business-Server/" style="font-size: 10px;">Lync Server / Skype for Business Server</a> <a href="../../tags/MTR/" style="font-size: 10px;">MTR</a> <a href="../../tags/Media/" style="font-size: 10px;">Media</a> <a href="../../tags/Meeting/" style="font-size: 15px;">Meeting</a> <a href="../../tags/Mobile/" style="font-size: 16.67px;">Mobile</a> <a href="../../tags/New-Teams/" style="font-size: 16.67px;">New Teams</a> <a href="../../tags/Outlook/" style="font-size: 10px;">Outlook</a> <a href="../../tags/PowerShell/" style="font-size: 11.67px;">PowerShell</a> <a href="../../tags/Presence/" style="font-size: 10px;">Presence</a> <a href="../../tags/Proxy/" style="font-size: 10px;">Proxy</a> <a href="../../tags/Recording/" style="font-size: 10px;">Recording</a> <a href="../../tags/Search/" style="font-size: 10px;">Search</a> <a href="../../tags/Settings/" style="font-size: 10px;">Settings</a> <a href="../../tags/Skype-for-Business-Online/" style="font-size: 11.67px;">Skype for Business Online</a> <a href="../../tags/Teams/" style="font-size: 20px;">Teams</a> <a href="../../tags/Teams-2-1/" style="font-size: 16.67px;">Teams 2.1</a> <a href="../../tags/Troubleshooting/" style="font-size: 10px;">Troubleshooting</a> <a href="../../tags/VDI/" style="font-size: 15px;">VDI</a> <a href="../../tags/Windows/" style="font-size: 13.33px;">Windows</a> <a href="../../tags/%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98/" style="font-size: 10px;">音声認識</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2026 CSS Japan<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="../../index.html" class="mobile-nav-link">Home</a>
+  
+    <a href="../../archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="../../js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
