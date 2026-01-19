@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Teams - チャットに添付したファイルが「送信できませんでした」で送れないときに確認したいこと | Japan Unified Communications Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="はじめに A 大規模なグループ チャットや会議チャットの場合 B グループ チャット内にゲスト ユーザーなど組織外のユーザーが含まれる場合 おわりに   はじめにこんにちは、 Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。 Teams のチャットではファイルを添付したうえでメッセージを送ることが可">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Teams - チャットに添付したファイルが「送信できませんでした」で送れないときに確認したいこと">
+<meta property="og:url" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%81%AB%E6%B7%BB%E4%BB%98%E3%81%97%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8C%E3%80%8C%E9%80%81%E4%BF%A1%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93%E3%81%A7%E3%81%97%E3%81%9F%E3%80%8D%E3%81%A7%E9%80%81%E3%82%8C%E3%81%AA%E3%81%84%E3%81%A8%E3%81%8D%E3%81%AB%E7%A2%BA%E8%AA%8D%E3%81%97%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8/index.html">
+<meta property="og:site_name" content="Japan Unified Communications Support Blog">
+<meta property="og:description" content="はじめに A 大規模なグループ チャットや会議チャットの場合 B グループ チャット内にゲスト ユーザーなど組織外のユーザーが含まれる場合 おわりに   はじめにこんにちは、 Unified Communications サポート チームです。いつも Microsoft Teams をご利用いただきありがとうございます。 Teams のチャットではファイルを添付したうえでメッセージを送ることが可">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%81%AB%E6%B7%BB%E4%BB%98%E3%81%97%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8C%E3%80%8C%E9%80%81%E4%BF%A1%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93%E3%81%A7%E3%81%97%E3%81%9F%E3%80%8D%E3%81%A7%E9%80%81%E3%82%8C%E3%81%AA%E3%81%84%E3%81%A8%E3%81%8D%E3%81%AB%E7%A2%BA%E8%AA%8D%E3%81%97%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8/image01.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%81%AB%E6%B7%BB%E4%BB%98%E3%81%97%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8C%E3%80%8C%E9%80%81%E4%BF%A1%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93%E3%81%A7%E3%81%97%E3%81%9F%E3%80%8D%E3%81%A7%E9%80%81%E3%82%8C%E3%81%AA%E3%81%84%E3%81%A8%E3%81%8D%E3%81%AB%E7%A2%BA%E8%AA%8D%E3%81%97%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8/image02.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%81%AB%E6%B7%BB%E4%BB%98%E3%81%97%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8C%E3%80%8C%E9%80%81%E4%BF%A1%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93%E3%81%A7%E3%81%97%E3%81%9F%E3%80%8D%E3%81%A7%E9%80%81%E3%82%8C%E3%81%AA%E3%81%84%E3%81%A8%E3%81%8D%E3%81%AB%E7%A2%BA%E8%AA%8D%E3%81%97%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8/image03.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%81%AB%E6%B7%BB%E4%BB%98%E3%81%97%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8C%E3%80%8C%E9%80%81%E4%BF%A1%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93%E3%81%A7%E3%81%97%E3%81%9F%E3%80%8D%E3%81%A7%E9%80%81%E3%82%8C%E3%81%AA%E3%81%84%E3%81%A8%E3%81%8D%E3%81%AB%E7%A2%BA%E8%AA%8D%E3%81%97%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8/image04.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%81%AB%E6%B7%BB%E4%BB%98%E3%81%97%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8C%E3%80%8C%E9%80%81%E4%BF%A1%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93%E3%81%A7%E3%81%97%E3%81%9F%E3%80%8D%E3%81%A7%E9%80%81%E3%82%8C%E3%81%AA%E3%81%84%E3%81%A8%E3%81%8D%E3%81%AB%E7%A2%BA%E8%AA%8D%E3%81%97%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8/image05.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%81%AB%E6%B7%BB%E4%BB%98%E3%81%97%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8C%E3%80%8C%E9%80%81%E4%BF%A1%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93%E3%81%A7%E3%81%97%E3%81%9F%E3%80%8D%E3%81%A7%E9%80%81%E3%82%8C%E3%81%AA%E3%81%84%E3%81%A8%E3%81%8D%E3%81%AB%E7%A2%BA%E8%AA%8D%E3%81%97%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8/image06.png">
+<meta property="og:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%81%AB%E6%B7%BB%E4%BB%98%E3%81%97%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8C%E3%80%8C%E9%80%81%E4%BF%A1%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93%E3%81%A7%E3%81%97%E3%81%9F%E3%80%8D%E3%81%A7%E9%80%81%E3%82%8C%E3%81%AA%E3%81%84%E3%81%A8%E3%81%8D%E3%81%AB%E7%A2%BA%E8%AA%8D%E3%81%97%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8/image07.png">
+<meta property="article:published_time" content="2026-01-19T05:00:00.000Z">
+<meta property="article:modified_time" content="2026-01-19T05:07:51.349Z">
+<meta property="article:author" content="CSS Japan">
+<meta property="article:tag" content="Teams">
+<meta property="article:tag" content="Chat">
+<meta property="article:tag" content="Troubleshooting">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%81%AB%E6%B7%BB%E4%BB%98%E3%81%97%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8C%E3%80%8C%E9%80%81%E4%BF%A1%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93%E3%81%A7%E3%81%97%E3%81%9F%E3%80%8D%E3%81%A7%E9%80%81%E3%82%8C%E3%81%AA%E3%81%84%E3%81%A8%E3%81%8D%E3%81%AB%E7%A2%BA%E8%AA%8D%E3%81%97%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8/image01.png">
+  
+    <link rel="alternate" href="../../atom.xml" title="Japan Unified Communications Support Blog" type="application/atom+xml">
+  
+
+  <link rel="icon" href="../../favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="../../css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        <div id="ms-logo"></div>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+        <a class="main-nav-link" href="https://cssjpn.github.io/" target="_blank" rel="noopener">サポート情報</a>
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="../../atom.xml" title="RSSフィード"></a>
+        
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//www.bing.com/search" method="get" accept-charset="UTF-8" name="bing-search" onsubmit="var f=this;if(f['q'].value){var searchUrl =  'https://www.bing.com/search?q=' +  encodeURIComponent(f['q'].value + ' site:' + f['sitesearch'].value) ;window.open(searchUrl, 'blank') };return false;" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="検索"><button type="submit" id="nav-search-btn" class="search-form-submit"></button><input type="hidden" name="sitesearch" value="https://jpucsupport.github.io/blog"></form>
+      </div>
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="../../index.html" id="logo">Japan Unified Communications Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="../../index.html" id="subtitle">日本マイクロソフトの Teams と Skype for Business に関するサポート情報のブログです。</a>
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-teams/Teams - チャットに添付したファイルが「送信できませんでした」で送れないときに確認したいこと" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Teams - チャットに添付したファイルが「送信できませんでした」で送れないときに確認したいこと
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="" class="article-date-single">
+  <time datetime="2026-01-19T05:00:00.000Z" itemprop="datePublished">2026-01-19</time>
+</a>
+        
+        
+        <a href="https://github.com/jpucsupport/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+673a5c64-bd60-5c89-b104-b28874270a4f%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BTeams+-+%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%81%AB%E6%B7%BB%E4%BB%98%E3%81%97%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8C%E3%80%8C%E9%80%81%E4%BF%A1%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93%E3%81%A7%E3%81%97%E3%81%9F%E3%80%8D%E3%81%A7%E9%80%81%E3%82%8C%E3%81%AA%E3%81%84%E3%81%A8%E3%81%8D%E3%81%AB%E7%A2%BA%E8%AA%8D%E3%81%97%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8%5D%28https%3A%2F%2Fjpucsupport.github.io%2Fblog%2Fteams%2FTeams%2520-%2520%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%81%AB%E6%B7%BB%E4%BB%98%E3%81%97%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8C%E3%80%8C%E9%80%81%E4%BF%A1%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93%E3%81%A7%E3%81%97%E3%81%9F%E3%80%8D%E3%81%A7%E9%80%81%E3%82%8C%E3%81%AA%E3%81%84%E3%81%A8%E3%81%8D%E3%81%AB%E7%A2%BA%E8%AA%8D%E3%81%97%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8%2F%29%0A*+Content+Source%3A+%5Barticles%2Fteams%2FTeams+-+%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%81%AB%E6%B7%BB%E4%BB%98%E3%81%97%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8C%E3%80%8C%E9%80%81%E4%BF%A1%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93%E3%81%A7%E3%81%97%E3%81%9F%E3%80%8D%E3%81%A7%E9%80%81%E3%82%8C%E3%81%AA%E3%81%84%E3%81%A8%E3%81%8D%E3%81%AB%E7%A2%BA%E8%AA%8D%E3%81%97%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8.md%5D%28https%3A%2F%2Fgithub.com%2Fjpucsupport%2Fblog%2Fblob%2Fmaster%2Farticles%2Fteams%2FTeams%2520-%2520%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%81%AB%E6%B7%BB%E4%BB%98%E3%81%97%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8C%E3%80%8C%E9%80%81%E4%BF%A1%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93%E3%81%A7%E3%81%97%E3%81%9F%E3%80%8D%E3%81%A7%E9%80%81%E3%82%8C%E3%81%AA%E3%81%84%E3%81%A8%E3%81%8D%E3%81%AB%E7%A2%BA%E8%AA%8D%E3%81%97%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        
+        <a data-url="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%81%AB%E6%B7%BB%E4%BB%98%E3%81%97%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8C%E3%80%8C%E9%80%81%E4%BF%A1%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93%E3%81%A7%E3%81%97%E3%81%9F%E3%80%8D%E3%81%A7%E9%80%81%E3%82%8C%E3%81%AA%E3%81%84%E3%81%A8%E3%81%8D%E3%81%AB%E7%A2%BA%E8%AA%8D%E3%81%97%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8/" data-id="cmkkpf2qp001s9enze8dpdlwu" class="article-share-link">共有</a>
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><a href="#はじめに">はじめに</a></li>
+<li><a href="#A-大規模なグループ-チャットや会議チャットの場合">A 大規模なグループ チャットや会議チャットの場合</a></li>
+<li><a href="#B-グループ-チャット内にゲスト-ユーザーなど組織外のユーザーが含まれる場合">B グループ チャット内にゲスト ユーザーなど組織外のユーザーが含まれる場合</a></li>
+<li><a href="#おわりに">おわりに</a></li>
+</ul>
+<hr>
+<h2 id="はじめに"><a href="#はじめに" class="headerlink" title="はじめに"></a>はじめに</h2><p>こんにちは、 Unified Communications サポート チームです。<br>いつも Microsoft Teams をご利用いただきありがとうございます。</p>
+<p>Teams のチャットではファイルを添付したうえでメッセージを送ることが可能ですが、メッセージに添付されたファイルのアップロードが想定通り行われないことによって、「送信できませんでした」というメッセージが表示されることがあります。</p>
+<p><img src="image01.png" alt="エラーメッセージ例"></p>
+<p>本記事では、上記事象に対する代表的なシナリオとその対応策についてご紹介いたします。</p>
+<p><em>※ 本記事の内容は執筆時点 (2026 年 1 月 現在) の情報・動作に基づくものとなります。</em></p>
+<h2 id="A-大規模なグループ-チャットや会議チャットの場合"><a href="#A-大規模なグループ-チャットや会議チャットの場合" class="headerlink" title="A 大規模なグループ チャットや会議チャットの場合"></a>A 大規模なグループ チャットや会議チャットの場合</h2><p><strong>&lt;シナリオ&gt;</strong></p>
+<p>100 人を超える参加者を含むグループ チャット・会議チャットでは、[現在このチャットに参加しているユーザー] のアクセス範囲でファイルが添付されたメッセージを送ることができない場合がございます。</p>
+<p>これは 100 人を超えるユーザーが含まれるチャットでは、上記のアクセス範囲は推奨されないためになります。</p>
+<p><strong>&lt;対応策&gt;</strong></p>
+<p>このシナリオの場合、<strong>ファイルのリンク設定を [すべてのユーザー] や [“組織名”のユーザー] に変更</strong>いただくことで事象の改善が期待されます。</p>
+<p><img src="image02.png" alt="アクセス範囲の設定箇所"></p>
+<div class="markdown-alert markdown-alert-note">
+  <p class="markdown-alert-title">ℹ️ NOTE</p>
+  <p>詳細は以下公開情報に記載がございますので、こちらも合わせてご参照くださいませ。</p>
+<p>📖 <a href="https://learn.microsoft.com/ja-jp/troubleshoot/microsoftteams/files/cannot-share-files-in-large-chat" target="_blank" rel="noopener">大規模なグループ チャットまたは会議チャットでファイルを共有できない</a></p>
+
+</div>
+<div class="markdown-alert markdown-alert-warning">
+  <p class="markdown-alert-title">⚠️ WARNING</p>
+  <p>ファイルのリンク設定を [現在このチャットに参加しているユーザー] から、[すべてのユーザー] や [“組織名”のユーザー] に変更することで、ファイルの共有範囲は変更前と比較して、広い設定となる点ご留意ください。</p>
+
+</div>
+
+<h2 id="B-グループ-チャット内にゲスト-ユーザーなど組織外のユーザーが含まれる場合"><a href="#B-グループ-チャット内にゲスト-ユーザーなど組織外のユーザーが含まれる場合" class="headerlink" title="B グループ チャット内にゲスト ユーザーなど組織外のユーザーが含まれる場合"></a>B グループ チャット内にゲスト ユーザーなど組織外のユーザーが含まれる場合</h2><p><strong>&lt;シナリオ&gt;</strong></p>
+<p>Teams のグループ チャットや会議チャットにゲスト ユーザーや組織外のユーザーが含まれている場合、「送信できませんでした」のエラーが発生することがございます。</p>
+<p>こちらのシナリオは [クラウド ファイルの添付] を選択し OneDrive 内のファイルを共有しようとする際、SharePoint Online (OneDrive) に設定されているアクセス権のポリシーが競合することで発生している可能性がございます。</p>
+<p>例えば、 SharePoint 管理センター内の “共有” 設定を以下とします：</p>
+<ul>
+<li>外部共有 &gt; OneDrive &gt; コンテンツを共有できる相手 &gt; [自分の組織内ユーザーのみ]</li>
+<li>ファイルとフォルダーのリンク &gt; ユーザーが SharePoint と OneDrive でファイルやフォルダを共有する際、デフォルトで選択されるリンクの種類を選択します。&gt; [特定のユーザー（ユーザーが指定したユーザーのみ）]</li>
+</ul>
+<p><img src="image03.png" alt="SharePoint 管理センターの設定"></p>
+<p>上記設定の場合、Teams はグループ チャットのゲスト ユーザーを含むメンバー全員にファイルのアクセスを付与しようとしますが、この動作が OneDrive 側の上述の設定（コンテンツを共有できる相手 &gt; [自分の組織内ユーザーのみ]）と競合する状況となります。そのため、結果として処理が失敗し「送信できませんでした」のエラーが発生する場合がございます。</p>
+<p><strong>&lt;再現操作例&gt;</strong></p>
+<ol>
+<li>SharePoint 管理センターで、以下の 2 点を設定します</li>
+</ol>
+<ul>
+<li>外部共有 &gt; OneDrive &gt; コンテンツを共有できる相手 &gt; [自分の組織内ユーザーのみ]</li>
+<li>ファイルとフォルダーのリンク &gt; ユーザーが SharePoint と OneDrive でファイルやフォルダを共有する際、デフォルトで選択されるリンクの種類を選択します。&gt; [特定のユーザー（ユーザーが指定したユーザーのみ）]</li>
+</ul>
+<ol start="2">
+<li>Teams でゲスト ユーザーが含まれるグループ チャットにアクセスし、[+] &gt; [ファイルを添付する] &gt; [クラウド ファイルの添付] をクリックします<br><img src="image04.png" alt=""></li>
+<li>OneDrive &gt; [マイファイル] 配下にあるファイルを選択し、[添付] をクリックします</li>
+<li>ファイルが添付されたことを確認し、メッセージを送信します</li>
+<li>「送信できませんでした」のエラーが返される状態となります<br><img src="image05.png" alt=""></li>
+</ol>
+<p><strong>&lt;対応策&gt;</strong></p>
+<p>このシナリオの場合、<strong>ファイルのリンク設定を [“組織名”のユーザー] に変更</strong>いただくことで、メッセージが送信できる状態となります。</p>
+<p><img src="image06.png" alt="リンクの設定 画面"></p>
+<p><img src="image07.png" alt="設定変更後に送信した状態"></p>
+<p>※ ファイルのリンクを SharePoint 管理センターの “外部共有” 設定にあわせる状態となります</p>
+<p>またゲストユーザー含めファイルを共有されたい場合は、SharePoint 管理センターの “外部共有” 設定を [新規および既存のゲスト] や [既存のゲスト] に変更ください。</p>
+<div class="markdown-alert markdown-alert-note">
+  <p class="markdown-alert-title">ℹ️ NOTE</p>
+  <p>SharePoint 管理センター上のファイル共有設定につきましては、以下公開情報もあわせてご参照ください。</p>
+<p>📖 <a href="https://learn.microsoft.com/ja-jp/microsoft-365/solutions/collaborate-as-team#sharepoint-organization-level-sharing-settings" target="_blank" rel="noopener">チーム内のゲストと共同作業する (IT 管理者) | Microsoft Learn &gt; SharePoint 組織レベルの共有設定</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ja-jp/microsoft-365/solutions/collaborate-as-team#sharepoint-organization-level-default-link-settings" target="_blank" rel="noopener">チーム内のゲストと共同作業する (IT 管理者) | Microsoft Learn &gt; SharePoint 組織レベルの既定のリンク設定</a></p>
+
+</div>
+
+<h2 id="おわりに"><a href="#おわりに" class="headerlink" title="おわりに"></a>おわりに</h2><p>本記事では、ファイルを添付したメッセージが「送信できませんでした」のエラーにて送信することができない事象に対する代表的なシナリオとその対応策についてご紹介いたしました。</p>
+<p>本記事が事象の切り分け・整理の一助となりましたら幸いです。また、本記事のシナリオに合致しない事象が見受けられた場合はお気兼ねなく サポートチームまでお問い合わせをいただければと存じます。</p>
+<p>(文責 : 山上)</p>
+<p>NOTE : </p>
+<ul>
+<li>2026年01月19日に、初版を公開しました。</li>
+</ul>
+
+      
+      
+        <div class="article-disclaimer">
+        
+          <p>※本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。</p>
+        
+        </div>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Chat/" rel="tag">Chat</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Troubleshooting/" rel="tag">Troubleshooting</a></li></ul>
+
+        
+        <a href="https://github.com/jpucsupport/blog/edit/master/articles/teams/Teams%20-%20チャットに添付したファイルが「送信できませんでした」で送れないときに確認したいこと.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="../Teams%20-%20Teams%20%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%81%A7%E6%B7%BB%E4%BB%98%E3%81%97%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E6%A8%A9%E9%99%90%E3%81%8C%E7%B7%A8%E9%9B%86%E6%A8%A9%E9%99%90%E3%81%8B%E3%82%89%E8%A1%A8%E7%A4%BA%E6%A8%A9%E9%99%90%E3%81%AB%E5%A4%89%E3%82%8F%E3%82%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前の記事</strong>
+      <div class="article-nav-title">Teams - Teams チャットで添付したファイルの権限が編集権限から表示権限に変わる</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近の投稿</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="">Teams - チャットに添付したファイルが「送信できませんでした」で送れないときに確認したいこと</a>
+          </li>
+        
+          <li>
+            <a href="../Teams%20-%20Teams%20%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%81%A7%E6%B7%BB%E4%BB%98%E3%81%97%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E6%A8%A9%E9%99%90%E3%81%8C%E7%B7%A8%E9%9B%86%E6%A8%A9%E9%99%90%E3%81%8B%E3%82%89%E8%A1%A8%E7%A4%BA%E6%A8%A9%E9%99%90%E3%81%AB%E5%A4%89%E3%82%8F%E3%82%8B/">Teams - Teams チャットで添付したファイルの権限が編集権限から表示権限に変わる</a>
+          </li>
+        
+          <li>
+            <a href="../Teams%20-%20Intelligent%20Speaker%20(%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98%20%20%E8%A9%B1%E8%80%85%E8%AA%8D%E8%AD%98)%20%E3%82%92%E6%A4%9C%E8%A8%BC%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/">Teams - Intelligent Speaker (音声認識 話者認識) を検証してみた</a>
+          </li>
+        
+          <li>
+            <a href="../Teams%20-%20%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AB%20AI%20%E3%81%8C%E7%99%BB%E5%A0%B4%EF%BC%81Teams%20%E3%81%AE%20AI%20%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%A7%E6%A5%AD%E5%8B%99%E3%82%92%E3%82%82%E3%81%A3%E3%81%A8%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%81%AB/">Teams - ワークフローアプリに AI が登場！Teams の AI ワークフローで業務をもっとスマートに</a>
+          </li>
+        
+          <li>
+            <a href="../Teams%20-%20%E6%96%B0%E3%81%97%E3%81%84%20Teams%20%E3%81%AE%E6%97%A2%E7%9F%A5%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">新しい Teams の既知の問題について</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグ</h3>
+    <div class="widget">
+      <!-- <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/BYOD-%E3%83%AB%E3%83%BC%E3%83%A0/" rel="tag">BYOD ルーム</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Chat/" rel="tag">Chat</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Classic-Teams/" rel="tag">Classic Teams</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Client/" rel="tag">Client</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Copilot/" rel="tag">Copilot</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Edge/" rel="tag">Edge</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Guest-User/" rel="tag">Guest User</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Information/" rel="tag">Information</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Install/" rel="tag">Install</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Intelligent-Speaker/" rel="tag">Intelligent Speaker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Introduction/" rel="tag">Introduction</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Live-Events-Live-Events-Assitance-Program/" rel="tag">Live Events / Live Events Assitance Program</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Lync-Server-Skype-for-Business-Server/" rel="tag">Lync Server / Skype for Business Server</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/MTR/" rel="tag">MTR</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Media/" rel="tag">Media</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Meeting/" rel="tag">Meeting</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Mobile/" rel="tag">Mobile</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/New-Teams/" rel="tag">New Teams</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Outlook/" rel="tag">Outlook</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/PowerShell/" rel="tag">PowerShell</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Presence/" rel="tag">Presence</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Proxy/" rel="tag">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Recording/" rel="tag">Recording</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Search/" rel="tag">Search</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Settings/" rel="tag">Settings</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Skype-for-Business-Online/" rel="tag">Skype for Business Online</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Teams-2-1/" rel="tag">Teams 2.1</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Troubleshooting/" rel="tag">Troubleshooting</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/VDI/" rel="tag">VDI</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Windows/" rel="tag">Windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98/" rel="tag">音声認識</a></li></ul>  -->
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Skype-for-Business-Online/">Skype for Business Online</a><span class="tag-list-count">2</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Skype-for-Business-Online/Client">Client</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Skype-for-Business-Online/Information">Information</a><span class="tag-list-count">1</span></li></ul></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Lync-Server-Skype-for-Business-Server/">Lync Server / Skype for Business Server</a><span class="tag-list-count">1</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Lync-Server-Skype-for-Business-Server/Edge">Edge</a><span class="tag-list-count">1</span></li></ul></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Information/">Information</a><span class="tag-list-count">33</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Client">Client</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Guest-User">Guest User</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Install">Install</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Meeting">Meeting</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Mobile">Mobile</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/New-Teams">New Teams</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/PowerShell">PowerShell</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Search">Search</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Settings">Settings</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Skype-for-Business-Online">Skype for Business Online</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Teams">Teams</a><span class="tag-list-count">30</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Teams-2-1">Teams 2.1</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/VDI">VDI</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Information/Windows">Windows</a><span class="tag-list-count">1</span></li></ul></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Live-Events-Live-Events-Assitance-Program/">Live Events / Live Events Assitance Program</a><span class="tag-list-count">5</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Live-Events-Live-Events-Assitance-Program/Introduction">Introduction</a><span class="tag-list-count">1</span></li></ul></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Teams/">Teams</a><span class="tag-list-count">51</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/BYOD-%E3%83%AB%E3%83%BC%E3%83%A0">BYOD ルーム</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Chat">Chat</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Client">Client</a><span class="tag-list-count">4</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Copilot">Copilot</a><span class="tag-list-count">3</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Guest-User">Guest User</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Information">Information</a><span class="tag-list-count">30</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Install">Install</a><span class="tag-list-count">4</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Intelligent-Speaker">Intelligent Speaker</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/MTR">MTR</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Media">Media</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Meeting">Meeting</a><span class="tag-list-count">4</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Mobile">Mobile</a><span class="tag-list-count">5</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/New-Teams">New Teams</a><span class="tag-list-count">3</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Outlook">Outlook</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/PowerShell">PowerShell</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Presence">Presence</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Proxy">Proxy</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Recording">Recording</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Search">Search</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Teams/Settings">Settings</a><span class="tag-list-count">1</span></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">アーカイブ</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2026/01/">2026 / 01</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2025/12/">2025 / 12</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2025/11/">2025 / 11</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2025/10/">2025 / 10</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2025/07/">2025 / 07</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2025/06/">2025 / 06</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/12/">2024 / 12</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/11/">2024 / 11</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/07/">2024 / 07</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/05/">2024 / 05</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/04/">2024 / 04</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/03/">2024 / 03</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/01/">2024 / 01</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/11/">2023 / 11</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/09/">2023 / 09</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/08/">2023 / 08</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/06/">2023 / 06</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/05/">2023 / 05</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/04/">2023 / 04</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/03/">2023 / 03</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/02/">2023 / 02</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/01/">2023 / 01</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/12/">2022 / 12</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/11/">2022 / 11</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/10/">2022 / 10</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/09/">2022 / 09</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/06/">2022 / 06</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/04/">2022 / 04</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/03/">2022 / 03</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/02/">2022 / 02</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/09/">2021 / 09</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/08/">2021 / 08</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/07/">2021 / 07</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/05/">2021 / 05</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/04/">2021 / 04</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグクラウド</h3>
+    <div class="widget tagcloud">
+      <a href="../../tags/BYOD-%E3%83%AB%E3%83%BC%E3%83%A0/" style="font-size: 10px;">BYOD ルーム</a> <a href="../../tags/Chat/" style="font-size: 11.67px;">Chat</a> <a href="../../tags/Classic-Teams/" style="font-size: 11.67px;">Classic Teams</a> <a href="../../tags/Client/" style="font-size: 16.67px;">Client</a> <a href="../../tags/Copilot/" style="font-size: 13.33px;">Copilot</a> <a href="../../tags/Edge/" style="font-size: 10px;">Edge</a> <a href="../../tags/Guest-User/" style="font-size: 11.67px;">Guest User</a> <a href="../../tags/Information/" style="font-size: 18.33px;">Information</a> <a href="../../tags/Install/" style="font-size: 15px;">Install</a> <a href="../../tags/Intelligent-Speaker/" style="font-size: 10px;">Intelligent Speaker</a> <a href="../../tags/Introduction/" style="font-size: 10px;">Introduction</a> <a href="../../tags/Live-Events-Live-Events-Assitance-Program/" style="font-size: 16.67px;">Live Events / Live Events Assitance Program</a> <a href="../../tags/Lync-Server-Skype-for-Business-Server/" style="font-size: 10px;">Lync Server / Skype for Business Server</a> <a href="../../tags/MTR/" style="font-size: 10px;">MTR</a> <a href="../../tags/Media/" style="font-size: 10px;">Media</a> <a href="../../tags/Meeting/" style="font-size: 15px;">Meeting</a> <a href="../../tags/Mobile/" style="font-size: 16.67px;">Mobile</a> <a href="../../tags/New-Teams/" style="font-size: 16.67px;">New Teams</a> <a href="../../tags/Outlook/" style="font-size: 10px;">Outlook</a> <a href="../../tags/PowerShell/" style="font-size: 11.67px;">PowerShell</a> <a href="../../tags/Presence/" style="font-size: 10px;">Presence</a> <a href="../../tags/Proxy/" style="font-size: 10px;">Proxy</a> <a href="../../tags/Recording/" style="font-size: 10px;">Recording</a> <a href="../../tags/Search/" style="font-size: 10px;">Search</a> <a href="../../tags/Settings/" style="font-size: 10px;">Settings</a> <a href="../../tags/Skype-for-Business-Online/" style="font-size: 11.67px;">Skype for Business Online</a> <a href="../../tags/Teams/" style="font-size: 20px;">Teams</a> <a href="../../tags/Teams-2-1/" style="font-size: 16.67px;">Teams 2.1</a> <a href="../../tags/Troubleshooting/" style="font-size: 11.67px;">Troubleshooting</a> <a href="../../tags/VDI/" style="font-size: 15px;">VDI</a> <a href="../../tags/Windows/" style="font-size: 13.33px;">Windows</a> <a href="../../tags/%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98/" style="font-size: 10px;">音声認識</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2026 CSS Japan<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="../../index.html" class="mobile-nav-link">Home</a>
+  
+    <a href="../../archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="../../js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
