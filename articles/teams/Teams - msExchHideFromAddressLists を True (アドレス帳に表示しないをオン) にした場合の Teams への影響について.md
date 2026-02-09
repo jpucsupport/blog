@@ -11,7 +11,7 @@ tags:
 > [!NOTE]
 > 2026-02-09 更新
 > Teams の検索動作については、MC1168293 により更新がされています。[こちら](https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%82%B2%E3%82%B9%E3%83%88%20%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%E6%A4%9C%E7%B4%A2%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB)の記事でもご紹介しておりますので、あわせてご参照ください。
-***************
+
 こんにちは。Unified Communications サポート チームです。
 いつも Microsoft Teams をご利用いただきありがとうございます。
 
