@@ -4,8 +4,9 @@
     <div class="widget">
       <ul>
         <% site.posts.sort('date', -1).limit(5).each(function(post){ %>
+          <% var isArchived = post.tags && post.tags.some(function(tag){ return tag.name === 'Archived'; }); %>
           <li>
-            <a href="<%- url_for(post.path) %>"><%= post.title || '(no title)' %></a>
+            <a href="<%- url_for(post.path) %>"><%= isArchived ? '[Archived] ' + post.title : post.title || '(no title)' %></a>
           </li>
         <% }) %>
       </ul>
