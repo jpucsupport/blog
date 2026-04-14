@@ -3,6 +3,10 @@
   <%- partial('google-analytics') %>
   <%
   var title = page.title;
+  var hasArchivedTag = page.tags && page.tags.some(function(tag){ return tag.name === 'Archived'; });
+  if (hasArchivedTag && title) {
+    title = '[Archived] ' + title;
+  }
 
   if (is_archive()){
     title = __('archive_a');

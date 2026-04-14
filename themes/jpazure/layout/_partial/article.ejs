@@ -20,6 +20,14 @@
       </div>
     <% } %>
     <div class="article-entry" itemprop="articleBody">
+      <% var isArchived = post.tags && post.tags.some(function(tag){ return tag.name === 'Archived'; }); %>
+      <% if (isArchived){ %>
+        <% var d = post.date; var archiveDate = d.format('YYYY/MM/DD'); %>
+        <div class="markdown-alert markdown-alert-warning">
+          <p class="markdown-alert-title">⚠️ WARNING</p>
+          <p>この記事は <%= archiveDate %> をもってアーカイブされました。当記事に記載された情報は最新でない可能性がありますのでご注意ください。</p>
+        </div>
+      <% } %>
       <% if (post.excerpt && index){ %>
         <%- post.excerpt %>
         <% if (theme.excerpt_link){ %>
