@@ -4,7 +4,7 @@ date: 2026-04-21 10:00:00
 tags:
   - Teams
   - Information
-  - chat
+  - Chat
 ---
 
 # Teams - SPO サブサイト上の PDF 共有リンクを Teams チャットに貼り付けて開くとエラーが表示される事象について
