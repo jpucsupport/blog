@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://jpucsupport.github.io/blog/"/>
-  <updated>2026-04-21T00:57:52.000Z</updated>
+  <updated>2026-04-21T01:14:56.000Z</updated>
   <id>https://jpucsupport.github.io/blog/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://jpucsupport.github.io/blog/teams/Teams%20-%20SharePoint%20Online%20%E3%82%B5%E3%83%96%E3%82%B5%E3%82%A4%E3%83%88%E4%B8%8A%E3%81%AE%20PDF%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%82%84%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB%E3%81%AB%E8%B2%BC%E3%82%8A%E4%BB%98%E3%81%91%E3%81%A6%E9%96%8B%E3%81%8F%E3%81%A8%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B/"/>
     <id>https://jpucsupport.github.io/blog/teams/Teams%20-%20SharePoint%20Online%20%E3%82%B5%E3%83%96%E3%82%B5%E3%82%A4%E3%83%88%E4%B8%8A%E3%81%AE%20PDF%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%82%84%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB%E3%81%AB%E8%B2%BC%E3%82%8A%E4%BB%98%E3%81%91%E3%81%A6%E9%96%8B%E3%81%8F%E3%81%A8%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B/</id>
     <published>2026-04-21T01:00:00.000Z</published>
-    <updated>2026-04-21T00:57:52.000Z</updated>
+    <updated>2026-04-21T01:14:56.000Z</updated>
     
     <content type="html"><![CDATA[<p>こんにちは。Unified Communications サポート チームです。<br>いつも Microsoft Teams をご利用いただきありがとうございます。</p><p>現在、Teams メッセージに SharePoint Online (以下 SPO) のサブサイト上に保存された PDF ファイルの共有リンクを貼り付けて投稿した場合、<br>投稿された PDF ファイルをクリックする箇所によっては正しくリンク先に遷移できずエラー画面が表示される事象が確認されております。<br>同様の事象が生じている場合には、本記事をご参照ください。</p><h2 id="発生事象について"><a href="#発生事象について" class="headerlink" title="発生事象について"></a>発生事象について</h2><p>本事象は下記の手順を実施した際に発生いたします。</p><p>&lt;再現手順&gt;  </p><p>1) SPO サブサイト上のドキュメント ライブラリに、任意の PDF ファイルを保存します。<br>2) 保存した PDF ファイルを右クリックし [リンクをコピー] を選択して共有リンクを取得します。<br>3) Teams を起動し、任意のチャットまたはチャネルの投稿欄に取得した共有リンクを貼り付けて送信します。<br>4) 送信された投稿に表示されている PDF のリンクテキスト部分 (下記画像 1 ) を選択します。<br>5) PDF ファイルへ正しく遷移されず、エラー画面 (下記画像 2 )が表示されます。  </p><p>画像 1:エラー発生時の選択箇所<br><img src="error_click.png" alt="">  </p><p>画像 2: 遷移時に表示されるエラー画面例<br><img src="error_message.png" alt="">  </p><h2 id="事象発生条件について"><a href="#事象発生条件について" class="headerlink" title="事象発生条件について"></a>事象発生条件について</h2><p>本事象は以下の条件をいずれも満たす場合に発生することを確認しております。</p><ul><li>Teams にて投稿された PDF ファイル共有リンクが、SPO のサブサイト上に保存されたものであること</li><li>投稿された PDF ファイルのリンクテキスト部分を選択していること</li></ul><p>また本事象は Teams デスクトップクライアント 及び Web 版 Teams いずれにおいても発生することが確認されております。</p><h2 id="回避策について"><a href="#回避策について" class="headerlink" title="回避策について"></a>回避策について</h2><p>本事象は、 リンクテキスト部分を選択し PDF ファイルを開いた場合のみ発生いたしますため、以下いずれかの操作をご利用いただくことで PDF ファイルを正常に閲覧いただけます。</p><ul><li>投稿されたリンクテキスト部分を<strong>右クリック</strong>し、[リンクを開く] を選択する</li><li>投稿されたリンク カードのファイルアイコン部分を選択する</li><li>投稿されたリンク カードの「…」メニューなどから [ブラウザーで開く] を選択する</li><li>投稿されたリンク カードから [ダウンロード] を選択し、ローカルで開く</li><li>リンクをコピーし、ブラウザーのアドレス バーに貼り付けて開く</li></ul><p>また、運用面でのご検討が可能な場合には、以下の構成変更も回避策としてご利用いただけます。</p><ul><li>対象の PDF ファイルを SPO の<strong>サブサイト以外</strong>の場所 (SPO サイト直下のドキュメント ライブラリなど) へ保存する</li></ul><h2 id="本事象の対応状況について"><a href="#本事象の対応状況について" class="headerlink" title="本事象の対応状況について"></a>本事象の対応状況について</h2><p>本事象については、現在弊社開発部門による修正に向けた対応が進められております。<br>現時点での修正予定時期として、<strong>2026 年 6 月末頃</strong> の対応を見込んでおります。<br>※ 上記の修正時期はあくまでも現時点での計画となり、対応状況によっては前後する可能性がございます。</p><p>当該対応に進展があり次第、本 Blog にてご案内いたします。  </p><p>NOTE:  </p><ul><li>2026 年 4 月 21 日に、初版を公開しました。</li></ul>]]></content>
     
@@ -41,7 +41,7 @@
     
       <category term="Teams" scheme="https://jpucsupport.github.io/blog/tags/Teams/"/>
     
-      <category term="chat" scheme="https://jpucsupport.github.io/blog/tags/chat/"/>
+      <category term="Chat" scheme="https://jpucsupport.github.io/blog/tags/Chat/"/>
     
   </entry>
   
@@ -228,9 +228,9 @@
     
       <category term="Teams" scheme="https://jpucsupport.github.io/blog/tags/Teams/"/>
     
-      <category term="Troubleshooting" scheme="https://jpucsupport.github.io/blog/tags/Troubleshooting/"/>
-    
       <category term="Chat" scheme="https://jpucsupport.github.io/blog/tags/Chat/"/>
+    
+      <category term="Troubleshooting" scheme="https://jpucsupport.github.io/blog/tags/Troubleshooting/"/>
     
   </entry>
   
