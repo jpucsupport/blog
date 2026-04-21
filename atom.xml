@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://jpucsupport.github.io/blog/"/>
-  <updated>2026-04-20T05:40:50.000Z</updated>
+  <updated>2026-04-21T00:57:52.000Z</updated>
   <id>https://jpucsupport.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Teams - SPO サブサイト上の PDF 共有リンクを Teams チャットに貼り付けて開くとエラーが表示される事象について</title>
+    <link href="https://jpucsupport.github.io/blog/teams/Teams%20-%20SharePoint%20Online%20%E3%82%B5%E3%83%96%E3%82%B5%E3%82%A4%E3%83%88%E4%B8%8A%E3%81%AE%20PDF%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%82%84%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB%E3%81%AB%E8%B2%BC%E3%82%8A%E4%BB%98%E3%81%91%E3%81%A6%E9%96%8B%E3%81%8F%E3%81%A8%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B/"/>
+    <id>https://jpucsupport.github.io/blog/teams/Teams%20-%20SharePoint%20Online%20%E3%82%B5%E3%83%96%E3%82%B5%E3%82%A4%E3%83%88%E4%B8%8A%E3%81%AE%20PDF%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%82%84%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB%E3%81%AB%E8%B2%BC%E3%82%8A%E4%BB%98%E3%81%91%E3%81%A6%E9%96%8B%E3%81%8F%E3%81%A8%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B/</id>
+    <published>2026-04-21T01:00:00.000Z</published>
+    <updated>2026-04-21T00:57:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは。Unified Communications サポート チームです。<br>いつも Microsoft Teams をご利用いただきありがとうございます。</p><p>現在、Teams メッセージに SharePoint Online (以下 SPO) のサブサイト上に保存された PDF ファイルの共有リンクを貼り付けて投稿した場合、<br>投稿された PDF ファイルをクリックする箇所によっては正しくリンク先に遷移できずエラー画面が表示される事象が確認されております。<br>同様の事象が生じている場合には、本記事をご参照ください。</p><h2 id="発生事象について"><a href="#発生事象について" class="headerlink" title="発生事象について"></a>発生事象について</h2><p>本事象は下記の手順を実施した際に発生いたします。</p><p>&lt;再現手順&gt;  </p><p>1) SPO サブサイト上のドキュメント ライブラリに、任意の PDF ファイルを保存します。<br>2) 保存した PDF ファイルを右クリックし [リンクをコピー] を選択して共有リンクを取得します。<br>3) Teams を起動し、任意のチャットまたはチャネルの投稿欄に取得した共有リンクを貼り付けて送信します。<br>4) 送信された投稿に表示されている PDF のリンクテキスト部分 (下記画像 1 ) を選択します。<br>5) PDF ファイルへ正しく遷移されず、エラー画面 (下記画像 2 )が表示されます。  </p><p>画像 1:エラー発生時の選択箇所<br><img src="error_click.png" alt="">  </p><p>画像 2: 遷移時に表示されるエラー画面例<br><img src="error_message.png" alt="">  </p><h2 id="事象発生条件について"><a href="#事象発生条件について" class="headerlink" title="事象発生条件について"></a>事象発生条件について</h2><p>本事象は以下の条件をいずれも満たす場合に発生することを確認しております。</p><ul><li>Teams にて投稿された PDF ファイル共有リンクが、SPO のサブサイト上に保存されたものであること</li><li>投稿された PDF ファイルのリンクテキスト部分を選択していること</li></ul><p>また本事象は Teams デスクトップクライアント 及び Web 版 Teams いずれにおいても発生することが確認されております。</p><h2 id="回避策について"><a href="#回避策について" class="headerlink" title="回避策について"></a>回避策について</h2><p>本事象は、 リンクテキスト部分を選択し PDF ファイルを開いた場合のみ発生いたしますため、以下いずれかの操作をご利用いただくことで PDF ファイルを正常に閲覧いただけます。</p><ul><li>投稿されたリンクテキスト部分を<strong>右クリック</strong>し、[リンクを開く] を選択する</li><li>投稿されたリンク カードのファイルアイコン部分を選択する</li><li>投稿されたリンク カードの「…」メニューなどから [ブラウザーで開く] を選択する</li><li>投稿されたリンク カードから [ダウンロード] を選択し、ローカルで開く</li><li>リンクをコピーし、ブラウザーのアドレス バーに貼り付けて開く</li></ul><p>また、運用面でのご検討が可能な場合には、以下の構成変更も回避策としてご利用いただけます。</p><ul><li>対象の PDF ファイルを SPO の<strong>サブサイト以外</strong>の場所 (SPO サイト直下のドキュメント ライブラリなど) へ保存する</li></ul><h2 id="本事象の対応状況について"><a href="#本事象の対応状況について" class="headerlink" title="本事象の対応状況について"></a>本事象の対応状況について</h2><p>本事象については、現在弊社開発部門による修正に向けた対応が進められております。<br>現時点での修正予定時期として、<strong>2026 年 6 月末頃</strong> の対応を見込んでおります。<br>※ 上記の修正時期はあくまでも現時点での計画となり、対応状況によっては前後する可能性がございます。</p><p>当該対応に進展があり次第、本 Blog にてご案内いたします。  </p><p>NOTE:  </p><ul><li>2026 年 4 月 21 日に、初版を公開しました。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;こんにちは。Unified Communications サポート チームです。&lt;br&gt;いつも Microsoft Teams をご利用いただきありがとうございます。&lt;/p&gt;
+&lt;p&gt;現在、Teams メッセージに SharePoint Online (以下 SPO) のサブ
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Information" scheme="https://jpucsupport.github.io/blog/tags/Information/"/>
+    
+      <category term="Teams" scheme="https://jpucsupport.github.io/blog/tags/Teams/"/>
+    
+      <category term="chat" scheme="https://jpucsupport.github.io/blog/tags/chat/"/>
+    
+  </entry>
   
   <entry>
     <title>Teams - 外部アクセスの制御 — よくあるご質問と回答</title>
@@ -570,35 +599,6 @@
       <category term="VDI" scheme="https://jpucsupport.github.io/blog/tags/VDI/"/>
     
       <category term="Classic Teams" scheme="https://jpucsupport.github.io/blog/tags/Classic-Teams/"/>
-    
-      <category term="New Teams" scheme="https://jpucsupport.github.io/blog/tags/New-Teams/"/>
-    
-      <category term="Teams 2.1" scheme="https://jpucsupport.github.io/blog/tags/Teams-2-1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Teams - 新しい Teams の前提条件について</title>
-    <link href="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E6%96%B0%E3%81%97%E3%81%84%20Teams%20%E3%81%AE%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/"/>
-    <id>https://jpucsupport.github.io/blog/teams/Teams%20-%20%E6%96%B0%E3%81%97%E3%81%84%20Teams%20%E3%81%AE%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</id>
-    <published>2024-04-16T01:00:00.000Z</published>
-    <updated>2024-04-16T01:00:26.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>こんにちは。Unified Communications サポート チームです。<br>いつも Microsoft Teams をご利用いただきありがとうございます。</p><p>今回は新しい Teams のアーキテクチャや、クライアントごとの前提条件、前提条件に関する事象について、公開情報内に記載がございます内容等を補足説明させていただきます。</p><h2 id="新しい-Teams-の対象となるクライアントについて"><a href="#新しい-Teams-の対象となるクライアントについて" class="headerlink" title="新しい Teams の対象となるクライアントについて"></a>新しい Teams の対象となるクライアントについて</h2><p>新しい Teams のコンセプトは、Teams デスクトップクライアント (Windows, Mac, VDI) と、Teams for Web のみを対象としています。<br>そのため、モバイル (iOS, Andoroid, iPad OS) や Surface Hub、Microsoft Teams Phone については、新しい Teams はリリースされず、これまでのアプリに対して更新が行われます。</p><h2 id="新しい-Teams-の前提条件について"><a href="#新しい-Teams-の前提条件について" class="headerlink" title="新しい Teams の前提条件について"></a>新しい Teams の前提条件について</h2><p>ここからは、クライアントごとに、新しい Teams を正常にインストールするための、ターゲット PC の前提条件をお伝えいたします。</p><h3 id="新しい-Teams-デスクトップクライアントの前提条件について"><a href="#新しい-Teams-デスクトップクライアントの前提条件について" class="headerlink" title="新しい Teams デスクトップクライアントの前提条件について"></a>新しい Teams デスクトップクライアントの前提条件について</h3><table width="1000" border="1">    <tr>        <td>要件</td>        <td>バージョン/説明</td>       </tr>    <tr>        <td>Windows</td>        <td>Windows 10 バージョン 10.0.19041 以降 (Windows 10 LTSC for Teams デスクトップ アプリを除く)</td>    </tr>    <tr>        <td>Windows 10 バージョン 10.0.19041 以降 (Windows 10 LTSC for Teams デスクトップ アプリを除く)</td>        <td>バージョン 1.6.00.4472 以降では、[ 新しい Teams を試す ] トグルが表示されます。<br>重要：クラシック Teams は、ユーザーが従来の Teams と新しい Teams を切り替えることができるようにする場合にのみ必要です。 ユーザーに新しい Teams クライアントのみを表示する場合、この前提条件は省略可能です。</td>    </tr>    <tr>        <td>設定</td>        <td>システム通知 Microsoft Teams の [通知バナーの表示] 設定をオンにして、Teams 通知を受信します。</td>    </tr>    <tr>        <td>Webview2</td>        <td>最新バージョンに更新します。 詳細情報:<a href="https://learn.microsoft.com/ja-jp/microsoft-edge/webview2/concepts/enterprise" target="_blank" rel="noopener" title="Title">WebView2 ランタイムのエンタープライズ管理</a></td>    </tr>    <tr>        <td>配信の最適化 (DO)</td>        <td>DO は、サービス契約の一部として必要な Teams 自動更新を強化します。<br>概要:<a href="https://learn.microsoft.com/ja-jp/windows/deployment/do/waas-delivery-optimization" target="_blank" rel="noopener" title="Title">配信の最適化</a>  <br>メモ： ダウンロード モード 100 (バイパス) はサポートされていません。</td>    </tr></table><p>また上記に加え、新しい Teams を利用する場合、M365 Apps は<a href="https://learn.microsoft.com/ja-jp/officeupdates/update-history-microsoft365-apps-by-date#supported-versions" target="_blank" rel="noopener">サポートされたバージョン</a> を利用いただく必要がございます。<br>参考情報: <a href="https://learn.microsoft.com/ja-jp/microsoftteams/new-teams-deploy-using-policies?tabs=teams-admin-center" target="_blank" rel="noopener">ポリシーを使用して新しい Teams にアップグレードする</a></p><h3 id="新しい-Teams-for-VDI-の前提条件について"><a href="#新しい-Teams-for-VDI-の前提条件について" class="headerlink" title="新しい Teams for VDI の前提条件について"></a>新しい Teams for VDI の前提条件について</h3><table width="1000" border="1">    <tr>        <td>要件</td>        <td>バージョン</td>       </tr>    <tr>        <td>Windows</td>        <td>- Windows 10.0.19041 以降<br>- パブリック プレビューの Windows Server 2019 (10.0.17763) 以降<br>- Windows Server 2022 (10.0.20348) 以降<br>※ Windows Server 2016 はサポートされていません<br>※ Windows サーバーや Windows 10/11 のマルチユーザー環境において、WebView2 フレームワークが必要となります</td>    </tr>    <tr>        <td>WebView2</td>        <td>最小バージョン: 90.0.818.66。 詳細情報: <a href="https://learn.microsoft.com/ja-jp/microsoft-edge/webview2/concepts/enterprise" target="_blank" rel="noopener" title="Title">WebView2 ランタイムのエンタープライズ管理</a></td>    </tr>    <tr>        <td>クラシック Teams アプリ</td>        <td>バージョン 1.6.00.4472 以降では、[新しい Teams を試す] トグルが表示されます。 重要: クラシック Teams は、ユーザーが従来の Teams と新しい Teams を切り替えることができるようにする場合にのみ必要です。 ユーザーに新しい Teams クライアントのみを表示する場合、この前提条件は省略可能です</td>    </tr>    <tr>        <td>設定</td>        <td>システムの通知設定において、Microsoft Teams の [通知バナーの表示] 設定をオンにして、Teams 通知を受信します。</a></td>    </tr>    <tr>        <td>アプリサイドローディングが有効</td>        <td>インストールするすべてのコンピューターでサイドローディングが有効になっていることを確認します。 詳細情報: <a href="https://learn.microsoft.com/ja-jp/windows/application-management/sideload-apps-in-windows" target="_blank" rel="noopener" title="Title"> Windows クライアント デバイスでの基幹業務 (LOB) アプリのサイドロード</a></td>    </tr>    <tr>        <td>ウイルス対策と DLP を除外する</td>        <td>Teams が正しく起動できるように、ウイルス対策アプリケーションと DLP アプリケーションに新しい Teams を追加します。 詳細情報: <a href="https://learn.microsoft.com/ja-jp/microsoftteams/troubleshoot/teams-administration/include-exclude-teams-from-antivirus-dlp" target="_blank" rel="noopener" title="Title"> ウイルス対策アプリケーションと DLP アプリケーションを Teams のブロックから除外する</a></td>    </tr></table><p>参考情報: <a href="https://learn.microsoft.com/ja-jp/microsoftteams/new-teams-vdi-requirements-deploy" target="_blank" rel="noopener">新しい Teams for Virtualized Desktop Infrastructure (VDI) へのアップグレード</a></p><h3 id="新しい-Teams-for-Mac-の前提条件について"><a href="#新しい-Teams-for-Mac-の前提条件について" class="headerlink" title="新しい Teams for Mac の前提条件について"></a>新しい Teams for Mac の前提条件について</h3><ul><li>macOS モントレー (12) 以降で実行している必要があります。</li><li>[新しい Teams を試す] トグルを表示するには、現在の Teams アプリでバージョン 1.6.00.12303 以降が実行されている必要があります。下位バージョンの場合は、オーバーフロー メニュー (…) を選択し、[更新プログラムの確認] &gt; [更新プログラム] を選択し、アプリを再起動します。  </li></ul><p>参考情報: <a href="https://learn.microsoft.com/ja-jp/microsoftteams/new-teams-mac-install-prerequisites" target="_blank" rel="noopener">新しい Teams for Mac - 概要と前提条件</a></p><h3 id="新しい-Teams-for-Web-の前提条件について"><a href="#新しい-Teams-for-Web-の前提条件について" class="headerlink" title="新しい Teams for Web の前提条件について"></a>新しい Teams for Web の前提条件について</h3><ul><li>サードパーティの Cookie を許可するようにブラウザーを構成する必要があります。</li><li>ブラウザーはデスクトップ コンピューターで実行される必要があります。</li><li>ブラウザーは、Microsoft Edge または Chrome の 3 つの最新バージョンがサポートされます。<br>※ 新しい Teams for Web の前提条件に、WebView2 は含まれません。  </li></ul><p>参考情報: <a href="https://learn.microsoft.com/ja-jp/microsoftteams/new-teams-web" target="_blank" rel="noopener">新しい Teams for Web - 概要と前提条件</a></p><h2 id="前提条件に関連して特によくお問い合わせいただく内容"><a href="#前提条件に関連して特によくお問い合わせいただく内容" class="headerlink" title="前提条件に関連して特によくお問い合わせいただく内容"></a>前提条件に関連して特によくお問い合わせいただく内容</h2><p>これまで、WebView2 のインストール自体をブロックしていたお客様も多くいらっしゃるようで、WebView2 が影響した事象を複数お問い合わせいただいております。具体的には、下記のような内容で、いずれも WebView2 のバージョンが古いことに起因して発生しています。</p><ul><li>新しい Teams のウィンドウが動かせない事象</li><li>新しい Teams を起動する際、アプリの画面が白い画面になり、点滅しを繰り返して起動できない事象</li></ul><p>そのため、WebView2 が前提条件に含まれるクライアントにおいては、下記の手順に従い、WebView2 を最新のバージョンへ更新していただきますようお願い申し上げます。<br>なお、新しい Teams for VDI の前提条件において、WebView2 のバージョンは「最小バージョン: 90.0.818.66」と言及されておりますが、上述の通り、WebView2 のバージョンに起因した問題が発生する場合もございますため、可能な限り最新のバージョンをご利用いただくことを推奨しております。</p><p>&lt;確認手順&gt;</p><ol><li>Window スタートボタンをクリックします。</li><li>設定 &gt; アプリ &gt; インストールされたアプリの一覧から、[Microsoft Edge Webview2 Runtime] を選択し、表示されるバージョンを確認します。<br>例: 120.0.2210.133</li><li>以下の URL にアクセスし、”エバーグリーンブートストラップ” 内の [ダウンロード] をクリックし、インストーラを取得します。<br>URL: <a href="https://developer.microsoft.com/ja-jp/microsoft-edge/webview2/?form=MA13LH" target="_blank" rel="noopener">Microsoft Edge WebView2</a></li><li>画面の指示に従ってインストールを実行します。</li><li>新しい Teams クライアントを終了し、一度以下のパスのフォルダを削除することでキャッシュをクリアします。<br>%localappdata%\Packages\MSTeams_8wekyb3d8bbwe フォルダを削除<br>※Teams フォルダが削除できない場合 addin の影響があるため Outlook を終了して再度お試しください。</li><li>新しい Teams を再起動し、動作をご確認ください。</li></ol><br /><p>NOTE:  </p><ul><li>2024 年 1 月 31 日に、初版を公開しました。</li><li>2024 年 2 月 5 日に、追記しました。</li><li>2024 年 2 月 28 日に、追記しました。</li><li>2024 年 4 月 16 日に、追記しました。</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;こんにちは。Unified Communications サポート チームです。&lt;br&gt;いつも Microsoft Teams をご利用いただきありがとうございます。&lt;/p&gt;
-&lt;p&gt;今回は新しい Teams のアーキテクチャや、クライアントごとの前提条件、前提条件に関する事
-      
-    
-    </summary>
-    
-    
-    
-      <category term="Teams" scheme="https://jpucsupport.github.io/blog/tags/Teams/"/>
     
       <category term="New Teams" scheme="https://jpucsupport.github.io/blog/tags/New-Teams/"/>
     
