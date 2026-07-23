@@ -3,7 +3,7 @@ title: Teams - チャネル会議の投稿に [編集] メニューが表示さ�
 date: 2026-07-23 16:00:00
 tags:
     - Teams
-    - How-To
+    - HowTo
     - Meeting
 ---
 
