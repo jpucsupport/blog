@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://jpucsupport.github.io/blog/"/>
-  <updated>2026-07-14T08:13:10.000Z</updated>
+  <updated>2026-07-23T07:05:09.000Z</updated>
   <id>https://jpucsupport.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Teams - チャネル会議の投稿に [編集] メニューが表示されない動作について</title>
+    <link href="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB%E4%BC%9A%E8%AD%B0%E3%81%AE%E6%8A%95%E7%A8%BF%E3%81%A7%20[%E7%B7%A8%E9%9B%86]%20%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/"/>
+    <id>https://jpucsupport.github.io/blog/teams/Teams%20-%20%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB%E4%BC%9A%E8%AD%B0%E3%81%AE%E6%8A%95%E7%A8%BF%E3%81%A7%20[%E7%B7%A8%E9%9B%86]%20%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</id>
+    <published>2026-07-23T07:00:00.000Z</published>
+    <updated>2026-07-23T07:05:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは。Unified Communications サポート チームです。<br>いつも Microsoft Teams をご利用いただきありがとうございます。</p><p>チャネルで開催する会議（チャネル会議）の投稿表示について、従来は表示されていた […]（その他のオプション）&gt; [編集] のメニューが表示されない、というお問い合わせをいただいております。<br>本記事では、チャネル会議の投稿に関する現在の動作と、会議の情報をチャネル上で編集・更新したい場合の代替案についてご紹介いたします。<br>※ 本記事の内容は執筆時点 (2026 年 7 月現在) の情報・動作に基づくものとなります。</p><h2 id="現在のチャネル会議作成後の動作について"><a href="#現在のチャネル会議作成後の動作について" class="headerlink" title="現在のチャネル会議作成後の動作について"></a>現在のチャネル会議作成後の動作について</h2><p>チャネル会議をスケジュールすると、対象のチャネルには会議の案内メッセージが自動的に投稿されます。このメッセージは、会議のスケジュールに伴って自動生成されるシステム メッセージとなり、投稿内容を後から編集することは想定されておりません。<br><img src="image01.png" alt=""></p><p>そのため、チャネル会議のメッセージに対して [編集] メニューが表示されない状態は、現時点での想定動作に基づくものとなります。<br>会議の議題や詳細情報をチャネル上で共有し、必要に応じて編集・更新されたい場合には、後述の <strong>「代替案について」</strong> をご参照ください。</p><h2 id="関連する動作について"><a href="#関連する動作について" class="headerlink" title="関連する動作について"></a>関連する動作について</h2><p>チャネル会議をスケジュールした際に投稿されるメッセージは、チャネルの投稿形式（レイアウト）によって表示が異なっております。</p><h3 id="投稿-レイアウトの場合"><a href="#投稿-レイアウトの場合" class="headerlink" title="投稿 レイアウトの場合"></a>投稿 レイアウトの場合</h3><p>“投稿”レイアウトのチャネルでは、会議をスケジュールすると、会議作成時に入力した詳細情報を含むチャネル メッセージがチャネルに投稿されます。<br><img src="image03.png" alt="会議作成画面"><br><img src="image02.png" alt="投稿 レイアウトのチャネルに表示される会議メッセージの例"></p><h3 id="スレッド-レイアウトの場合"><a href="#スレッド-レイアウトの場合" class="headerlink" title="スレッド レイアウトの場合"></a>スレッド レイアウトの場合</h3><p>“スレッド”レイアウトのチャネルでは、会議の招待に含まれる <strong>詳細セクションはチャネルへ投稿されず、会議カードのみが投稿される</strong> 動作となっております。<br><img src="image04.png" alt="スレッド レイアウトのチャネルに表示される会議メッセージの例"></p><h2 id="代替案について"><a href="#代替案について" class="headerlink" title="代替案について"></a>代替案について</h2><p>会議に関する情報をチャネル上で共有し、投稿後も編集・更新されたい場合には、以下のいずれかの方法をご利用いただけます。</p><h3 id="1-別途チャネル投稿を作成する-もしくは-返信メッセージに記載をする"><a href="#1-別途チャネル投稿を作成する-もしくは-返信メッセージに記載をする" class="headerlink" title="1. 別途チャネル投稿を作成する もしくは 返信メッセージに記載をする"></a>1. 別途チャネル投稿を作成する もしくは 返信メッセージに記載をする</h3><p>会議をスケジュールする際に、会議の案内メッセージとは別に、手動でチャネル メッセージを投稿し、そちらへ議題や詳細情報を記載する方法です。もしくは、チャネル会議作成時に投稿されたメッセージに手動でメッセージを返信し、そこに内容を記載することも可能でございます。<br>手動で投稿されたメッセージであれば、投稿後も […] メニューの [編集] から内容を編集することが可能でございます。</p><h3 id="2-会議の議題を利用する"><a href="#2-会議の議題を利用する" class="headerlink" title="2. 会議の議題を利用する"></a>2. 会議の議題を利用する</h3><p>Teams 会議作成時に追加することができる [議題] の Loop コンポーネントを利用する方法です。こちらは Loop コンポーネントとして、チャネル メッセージに添付することが可能でございます。<br><img src="image05.png" alt="会議作成画面では上記の箇所に作成されます"><br><img src="image06.png" alt="コピーされた Loop コンポーネントはチャネル メッセージに添付することが可能です"><br>また、こちらの Loop コンポーネントは投稿後も必要に応じて内容を更新（編集）いただけるものとなります。</p><p>お手数をおかけし恐縮ではございますが、上記の代替案もあわせて、ご活用いただけますと幸いです。</p></br>NOTE:- 2026 年 7 月 23 日に、初版を公開しました。<p>(文責 : 山上)</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;こんにちは。Unified Communications サポート チームです。&lt;br&gt;いつも Microsoft Teams をご利用いただきありがとうございます。&lt;/p&gt;
+&lt;p&gt;チャネルで開催する会議（チャネル会議）の投稿表示について、従来は表示されていた […]（その
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Teams" scheme="https://jpucsupport.github.io/blog/tags/Teams/"/>
+    
+      <category term="Meeting" scheme="https://jpucsupport.github.io/blog/tags/Meeting/"/>
+    
+      <category term="How-To" scheme="https://jpucsupport.github.io/blog/tags/How-To/"/>
+    
+  </entry>
   
   <entry>
     <title>Teams - 外部アクセスの制御 — よくあるご質問と回答</title>
@@ -572,37 +601,6 @@
     
     
       <category term="Information" scheme="https://jpucsupport.github.io/blog/tags/Information/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Teams - 新しい Teams インストール時のアプリ インストーラーについて</title>
-    <link href="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E6%96%B0%E3%81%97%E3%81%84%20Teams%20%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%99%82%E3%81%AE%E3%82%A2%E3%83%97%E3%83%AA%20%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A9%E3%83%BC%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/"/>
-    <id>https://jpucsupport.github.io/blog/teams/Teams%20-%20%E6%96%B0%E3%81%97%E3%81%84%20Teams%20%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%99%82%E3%81%AE%E3%82%A2%E3%83%97%E3%83%AA%20%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A9%E3%83%BC%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</id>
-    <published>2024-05-29T07:00:00.000Z</published>
-    <updated>2025-10-07T06:06:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>こんにちは。Unified Communications サポート チームです。<br>いつも Microsoft Teams をご利用いただきありがとうございます。</p><p>今回はアプリ インストーラーがインストールされていない、または古いバージョンの場合に新しい Teams をインストールが失敗する事象を説明させていただきます。</p><h2 id="事象の詳細について"><a href="#事象の詳細について" class="headerlink" title="事象の詳細について"></a>事象の詳細について</h2><p>新しい Teams のインストールを試みた際に [アプリ パッケージを開くことができません] 画面が表示され、以下のエラー メッセージが表示されます。</p><blockquote><p>エラー メッセージ「このアプリパッケージは、アプリ インストーラーによるインストールをサポートしていません。特定の制限付き機能を使用しているためです。」</p></blockquote><h2 id="アプリ-インストーラーとは"><a href="#アプリ-インストーラーとは" class="headerlink" title="アプリ インストーラーとは"></a>アプリ インストーラーとは</h2><p>アプリ インストーラーは、Windows の一部として付属しており、これによって MSIX ファイルと MSIXBundles を簡単にインストールできるようになります。<br>アプリ インストーラーは既定では自動的に更新されます。<br>そのため、アプリ インストーラーが古い状態になっている環境は何かしらの要因で自動更新が行えないと推察されます。</p><p>オフライン環境やストアの接続を制限しているなどで自動更新が行えない環境ではパッケージやアプリ インストーラー自体をオフライン インストーラーとして入手していただきインストールする必要がございます。</p><h2 id="事象の対処方法"><a href="#事象の対処方法" class="headerlink" title="事象の対処方法"></a>事象の対処方法</h2><p>以下をご確認いただき、バージョンが 1.22.10861.0 よりも低いバージョンの場合は、手順に従いバージョンを更新いただき、事象が改善するかをご確認くださいますようお願いいたします。</p><ul><li>1.22.10861.0 は 2024/04/09 現在の最新バージョンです</li></ul><ul><li>アプリ インストーラーのバージョンの確認方法<br>1．Powershell を起動します。<br>2．以下のコマンドを実行して Version を確認します。<br>(Get-AppxPackage Microsoft.DesktopAppInstaller).version</li></ul><ul><li>万が一、表示されない場合、Get-AppxPackage Microsoft.DesktopAppInstaller を実行して Version 情報が表示されるかご確認ください</li></ul><ul><li>バージョンを更新する方法</li></ul><ol><li><p>以下の URL にアクセスして、Microsoft.VCLibs.x64.14.00.Desktop.appx を入手します。<br><a href="https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx" target="_blank" rel="noopener">https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx</a></p></li><li><p>PowerShell から以下のコマンドを実行し、Microsoft.VCLibs.x64.14.00.Desktop.appx をインストールします。<br>Add-AppxPackage Microsoft.VCLibs.x64.14.00.Desktop.appx</p></li><li><p>以下の URL にアクセスして、Microsoft.UI.Xaml.2.8.x64.appx を入手します。<br><a href="https://github.com/microsoft/microsoft-ui-xaml/releases/download/v2.8.6/Microsoft.UI.Xaml.2.8.x64.appx" target="_blank" rel="noopener">https://github.com/microsoft/microsoft-ui-xaml/releases/download/v2.8.6/Microsoft.UI.Xaml.2.8.x64.appx</a></p></li><li><p>PowerShell から以下のコマンドを実行し、Microsoft.UI.Xaml.2.8.x64.appx をインストールします。<br>Add-AppxPackage Microsoft.UI.Xaml.2.8.x64.appx</p></li><li><p>以下の URL にアクセスして、Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle を入手します。<br><a href="https://aka.ms/getwinget" target="_blank" rel="noopener">https://aka.ms/getwinget</a></p></li><li><p>PowerShell から以下のコマンドを実行し、Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle をインストールします。<br>Add-AppxPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle</p></li><li><p>手順8 でエラーにならずにインストールできた場合は、次のコマンドでバージョン情報が表示されるか確認ください。<br>  (Get-AppxPackage Microsoft.DesktopAppInstaller).Version<br>  #Version が 1.22.10861.0 になっていることを確認します。</p></li></ol><br /><p>NOTE:  </p><ul><li>2024 年 4 月 9 日に、初版を公開しました。</li><li>2024 年 5 月 29 日に、一部訂正しました。</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;こんにちは。Unified Communications サポート チームです。&lt;br&gt;いつも Microsoft Teams をご利用いただきありがとうございます。&lt;/p&gt;
-&lt;p&gt;今回はアプリ インストーラーがインストールされていない、または古いバージョンの場合に新しい 
-      
-    
-    </summary>
-    
-    
-    
-      <category term="VDI" scheme="https://jpucsupport.github.io/blog/tags/VDI/"/>
-    
-      <category term="Classic Teams" scheme="https://jpucsupport.github.io/blog/tags/Classic-Teams/"/>
-    
-      <category term="New Teams" scheme="https://jpucsupport.github.io/blog/tags/New-Teams/"/>
-    
-      <category term="Teams 2.1" scheme="https://jpucsupport.github.io/blog/tags/Teams-2-1/"/>
     
   </entry>
   
