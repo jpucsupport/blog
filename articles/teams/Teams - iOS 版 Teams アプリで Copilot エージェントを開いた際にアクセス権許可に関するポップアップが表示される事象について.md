@@ -1,5 +1,5 @@
 ---
-title: Teams - iOS 版 Teams アプリで Copilot エージェントを開いた際に「[Copilot エージェント名] がチャットで使用するにはアクセス許可が必要です。」のポップアップが意図せず出現する事象について
+title: Teams - iOS 版 Teams アプリで Copilot エージェントを開いた際にアクセス権許可に関するポップアップが表示される事象について
 date: 2026-09-10 16:00:00
 tags:
   - Teams
@@ -8,7 +8,7 @@ tags:
   - Information
 ---
 
-# Teams - iOS 版 Teams アプリで Copilot エージェントを開いた際に「[Copilot エージェント名] がチャットで使用するにはアクセス許可が必要です。」のポップアップが意図せず出現する事象について
+# Teams - iOS 版 Teams アプリで Copilot エージェントを開いた際にアクセス権許可に関するポップアップが表示される事象について
 こんにちは。Unified Communications サポート チームです。
 いつも Microsoft Teams をご利用いただきありがとうございます。
 
