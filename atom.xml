@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://jpucsupport.github.io/blog/"/>
-  <updated>2026-07-23T08:50:26.000Z</updated>
+  <updated>2026-09-10T06:58:09.000Z</updated>
   <id>https://jpucsupport.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Teams - iOS 版 Teams アプリで Copilot エージェントを開いた際にアクセス権許可に関するポップアップが表示される事象について</title>
+    <link href="https://jpucsupport.github.io/blog/teams/Teams%20-%20iOS%20%E7%89%88%20Teams%20%E3%82%A2%E3%83%97%E3%83%AA%E3%81%A7%20Copilot%20%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%82%92%E9%96%8B%E3%81%84%E3%81%9F%E9%9A%9B%E3%81%AB%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E6%A8%A9%E8%A8%B1%E5%8F%AF%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%83%9D%E3%83%83%E3%83%97%E3%82%A2%E3%83%83%E3%83%97%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B%E4%BA%8B%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/"/>
+    <id>https://jpucsupport.github.io/blog/teams/Teams%20-%20iOS%20%E7%89%88%20Teams%20%E3%82%A2%E3%83%97%E3%83%AA%E3%81%A7%20Copilot%20%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%82%92%E9%96%8B%E3%81%84%E3%81%9F%E9%9A%9B%E3%81%AB%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E6%A8%A9%E8%A8%B1%E5%8F%AF%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%83%9D%E3%83%83%E3%83%97%E3%82%A2%E3%83%83%E3%83%97%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B%E4%BA%8B%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</id>
+    <published>2026-09-10T07:00:00.000Z</published>
+    <updated>2026-09-10T06:58:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは。Unified Communications サポート チームです。<br>いつも Microsoft Teams をご利用いただきありがとうございます。</p><p>iOS 版 Teams アプリで Copilot エージェントとの会話を開いた初回は、”&lt;Copilot エージェント名&gt; がチャットで使用するにはアクセス許可が必要です。” という承諾を求めるポップアップが出現します。<br>こちらのポップアップで一度承諾をしたにもかかわらず、2 回目以降の Copilot エージェントとの会話を開いた際に同じポップアップが出現する事象が確認されています。<br>　<br><img src="image.png" alt="alt text"></p><p>同様の事象が生じている場合には本記事をご参照ください。</p><h2 id="発生事象について"><a href="#発生事象について" class="headerlink" title="発生事象について"></a>発生事象について</h2><p>Copilot エージェントの初回利用時はエージェントに関連付けられた Privacy Policy や Terms of Use などの情報をユーザーへ提示するため、上述のポップアップが表示されます。<br>既に同意済みであるにもかかわらず、クライアント側の判定により同意を求めるポップアップが再度表示されるというのが今回の事象となります。</p><h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>従来の実装では iOS 版 Teams アプリ側が同意の必要性を判断していたため、iOS 版 Teams アプリ側の状況によっては同意済みユーザーであってもポップアップが再度表示される可能性がありました。<br>今回の修正により、まずはユーザー操作を伴わない認証を試行し、その後サービス側で承諾の状態を判定するよう変更される予定です。<br>サービス側が未承諾であると判断した場合のみ該当のポップアップを表示し、既に承諾済みのユーザーには該当のポップアップを再表示しない動作となります。</p><p>なお、本修正適用後も初回利用時に表示される上記のポップアップは、引き続き発生することが想定される動作となります。<br>一方で同一ユーザーに対して 2 回目以降も繰り返し該当のポップアップが表示される事象については、本修正により改善される見込みです。</p><h2 id="回避策について"><a href="#回避策について" class="headerlink" title="回避策について"></a>回避策について</h2><p>現時点では回避策は確認されておりません。</p><h2 id="修正時期について"><a href="#修正時期について" class="headerlink" title="修正時期について"></a>修正時期について</h2><p>今後の修正等の対応予定としましては、2026 年 11 月下旬までには展開が完了する見込みとなります。<br>当該対応に進展があり次第、本 Blog にてご案内いたします。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;こんにちは。Unified Communications サポート チームです。&lt;br&gt;いつも Microsoft Teams をご利用いただきありがとうございます。&lt;/p&gt;
+&lt;p&gt;iOS 版 Teams アプリで Copilot エージェントとの会話を開いた初回は、”&amp;l
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Information" scheme="https://jpucsupport.github.io/blog/tags/Information/"/>
+    
+      <category term="Teams" scheme="https://jpucsupport.github.io/blog/tags/Teams/"/>
+    
+      <category term="Copilot" scheme="https://jpucsupport.github.io/blog/tags/Copilot/"/>
+    
+      <category term="Mobile" scheme="https://jpucsupport.github.io/blog/tags/Mobile/"/>
+    
+  </entry>
   
   <entry>
     <title>Teams - チャネル会議の投稿に [編集] メニューが表示されない動作について</title>
@@ -577,30 +608,6 @@
       <category term="Information" scheme="https://jpucsupport.github.io/blog/tags/Information/"/>
     
       <category term="Teams" scheme="https://jpucsupport.github.io/blog/tags/Teams/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Teams - Teams のユーザー削除について</title>
-    <link href="https://jpucsupport.github.io/blog/teams/Teams%20-%20Teams%20%E3%81%AE%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E5%89%8A%E9%99%A4%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/"/>
-    <id>https://jpucsupport.github.io/blog/teams/Teams%20-%20Teams%20%E3%81%AE%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E5%89%8A%E9%99%A4%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</id>
-    <published>2024-07-08T05:00:00.000Z</published>
-    <updated>2024-07-08T04:54:36.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>こんにちは、Unified Communications サポート チームです。<br>いつも Microsoft Teams をご利用いただきありがとうございます。<br>Entra ID からアカウントを削除した場合、同時に Teams ユーザーが削除されますが、この時ご注意いただきたい内容についてご説明させていただきます。</p><h2 id="発生事象について"><a href="#発生事象について" class="headerlink" title="発生事象について"></a>発生事象について</h2><p>チャネルに所有者が一人しか存在しない状態で、所有者のユーザーが削除されてしまうことで、チャネルが自動的に削除される事象が発生しました。</p><p>具体的には、Entra ID で直接ユーザーを削除した場合やアクセスレビューなどを利用してユーザーの棚卸をした場合等に発生します。<br>Microsoft Teams としては、所有者が存在しないチャネルは想定されておらず、この場合チャネルが自動的に削除されることは想定動作です。<br>また、プライベート チャネルの場合は、チャネルに紐づく独自の SharePoint サイトが存在するため、チャネルの削除に伴い、チャネルに紐づく SharePoint サイトも削除されます。<br>チャネルは削除されてから 30 日以内であれば復元できますが、30 日後は削除されたチャネルとそのコンテンツは完全に削除され復元ができません。</p><p>一方、SharePoint サイトは削除されてから 93 日間は復元ができます。<br>93 日を過ぎると、リスト、ライブラリ、ページ、サブサイトなど、サイトおよびサイトのすべてのコンテンツと設定が完全に削除され復元ができません。<br>本来であれば、Teams クライアントからはチャネルの最後の所有者であった場合はそのユーザーの削除はできませんが、Entra ID 等からはユーザーの削除ができてしまいこのような動きをしています。</p><p>参考情報:<br><a href="https://learn.microsoft.com/ja-jp/microsoftteams/private-channels#adding-and-removing-owners-and-members" target="_blank" rel="noopener">所有者とメンバーの追加と削除</a></p><h2 id="回避策について"><a href="#回避策について" class="headerlink" title="回避策について"></a>回避策について</h2><p>プライベートチャネルの最後の所有者であるユーザーが削除できてしまうのは現在の実装上の動作となります。<br>また、所有者が存在しないチャネルが自動的に削除されることも想定動作です。<br>しかし、意図せずチャネルが削除された場合には情報保持の観点からも影響が大きいことが想定されます。<br>このような状況を避けるために、下記のような方法による設定を行っていただくことを推奨いたします。</p><p>一つ目は、管理用のユーザーをあらかじめ作成しておき、チャネルの所有者あるいはメンバーとして登録しておくことです。<br>管理用のユーザーを登録することで、ユーザーの棚卸が発生した場合でも最低でも常に 1 つのユーザーがチャネルに参加している状態となります。<br>これにより、チャネルの所有者が削除された場合、管理用のユーザーがプライベート チャネル所有者に自動的に昇格します。<br>よって、所有者が不在になることはなく、チャネルが自動的に削除されることを防ぐことが可能です。</p><p>二つ目は、アイテム保持ポリシーを作成することです。<br>アイテム保持ポリシーを作成することで、所有者がいなくなった場合でも、チャネル削除によるデータの損失を防ぐことができます。<br>このポリシーを用いて、保持期間をあらかじめ30日よりも多く設定をしておくことで、チャネルが削除されることを防ぐことができ指定した保持期間は削除されることを回避できます。<br><strong>この時、保持期間はポリシーが割り当てられた時点からではなく、指定した保持期間の開始に従って計算されますので、ご留意ください。</strong></p><p>参考情報:<br><a href="https://learn.microsoft.com/ja-jp/purview/retention-settings#settings-for-retaining-and-deleting-content" target="_blank" rel="noopener">コンテンツを保持および削除するための設定</a></p><p>上記内容が皆様の参考となりますと幸いです。どちら様も素敵な Teams ライフをお過ごしください。<br>ご不明な点等がありましたら、ぜひ弊社サポート サービスまでお問い合わせいただけますと幸いでございます。</p><br />NOTE:  - 2024 年 7 月 8 日に、初版を公開しました。]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;こんにちは、Unified Communications サポート チームです。&lt;br&gt;いつも Microsoft Teams をご利用いただきありがとうございます。&lt;br&gt;Entra ID からアカウントを削除した場合、同時に Teams ユーザーが削除されますが、この時
-      
-    
-    </summary>
-    
-    
-    
-      <category term="Information" scheme="https://jpucsupport.github.io/blog/tags/Information/"/>
     
   </entry>
   
