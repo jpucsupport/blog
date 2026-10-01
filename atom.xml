@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://jpucsupport.github.io/blog/"/>
-  <updated>2026-09-10T07:14:44.000Z</updated>
+  <updated>2026-10-01T07:07:15.000Z</updated>
   <id>https://jpucsupport.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Teams - 共同開催者が Copilot ライセンスなしでもファシリテーターのトグルを操作できてしまう事象について</title>
+    <link href="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E5%85%B1%E5%90%8C%E9%96%8B%E5%82%AC%E8%80%85%E3%81%8C%20Copilot%20%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E3%81%AA%E3%81%97%E3%81%A7%E3%82%82%E3%83%95%E3%82%A1%E3%82%B7%E3%83%AA%E3%83%86%E3%83%BC%E3%82%BF%E3%83%BC%E3%81%AE%E3%83%88%E3%82%B0%E3%83%AB%E3%82%92%E6%93%8D%E4%BD%9C%E3%81%A7%E3%81%8D%E3%81%A6%E3%81%97%E3%81%BE%E3%81%86%E4%BA%8B%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/"/>
+    <id>https://jpucsupport.github.io/blog/teams/Teams%20-%20%E5%85%B1%E5%90%8C%E9%96%8B%E5%82%AC%E8%80%85%E3%81%8C%20Copilot%20%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E3%81%AA%E3%81%97%E3%81%A7%E3%82%82%E3%83%95%E3%82%A1%E3%82%B7%E3%83%AA%E3%83%86%E3%83%BC%E3%82%BF%E3%83%BC%E3%81%AE%E3%83%88%E3%82%B0%E3%83%AB%E3%82%92%E6%93%8D%E4%BD%9C%E3%81%A7%E3%81%8D%E3%81%A6%E3%81%97%E3%81%BE%E3%81%86%E4%BA%8B%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</id>
+    <published>2026-10-01T08:00:00.000Z</published>
+    <updated>2026-10-01T07:07:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは。Unified Communications サポート チームです。<br>いつも Microsoft Teams をご利用いただきありがとうございます。</p><p>Microsoft 365 Copilot ライセンス (以降、Copilot ライセンス) が付与されていない共同開催者が、会議オプションにおいてファシリテーターのトグルを操作できてしまう、という事象が現在確認されております。<br>同様の問題が生じている場合には本記事をご参照ください。</p><p><img src="image.png" alt="会議オプションにおけるファシリテーターのトグル"></p><h2 id="背景について"><a href="#背景について" class="headerlink" title="背景について"></a>背景について</h2><h3 id="共同開催者とは"><a href="#共同開催者とは" class="headerlink" title="共同開催者とは"></a>共同開催者とは</h3><p>Teams 会議の「共同開催者」とは、開催者が指定した、会議の管理権限を共有するユーザーのことです。<br>共同開催者は、会議オプションの変更やレコーディングの開始・停止など、開催者とほぼ同様の操作を行うことが可能です。</p><h3 id="ファシリテーターとは"><a href="#ファシリテーターとは" class="headerlink" title="ファシリテーターとは"></a>ファシリテーターとは</h3><p>ファシリテーター (Facilitator) は、Teams 会議の中で動作する AI エージェントです。<br>会議チャットでの AI による質問応答、アジェンダタイマーによる進行管理、議事録の自動作成などの機能を提供します。<br>ファシリテーターを利用するには、以下のすべてを満たす必要があります。<br>なお、既定値はオンです。</p><ul><li>対象の Microsoft 365 ベースのライセンス (E3 / E5 / Business Standard 等)</li><li>Microsoft Teams ライセンス</li><li><strong>Copilot ライセンス</strong></li></ul><p>詳しくは以下の弊社公開情報に記載しておりますので、必要に応じてご参照ください。</p><p>Title: Microsoft Teams会議のファシリテーター - Microsoft サポート<br>Url: <a href="https://support.microsoft.com/ja-jp/office/37657f91-39b5-40eb-9421-45141e3ce9f6" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/office/37657f91-39b5-40eb-9421-45141e3ce9f6</a></p><p>Title: Microsoft Teamsでファシリテーターを設定する - Microsoft Teams | Microsoft Learn<br>Url: <a href="https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams" target="_blank" rel="noopener">https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams</a></p><h2 id="ファシリテーターの各ライセンスパターンにおける想定動作"><a href="#ファシリテーターの各ライセンスパターンにおける想定動作" class="headerlink" title="ファシリテーターの各ライセンスパターンにおける想定動作"></a>ファシリテーターの各ライセンスパターンにおける想定動作</h2><p>ファシリテーターの会議オプションにおける設定可否は、開催者および共同開催者の Microsoft 365 Copilot ライセンスの有無によって以下のとおり異なります。</p><table><thead><tr><th>#</th><th>開催者</th><th>共同開催者</th><th>想定動作 (共同開催者)</th></tr></thead><tbody><tr><td>①</td><td>Copilot ライセンスなし</td><td>Copilot ライセンスあり</td><td>会議オプションにファシリテーターの設定項目が表示されない</td></tr><tr><td>②</td><td>Copilot ライセンスあり</td><td>Copilot ライセンスあり</td><td>会議オプションでファシリテーターをオン・オフに設定可能</td></tr><tr><td>③</td><td>Copilot ライセンスあり</td><td>Copilot ライセンスなし</td><td>会議オプションでファシリテーターのトグルを変更できない (想定動作)</td></tr></tbody></table><p>上記 ①② は想定通りの動作です。特に ① においては、開催者が Copilot ライセンスを持たない場合、会議レベルでファシリテーター機能がサポートされないため、共同開催者のライセンス有無にかかわらず設定項目自体が表示されません。</p><h2 id="発生事象について"><a href="#発生事象について" class="headerlink" title="発生事象について"></a>発生事象について</h2><p>上記 ③ のパターンにおいて、本来であれば共同開催者に Microsoft 365 Copilot ライセンスが付与されていなければファシリテーターのトグルを変更できないことが想定された動作ですが、<strong>UI 上でトグルの操作が可能になってしまう</strong>事象が確認されております。<br>さらに、この事象においてはトグルの操作方向によって挙動が異なることが確認されております。</p><h3 id="オフからオンに変更した場合"><a href="#オフからオンに変更した場合" class="headerlink" title="オフからオンに変更した場合"></a>オフからオンに変更した場合</h3><p>以下の 2 ステップを実施した場合、一見設定が保存されたように見えますが、再度会議オプションを開くとトグルがオフに戻り、<strong>ファシリテーターが有効化されることはありません</strong>。</p><ol><li>開催者 (Copilot ライセンスあり) が作成した会議に、共同開催者 (Copilot ライセンスなし) が割り当てられている</li><li>共同開催者が会議オプションを開き、ファシリテーターのトグルをオンに変更する</li></ol><h3 id="オンからオフに変更した場合"><a href="#オンからオフに変更した場合" class="headerlink" title="オンからオフに変更した場合"></a>オンからオフに変更した場合</h3><p>以下の 2 ステップを実施した場合、<strong>変更は実際に保存され、開催者がセットしたファシリテーターが意図せず無効化される可能性があります</strong>。</p><ol><li>開催者 (Copilot ライセンスあり) がファシリテーターをオンに設定した会議に、共同開催者 (Copilot ライセンスなし) が割り当てられている</li><li>共同開催者が会議オプションを開き、ファシリテーターのトグルをオフに変更する</li></ol><h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>いずれのケースにおいても、<strong>システム側で Copilot ライセンス未保有の共同開催者に対してトグルの操作を制限できていない</strong>ことが原因です。<br>Copilot ライセンスを保有していない共同開催者がファシリテーターのトグルを操作できること自体が想定外の動作となります。</p><h2 id="回避策について"><a href="#回避策について" class="headerlink" title="回避策について"></a>回避策について</h2><p>現時点では、ライセンス未保有の共同開催者に対して UI 上でトグルの表示を制限する方法は確認されておりません。<br>特に、共同開催者がトグルをオンからオフに変更した場合は設定が実際に反映されるため、ファシリテーターが意図せず無効化されるリスクがあります。<br>対処としましては、以下の点を該当ユーザーにご周知いただくことをお勧めいたします。</p><ul><li>Copilot ライセンスを保有していない共同開催者は、ファシリテーターのトグルを操作しないでください</li><li>オフからオンへの変更は保存されませんが、<strong>オンからオフへの変更は保存されファシリテーターが無効化されます</strong></li></ul><h2 id="修正時期について"><a href="#修正時期について" class="headerlink" title="修正時期について"></a>修正時期について</h2><p>本事象の修正対応は 8 月上旬の完了を予定しておりましたが、現時点においても弊社開発部門にて修正に向けた対応を進めております。<br>具体的な修正時期等について現時点でご案内可能な情報はございませんが、当該対応に進展があり次第、本 Blog にてご案内いたします。</p><br />NOTE:- 2026 年 4 月 3 日に、初版を公開しました。- 2026 年 10 月 1 日に、第 2 版を公開しました。]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;こんにちは。Unified Communications サポート チームです。&lt;br&gt;いつも Microsoft Teams をご利用いただきありがとうございます。&lt;/p&gt;
+&lt;p&gt;Microsoft 365 Copilot ライセンス (以降、Copilot ライセンス)
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Information" scheme="https://jpucsupport.github.io/blog/tags/Information/"/>
+    
+      <category term="Teams" scheme="https://jpucsupport.github.io/blog/tags/Teams/"/>
+    
+      <category term="Copilot" scheme="https://jpucsupport.github.io/blog/tags/Copilot/"/>
+    
+      <category term="Meeting" scheme="https://jpucsupport.github.io/blog/tags/Meeting/"/>
+    
+  </entry>
   
   <entry>
     <title>Teams - iOS 版 Teams アプリで Copilot エージェントを開いた際にアクセス権許可に関するポップアップが表示される事象について</title>
@@ -163,37 +194,6 @@
       <category term="New Teams" scheme="https://jpucsupport.github.io/blog/tags/New-Teams/"/>
     
       <category term="Teams 2.1" scheme="https://jpucsupport.github.io/blog/tags/Teams-2-1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Teams - 共同開催者が Copilot ライセンスなしでもファシリテーターのトグルを操作できてしまう事象について</title>
-    <link href="https://jpucsupport.github.io/blog/teams/Teams%20-%20%E5%85%B1%E5%90%8C%E9%96%8B%E5%82%AC%E8%80%85%E3%81%8C%20Copilot%20%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E3%81%AA%E3%81%97%E3%81%A7%E3%82%82%E3%83%95%E3%82%A1%E3%82%B7%E3%83%AA%E3%83%86%E3%83%BC%E3%82%BF%E3%83%BC%E3%81%AE%E3%83%88%E3%82%B0%E3%83%AB%E3%82%92%E6%93%8D%E4%BD%9C%E3%81%A7%E3%81%8D%E3%81%A6%E3%81%97%E3%81%BE%E3%81%86%E4%BA%8B%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/"/>
-    <id>https://jpucsupport.github.io/blog/teams/Teams%20-%20%E5%85%B1%E5%90%8C%E9%96%8B%E5%82%AC%E8%80%85%E3%81%8C%20Copilot%20%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E3%81%AA%E3%81%97%E3%81%A7%E3%82%82%E3%83%95%E3%82%A1%E3%82%B7%E3%83%AA%E3%83%86%E3%83%BC%E3%82%BF%E3%83%BC%E3%81%AE%E3%83%88%E3%82%B0%E3%83%AB%E3%82%92%E6%93%8D%E4%BD%9C%E3%81%A7%E3%81%8D%E3%81%A6%E3%81%97%E3%81%BE%E3%81%86%E4%BA%8B%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</id>
-    <published>2026-04-07T06:00:00.000Z</published>
-    <updated>2026-04-07T06:13:04.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>こんにちは。Unified Communications サポート チームです。<br>いつも Microsoft Teams をご利用いただきありがとうございます。</p><p>Microsoft 365 Copilot ライセンス (以降、Copilot ライセンス) が付与されていない共同開催者が、会議オプションにおいてファシリテーターのトグルを操作できてしまう、という事象が現在確認されております。<br>同様の問題が生じている場合には本記事をご参照ください。</p><p><img src="image.png" alt="会議オプションにおけるファシリテーターのトグル"></p><h2 id="背景について"><a href="#背景について" class="headerlink" title="背景について"></a>背景について</h2><h3 id="共同開催者とは"><a href="#共同開催者とは" class="headerlink" title="共同開催者とは"></a>共同開催者とは</h3><p>Teams 会議の「共同開催者」とは、開催者が指定した、会議の管理権限を共有するユーザーのことです。<br>共同開催者は、会議オプションの変更やレコーディングの開始・停止など、開催者とほぼ同様の操作を行うことが可能です。</p><h3 id="ファシリテーターとは"><a href="#ファシリテーターとは" class="headerlink" title="ファシリテーターとは"></a>ファシリテーターとは</h3><p>ファシリテーター (Facilitator) は、Teams 会議の中で動作する AI エージェントです。<br>会議チャットでの AI による質問応答、アジェンダタイマーによる進行管理、議事録の自動作成などの機能を提供します。<br>ファシリテーターを利用するには、以下のすべてを満たす必要があります。<br>なお、既定値はオンです。</p><ul><li>対象の Microsoft 365 ベースのライセンス (E3 / E5 / Business Standard 等)</li><li>Microsoft Teams ライセンス</li><li><strong>Copilot ライセンス</strong></li></ul><p>詳しくは以下の弊社公開情報に記載しておりますので、必要に応じてご参照ください。</p><p>Title: Microsoft Teams会議のファシリテーター - Microsoft サポート<br>Url: <a href="https://support.microsoft.com/ja-jp/office/37657f91-39b5-40eb-9421-45141e3ce9f6" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/office/37657f91-39b5-40eb-9421-45141e3ce9f6</a></p><p>Title: Microsoft Teamsでファシリテーターを設定する - Microsoft Teams | Microsoft Learn<br>Url: <a href="https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams" target="_blank" rel="noopener">https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams</a></p><h2 id="ファシリテーターの各ライセンスパターンにおける想定動作"><a href="#ファシリテーターの各ライセンスパターンにおける想定動作" class="headerlink" title="ファシリテーターの各ライセンスパターンにおける想定動作"></a>ファシリテーターの各ライセンスパターンにおける想定動作</h2><p>ファシリテーターの会議オプションにおける設定可否は、開催者および共同開催者の Microsoft 365 Copilot ライセンスの有無によって以下のとおり異なります。</p><table><thead><tr><th>#</th><th>開催者</th><th>共同開催者</th><th>想定動作 (共同開催者)</th></tr></thead><tbody><tr><td>①</td><td>Copilot ライセンスなし</td><td>Copilot ライセンスあり</td><td>会議オプションにファシリテーターの設定項目が表示されない</td></tr><tr><td>②</td><td>Copilot ライセンスあり</td><td>Copilot ライセンスあり</td><td>会議オプションでファシリテーターをオン・オフに設定可能</td></tr><tr><td>③</td><td>Copilot ライセンスあり</td><td>Copilot ライセンスなし</td><td>会議オプションでファシリテーターのトグルを変更できない (想定動作)</td></tr></tbody></table><p>上記 ①② は想定通りの動作です。特に ① においては、開催者が Copilot ライセンスを持たない場合、会議レベルでファシリテーター機能がサポートされないため、共同開催者のライセンス有無にかかわらず設定項目自体が表示されません。</p><h2 id="発生事象について"><a href="#発生事象について" class="headerlink" title="発生事象について"></a>発生事象について</h2><p>上記 ③ のパターンにおいて、本来であれば共同開催者に Microsoft 365 Copilot ライセンスが付与されていなければファシリテーターのトグルを変更できないことが想定された動作ですが、<strong>UI 上でトグルの操作が可能になってしまう</strong>事象が確認されております。<br>さらに、この事象においてはトグルの操作方向によって挙動が異なることが確認されております。</p><h3 id="オフからオンに変更した場合"><a href="#オフからオンに変更した場合" class="headerlink" title="オフからオンに変更した場合"></a>オフからオンに変更した場合</h3><p>以下の 2 ステップを実施した場合、一見設定が保存されたように見えますが、再度会議オプションを開くとトグルがオフに戻り、<strong>ファシリテーターが有効化されることはありません</strong>。</p><ol><li>開催者 (Copilot ライセンスあり) が作成した会議に、共同開催者 (Copilot ライセンスなし) が割り当てられている</li><li>共同開催者が会議オプションを開き、ファシリテーターのトグルをオンに変更する</li></ol><h3 id="オンからオフに変更した場合"><a href="#オンからオフに変更した場合" class="headerlink" title="オンからオフに変更した場合"></a>オンからオフに変更した場合</h3><p>以下の 2 ステップを実施した場合、<strong>変更は実際に保存され、開催者がセットしたファシリテーターが意図せず無効化される可能性があります</strong>。</p><ol><li>開催者 (Copilot ライセンスあり) がファシリテーターをオンに設定した会議に、共同開催者 (Copilot ライセンスなし) が割り当てられている</li><li>共同開催者が会議オプションを開き、ファシリテーターのトグルをオフに変更する</li></ol><h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>いずれのケースにおいても、<strong>システム側で Copilot ライセンス未保有の共同開催者に対してトグルの操作を制限できていない</strong>ことが原因です。<br>Copilot ライセンスを保有していない共同開催者がファシリテーターのトグルを操作できること自体が想定外の動作となります。</p><h2 id="回避策について"><a href="#回避策について" class="headerlink" title="回避策について"></a>回避策について</h2><p>現時点では、ライセンス未保有の共同開催者に対して UI 上でトグルの表示を制限する方法は確認されておりません。<br>特に、共同開催者がトグルをオンからオフに変更した場合は設定が実際に反映されるため、ファシリテーターが意図せず無効化されるリスクがあります。<br>対処としましては、以下の点を該当ユーザーにご周知いただくことをお勧めいたします。</p><ul><li>Copilot ライセンスを保有していない共同開催者は、ファシリテーターのトグルを操作しないでください</li><li>オフからオンへの変更は保存されませんが、<strong>オンからオフへの変更は保存されファシリテーターが無効化されます</strong></li></ul><h2 id="修正時期について"><a href="#修正時期について" class="headerlink" title="修正時期について"></a>修正時期について</h2><p>今後の修正等の対応予定としましては、2026 年 8 月上旬ごろを見込んでおります。<br>当該対応に進展があり次第、本 Blog にてご案内いたします。</p><br />NOTE:- 2026 年 4 月 3 日に、初版を公開しました。]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;こんにちは。Unified Communications サポート チームです。&lt;br&gt;いつも Microsoft Teams をご利用いただきありがとうございます。&lt;/p&gt;
-&lt;p&gt;Microsoft 365 Copilot ライセンス (以降、Copilot ライセンス)
-      
-    
-    </summary>
-    
-    
-    
-      <category term="Information" scheme="https://jpucsupport.github.io/blog/tags/Information/"/>
-    
-      <category term="Teams" scheme="https://jpucsupport.github.io/blog/tags/Teams/"/>
-    
-      <category term="Copilot" scheme="https://jpucsupport.github.io/blog/tags/Copilot/"/>
-    
-      <category term="Meeting" scheme="https://jpucsupport.github.io/blog/tags/Meeting/"/>
     
   </entry>
   
