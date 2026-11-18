@@ -38,3 +38,7 @@ example
 └── themes             # Blog themes
     └── jpazure (git submodule)
 ```
+
+## アーカイブ日
+
+記事をアーカイブするときは、Markdown の front matter の `tags` に `Archived` を追加し、`archived_date: 'YYYY-MM-DD'` にアーカイブ日を指定します。`Last Update` に表示される `date` は変更しません。`archived_date` の指定がない既存記事は、従来どおり告知にも `date` を表示します。

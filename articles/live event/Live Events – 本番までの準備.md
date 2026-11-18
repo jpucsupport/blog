@@ -4,6 +4,7 @@ date: 2021-4-16 10:00:00
 tags:
   - Live Events / Live Events Assitance Program
   - Archived
+archived_date: '2026-11-18'
 ---
 
 # Live Events - 本番までの準備

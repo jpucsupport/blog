@@ -4,6 +4,7 @@ date: 2021-05-17 00:00:00
 tags:
  - Skype for Business Online
  - Archived
+archived_date: '2026-11-18'
 ---
 
 こんにちは、Unified Communications サポート チームです。  

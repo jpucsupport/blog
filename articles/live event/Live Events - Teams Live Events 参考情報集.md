@@ -4,6 +4,7 @@ date: 2021-4-6 15:00:00
 tags:
  - Live Events / Live Events Assitance Program
  - Archived
+archived_date: '2026-11-18'
 ---
 
 # Teams Live Events 参考情報集
