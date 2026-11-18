@@ -41,4 +41,4 @@ example
 
 ## アーカイブ日
 
-記事をアーカイブするときは、Markdown の front matter の `tags` に `Archived` を追加し、`archived_date: 'YYYY-MM-DD'` にアーカイブ日を指定します。`Last Update` に表示される `date` は変更しません。`archived_date` の指定がない既存記事は、従来どおり告知にも `date` を表示します。
+記事をアーカイブするときは、Markdown の front matter の `tags` に `Archived` を追加します。告知には既定で `Last Update` と同じ `date` を表示します。告知だけに別の日付を表示したい場合は、`archived_date: 'YYYY-MM-DD'` を指定します。どちらの場合も `Last Update` に表示される `date` は変更しません。

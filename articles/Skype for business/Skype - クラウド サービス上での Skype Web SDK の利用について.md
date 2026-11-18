@@ -4,7 +4,6 @@ date: 2022-10-14 15:00:00
 tags:
   - Skype for Business Online
   - Archived
-archived_date: '2026-11-18'
 ---
 
 # Skype - クラウド サービス上での Skype Web SDK の利用について
