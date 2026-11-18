@@ -2,8 +2,8 @@
 title: Teams - msExchHideFromAddressLists を True (アドレス帳に表示しないをオン) にした場合の Teams への影響について
 date: 2022-04-18 15:00:00
 tags:
-  - Teams
   - HowTo
+  - Teams
   - Search
 ---
 

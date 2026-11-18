@@ -2,8 +2,8 @@
 title: Teams - ワークフローアプリに AI が登場！Teams の AI ワークフローで業務をもっとスマートに
 date: 2025-12-08 15:00:00
 tags:
-  - Teams
   - HowTo
+  - Teams
   - Copilot
 ---
 # Teams - ワークフローアプリに AI が登場！Teams の AI ワークフローで業務をもっとスマートに <!-- omit in toc -->

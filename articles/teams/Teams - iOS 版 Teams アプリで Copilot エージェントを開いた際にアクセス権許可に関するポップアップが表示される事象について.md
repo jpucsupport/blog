@@ -2,8 +2,8 @@
 title: Teams - iOS 版 Teams アプリで Copilot エージェントを開いた際にアクセス権許可に関するポップアップが表示される事象について
 date: 2026-11-05 14:30:00
 tags:
-  - Teams
   - Information
+  - Teams
   - Mobile
   - Copilot
 ---

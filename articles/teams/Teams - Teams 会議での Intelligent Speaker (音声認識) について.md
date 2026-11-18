@@ -2,8 +2,8 @@
 title: Teams - Teams 会議での Intelligent Speaker (音声認識) について
 date: 2025-07-23 14:30:00
 tags:
-  - Teams
   - HowTo
+  - Teams
   - BYOD Room
   - Intelligent Speaker
 ---

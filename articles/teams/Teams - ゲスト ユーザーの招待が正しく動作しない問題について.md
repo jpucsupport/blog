@@ -2,8 +2,8 @@
 title: Teams - ゲスト ユーザーの招待が正しく動作しない問題について
 date: 2021-9-16 15:00:00
 tags:
-  - Teams
   - Information
+  - Teams
   - Guest User
 ---
 

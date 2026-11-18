@@ -2,8 +2,8 @@
 title: Teams - 新しい Microsoft Teams クライアントのインストール方法
 date: 2024-01-15 12:00:00
 tags:
- - Teams
  - HowTo
+ - Teams
  - Client
  - Install
  - New Teams

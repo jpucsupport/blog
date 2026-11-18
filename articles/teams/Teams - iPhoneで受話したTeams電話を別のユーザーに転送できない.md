@@ -2,8 +2,8 @@
 title: Teams - iPhoneで受話したTeams電話を別のユーザーに転送できない  
 date: 2023-1-20 15:30:00
 tags:
- - Teams
  - Information
+ - Teams
 ---
 
 # Teams - iPhoneで受話したTeams電話を別のユーザーに転送できない  

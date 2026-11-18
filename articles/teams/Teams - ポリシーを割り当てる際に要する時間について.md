@@ -2,8 +2,8 @@
 title: Teams - ポリシーを割り当てる際に要する時間について
 date: 2021-07-06 9:00:00
 tags:
-  - Teams
   - HowTo
+  - Teams
   - Settings
 
 ---

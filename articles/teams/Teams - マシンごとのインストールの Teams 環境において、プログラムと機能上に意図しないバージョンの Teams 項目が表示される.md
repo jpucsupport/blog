@@ -2,8 +2,8 @@
 title: Teams - マシンごとのインストールの Teams 環境において、"プログラムと機能" 上に意図しないバージョンの Teams 項目が表示される
 date: 2022-12-08 15:00:00
 tags:
-  - Teams
   - Information
+  - Teams
 ---
 
 
