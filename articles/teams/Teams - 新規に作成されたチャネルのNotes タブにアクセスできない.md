@@ -2,8 +2,8 @@
 title: Teams - 新規に作成されたチャネルの Notes タブにアクセスできない
 date: 2023-11-16 10:30:00
 tags:
-  - Information
   - Teams
+  - Information
 ---
 # Teams - 新規に作成されたチャネルの Notes タブにアクセスできない
 

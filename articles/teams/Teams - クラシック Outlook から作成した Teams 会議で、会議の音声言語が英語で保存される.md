@@ -2,8 +2,8 @@
 title: Teams - クラシック Outlook から作成した Teams 会議で、会議の音声言語が英語で保存される
 date: 2026-10-27 14:00:00
 tags:
-  - Information
   - Teams
+  - Information
   - Meeting
 ---
 

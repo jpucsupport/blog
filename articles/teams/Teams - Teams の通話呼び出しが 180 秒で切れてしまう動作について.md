@@ -2,8 +2,8 @@
 title: Teams - Teams の通話呼び出しが 180 秒で切れてしまう動作について
 date: 2026-10-23 15:00:00
 tags:
-  - Information
   - Teams
+  - Information
 ---
 
 こんにちは。 Unified Communication サポート チームです。

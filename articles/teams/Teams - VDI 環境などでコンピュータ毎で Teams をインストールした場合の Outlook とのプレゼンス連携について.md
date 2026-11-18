@@ -2,8 +2,8 @@
 title: Teams - VDI 環境などでコンピュータ毎で Teams をインストールした場合の Outlook とのプレゼンス連携について
 date: 2022-09-09 16:00:00
 tags:
-  - HowTo
   - Teams
+  - HowTo
   - Outlook
   - Presence
 ---

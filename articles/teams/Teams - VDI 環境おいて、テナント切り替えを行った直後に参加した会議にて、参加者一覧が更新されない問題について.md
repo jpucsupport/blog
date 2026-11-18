@@ -2,8 +2,8 @@
 title: Teams - VDI 環境おいて、テナント切り替えを行った直後に参加した会議にて、参加者一覧が更新されない問題について
 date: 2021-08-06 00:00:00
 tags:
-  - Information
   - Teams
+  - Information
   - Meeting
   - VDI
 

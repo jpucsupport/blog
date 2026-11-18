@@ -2,8 +2,8 @@
 title: Teams - 新しい Teams インストール時のアプリ インストーラーについて
 date: 2024-05-29 16:00:00
 tags:
- - HowTo
  - Teams
+ - HowTo
  - Classic Teams
  - New Teams
  - Teams 2.1

@@ -2,8 +2,8 @@
 title: Teams - 全角でメンション（@）すると文字が太文字になる
 date: 2023-06-05 18:00:00
 tags:
-  - Information
   - Teams
+  - Information
 ---
 # Teams - 全角でメンション（@）すると文字が太文字になる
 

@@ -2,8 +2,8 @@
 title: Teams - Proxy 環境で、Teams の PowerShell 2.0.0 以降の Teams PowerShell で Get-csOnlineUser などの YYY-csXXX のコマンドを実行する場合、Winhttp 側への Proxy 設定が必要
 date: 2025-10-14 17:00:00
 tags:
-  - HowTo
   - Teams
+  - HowTo
   - PowerShell
 ---
 

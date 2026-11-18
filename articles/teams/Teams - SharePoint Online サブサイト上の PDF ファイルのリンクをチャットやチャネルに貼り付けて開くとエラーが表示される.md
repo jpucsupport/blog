@@ -2,8 +2,8 @@
 title: Teams - SPO サブサイト上の PDF 共有リンクを Teams チャットに貼り付けて開くとエラーが表示される事象について
 date: 2026-07-07 17:30:00
 tags:
-  - Information
   - Teams
+  - Information
   - Chat
 ---
 

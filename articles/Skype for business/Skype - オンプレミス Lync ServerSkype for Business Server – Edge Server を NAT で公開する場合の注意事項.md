@@ -2,8 +2,8 @@
 title: Skype - オンプレミス Lync Server/Skype for Business Server – Edge Server を NAT で公開する場合の注意事項
 date: 2021-04-13 00:00:00
 tags:
- - HowTo
  - Lync Server / Skype for Business Server
+ - HowTo
  - Edge
 ---
 

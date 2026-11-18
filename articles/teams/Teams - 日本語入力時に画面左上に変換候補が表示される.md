@@ -2,8 +2,8 @@
 title: Teams - 日本語入力時に画面左上に変換候補が表示される
 date: 2022-10-24 13:00:00
 tags:
-  - Information
   - Teams
+  - Information
 ---
 # Teams - 日本語入力時に画面左上に変換候補が表示される
 

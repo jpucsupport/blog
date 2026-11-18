@@ -2,8 +2,8 @@
 title: Teams - Microsoft Graph API で作成した "HiddenMembership" の M365 グループから、チームを作成した場合の Teams クライアント上の表示の問題について
 date: 2023-4-13 17:30:00
 tags:
- - Information
  - Teams
+ - Information
 ---
 
 # Teams - Microsoft Graph API で作成した "HiddenMembership" の M365 グループから、チームを作成した場合の Teams クライアント上の表示の問題について
