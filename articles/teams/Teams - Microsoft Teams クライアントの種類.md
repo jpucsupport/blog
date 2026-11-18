@@ -3,9 +3,10 @@ title: Teams - Microsoft Teams クライアントの種類
 date: 2021-07-20 17:00:00
 tags:
  - Teams
- - Windows
+ - HowTo
  - Client
  - Install
+ - Windows
 ---
 
 こんにちは、Unified Communications サポート チームです。  

@@ -3,6 +3,7 @@ title: Live Events - バックアップ イベント URL の差し替え方法
 date: 2021-4-28 15:00:00
 tags:
   - Live Events / Live Events Assitance Program
+  - Archived
 ---
 # Live Events - バックアップ イベント URL の差し替え方法
 

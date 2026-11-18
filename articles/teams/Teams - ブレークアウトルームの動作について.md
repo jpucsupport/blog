@@ -3,7 +3,7 @@ title: Teams - ブレークアウトルームの動作について
 date: 2022-10-05 12:00:00
 tags:
   - Teams
-  - Information
+  - HowTo
 ---
 
 # Teams - ブレークアウトルームの動作について

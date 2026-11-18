@@ -3,8 +3,8 @@ title: Teams - Windows Server 2012 の OS を使用している環境で Teams �
 date: 2022-03-15 00:00:00
 tags:
   - Teams
+  - HowTo
   - PowerShell
-  - Information
 
 ---
 

@@ -3,7 +3,7 @@ title: Teams - Proxy 環境で、Teams の PowerShell 2.0.0 以降の Teams Powe
 date: 2025-10-14 17:00:00
 tags:
   - Teams
-  - Information
+  - HowTo
   - PowerShell
 ---
 

@@ -3,9 +3,9 @@ title: Teams - VDI 環境おいて、テナント切り替えを行った直後�
 date: 2021-08-06 00:00:00
 tags:
   - Teams
-  - VDI
-  - Meeting
   - Information
+  - Meeting
+  - VDI
 
 ---
 

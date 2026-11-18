@@ -2,8 +2,8 @@
 title: 新しい Teams の既知の問題について
 date: 2026-07-07 16:00:00
 tags:
-- Information
 - Teams
+- Information
 - New Teams
 - Teams 2.1
 ---

@@ -3,8 +3,8 @@ title: Teams - チャットに添付したファイルが「送信できませ�
 date: 2026-01-19 14:00:00
 tags:
   - Teams
-  - Chat
   - Troubleshooting
+  - Chat
 ---
 # Teams - チャットに添付したファイルが「送信できませんでした」で送れないときに確認したいこと <!-- omit in toc -->
 

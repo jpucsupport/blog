@@ -3,9 +3,9 @@ title: Teams - 共同開催者が Copilot ライセンスなしでもファシ�
 date: 2026-10-01 17:00:00
 tags:
   - Teams
+  - Information
   - Copilot
   - Meeting
-  - Information
 ---
 
 # Teams - 共同開催者が Copilot ライセンスなしでもファシリテーターのトグルを操作できてしまう事象について

@@ -3,6 +3,7 @@ title: Teams - モバイルアプリ上で、短縮ダイヤルの表記が姓�
 date: 2024-12-23 12:00:00
 tags:
   - Teams
+  - Information
   - Mobile
 ---
 

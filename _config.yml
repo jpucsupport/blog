@@ -23,11 +23,11 @@ author: CSS Japan
 # Tag (hexo helper)
 root_tag_generator:
   root_tag_names:
-    - Information
+    - Introduction
     - Teams
-    - Live Events / Live Events Assitance Program
     - Skype for Business Online
-    - Lync Server / Skype for Business Server 
+    - Lync Server / Skype for Business Server
+    - Live Events / Live Events Assitance Program
   sub_tag_limit: 20
 
 # URL

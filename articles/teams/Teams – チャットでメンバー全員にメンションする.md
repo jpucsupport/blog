@@ -2,8 +2,8 @@
 title: Teams – チャットでメンバー全員にメンションする
 date: 2023-05-24 12:00:00
 tags:
- - Information
  - Teams
+ - HowTo
 ---
 
 # Teams – チャットでメンバー全員にメンションする

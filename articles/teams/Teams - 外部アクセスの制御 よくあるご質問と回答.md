@@ -3,8 +3,8 @@ title: Teams - 外部アクセスの制御 — よくあるご質問と回答
 date: 2026-07-14 17:00:00
 tags:
   - Teams
-  - External Access
   - HowTo
+  - External Access
 ---
 # Teams - 外部アクセスの制御 — よくあるご質問と回答 <!-- omit in toc -->
 

@@ -2,6 +2,8 @@
 title: Teams - クラシック Teams の可用性について
 date: 2024-03-01 10:00:00
 tags:
+ - Teams
+ - HowTo
  - Classic Teams
  - New Teams
  - Teams 2.1

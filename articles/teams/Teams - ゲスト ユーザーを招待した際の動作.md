@@ -2,8 +2,9 @@
 title: Teams - ゲスト ユーザーを招待した際の動作
 date: 2021-7-5 15:00:00
 tags:
-  - Teams 
-  - Guest User 
+  - Teams
+  - HowTo
+  - Guest User
 ---
 
 # Teams - ゲスト ユーザーを招待した際の動作

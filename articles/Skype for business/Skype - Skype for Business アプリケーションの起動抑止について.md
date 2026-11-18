@@ -3,7 +3,7 @@ title: Skype - Skype for Business アプリケーションの起動抑止につ�
 date: 2021-05-17 00:00:00
 tags:
  - Skype for Business Online
- - Client
+ - Archived
 ---
 
 こんにちは、Unified Communications サポート チームです。  

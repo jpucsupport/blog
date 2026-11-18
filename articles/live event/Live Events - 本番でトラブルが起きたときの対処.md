@@ -3,6 +3,7 @@ title: Live Events - 本番でトラブルが起きたときの対処
 date: 2021-4-26 15:00:00
 tags:
   - Live Events / Live Events Assitance Program
+  - Archived
 ---
 
 # Live Events - 本番でトラブルが起きたときの対処

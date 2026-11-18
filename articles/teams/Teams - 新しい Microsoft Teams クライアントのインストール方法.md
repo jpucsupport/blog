@@ -3,12 +3,12 @@ title: Teams - 新しい Microsoft Teams クライアントのインストール
 date: 2024-01-15 12:00:00
 tags:
  - Teams
- - Information
+ - HowTo
+ - Client
+ - Install
  - New Teams
  - Teams 2.1
  - Windows
- - Client
- - Install
 ---
 
 こんにちは、Unified Communications サポート チームです。  

@@ -3,7 +3,7 @@ title: Teams - チームに割り当てられるインターネットメール�
 date: 2022-11-01 11:00:00
 tags:
   - Teams
-  - Information
+  - HowTo
 ---
 
 # Teams - チームに割り当てられるインターネットメールアドレスについて

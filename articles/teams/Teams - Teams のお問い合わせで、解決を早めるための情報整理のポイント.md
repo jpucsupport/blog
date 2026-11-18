@@ -3,8 +3,8 @@ title: Teams - Teams のお問い合わせで、解決を早めるための情�
 date: 2026-02-16 17:30:00
 tags:
   - Teams
-  - サポート
   - Troubleshooting
+  - Support
 ---
 <!-- textlint-disable ja-technical-writing/no-exclamation-question-mark -->
 <!-- markdownlint-disable MD025 MD026 MD033 -->

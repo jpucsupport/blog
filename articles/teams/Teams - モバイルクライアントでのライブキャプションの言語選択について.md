@@ -3,8 +3,9 @@ title: Teams - モバイルクライアントでのライブキャプション�
 date: 2022-02-25 00:00:00
 tags:
   - Teams
-  - Mobile
+  - HowTo
   - Meeting
+  - Mobile
 ---------------------------
 
 こんにちは。Unified Communications サポート チームです。

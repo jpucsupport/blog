@@ -2,7 +2,8 @@
 title: Teams - ユーザーの UPN を変更した場合の影響
 date: 2021-5-14 15:00:00
 tags:
-  - Teams 
+  - Teams
+  - HowTo
 ---
 # Teams - ユーザーの UPN を変更した場合の影響
 

@@ -3,6 +3,7 @@ title: Teams - Intelligent Speaker (音声認識 話者認識) を検証して�
 date: 2026-01-09 11:00:00
 tags:
   - Teams
+  - HowTo
   - Copilot
   - MTR
 ---

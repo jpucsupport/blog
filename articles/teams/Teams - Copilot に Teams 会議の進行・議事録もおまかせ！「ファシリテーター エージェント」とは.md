@@ -3,6 +3,7 @@ title: Teams - Copilot に Teams 会議の進行・議事録もおまかせ！�
 date: 2025-11-20 15:30:00
 tags:
   - Teams
+  - HowTo
   - Copilot
   - Meeting
 ---

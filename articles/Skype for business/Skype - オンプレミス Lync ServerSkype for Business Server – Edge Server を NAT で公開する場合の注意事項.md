@@ -3,6 +3,7 @@ title: Skype - オンプレミス Lync Server/Skype for Business Server – Edge
 date: 2021-04-13 00:00:00
 tags:
  - Lync Server / Skype for Business Server
+ - HowTo
  - Edge
 ---
 

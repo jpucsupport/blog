@@ -2,7 +2,7 @@
 title: Unified Communications Support チームブログへようこそ
 date: 2021-04-05
 tags:
-  - Information
+  - Introduction
 ---
 Unified Communications Support チームのブログです。
 
