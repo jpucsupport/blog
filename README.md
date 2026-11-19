@@ -39,6 +39,3 @@ example
     └── jpazure (git submodule)
 ```
 
-## アーカイブ日
-
-記事をアーカイブするときは、Markdown の front matter の `tags` に `Archived` を追加します。告知には既定で `Last Update` と同じ `date` を表示します。告知だけに別の日付を表示したい場合は、`archived_date: 'YYYY-MM-DD'` を指定します。どちらの場合も `Last Update` に表示される `date` は変更しません。
